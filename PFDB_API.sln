@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PFDB_SS", "PFDB_SS\PFDB_SS.csproj", "{9E0E1908-2DF9-41AF-BAE4-71E933FD80CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeaponClasses", "WeaponClasses\WeaponClasses.csproj", "{601C6893-5492-4F99-925C-950EB6D94121}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ImageParserForAPI", "ImageParserForAPI\ImageParserForAPI.pyproj", "{2D7FAD35-6FD6-4742-9D78-05964EFD0A29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E0E1908-2DF9-41AF-BAE4-71E933FD80CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0E1908-2DF9-41AF-BAE4-71E933FD80CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0E1908-2DF9-41AF-BAE4-71E933FD80CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0E1908-2DF9-41AF-BAE4-71E933FD80CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{601C6893-5492-4F99-925C-950EB6D94121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{601C6893-5492-4F99-925C-950EB6D94121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{601C6893-5492-4F99-925C-950EB6D94121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{601C6893-5492-4F99-925C-950EB6D94121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D7FAD35-6FD6-4742-9D78-05964EFD0A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7FAD35-6FD6-4742-9D78-05964EFD0A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AA10F69-0805-4E23-8FF7-28A6423AF140}
+	EndGlobalSection
+EndGlobal

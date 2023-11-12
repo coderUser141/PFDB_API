@@ -2012,99 +2012,400 @@
 
     public class WS
     {
-
+        //order of strings: assault rifles, personal defense weapons (PDWs), light 
         Dictionary<string, List<List<string>>> versionStrings = new Dictionary<string, List<List<string>>>() {
-            { "8.0.0", 
+            { 
+                "800", 
                 new List<List<string>>(){
                     new List<string>()
                     {
                         "ak12","an94","as-val","scar-l","aug-a1","m16a4","g36","m16a1","m16a3","type-20","aug-a2","k2","famas-f1",
                 "ak47","aug-a3","l85a2","hk416","ak74","akm","ak103","tar-21","type-88","m231","c7a2","stg-44","g11k2"
-                    },
-                    new List<string>()
+                    },new List<string>()
                     {
                         "mp5k","ump45","g36c","mp7","mac10","p90","colt-mars","mp5","colt-smg-633","l2a3","mp5sd","mp10","m3a1",
                 "mp510","uzi","aug-a3-para-xs","k7","aks74u","ppsh-41","fal-para-shorty","kriss-vector","pp-19-bizon","mp40",
                 "x95-smg","tommy-gun","rama-1130"
+                    },new List<string>()
+                    {
+                        "colt-lmg","m60","aug-hbar","mg36","rpk12","l86-lsw","rpk","hk21e","hamr-iar","rpk74","mg3kws"
+                    }, new List<string>()
+                    {
+                        "intervention","model-700","dragunov-svu","aws","bfg-50","awm","trg-42","mosin-nagant","dragunov-svds",
+                "m1903","k14","hecate-ii","ft300","m107","steyr-scout","wa2000","ntw-20"
+                    }, new List<string>()
+                    {
+                        "m14","beowulf-ecr","scar-h","ak12br","g3a3","ag-3","hk417","henry-45-70","fal-5000"
+                    }, new List<string>()
+                    {
+                        "m4a1","g36k","m4","l22","scar-pdw","aku12","groza-1","ots-126","ak12c","honey-badger","k1a","sr-3m","groza-4",
+                "mc51","fal-5063-para","1858-carbine","ak105","jury","kac-srr","gyrojet-carbine","c8a2","x95r","hk51b",
+                "can-cannon"
+                    }, new List<string>()
+                    {
+                        "mk11","sks","sl-8","vss-vintorez","msg90","m21","beowulf-tcr","sa58-spr","scar-ssr"
+                    }, new List<string>()
+                    {
+                        "ksg-12","model-870","dbv12","ks-23m","saiga-12","stevens-db","e-gun","aa-12","spas-12","dt11","usas-12"
+                    }, new List<string>()
+                    {
+                        "g17","m9","m1911a1","desert-eagle-l5","g21","g23","m45a1","g40","kg-99","g50","five-seven","zip-22","gi-m1",
+                "hardballer","izhevsk-pb","makarov-pm","gb-22","desert-eagle-xix","automag-iii","gyrojet-mark-i","gsp",
+                "grizzly","m2011","alien","af2011-a1"
+                    }, new List<string>()
+                    {
+                        "g18c","93r","pp-2000","tec-9","micro-uzi","skorpion-vz61","asmi","mp1911","arm-pistol"
+                    }, new List<string>()
+                    {
+                        "mp412-rex","mateba-6","1858-new-army","redhawk-44","judge","executioner"
+                    }, new List<string>()
+                    {
+                        "super-shorty","sfg-50","m79-thumper","advanced-coilgun","sawed-off","saiga-12u","obrez","sass-308"
+                    }, new List<string>()
+                    {
+                        "m67-frag", "mk-2-frag", "m24-stick", "m26-frag", "m560-mini", "v40-mini", "roly-hg"
+                    }, new List<string>()
+                    {
+                        "dynamite-3", "dynamite", "rgd-5-he","semtex", "pb-grenade", "bundle-charge"
+                    }, new List<string>()
+                    {
+                        "cleaver", "tanzanite-blade", "war-fan", "nata-hatchet",
+                "mekleth", "karambit", "krampus-kukri", "trench-knife", "knife", "tactical-spatula", "hunting-knife",
+                "tanto", "entrencher", "ritual-sickle", "kama", "key", "ice-pick", "machete", "tomahawk", "pocket-knife",
+                "havoc-blade", "cutter", "jason", "bridal-brandisher", "darkheart", "streiter", "balisong", "kommando",
+                "linked-sword", "classic-knife", "jkey"
+                    }, new List<string>()
+                    {
+                        "zircon-trident", "nordic-war-axe", "world-buster", "noobslayer", "hattori", "chosen-one", "reaper",
+                "zero-cutter", "naginata", "training-bayonet", "longsword", "fire-axe", "harvester", "zweihander"
+                    }, new List<string>()
+                    {
+                        "asp-baton", "toy-gun", "maglite-club", "crowbar", "mjolnir", "keyboard", "fumelee", "candy-cane",
+                "bare-fists", "tanzanite-pick", "stick-grenade", "bloxy", "holiday-tea", "trench-mace", "clonker",
+                "nightstick", "stun-gun", "uchiwa", "fixer", "brass-knuckle", "cricket-bat", "frying-pan", "arm-cannon",
+                "starlis-funpost"
+                    }, new List<string>()
+                    {
+                        "paddle", "cursed-shinai", "banjo", "stylis-brush", "kanabo", "stopper", "the-axe", "void-staff",
+                "morning-star", "present", "crane"
                     }
-                } 
+                }
+            },
+            {
+                "801",
+                new List<List<string>>() {
+                    new List<string>()
+                    {
+                        "ak12","an94","as-val","scar-l","aug-a1","m16a4","g36","m16a1","m16a3","type-20","aug-a2","k2","famas-f1",
+                "ak47","aug-a3","l85a2","hk416","ak74","akm","ak103","tar-21","type-88","m231","c7a2","stg-44","g11k2"
+                    },new List<string>()
+                    {
+                        "mp5k","ump45","g36c","mp7","mac10","p90","colt-mars","mp5","colt-smg-633","l2a3","mp5sd","mp10","m3a1",
+                "mp510","uzi","aug-a3-para-xs","k7","aks74u","ppsh-41","fal-para-shorty","kriss-vector","pp-19-bizon","mp40",
+                "x95-smg","tommy-gun","rama-1130","bwc9-a","five-0"
+                    },new List<string>()
+                    {
+                        "colt-lmg","m60","aug-hbar","mg36","rpk12","l86-lsw","rpk","hk21e","hamr-iar","rpk74","mg3kws","mgv-176","stoner-96"
+                    }, new List<string>()
+                    {
+                        "intervention","model-700","dragunov-svu","aws","bfg-50","awm","trg-42","mosin-nagant","dragunov-svds",
+                "m1903","k14","hecate-ii","ft300","m107","steyr-scout","wa2000","ntw-20"
+                    }, new List<string>()
+                    {
+                        "m14","beowulf-ecr","scar-h","ak12br","g3a3","ag-3","hk417","henry-45-70","fal-5000"
+                    }, new List<string>()
+                    {
+                        "m4a1","g36k","m4","l22","scar-pdw","aku12","groza-1","ots-126","ak12c","honey-badger","k1a","sr-3m","groza-4",
+                "mc51","fal-5063-para","1858-carbine","ak105","jury","kac-srr","gyrojet-carbine","c8a2","x95r","hk51b",
+                "can-cannon"
+                    }, new List<string>()
+                    {
+                        "mk11","sks","sl-8","vss-vintorez","msg90","m21","beowulf-tcr","sa58-spr","scar-ssr"
+                    }, new List<string>()
+                    {
+                        "ksg-12","model-870","dbv12","ks-23m","saiga-12","stevens-db","e-gun","aa-12","spas-12","dt11","usas-12"
+                    }, new List<string>()
+                    {
+                        "g17","m9","m1911a1","desert-eagle-l5","g21","g23","m45a1","g40","kg-99","g50","five-seven","zip-22","gi-m1",
+                "hardballer","izhevsk-pb","makarov-pm","gb-22","desert-eagle-xix","automag-iii","gyrojet-mark-i","gsp",
+                "grizzly","m2011","alien","af2011-a1"
+                    }, new List<string>()
+                    {
+                        "g18c","93r","pp-2000","tec-9","micro-uzi","skorpion-vz61","asmi","mp1911","arm-pistol"
+                    }, new List<string>()
+                    {
+                        "mp412-rex","mateba-6","1858-new-army","redhawk-44","judge","executioner"
+                    }, new List<string>()
+                    {
+                        "super-shorty","sfg-50","m79-thumper","advanced-coilgun","sawed-off","saiga-12u","obrez","sass-308"
+                    }, new List<string>()
+                    {
+                        "m67-frag", "mk-2-frag", "m24-stick", "m26-frag", "m560-mini", "v40-mini", "roly-hg"
+                    }, new List<string>()
+                    {
+                        "dynamite-3", "dynamite", "rgd-5-he","semtex", "pb-grenade", "bundle-charge"
+                    }, new List<string>()
+                    {
+                        "cleaver", "tanzanite-blade", "war-fan", "nata-hatchet",
+                "mekleth", "karambit", "krampus-kukri", "trench-knife", "knife", "tactical-spatula", "hunting-knife",
+                "tanto", "entrencher", "ritual-sickle", "kama", "key", "ice-pick", "machete", "tomahawk", "pocket-knife",
+                "havoc-blade", "cutter", "jason", "bridal-brandisher", "darkheart", "streiter", "balisong", "kommando",
+                "linked-sword", "classic-knife", "jkey"
+                    }, new List<string>()
+                    {
+                        "zircon-trident", "nordic-war-axe", "world-buster", "noobslayer", "hattori", "chosen-one", "reaper",
+                "zero-cutter", "naginata", "training-bayonet", "longsword", "fire-axe", "harvester", "zweihander"
+                    }, new List<string>()
+                    {
+                        "asp-baton", "toy-gun", "maglite-club", "crowbar", "mjolnir", "keyboard", "fumelee", "candy-cane",
+                "bare-fists", "tanzanite-pick", "stick-grenade", "bloxy", "holiday-tea", "trench-mace", "clonker",
+                "nightstick", "stun-gun", "uchiwa", "fixer", "brass-knuckle", "cricket-bat", "frying-pan", "arm-cannon",
+                "starlis-funpost"
+                    }, new List<string>()
+                    {
+                        "paddle", "cursed-shinai", "banjo", "stylis-brush", "kanabo", "stopper", "the-axe", "void-staff",
+                "morning-star", "present", "crane"
+                    }
+                }
+            },
+            {
+                "802",
+                new List<List<string>>() {
+                    new List<string>()
+                    {
+                        "ak12","an94","as-val","scar-l","aug-a1","m16a4","g36","m16a1","m16a3","type-20","aug-a2","k2","famas-f1",
+                "ak47","aug-a3","l85a2","hk416","ak74","akm","ak103","tar-21","type-88","m231","c7a2","stg-44","g11k2"
+                    },new List<string>()
+                    {
+                        "mp5k","ump45","g36c","mp7","mac10","p90","colt-mars","mp5","colt-smg-633","l2a3","mp5sd","mp10","m3a1",
+                "mp510","uzi","aug-a3-para-xs","k7","aks74u","ppsh-41","fal-para-shorty","kriss-vector","pp-19-bizon","mp40",
+                "x95-smg","tommy-gun","rama-1130","bwc9-a","five-0"
+                    },new List<string>()
+                    {
+                        "colt-lmg","m60","aug-hbar","mg36","rpk12","l86-lsw","rpk","hk21e","hamr-iar","rpk74","mg3kws","mgv-176","stoner-96","mg42"
+                    }, new List<string>()
+                    {
+                        "intervention","model-700","dragunov-svu","aws","bfg-50","awm","trg-42","mosin-nagant","dragunov-svds",
+                "m1903","k14","hecate-ii","ft300","m107","steyr-scout","wa2000","ntw-20"
+                    }, new List<string>()
+                    {
+                        "m14","beowulf-ecr","scar-h","ak12br","g3a3","ag-3","hk417","henry-45-70","fal-5000"
+                    }, new List<string>()
+                    {
+                        "m4a1","g36k","m4","l22","scar-pdw","aku12","groza-1","ots-126","ak12c","honey-badger","k1a","sr-3m","groza-4",
+                "mc51","fal-5063-para","1858-carbine","ak105","jury","kac-srr","gyrojet-carbine","c8a2","x95r","hk51b",
+                "can-cannon"
+                    }, new List<string>()
+                    {
+                        "mk11","sks","sl-8","vss-vintorez","msg90","m21","beowulf-tcr","sa58-spr","scar-ssr"
+                    }, new List<string>()
+                    {
+                        "ksg-12","model-870","dbv12","ks-23m","saiga-12","stevens-db","e-gun","aa-12","spas-12","dt11","usas-12"
+                    }, new List<string>()
+                    {
+                        "g17","m9","m1911a1","desert-eagle-l5","g21","g23","m45a1","g40","kg-99","g50","five-seven","zip-22","gi-m1",
+                "hardballer","izhevsk-pb","makarov-pm","gb-22","desert-eagle-xix","automag-iii","gyrojet-mark-i","gsp",
+                "grizzly","m2011","alien","af2011-a1"
+                    }, new List<string>()
+                    {
+                        "g18c","93r","pp-2000","tec-9","micro-uzi","skorpion-vz61","asmi","mp1911","arm-pistol"
+                    }, new List<string>()
+                    {
+                        "mp412-rex","mateba-6","1858-new-army","redhawk-44","judge","executioner"
+                    }, new List<string>()
+                    {
+                        "super-shorty","sfg-50","m79-thumper","advanced-coilgun","sawed-off","saiga-12u","obrez","sass-308"
+                    }, new List<string>()
+                    {
+                        "m67-frag", "mk-2-frag", "m24-stick", "m26-frag", "m560-mini", "v40-mini", "roly-hg"
+                    }, new List<string>()
+                    {
+                        "dynamite-3", "dynamite", "rgd-5-he","semtex", "pb-grenade", "bundle-charge"
+                    }, new List<string>()
+                    {
+                        "cleaver", "tanzanite-blade", "war-fan", "nata-hatchet",
+                "mekleth", "karambit", "krampus-kukri", "trench-knife", "knife", "tactical-spatula", "hunting-knife",
+                "tanto", "entrencher", "ritual-sickle", "kama", "key", "ice-pick", "machete", "tomahawk", "pocket-knife",
+                "havoc-blade", "cutter", "jason", "bridal-brandisher", "darkheart", "streiter", "balisong", "kommando",
+                "linked-sword", "classic-knife", "jkey"
+                    }, new List<string>()
+                    {
+                        "zircon-trident", "nordic-war-axe", "world-buster", "noobslayer", "hattori", "chosen-one", "reaper",
+                "zero-cutter", "naginata", "training-bayonet", "longsword", "fire-axe", "harvester", "zweihander"
+                    }, new List<string>()
+                    {
+                        "asp-baton", "toy-gun", "maglite-club", "crowbar", "mjolnir", "keyboard", "fumelee", "candy-cane",
+                "bare-fists", "tanzanite-pick", "stick-grenade", "bloxy", "holiday-tea", "trench-mace", "clonker",
+                "nightstick", "stun-gun", "uchiwa", "fixer", "brass-knuckle", "cricket-bat", "frying-pan", "arm-cannon",
+                "starlis-funpost"
+                    }, new List<string>()
+                    {
+                        "paddle", "cursed-shinai", "banjo", "stylis-brush", "kanabo", "stopper", "the-axe", "void-staff",
+                "morning-star", "present", "crane"
+                    }
+                }
+
+            },
+            {
+                "902",
+                new List<List<string>>() {
+                    new List<string>()
+                    {
+                        "ak12","an94","as-val","scar-l","aug-a1","m16a4","g36","m16a1","m16a3","type-20","aug-a2","k2","famas-f1",
+                "ak47","aug-a3","l85a2","hk416","ak74","akm","ak103","tar-21","type-88","m231","c7a2","stg-44","g11k2"
+                    },new List<string>()
+                    {
+                        "mp5k","ump45","g36c","mp7","mac10","p90","colt-mars","mp5","colt-smg-633","l2a3","mp5sd","mp10","m3a1",
+                "mp510","uzi","aug-a3-para-xs","k7","aks74u","ppsh-41","fal-para-shorty","kriss-vector","pp-19-bizon","mp40",
+                "x95-smg","tommy-gun","rama-1130","bwc9-a","five-0"
+                    },new List<string>()
+                    {
+                        "colt-lmg","m60","aug-hbar","mg36","rpk12","l86-lsw","rpk","hk21e","hamr-iar","rpk74","mg3kws","mgv-176","stoner-96","chainsaw","mg42"
+                    }, new List<string>()
+                    {
+                        "intervention","model-700","dragunov-svu","aws","bfg-50","awm","trg-42","mosin-nagant","dragunov-svds",
+                "m1903","k14","hecate-ii","ft300","m107","steyr-scout","wa2000","ntw-20"
+                    }, new List<string>()
+                    {
+                        "m14","beowulf-ecr","scar-h","ak12br","g3a3","ag-3","hk417","henry-45-70","fal-5000"
+                    }, new List<string>()
+                    {
+                        "m4a1","g36k","m4","l22","scar-pdw","aku12","groza-1","ots-126","ak12c","honey-badger","k1a","sr-3m","groza-4",
+                "mc51","fal-5063-para","1858-carbine","ak105","jury","kac-srr","gyrojet-carbine","c8a2","x95r","hk51b",
+                "can-cannon"
+                    }, new List<string>()
+                    {
+                        "mk11","sks","sl-8","vss-vintorez","msg90","m21","beowulf-tcr","sa58-spr","scar-ssr"
+                    }, new List<string>()
+                    {
+                        "ksg-12","model-870","dbv12","ks-23m","saiga-12","stevens-db","e-gun","aa-12","spas-12","dt11","usas-12"
+                    }, new List<string>()
+                    {
+                        "g17","m9","m1911a1","m17","desert-eagle-l5","g21","g23","m45a1","g40","kg-99","g50","five-seven","zip-22","gi-m1",
+                "hardballer","izhevsk-pb","makarov-pm","gb-22","desert-eagle-xix","automag-iii","gyrojet-mark-i","gsp",
+                "grizzly","m2011","alien","af2011-a1"
+                    }, new List<string>()
+                    {
+                        "g18c","93r","pp-2000","tec-9","micro-uzi","skorpion-vz61","asmi","mp1911","arm-pistol"
+                    }, new List<string>()
+                    {
+                        "mp412-rex","mateba-6","1858-new-army","redhawk-44","judge","executioner"
+                    }, new List<string>()
+                    {
+                        "super-shorty","sfg-50","m79-thumper","advanced-coilgun","sawed-off","saiga-12u","obrez","sass-308"
+                    }, new List<string>()
+                    {
+                        "m67-frag", "mk-2-frag", "m24-stick", "m26-frag", "m560-mini", "v40-mini", "roly-hg"
+                    }, new List<string>()
+                    {
+                        "dynamite-3", "dynamite", "rgd-5-he","semtex", "pb-grenade", "bundle-charge"
+                    }, new List<string>()
+                    {
+                        "cleaver", "tanzanite-blade", "war-fan", "nata-hatchet",
+                "mekleth", "karambit", "krampus-kukri", "trench-knife", "knife", "tactical-spatula", "hunting-knife",
+                "tanto", "entrencher", "ritual-sickle", "kama", "key", "ice-pick", "machete", "tomahawk", "pocket-knife",
+                "havoc-blade", "cutter", "jason", "bridal-brandisher", "darkheart", "streiter", "balisong", "kommando",
+                "linked-sword", "classic-knife", "jkey"
+                    }, new List<string>()
+                    {
+                        "zircon-trident", "nordic-war-axe", "world-buster", "noobslayer", "hattori", "chosen-one", "reaper",
+                "zero-cutter", "naginata", "training-bayonet", "longsword", "fire-axe", "harvester", "zweihander"
+                    }, new List<string>()
+                    {
+                        "asp-baton", "toy-gun", "maglite-club", "crowbar", "mjolnir", "keyboard", "fumelee", "candy-cane",
+                "bare-fists","sparkler", "tanzanite-pick", "stick-grenade", "bloxy", "holiday-tea", "trench-mace", "clonker",
+                "nightstick", "stun-gun", "uchiwa", "fixer", "brass-knuckle", "cricket-bat", "frying-pan", "arm-cannon",
+                "starlis-funpost"
+                    }, new List<string>()
+                    {
+                        "paddle", "cursed-shinai", "banjo", "stylis-brush", "kanabo", "stopper", "the-axe", "void-staff",
+                "morning-star", "present", "crane"
+                    }
+                }
+            },
+            {
+                "903",
+                new List<List<string>>()
+                {
+                    new List<string>()
+                    {
+                        "ak12","an94","as-val","scar-l","aug-a1","m16a4","g36","m16a1","m16a3","type-20","aug-a2","k2","famas-f1",
+                "ak47","aug-a3","l85a2","hk416","ak74","akm","ak103","tar-21","type-88","m231","c7a2","stg-44","g11k2"
+                    },new List<string>()
+                    {
+                        "mp5k","ump45","g36c","mp7","mac10","p90","colt-mars","mp5","colt-smg-633","l2a3","mp5sd","mp10","m3a1",
+                "mp510","uzi","aug-a3-para-xs","k7","aks74u","ppsh-41","fal-para-shorty","kriss-vector","pp-19-bizon","mp40",
+                "x95-smg","tommy-gun","rama-1130","bwc9-a","five-0"
+                    },new List<string>()
+                    {
+                        "colt-lmg","m60","aug-hbar","mg36","rpk12","l86-lsw","rpk","hk21e","hamr-iar","rpk74","mg3kws","m1918a2","mgv-176","stoner-96","chainsaw","mg42"
+                    }, new List<string>()
+                    {
+                        "intervention","model-700","dragunov-svu","aws","bfg-50","awm","trg-42","mosin-nagant","dragunov-svds",
+                "m1903","k14","hecate-ii","ft300","m107","steyr-scout","wa2000","ntw-20"
+                    }, new List<string>()
+                    {
+                        "m14","beowulf-ecr","scar-h","ak12br","g3a3","ag-3","hk417","henry-45-70","fal-5000","hcar"
+                    }, new List<string>()
+                    {
+                        "m4a1","g36k","m4","l22","scar-pdw","aku12","groza-1","ots-126","ak12c","honey-badger","k1a","sr-3m","groza-4",
+                "mc51","fal-5063-para","1858-carbine","ak105","jury","kac-srr","gyrojet-carbine","c8a2","x95r","hk51b",
+                "can-cannon"
+                    }, new List<string>()
+                    {
+                        "mk11","sks","sl-8","vss-vintorez","msg90","m21","beowulf-tcr","sa58-spr","scar-ssr"
+                    }, new List<string>()
+                    {
+                        "ksg-12","model-870","dbv12","ks-23m","saiga-12","stevens-db","e-gun","aa-12","spas-12","dt11","usas-12"
+                    }, new List<string>()
+                    {
+                        "g17","m9","m1911a1","m17","desert-eagle-l5","g21","g23","m45a1","g40","kg-99","g50","five-seven","zip-22","gi-m1",
+                "hardballer","izhevsk-pb","makarov-pm","gb-22","desert-eagle-xix","automag-iii","gyrojet-mark-i","gsp",
+                "grizzly","m2011","alien","af2011-a1"
+                    }, new List<string>()
+                    {
+                        "g18c","93r","pp-2000","tec-9","micro-uzi","skorpion-vz61","asmi","mp1911","arm-pistol"
+                    }, new List<string>()
+                    {
+                        "mp412-rex","mateba-6","1858-new-army","redhawk-44","judge","executioner"
+                    }, new List<string>()
+                    {
+                        "super-shorty","sfg-50","m79-thumper","advanced-coilgun","sawed-off","saiga-12u","obrez","sass-308"
+                    }, new List<string>()
+                    {
+                        "m67-frag", "mk-2-frag", "m24-stick", "m26-frag", "m560-mini", "v40-mini", "roly-hg"
+                    }, new List<string>()
+                    {
+                        "dynamite-3", "dynamite", "rgd-5-he","semtex", "pb-grenade", "bundle-charge"
+                    }, new List<string>()
+                    {
+                        "cleaver", "tanzanite-blade", "war-fan", "nata-hatchet",
+                "mekleth", "karambit", "krampus-kukri", "trench-knife", "knife", "tactical-spatula", "hunting-knife",
+                "tanto", "entrencher", "ritual-sickle", "kama", "key", "ice-pick", "machete", "tomahawk", "pocket-knife",
+                "havoc-blade", "cutter", "jason", "bridal-brandisher", "darkheart", "streiter", "balisong", "kommando",
+                "linked-sword", "classic-knife", "jkey"
+                    }, new List<string>()
+                    {
+                        "zircon-trident", "nordic-war-axe", "world-buster", "noobslayer", "hattori", "chosen-one", "reaper",
+                "zero-cutter", "naginata", "training-bayonet", "longsword", "fire-axe", "harvester", "zweihander"
+                    }, new List<string>()
+                    {
+                        "asp-baton", "toy-gun", "maglite-club", "crowbar", "mjolnir", "keyboard", "fumelee", "candy-cane",
+                "bare-fists","sparkler", "tanzanite-pick", "stick-grenade", "bloxy", "holiday-tea", "trench-mace", "clonker",
+                "nightstick", "stun-gun", "uchiwa", "fixer", "brass-knuckle", "cricket-bat", "frying-pan", "arm-cannon",
+                "starlis-funpost"
+                    }, new List<string>()
+                    {
+                        "paddle", "cursed-shinai", "banjo", "stylis-brush", "kanabo", "stopper", "the-axe", "void-staff",
+                "morning-star", "present", "crane"
+                    }
+                }
             }
         
         
         };
         
-
-        private static List<string> assaultRiflesStrings = new() {
-                "ak12","an94","as-val","scar-l","aug-a1","m16a4","g36","m16a1","m16a3","type-20","aug-a2","k2","famas-f1",
-                "ak47","aug-a3","l85a2","hk416","ak74","akm","ak103","tar-21","type-88","m231","c7a2","stg-44","g11k2" };
-
-        private static List<string> personalDefenseWeaponsStrings100 = new() {
-                "mp5k","ump45","g36c","mp7","mac10","p90","colt-mars","mp5","colt-smg-633","l2a3","mp5sd","mp10","m3a1",
-                "mp510","uzi","aug-a3-para-xs","k7","aks74u","ppsh-41","fal-para-shorty","kriss-vector","pp-19-bizon","mp40",
-                "x95-smg","tommy-gun","rama-1130"/*,"bwc9-a","five-0"*/};
-
-        private static List<string> personalDefenseWeaponsStrings101 = new() {
-                "mp5k","ump45","g36c","mp7","mac10","p90","colt-mars","mp5","colt-smg-633","l2a3","mp5sd","mp10","m3a1",
-                "mp510","uzi","aug-a3-para-xs","k7","aks74u","ppsh-41","fal-para-shorty","kriss-vector","pp-19-bizon","mp40",
-                "x95-smg","tommy-gun","rama-1130","bwc9-a","five-0"};
-
-
-        private static List<string> lightMachineGunsStrings100 = new() {
-                "colt-lmg","m60","aug-hbar","mg36","rpk12","l86-lsw","rpk","hk21e","hamr-iar","rpk74","mg3kws"/*,"mgv-176","stoner-96" */};
-
-        private static List<string> lightMachineGunsStrings101 = new() {
-                "colt-lmg","m60","aug-hbar","mg36","rpk12","l86-lsw","rpk","hk21e","hamr-iar","rpk74","mg3kws","mgv-176","stoner-96" };
-
-        private static List<string> lightMachineGunsStrings102 = new() {
-                "colt-lmg","m60","aug-hbar","mg36","rpk12","l86-lsw","rpk","hk21e","hamr-iar","rpk74","mg3kws","mgv-176","stoner-96","mg42" };
-
-        private static List<string> sniperRiflesStrings = new() {
-                "intervention","model-700","dragunov-svu","aws","bfg-50","awm","trg-42","mosin-nagant","dragunov-svds",
-                "m1903","k14","hecate-ii","ft300","m107","steyr-scout","wa2000","ntw-20"};
-
-        private static List<string> battleRiflesStrings = new() {
-                "m14","beowulf-ecr","scar-h","ak12br","g3a3","ag-3","hk417","henry-45-70","fal-5000"};
-
-        private static List<string> designatedMarksmanRiflesStrings = new() {
-                "mk11","sks","sl-8","vss-vintorez","msg90","m21","beowulf-tcr","sa58-spr","scar-ssr"};
-
-        private static List<string> shotgunsStrings = new() {
-                "ksg-12","model-870","dbv12","ks-23m","saiga-12","stevens-db","e-gun","aa-12","spas-12","dt11","usas-12"};
-
-        private static List<string> carbineStrings = new() {
-                "m4a1","g36k","m4","l22","scar-pdw","aku12","groza-1","ots-126","ak12c","honey-badger","k1a","sr-3m","groza-4",
-                "mc51","fal-5063-para","1858-carbine","ak105","jury","kac-srr","gyrojet-carbine","c8a2","x95r","hk51b",
-                "can-cannon"};
-
-        private static List<string> pistolsStrings = new() {
-                "g17","m9","m1911a1","desert-eagle-l5","g21","g23","m45a1","g40","kg-99","g50","five-seven","zip-22","gi-m1",
-                "hardballer","izhevsk-pb","makarov-pm","gb-22","desert-eagle-xix","automag-iii","gyrojet-mark-i","gsp",
-                "grizzly","m2011","alien","af2011-a1"};
-
         //limited: boxy buster (pistol)
-
-        private static List<string> machinePistolsStrings = new() {
-                "g18c","93r","pp-2000","tec-9","micro-uzi","skorpion-vz61","asmi","mp1911","arm-pistol"};
-
-        private static List<string> revolversStrings = new() {
-                "mp412-rex","mateba-6","1858-new-army","redhawk-44","judge","executioner"};
-
-        private static List<string> othersStrings = new() {
-                "super-shorty","sfg-50","m79-thumper","advanced-coilgun","sawed-off","saiga-12u","obrez","sass-308"};
-
-        private static List<string> fragmentationGrenadesStrings = new() {
-                "m67-frag", "mk-2-frag", "m24-stick", "m26-frag", "m560-mini", "v40-mini", "roly-hg"};
-
-        private static List<string> highExplosiveGrenadeStrings = new() {
-                "dynamite-3", "dynamite", "rgd-5-he","semtex", "pb-grenade", "bundle-charge"};
-
-        private static List<string> impactGrenadeStrings = new() { "t-13-impact", "rgn-udzs", "rgo-udzs" };
-
-        private static List<string> oneHandBladeStrings = new() { "cleaver", "tanzanite-blade", "war-fan", "nata-hatchet",
-                "mekleth", "karambit", "krampus-kukri", "trench-knife", "knife", "tactical-spatula", "hunting-knife",
-                "tanto", "entrencher", "ritual-sickle", "kama", "key", "ice-pick", "machete", "tomahawk", "pocket-knife",
-                "havoc-blade", "cutter", "jason", "bridal-brandisher", "darkheart", "streiter", "balisong", "kommando",
-                "linked-sword", "classic-knife", "jkey" };
 
         /*
          ohbt: flame of olympia, pacific fm, slay bells, sleigh bells, the countdown
@@ -2113,42 +2414,8 @@
          */
 
         //special thanks to: Kanako#9096, Fork#2067, and シノン△#1231
+        //now for.k, and sinonzarokku
         //huge shoutout to hackurtoaster#7938
-
-        private static List<string> twoHandBladeStrings = new() {
-                "zircon-trident", "nordic-war-axe", "world-buster", "noobslayer", "hattori", "chosen-one", "reaper",
-                "zero-cutter", "naginata", "training-bayonet", "longsword", "fire-axe", "harvester", "zweihander" };
-
-        private static List<string> oneHandBluntStrings = new() {
-                "asp-baton", "toy-gun", "maglite-club", "crowbar", "mjolnir", "keyboard", "fumelee", "candy-cane",
-                "bare-fists", "tanzanite-pick", "stick-grenade", "bloxy", "holiday-tea", "trench-mace", "clonker",
-                "nightstick", "stun-gun", "uchiwa", "fixer", "brass-knuckle", "cricket-bat", "frying-pan", "arm-cannon",
-                "starlis-funpost"};
-
-        private static List<string> twoHandBluntStrings = new() { "sledge-hammer", "hockey-stick", "sweeper", "baseball-bat",
-                "paddle", "cursed-shinai", "banjo", "stylis-brush", "kanabo", "stopper", "the-axe", "void-staff",
-                "morning-star", "present", "crane"};
-
-
-        public static List<string> SniperRiflesStrings { get { return sniperRiflesStrings; } }
-        public static List<string> BattleRiflesStrings { get { return battleRiflesStrings; } }
-        public static List<string> DesignatedMarksmanRiflesStrings { get { return designatedMarksmanRiflesStrings; } }
-        public static List<string> ShotgunsStrings { get { return shotgunsStrings; } }
-        public static List<string> CarbineStrings { get { return carbineStrings; } }
-        public static List<string> PistolsStrings { get { return pistolsStrings; } }
-        public static List<string> MachinePistolsStrings { get { return machinePistolsStrings; } }
-        public static List<string> RevolversStrings { get { return revolversStrings; } }
-        public static List<string> OthersStrings { get { return othersStrings; } }
-        //public List<string> ResultString { get { return stringBuilding; } set { stringBuilding = value; } } //redundant, but whatevs
-
-
-        public static List<string> FragmentationGrenadesStrings { get { return fragmentationGrenadesStrings; } }
-        public static List<string> HighExplosiveGrenadesStrings { get { return highExplosiveGrenadeStrings; } }
-        public static List<string> ImpactGrenadesStrings { get { return impactGrenadeStrings; } }
-        public static List<string> OneHandBladeMelees { get { return oneHandBladeStrings; } }
-        public static List<string> OneHandBluntMelees { get { return oneHandBluntStrings; } }
-        public static List<string> TwoHandBladeMelees { get { return twoHandBladeStrings; } }
-        public static List<string> TwoHandBluntMelees { get { return twoHandBluntStrings; } }
 
     }
 }

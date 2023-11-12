@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/all build options v5
+/all build options v6
+/all build options v7
+/ImageParserForAPI/build/imp
+/ImageParserForAPI/tessbin
+/limited

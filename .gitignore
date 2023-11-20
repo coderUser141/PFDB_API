@@ -368,3 +368,4 @@ FodyWeavers.xsd
 /ImageParserForAPI/tessbin
 /limited
 /ImageParserForAPI/build/impa
+/ImageParserForAPI/pythoncvtesting

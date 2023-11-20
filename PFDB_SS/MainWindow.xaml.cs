@@ -15,7 +15,6 @@ using System.Windows.Shapes;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.ComponentModel;
-using WeaponClasses;
 using System.Media;
 
 namespace PFDB_SS
@@ -129,9 +128,4 @@ namespace PFDB_SS
 
     }
 
-    public class Scraper
-    {
-
-
-    }
 }

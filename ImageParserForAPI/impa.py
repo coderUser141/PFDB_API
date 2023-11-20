@@ -9,7 +9,7 @@ import os
 
 
 def thin_font(image):
-	kernel = numpy.ones((3,3),numpy.uint8)
+	kernel = numpy.ones((2,2),numpy.uint8)
 	erode = cv2.erode(image, kernel, iterations=1)
 	return (erode)
 
@@ -75,6 +75,8 @@ class ImageParser:
 		if image.size == 0:
 			return "[OCR] Empty Image"
 		bw = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+
 		dim = (int(bw.shape[0] * (self.resize_scale + 4)), int(bw.shape[1] * self.resize_scale))
 		resize = cv2.resize(bw, dim, interpolation=cv2.INTER_AREA)
 
@@ -96,12 +98,18 @@ class ImageParser:
 		enhanced_img = cv2.cvtColor(limg, cv2.COLOR_LAB2BGR)
 		process2 = cv2.cvtColor(enhanced_img, cv2.COLOR_BGR2GRAY)
 		sharpened_img = cv2.bilateralFilter(process2,9,75,75)
-		thresh, im_bw = cv2.threshold(sharpened_img, 140, 255, cv2.THRESH_BINARY )
+		thresh,im_bw = cv2.threshold(sharpened_img, 140, 255, cv2.THRESH_BINARY )
 		eroded = thin_font(im_bw)
 		if cropname == "DamageInfo":
-			cv2.imwrite("damagetest.png",sharpened_img)
-			return pytesseract.image_to_string(eroded, config="--psm 12")
-		data = pytesseract.image_to_string(sharpened_img, config="--psm 6")
+			return pytesseract.image_to_string(eroded, config="--psm 11")
+		elif cropname == "FireInfo":
+			return pytesseract.image_to_string(sharpened_img, config="--psm 4")
+		filename = "pythoncvtesting/" + cropname + "_eroded.png"
+		filename2 = "pythoncvtesting/" + cropname + "_sharpened.png"
+		cv2.imwrite(filename, eroded)
+		cv2.imwrite(filename2,sharpened_img)
+
+		data = pytesseract.image_to_string(sharpened_img, config="--psm 4")
 		return data
 
 

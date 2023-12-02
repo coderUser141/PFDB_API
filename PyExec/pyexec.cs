@@ -2,10 +2,9 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Runtime.Serialization;
 using System.Threading.Tasks;
 
-pyexec g = new pyexec("C:\\Users\\peter\\source\\repos\\PFDB_API\\ImageParserForAPI", "C:\\Users\\peter\\source\\repos\\PFDB_API\\ImageParserForAPI", "800", false);
+PyExec g = new PyExec("C:\\Users\\peter\\source\\repos\\PFDB_API\\ImageParserForAPI", "C:\\Users\\peter\\source\\repos\\PFDB_API\\ImageParserForAPI", "800", false);
 Tuple<string, double, double> k = g.exec("0_1.png", 1, "C:\\Users\\peter\\source\\repos\\PFDB_API\\ImageParserForAPI");
 Console.WriteLine($"{k.Item1}, {Environment.NewLine}{k.Item2},{k.Item3}");
 
@@ -21,7 +20,7 @@ Console.WriteLine($"{k.Item1}, {Environment.NewLine}{k.Item2},{k.Item3}");
 /// </list>
 /// </para>
 /// </summary>
-class pyexec
+class PyExec
 {
     private string programDirectory { get; set; }
     private string fileDirectory { get; set; }
@@ -35,7 +34,7 @@ class pyexec
     /// <param name="fileDirectory">Directory where the images for reading reside</param>
     /// <param name="version">Phantom Forces Version</param>
     /// <param name="currentDirectoryHasTessbin">True if <c>programDirectory</c> has the /tessbin/ folder required to operate.</param>
-    public pyexec(string programDirectory, string fileDirectory, string version, bool currentDirectoryHasTessbin)
+    public PyExec(string programDirectory, string fileDirectory, string version, bool currentDirectoryHasTessbin)
     {
         if (!programDirectory.EndsWith("\\"))
         {

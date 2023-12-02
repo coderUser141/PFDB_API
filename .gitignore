@@ -369,3 +369,5 @@ FodyWeavers.xsd
 /limited
 /ImageParserForAPI/build/impa
 /ImageParserForAPI/pythoncvtesting
+/ImageParserForAPI/env
+/fileparse/text.txt

@@ -1,4 +1,9 @@
-﻿namespace WeaponClasses
+﻿using System;
+using System.IO;
+using System.Collections.Generic;
+
+
+namespace WeaponClasses
 {
 
 
@@ -2010,10 +2015,10 @@
     }
 
 
-    public class WS
+    public static class WS
     {
         //order of strings: assault rifles, personal defense weapons (PDWs), light 
-        Dictionary<string, List<List<string>>> versionStrings = new Dictionary<string, List<List<string>>>() {
+        public static Dictionary<string, List<List<string>>> versionStrings = new Dictionary<string, List<List<string>>>() {
             { 
                 "800", 
                 new List<List<string>>(){

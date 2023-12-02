@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-class fileparseasync
+class FileParseAsync
 {
 
     public static Task<List<int>> indexFinderAsync(string filetext, string word)

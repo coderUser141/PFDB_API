@@ -1,16 +1,22 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using System;
-using System.Runtime.CompilerServices;
+using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
-//Console.WriteLine(fileparse.findStatisticInFile("text.txt", );
+//Console.WriteLine(Fileparse.findStatisticInFile("text.txt", );
 Console.WriteLine("hi");
+List<string> k = FileParse.findAllStatisticsInFile("text.txt", true);
+foreach(string s in k)Console.WriteLine(s);
+
+
+
 
 /// <summary>
 /// This class handles the text from the files generated after PyTesseract
 /// </summary>
-static class fileparse
+static class FileParse
 {
 	/// <summary>
 	/// The search targets for statistics
@@ -489,7 +495,7 @@ static class fileparse
 		catch(ArgumentNullException e)
 		{
 			throw e;
-		}
+		} 
 		catch (FileNotFoundException k) 
 		{
 			throw k;
@@ -530,6 +536,29 @@ static class fileparse
             result = searchForTarget(ref currentPosition, filetext, target);
         }
 		return result;
+	}
+
+	/// <summary>
+	/// Finds all the statistics in a file.
+	/// </summary>
+	/// <param name="filepath">Path to the desired file.</param>
+	/// <param name="consoleWrite">Set to true to print to the console, false otherwise.</param>
+	/// <returns>Returns a list of strings of the statistics of the file. May be empty.</returns>
+	public static List<string> findAllStatisticsInFile(string filepath, bool consoleWrite)
+	{
+		List<string> temp = new List<string>();
+		foreach(SearchTargets target in Enum.GetValues(typeof(SearchTargets)))
+		{
+			try
+			{
+				temp.Add(findStatisticInFile(filepath, target, consoleWrite));
+			}
+			catch
+			{
+				//do nothing
+			}
+		}
+		return temp;
 	}
 
 	/// <summary>

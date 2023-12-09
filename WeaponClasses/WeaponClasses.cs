@@ -2014,6 +2014,7 @@ namespace WeaponClasses
 
     }
 
+    
 
     public static class WS
     {
@@ -2072,7 +2073,11 @@ namespace WeaponClasses
                     }, new List<string>()
                     {
                         "dynamite-3", "dynamite", "rgd-5-he","semtex", "pb-grenade", "bundle-charge"
-                    }, new List<string>()
+                    },
+                    new List<string>()
+                    {
+                        "t-13 impact","rgn udzs","rgo udzs"
+                    },new List<string>()
                     {
                         "cleaver", "tanzanite-blade", "war-fan", "nata-hatchet",
                 "mekleth", "karambit", "krampus-kukri", "trench-knife", "knife", "tactical-spatula", "hunting-knife",
@@ -2149,7 +2154,11 @@ namespace WeaponClasses
                     }, new List<string>()
                     {
                         "dynamite-3", "dynamite", "rgd-5-he","semtex", "pb-grenade", "bundle-charge"
-                    }, new List<string>()
+                    },
+                    new List<string>()
+                    {
+                        "t-13 impact","rgn udzs","rgo udzs"
+                    },new List<string>()
                     {
                         "cleaver", "tanzanite-blade", "war-fan", "nata-hatchet",
                 "mekleth", "karambit", "krampus-kukri", "trench-knife", "knife", "tactical-spatula", "hunting-knife",
@@ -2226,6 +2235,10 @@ namespace WeaponClasses
                     }, new List<string>()
                     {
                         "dynamite-3", "dynamite", "rgd-5-he","semtex", "pb-grenade", "bundle-charge"
+                    },
+                    new List<string>()
+                    {
+                        "t-13 impact","rgn udzs","rgo udzs"
                     }, new List<string>()
                     {
                         "cleaver", "tanzanite-blade", "war-fan", "nata-hatchet",
@@ -2304,7 +2317,11 @@ namespace WeaponClasses
                     }, new List<string>()
                     {
                         "dynamite-3", "dynamite", "rgd-5-he","semtex", "pb-grenade", "bundle-charge"
-                    }, new List<string>()
+                    },
+                    new List<string>()
+                    {
+                        "t-13 impact","rgn udzs","rgo udzs"
+                    },new List<string>()
                     {
                         "cleaver", "tanzanite-blade", "war-fan", "nata-hatchet",
                 "mekleth", "karambit", "krampus-kukri", "trench-knife", "knife", "tactical-spatula", "hunting-knife",
@@ -2382,7 +2399,12 @@ namespace WeaponClasses
                     }, new List<string>()
                     {
                         "dynamite-3", "dynamite", "rgd-5-he","semtex", "pb-grenade", "bundle-charge"
-                    }, new List<string>()
+                    }, 
+                    new List<string>()
+                    {
+                        "t-13 impact","rgn udzs","rgo udzs"
+                    },
+                    new List<string>()
                     {
                         "cleaver", "tanzanite-blade", "war-fan", "nata-hatchet",
                 "mekleth", "karambit", "krampus-kukri", "trench-knife", "knife", "tactical-spatula", "hunting-knife",

@@ -103,5 +103,164 @@ extern "C" DLLEXPORT unsigned long long rankToExperienceDefault(unsigned long lo
 	return rankToExperienceGeneral(0, 0, targetRank);
 }
 
+/// <summary>
+/// 
+/// </summary>
+/// <param name="startRank"></param>
+/// <param name="endRank"></param>
+/// <returns></returns>
+extern "C" DLLEXPORT unsigned long long rankToRankXPRequirement(unsigned long long startRank, unsigned long long endRank) {
+	unsigned long long startXP = rankToExperienceDefault(startRank);
+	unsigned long long endXP = rankToExperienceDefault(endRank);
+	return endXP - startXP;
+}
+
+extern "C" DLLEXPORT unsigned long long creditsForGunRankRequirement(unsigned long long startRank, unsigned long long targetRank) {
+	unsigned long long delta = targetRank - startRank + 1;
+	if (delta > (UINT64_MAX - 700) / 140)return UINT64_MAX;
+	return 140 * delta + 700;
+}
+
+/*
+attachment list:
+
+Optics:
+H&K Sight			20
+Full Ring Sight		50
+Half Ring Sight		90
+Backup Sight		100
+Steyr Sight			210
+Double Open Sight	250
+Izhmash Sight		315
+Super Slim Sight	350
+Diopter Sight		410
+BUIS Sight			480
+KEL-TEC Sight		540
+Kalashnikov Sight	570
+KAC Sight			600
+1200M Sight			700
+H&K Export Sight	785
+Herstal Sight		820
+Bundeswehr Sight	870
+IWI Sight			1015
+Quick-Release Sight	1105
+MBUS Sight			1150
+AAC Flip Up Sight	1275
+Dual Aperture Sight	1400
+
+Z-Point				10
+EOTech XPS2			45
+Delta Sight			60
+MARS				70
+EOTech 552			85
+Mini Sight			120
+Comp Aimpoint		130
+PKA-S				225
+Reflex Sight		285
+Kobra Sight			330
+Coyote Sight		380
+Microdot Mini		490
+Pilad 3				500
+Kobra EKP Sight		625
+Acro P-1 Sight		675
+Barska Electro		750
+Eotech M40			755
+Kousaku Sight		777
+Microdot SRS		870
+OKP-7				900
+UH-1 Sight			920
+DDHB Reflex			1200
+DCL 120				1320
+Kousaku OLED		1554
+
+C79					145
+PK-A				165
+M145				185
+Malcolm 3X Scope	215
+PSO-1 Scope			250
+TA44 ACOG			295
+ACOG Scope			430
+VCOG 6X Scope		455
+TA33 ACOG			650
+Hensoldt 3X Sight	850
+Hensoldt Z24		1300
+Swarovski Scope		1355
+TA11 ACOG			1750
+PU-1 Scope			2000
+FF 3X NV			2170
+PSO-1M2				2250
+TA01 ACOG			2500
+Electra 5X			2600
+Reflector Scope		2700
+VCOG 8X Scope		3455
+Susat Scope			4242
+Global Offensive Scope	4750
+
+OEG					1977
+Maglite				1979
+AMT-Terminator		2029
+Handmade Sight		3000
+Plague Insight		3825
+Animu Sight			4500
+Furro Sight			5000
+Hand Sight			5250
+Anti Sight			5600
+
+Flash Hider			100
+Compensator			120
+Muzzle Brake		175
+T-Brake				225
+X-Ring				275
+Halbek Device		765
+Loudener			835
+Muzzle Booster		1200
+
+Suppressor			30
+R2 Suppressor		50
+ARS Suppressor		150
+PBS-1 Suppressor	205
+PBS-4 Suppressor	245
+Muffler				600
+Oil Filter			990
+
+Flashlight			0
+Red Laser			75
+Green Laser			165
+Blue Laser			255
+Yellow Laser		450
+Tri Laser			1070
+
+Vertical Grip		45
+Angled Grip			115
+Potato Grip			180
+Skeleton Grip		205
+Folding Grip		265
+Stubby Grip			355
+Pistol Grip			580
+Sideways Grip		715
+Hera CQR Grip		870
+Chainsaw Grip		950
+
+Flashlight			0
+Red Laser			20
+Green Laser			110
+Blue Laser			200
+Yellow Laser		450
+Tri Laser			1015
+Ballistics Tracker	1500
+
+Canted Iron Sight	310
+Canted Delta Sight	405
+Canted ACOG Scope	740
+Canted Animu Sight	3700
+Canted Furro Sight	3855
+
+Armor Piercing		1000
+Hollow Point		2000
+Tracerless			2950
 
 
+
+
+
+*/

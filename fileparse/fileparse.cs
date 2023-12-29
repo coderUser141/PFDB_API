@@ -7,8 +7,7 @@ using System.Text;
 
 //Console.WriteLine(Fileparse.findStatisticInFile("text.txt", );
 Console.WriteLine("hi");
-List<string> k = FileParse.findAllStatisticsInFile("text.txt", true);
-foreach(string s in k)Console.WriteLine(s);
+
 
 
 
@@ -16,8 +15,13 @@ foreach(string s in k)Console.WriteLine(s);
 /// <summary>
 /// This class handles the text from the files generated after PyTesseract
 /// </summary>
-static class FileParse
+public static class FileParse
 {
+	public static void Main(string[] args)
+	{
+		return;
+	}
+
 	/// <summary>
 	/// The search targets for statistics
 	/// </summary>
@@ -494,11 +498,11 @@ static class FileParse
 		}
 		catch(ArgumentNullException e)
 		{
-			throw e;
+			return string.Empty;
 		} 
 		catch (FileNotFoundException k) 
 		{
-			throw k;
+			return string.Empty;
 		}
 
 		if(filetext == string.Empty)return string.Empty;
@@ -561,13 +565,30 @@ static class FileParse
 		return temp;
 	}
 
-	/// <summary>
-	/// Selects words based on target. See <see cref="SearchTargets"/> for the options.
-	/// </summary>
-	/// <param name="target">Option of statistic target.</param>
-	/// <param name="inputWord1">The first word of statistic.</param>
-	/// <param name="inputWord2">The second word of statistic.</param>
-	public static void inputWordsSelection(SearchTargets target, ref string inputWord1, ref string? inputWord2)
+    public static List<string> findAllStatisticsInFileWithTypes	(string filepath, bool consoleWrite)
+    {
+        List<string> temp = new List<string>();
+        foreach (SearchTargets target in Enum.GetValues(typeof(SearchTargets)))
+        {
+            try
+            {
+                temp.Add(findStatisticInFile(filepath, target, consoleWrite));
+            }
+            catch
+            {
+                //do nothing
+            }
+        }
+        return temp;
+    }
+
+    /// <summary>
+    /// Selects words based on target. See <see cref="SearchTargets"/> for the options.
+    /// </summary>
+    /// <param name="target">Option of statistic target.</param>
+    /// <param name="inputWord1">The first word of statistic.</param>
+    /// <param name="inputWord2">The second word of statistic.</param>
+    public static void inputWordsSelection(SearchTargets target, ref string inputWord1, ref string? inputWord2)
 	{
 
 		switch (target)

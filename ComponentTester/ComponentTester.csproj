@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\fileparse\FileParse.csproj" />
+    <ProjectReference Include="..\fileread\FileIO.csproj" />
+    <ProjectReference Include="..\PyExec\PyExec.csproj" />
+    <ProjectReference Include="..\p_invokewrapper\P_invokeWrapper.csproj" />
+    <ProjectReference Include="..\StatisticProofread\StatisticProofread.csproj" />
+    <ProjectReference Include="..\WeaponClasses\WeaponClasses.csproj" />
+  </ItemGroup>
+
+</Project>

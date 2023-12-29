@@ -6,21 +6,11 @@ using System.ComponentModel;
 using System.Numerics;
 using System.Runtime.InteropServices.Marshalling;
 
-internal class Program
+public class PINVOKE
 {
 
-    private static ulong pow(ulong x, uint y)
-    {
-        ulong result = x;
-        for (uint i = 1; i < y; ++i)
-        {
-            result *= x;
-        }
-        return result;
-    }
-
     const string dllname = "Calculator.dll";
-    private static void Main(string[] args)
+    public static void Main(string[] args)
     {
         write();
 

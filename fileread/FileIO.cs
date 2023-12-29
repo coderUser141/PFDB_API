@@ -18,7 +18,7 @@ Console.Read();
 /// <summary>
 /// This class defines the input and output handling for files
 /// </summary>
-class FileIO
+public class FileIO
 {
 	private string version;
 	public string Version { 

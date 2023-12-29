@@ -3,6 +3,11 @@ using System.Text.RegularExpressions;
 
 public class Proofread
 {
+    public static void Main(string[] args)
+    {
+        return;
+    }
+
     public static Match regex(string text, string pattern)
     {
         Regex regex = new Regex(pattern);

@@ -121,6 +121,27 @@ extern "C" DLLEXPORT unsigned long long creditsForGunRankRequirement(unsigned lo
 	return 140 * delta + 700;
 }
 
+extern "C" DLLEXPORT unsigned creditsForAttachment(unsigned attachmentKillUnlock) {
+	double x{ (double)attachmentKillUnlock };
+	return (unsigned)(0.7 * x + 140) + 1;
+}
+
+extern "C" DLLEXPORT void hollowPoint() {
+
+}
+
+extern "C" DLLEXPORT void armorPiercing() {
+
+}
+
+void bla() {
+	std::cout << "bla" << std::endl;
+}
+
+extern "C" DLLEXPORT void write() {
+	bla();
+}
+
 /*
 attachment list:
 

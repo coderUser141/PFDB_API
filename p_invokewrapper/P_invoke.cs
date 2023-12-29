@@ -22,17 +22,12 @@ internal class Program
     const string dllname = "Calculator.dll";
     private static void Main(string[] args)
     {
-        test();
-        ulong g = 0;
-        --g;
-        UInt64 k = 10000000000000000000;
-        ulong h = Convert.ToUInt64(Console.ReadLine() ?? "0");
-        Console.WriteLine(rankToExperienceGeneral(0, 0, h));
+        write();
 
     }
 
         [DllImport(dllname)] static extern void test();
-
+    [DllImport(dllname)] static extern void write();
 
         /// <summary>
         /// Calculates the amount of credits earned at a given rank.

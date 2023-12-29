@@ -1,5 +1,11 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
-// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-
+public class Proofread
+{
+    public static Match regex(string text, string pattern)
+    {
+        Regex regex = new Regex(pattern);
+        return regex.Match(text);
+    }
+}

@@ -565,7 +565,7 @@ public static class FileParse
 		return temp;
 	}
 
-    public static List<string> findAllStatisticsInFileWithTypes	(string filepath, bool consoleWrite)
+    public static List<Tuple<string,SearchTargets>> findAllStatisticsInFileWithTypes	(string filepath, bool consoleWrite)
     {
         List<string> temp = new List<string>();
         foreach (SearchTargets target in Enum.GetValues(typeof(SearchTargets)))

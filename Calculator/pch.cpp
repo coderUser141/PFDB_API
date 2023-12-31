@@ -280,8 +280,92 @@ Armor Piercing		1000
 Hollow Point		2000
 Tracerless			2950
 
+attachments grouped by weapons:
+Flechette: KSG-12, Model 870, DBV12, Saiga-12, AA-12, USAS-12, Jury, Saiga-12U, Judge, Super Shorty, Sawed Off, Stevens DB, SPAS-12, M79 Thumper
+Birdshot: KSG-12, Model 870, DBV12, Saiga-12, AA-12, USAS-12, Jury, Saiga-12U, Judge, Super Shorty, Sawed Off, Stevens DB, SPAS-12
+Slugs: KSG-12, Model 870, DBV12, Saiga-12, AA-12, USAS-12, Saiga-12U, Judge, DT11, Super Shorty, Sawed Off, Stevens DB, SPAS-12
+223 Remington: SCAR-L, AUG A1, M16A4, G36, M16A1, M16A3, Type 20, AUG A2, K2, FAMAS F1, AUG A3, L85A2, HK416, TAR-21, M231, C7A2, M4A1, G36K, M4, L22, SCAR PDW, K1A, C8A2, G36C, Arm Pistol, SL-8, Saiga-12, Saiga-12U, Colt LMG, AUG HBAR, MG36, L86 LSW, HAMR IAR, Stoner 96, ChainSAW, 
+Armor Piercing NOT: Can Cannon, Gyrojet Carbine, KAC SRR, Jury, KSG-12, Model 870, DBV12, Saiga-12, AA-12, USAS-12, Saiga-12U, Judge, 1858 Carbine, Gyrojet Mark I, PP-2000, Obrez, Henry 45-70, NTW-20, WA2000, Steyr Scout, M107, SFG 50, FT300, Hecate II, K14, Dragunov SVDS, Mosin Nagant, TRG-42, AWM, BFG 50, AWS, Dragunov SVU, Model 700, Intervention
+Hollow Point NOT: Gyrojet Carbine, Gyrojet Mark I, Obrez, KAC SRR, Jury, KSG-12, Model 870, DBV12, Saiga-12, AA-12, USAS-12, Saiga-12U, Judge, 1858 Carbine, Gyrojet Mark I, Henry 45-70, NTW-20, WA2000, Steyr Scout, M107, SFG 50, FT300, Hecate II, K14, M1903, Dragunov SVDS, Mosin Nagant, TRG-42, AWM, BFG 50, Dragunov SVU, Model 700, Intervention
+Silent: G3A3, AG-3, AWS, Steyr Scout, K14, WA2000
+Super Armor Piercing: PP-2000, AK12, AN-94, AK74, Type 88, OTs-126, X95R, RPK12, RPK74, 
+Extended Magazine: M17, M45A1, KG-99, TEC-9, AS VAL, Type 20, SR-3M, BWC9 A, Model 700, Mosin Nagant, M107, Obrez
+Tracerless NOT: Gyrojet Carbine, Gyrojet Mark I, Super Shorty, KSG-12, DBV12, Model 870, Saiga-12, Saiga-12U, Stevens DB, E-Gun, AA-12, SPAS-12, DT11, USAS-12
+Plus P: MP5K, UMP45, MAC 10, MP5, Colt SMG 633, L2A3, MP5SD, MP10, M3A1, MP5/10, UZI, AUG A3 PARA XS, K7, Kriss Vector, PP-19 Bizon, MP40, X95 SMG, Tommy Gun, RAMA 1130, BWC9 A, G17, M9, M1911A1, G21, M45A1, G40, KG-99, Hardballer, Izhevsk PB, Makarov PM, M2011, Alien, AF2011-A1, 93R, TEC-9, Micro UZI, ASMI, MP1911, Henry 45-70
+Minishell: KSG-12, Model 870, SPAS-12, Super Shorty
+Minislugs: KSG-12, Model 870, SPAS-12, Super Shorty
+.45 Super: UMP45, MAC10, M3A1, Kriss Vector, Tommy Gun, G21, G17, M1911A1, M45A1, AF2011-A1,, MP1911
+.45 ACP: FAL Para Shorty, FAL 50.63 Para, FAL 50.00, Five-0, G3A3, Micro UZI, SA58 SPR, L2A3, UZI
+9X18MM: Skorpion VZ.61, PP-19 Bizon
+9X19MM: MP1911, Saiga-12U, Saiga-12, SCAR-L, AUG A1, SCAR PDW, AKU12, MAC10, AKS74U, Kriss Vector
+7.62X39MM: RPK12, AK12BR, AN-94, AUG A2, K2, Type 88, SCAR-H, AK12BR, RPK12, K1A, Saiga-12, Saiga-12U, AKS74U, VSS Vintorez
+.410 Bore: DBV12, Obrez, Mosin Nagant, Henry 45-70, Beowulf ECR, Jury
+9.6X53MM: Saiga-12, Saiga-12U, Dragunov SVU, Dragunov SVDS
+.44 Special: Mateba 6, Redhawk 44, 
+Rat shot: BFG 50, SFG 50, Skorpion VZ.61, Hecate II, M107
+6.5 Grendel: M16A4, M16A3, C7A2, M4A1, M4, C8A2, Colt LMG
+.25-45 Sharps: M16A4, M16A3, M4A1, M4
+.300 BLK: AUG A3, X95R
+.300 BLK.: G36, G36C, G36K, MG36, HK416
+.366 Shot: AKM, SKS
+5.56X45MM: AK103, STG-44, Beowulf ECR, Beowulf TCR, FAL 50.00, FAL 50.63 Para, FAL Para Shorty, SA58 SPR, Groza-1, AK105, X95R, K7, Steyr Scout, 
+Rubber Pellets: Jury, Super Shorty, KSG-12, Model 870, Saiga-12, Saiga-12U, Stevens DB, AA-12, SPAS-12
+.308 WIN: Saiga-12, Saiga-12U, AWM
+.308 WIN.: K14, MSG90
+.40S&W: UMP45, MP5/10, AUG A3 PARA XS
+.22LR: UZI, Kriss Vector, AUG HBAR
+Depleted Uranium: MG3KWS, MK11
+6.5MM: M14, M21, SCAR SSR
+.338 Norma: AWM, TRG-42
+10MM Auto: MP5K, GB-22, Tommy Gun
+Burst Grouping: MP5K, MP5, MP5SD, Colt SMG 633
+Semi-Auto Conv.: AA-12, BWC9 A
+Carbine Barrel: BFG 50
+Squad Barrel:
+CQB Barrel: Intervention, M107, Hecate II, 
+Full Stock: Dragunov SVDS,
+Remove Stock: BFG 50, SFG 50, Model 700, K14, M1903, Intervention, TRG-42, Dragunov SVDS, Mosin Nagant, FT300, Hecate II
+Retract Stock: Dragunov SVDS
+Heavy Barrel: BFG 50, TRG-42, Steyr Scout, FT300, Hecate II, Model 700
+Light Barrel: BFG 50, TRG-42, K14, Steyr Scout, FT300, Hecate II, Model 700, Dragunov SVDS, M1903
+Front Post: Mosin Nagant, Obrez,
+Marksman Kit: Intervention, Model 700, AWS, AWM, TRG-42, Mosin Nagant, M1903, K14, Hecate II, Steyr Scout, Hecate II, NTW-20, FT300, Obrez
+M903 SLAP, .17 Incinerator, .416 Barrett: Hecate II, BFG 50, SFG 50, M107
+Obrez Barrel: NTW-20, PPSH-41
 
 
+Model 700: .32 ACP
+.20 Tactical: Colt LMG
+5.45X39MM: Groza-1
+7.62X25MM
+12.7X55MM: AK12BR
+7.62X51MM: SCAR PDW
+9X39MM: AK12C
+.30-06: DBV12
+Duplex: TAR-21
+Triplex: X95 SMG
+Flashlight Off: MP10
+SVU Backup Sights, SVU-A Conv.: Dragunov SVU 
+TRG-22 Kit, TRG-S Kit, Sako Backup: TRG-42
+10/3.5MM: Dragunov SVDS
+Unertl 8X Scope, Air Service Barrel, Pedersen Device, Air Service Mag: M1903
+Obrez Stock: Obrez
 
+Other notes: 
+canted iron, furro, and animu are not on ft300
+no canteds on ntw20
 
+Family-Specific Attachments:
+Taurus Barrel, Taurus Stock: Judge, Executioner
+8X50MMR: Obrez, Mosin Nagant
+Full-Auto Conv.: Saiga-12, Saiga-12U
+.50 BMG: Saiga-12, Saiga-12U
+.458 SOCOM: Beowulf ECR, Beowulf TCR
+12MM Rocket: Gyrojet Carbine, Gyrojet Mark I
+33RD Mag: G17, G18C
+Crowd Control Setup, Home Defense Setup, Heavy Discs, Light Discs, Pennies: E-Gun, Coilgun
+M855: M16A1, M231
+BARS Barrel: AK103, AK105, AK12
+.20 Tact.: C7A2, C8A2
+Snake Shot: 1858 New Army, 1858 Carbine
 */

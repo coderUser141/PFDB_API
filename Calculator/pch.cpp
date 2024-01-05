@@ -345,6 +345,7 @@ Wood Furniture: G3A3, FT300
 Shoulder Stock: M1911A1, M45A1, GI M1, Grizzly, AF2011-A1
 Extended Magazine: Model 700, Mosin Nagant, M107, Obrez, MP7, M9, Five seveN, Izhevsk PB, Makarov PM, Arm Pistol
 12RD Magazine: Izhevsk PB, Makarov PM
+Heavy Bolt: MG3KWS, MG42
 
 Barrel:
 
@@ -369,12 +370,12 @@ Underbarrel:
 
 Romanian Grip: AN-94, G36, AK47, L85A2, AK74, AKM, AK103, Type 88, G11K2, G36C, MP5, Colt SMG 633, MP5/10, AKS74U, G36K, FAL 50.63 Para, AK105, Jury, KAC SRR, M14, Beowulf ECR, FAL 50.00, SKS, Dragunov SVU, MSG90, M21, MG36, L86 LSW, RPK, RPK74, Model 870, KS-23M, Saiga-12, AA-12, SPAS-12, Model 700, Mosin Nagant, Dragunov SVDS, M1903, WA2000
 Folded Grip: AUG A1, MP7, SR-3M
-Sideways Grip: AK12, AN-94, AS VAL, SCAR-L, AUG A1, M16A4, G36, M16A1, M16A3, Type 20, AUG A2, K2, FAMAS F1, AK47, AUG A3, L85A2, HK416, AK74, AKM, AK103, TAR-21, Type 88, M231, C7A2, STG-44, G11K2, MP5K, UMP45, G36C, MP7, MAC10, P90, Colt MARS, MP5, Colt SMG 633, L2A3, MP5SD, MP10, M3A1, MP5/10, UZI, AUG A3 Para XS, K7, AKS74U, PPSH-41, FAL Para Shorty, Kriss Vector, PP-19 Bizon, MP40, X95 SMG, RAMA 1130, BWC9 A, Five-0, M4A1, G36K, M4, L22, SCAR PDW, AKU12, Groza-1, OTs-126, AK12C, Honey Badger, K1A, SR-3M, Groza-4, MC51, FAL 50.63 Para, 1858 Carbine, AK105, Jury, KAC SRR, Gyrojet Carbine, C8A2, X95R, HK51B, Can Cannon, M14, Beowulf ECR, SCAR-H, AK12BR, G3A3, AG-3, HK417, Henry 45-70, FAL 50.00, HCAR, MK11, SKS, Dragunov SVU, VSS Vintorez, MSG90, M21, Beowulf TCR, SA58 SPR, SCAR SSR, Colt LMG, M60, AUG HBAR, MG36, RPK12, L86 LSW, RPK, HK21E, HAMR IAR, RPK74, MG3KWS, M1918A2, MGV-176, Stoner 96, KSG 12, Model 870, DBV12, KS-23M, Saiga-12, Stevens DB, E-Gun, AA-12, SPAS-12, DT11, USAS-12, Intervention, Model 700, AWS, BFG 50, AWM. TRG-42, Mosin Nagant, Dragunov SVDS, M1903, K14, Hecate II, FT300, M107, Steyr Scout, WA2000, NTW-20
-Hera CQR Grip: AK12, AN-94, SCAR-L, AUG A1, M16A4, G36, M16A3, Type 20, AUG A2, K2, FAMAS F1, AK47, AUG A3, HK416, AK74, AKM, AK103, Type 88, M231, C7A2, STG-44, G11K2, G36C, MP7, MAC10, P90, MP5, MP5SD, MP5/10, AUG A3 Para XS, K7, AKS74U, PP-19 Bizon, RAMA 1130, Five-0, M4A1, G36K, M4, AKU12, Groza-1, OTs-126, AK12C, Honey Badger, K1A, SR-3M, Groza-4, FAL 50.63 Para, AK105, Gyrojet Carbine, C8A2, Can Cannon, Beowulf ECR, SCAR-H, AK12BR, G3A3, AG-3, HK417, FAL 50.00, MK11, SKS, Dragunov SVU, MSG90, Beowulf TCR, SA58 SPR, SCAR SSR, M60, AUG HBAR, MG36, RPK12, RPK, HAMR IAR, RPK74, MG3KWS, KSG 12, Saiga-12, E-Gun, AA-12, USAS-12, AWS, AWM, Dragunov SVDS, K14, WA2000
+Sideways Grip: AK12, AN-94, AS VAL, SCAR-L, AUG A1, M16A4, G36, M16A1, M16A3, Type 20, AUG A2, K2, FAMAS F1, AK47, AUG A3, L85A2, HK416, AK74, AKM, AK103, TAR-21, Type 88, M231, C7A2, STG-44, G11K2, MP5K, UMP45, G36C, MP7, MAC10, P90, Colt MARS, MP5, Colt SMG 633, L2A3, MP5SD, MP10, M3A1, MP5/10, UZI, AUG A3 Para XS, K7, AKS74U, PPSH-41, FAL Para Shorty, Kriss Vector, PP-19 Bizon, MP40, X95 SMG, RAMA 1130, BWC9 A, Five-0, M4A1, G36K, M4, L22, SCAR PDW, AKU12, Groza-1, OTs-126, AK12C, Honey Badger, K1A, SR-3M, Groza-4, MC51, FAL 50.63 Para, 1858 Carbine, AK105, Jury, KAC SRR, Gyrojet Carbine, C8A2, X95R, HK51B, Can Cannon, M14, Beowulf ECR, SCAR-H, AK12BR, G3A3, AG-3, HK417, Henry 45-70, FAL 50.00, HCAR, MK11, SKS, Dragunov SVU, VSS Vintorez, MSG90, M21, Beowulf TCR, SA58 SPR, SCAR SSR, Colt LMG, M60, AUG HBAR, MG36, RPK12, L86 LSW, RPK, HK21E, HAMR IAR, RPK74, MG3KWS, M1918A2, MGV-176, Stoner 96, KSG 12, Model 870, DBV12, KS-23M, Saiga-12, Stevens DB, E-Gun, AA-12, SPAS-12, DT11, USAS-12, Intervention, Model 700, AWS, BFG 50, AWM. TRG-42, Mosin Nagant, Dragunov SVDS, M1903, K14, Hecate II, FT300, M107, Steyr Scout, WA2000, NTW-20, MG42
+Hera CQR Grip: AK12, AN-94, SCAR-L, AUG A1, M16A4, G36, M16A3, Type 20, AUG A2, K2, FAMAS F1, AK47, AUG A3, HK416, AK74, AKM, AK103, Type 88, M231, C7A2, STG-44, G11K2, G36C, MP7, MAC10, P90, MP5, MP5SD, MP5/10, AUG A3 Para XS, K7, AKS74U, PP-19 Bizon, RAMA 1130, Five-0, M4A1, G36K, M4, AKU12, Groza-1, OTs-126, AK12C, Honey Badger, K1A, SR-3M, Groza-4, FAL 50.63 Para, AK105, Gyrojet Carbine, C8A2, Can Cannon, Beowulf ECR, SCAR-H, AK12BR, G3A3, AG-3, HK417, FAL 50.00, MK11, SKS, Dragunov SVU, MSG90, Beowulf TCR, SA58 SPR, SCAR SSR, M60, AUG HBAR, MG36, RPK12, RPK, HAMR IAR, RPK74, MG3KWS, KSG 12, Saiga-12, E-Gun, AA-12, USAS-12, AWS, AWM, Dragunov SVDS, K14, WA2000, MG42
 
 Optics:
 
-Anti-Aircraft Irons: M60, MG3KWS
+Anti-Aircraft Irons: M60, MG3KWS, MG42
 Carry Handle Sight: M16A4, HK416, C7A2, M4A1, Honey Badger, C8A2, M14, Beowulf ECR, MK11, M21, Beowulf TCR
 PM II: SCAR-L, Type 20, SCAR PDW, Can Cannon, SCAR-H, SCAR SSR, HAMR IAR, AWS, AWM
 Hensoldt Dual: G36, G36C, G36K, SL-8, MG36
@@ -398,6 +399,7 @@ Full Choke: Model 870, Stevens DB, DT11, Super Shorty, Sawed Off
 
 Optic: Extended Stock, Full Stock, Remove Stock: SPAS-12
 
+Light Barrel: MG42
 .358 Win.: SASS 308
 Boom Stock: Sawed Off
 Sponge, Buckshot, Double Slugs, .410 Beehive: M79 Thumper
@@ -437,7 +439,6 @@ Shortened Barrel, Lengthened Barrel: Saiga-12
 Shrapnel, Volna-R, Barrikada, Harpoon, 4-Gauge: KS-23M
 KSG 25 Barrel: KSG 12
 Fold Stock: MGV-176
-Heavy Bolt: MG3KWS
 Closed Bolt Conv.: AUG HBAR
 .20 Tactical: Colt LMG
 Marksman Barrel: SL-8
@@ -523,6 +524,51 @@ sass 308 has default secondary scopes and special sights
 
 pistol default scopes: C79, PK-A, M145, TA44 ACOG, ACOG Scope, VCOG 6X Scope, TA33 ACOG, Hensoldt 3X Sight, TA11 ACOG, TA01 ACOG
 pistol default special sights: Maglite, AMT-Terminator, Plague Insight, Animu Sight, Furro Sight, Hand Sight, Anti Sight
+
+sniper default:
+Leupold M8-2X
+C79
+PK-A
+M145
+Malcolm 3X Scope
+TA44 ACOG
+PSO-1 Scope
+ACOG Scope
+VCOG 6X Scope
+TA33 ACOG
+Hensoldt 3X Sight
+Hensoldt Z24
+Swarovski Scope
+TA11 ACOG
+PU-1 Scope
+FF 3X NV
+PSO-1M2 Scope
+TA01 ACOG
+Electra 5X
+Reflector Scope
+VCOG 8X Scope
+Susat Scope
+Global Offensive Scope
+HI-Power 8-32
+Klassik LM
+Leupold M8-6X
+Leupold Mark 4
+NXS 8-32
+KOM 10X42
+PM II
+NXS 5.5-22
+Sidewinder ED
+Sagittarius 40X
+
+model 700 does not have pso-1 or pso-1m2
+intervention has NXS 5.5-22 by default so it does not have it as attachment
+bfg 50 and sfg 50 both have nxs 8-32 as default, doesnt have as attachment
+hecate doesn't have pu-1 or sidewinder ed
+ft300 doesn't have pso-1 or pso-1m2
+wa2000 doesn't have malcolm 3x scope, and also has klassik lm as default (no klassik lim attachment)
+ntw-20 does not have malcolm 3x scope or hensoldt 3x sight or pso-1m2 or pso-1
+
+note for future: pso-1 switches between 400 and 250 on some snipers
 
 Family-Specific Attachments:
 .36 Caliber: 1858 Carbine, 1858 New Army

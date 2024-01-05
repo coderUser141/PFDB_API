@@ -1636,7 +1636,6 @@ namespace WeaponClasses
         /// </summary>
         public string Name { get { return name; } set { name = value; } }
 
-#nullable enable
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -1647,7 +1646,6 @@ namespace WeaponClasses
             if (weapon != null) addWeapon(weapon);
             this.name = categoryName;
         }
-#nullable disable
 
         //generates id from weapon rank
         /// <summary>

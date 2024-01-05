@@ -16,6 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{091662A9-DEA1-43A5-A3B7-AFEE38FE4AD9}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		attachments.db = attachments.db
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "legacycode", "legacycode\legacycode.csproj", "{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}"
@@ -36,7 +37,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Calculator", "Calculator\Ca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "temprenamer", "temprenamer\temprenamer.csproj", "{EE46B51A-0903-4148-98C1-3954F0921E3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentTester", "ComponentTester\ComponentTester.csproj", "{3C763D2D-FB41-4180-B90E-ECA413C86FB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentTester", "ComponentTester\ComponentTester.csproj", "{3C763D2D-FB41-4180-B90E-ECA413C86FB6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{1FDCE27F-4876-40F8-98F3-77BA9B21C7BE} = {1FDCE27F-4876-40F8-98F3-77BA9B21C7BE}
 		{4F7ED044-16AE-463F-A17F-7C5DBFE17331} = {4F7ED044-16AE-463F-A17F-7C5DBFE17331}
@@ -124,8 +125,8 @@ Global
 		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Release|x86.Build.0 = Release|Any CPU
 		{90A08430-3034-483C-966C-44B531317C1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{90A08430-3034-483C-966C-44B531317C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90A08430-3034-483C-966C-44B531317C1A}.Debug|x64.ActiveCfg = Debug|x64
-		{90A08430-3034-483C-966C-44B531317C1A}.Debug|x64.Build.0 = Debug|x64
+		{90A08430-3034-483C-966C-44B531317C1A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{90A08430-3034-483C-966C-44B531317C1A}.Debug|x64.Build.0 = Debug|Any CPU
 		{90A08430-3034-483C-966C-44B531317C1A}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{90A08430-3034-483C-966C-44B531317C1A}.Debug|x86.Build.0 = Debug|Any CPU
 		{90A08430-3034-483C-966C-44B531317C1A}.Release|Any CPU.ActiveCfg = Release|Any CPU

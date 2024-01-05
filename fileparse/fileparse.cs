@@ -6,18 +6,13 @@ using System.IO;
 using System.Text;
 
 //Console.WriteLine(Fileparse.findStatisticInFile("text.txt", );
-Console.WriteLine("hi");
-
-
-
-
 
 /// <summary>
 /// This class handles the text from the files generated after PyTesseract
 /// </summary>
 public static class FileParse
 {
-	public static void Main(string[] args)
+	public static void Main()
 	{
 		return;
 	}
@@ -496,11 +491,11 @@ public static class FileParse
 		{
             filetext = fileReader(filepath);
 		}
-		catch(ArgumentNullException e)
+		catch(ArgumentNullException)
 		{
 			return string.Empty;
 		} 
-		catch (FileNotFoundException k) 
+		catch (FileNotFoundException) 
 		{
 			return string.Empty;
 		}
@@ -565,14 +560,21 @@ public static class FileParse
 		return temp;
 	}
 
-    public static List<Tuple<string,SearchTargets>> findAllStatisticsInFileWithTypes	(string filepath, bool consoleWrite)
+    /// <summary>
+    /// Finds all the statistics in a file.
+    /// </summary>
+    /// <param name="filepath">Path to the desired file.</param>
+    /// <param name="consoleWrite">Set to true to print to the console, false otherwise.</param>
+    /// <returns>Returns a list of tuples, containing both strings of the statistics and the type of statistics (defined by <see cref="SearchTargets"/>) from the file. May be empty.</returns>
+    public static List<Tuple<string,SearchTargets>> findAllStatisticsInFileWithTypes(string filepath, bool consoleWrite)
     {
-        List<string> temp = new List<string>();
+		List<Tuple<string, SearchTargets>> temp = new List<Tuple<string, SearchTargets>>();
+        //List<string> temp = new List<string>();
         foreach (SearchTargets target in Enum.GetValues(typeof(SearchTargets)))
         {
             try
             {
-                temp.Add(findStatisticInFile(filepath, target, consoleWrite));
+                temp.Add(Tuple.Create(findStatisticInFile(filepath, target, consoleWrite),target));
             }
             catch
             {

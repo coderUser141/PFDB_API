@@ -1,13 +1,14 @@
 // pch.cpp: source file corresponding to the pre-compiled header
 
 #include "pch.h"
+#include "sqlite3.h"
 #define DLLEXPORT __declspec(dllexport)
 
 
 // When you are using pre-compiled headers, this source file is necessary for compilation to succeed.
 
 extern "C" DLLEXPORT int test() {
-	std::cout << "your mom" << std::endl; return 6;
+	std::cout << "your mom\n"; return 6;
 }
 
 /// <summary>
@@ -136,6 +137,7 @@ extern "C" DLLEXPORT void armorPiercing() {
 
 void bla() {
 	std::cout << "bla" << std::endl;
+	
 }
 
 extern "C" DLLEXPORT void write() {

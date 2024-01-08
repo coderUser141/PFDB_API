@@ -372,4 +372,4 @@ FodyWeavers.xsd
 /ImageParserForAPI/env
 /fileparse/text.txt
 
-.c
+*.c

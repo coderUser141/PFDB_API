@@ -61,3 +61,9 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+*.h linguist-language=C++
+sqlite3.h linguist-language=C
+sqlite3ext.h linguist-language=C
+dllmain.cpp linguist-language=C++
+pch.cpp linguist-language=C++

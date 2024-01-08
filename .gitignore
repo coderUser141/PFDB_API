@@ -373,3 +373,5 @@ FodyWeavers.xsd
 /fileparse/text.txt
 
 *.c
+/Calculator/sqlite3.h
+/Calculator/sqlite3ext.h

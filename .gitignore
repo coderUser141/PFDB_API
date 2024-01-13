@@ -375,3 +375,4 @@ FodyWeavers.xsd
 *.c
 /Calculator/sqlite3.h
 /Calculator/sqlite3ext.h
+/Calculator/Calculator.exp

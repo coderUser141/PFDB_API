@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\p_invokewrapper\bin\Debug\net7.0\</OutDir>
+    <OutDir>$(ProjectDir)</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -121,6 +121,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)Calculator.dll $(SolutionDir)p_invokewrapper\bin\Debug\net8.0\ /y
+xcopy $(ProjectDir)Calculator.dll $(SolutionDir)p_invokewrapper\bin\Debug\net7.0\ /y
+xcopy $(SolutionDir)attachments.db $(SolutionDir)p_invokewrapper\bin\Debug\net7.0\ /y 
+xcopy $(SolutionDir)attachments.db $(SolutionDir)p_invokewrapper\bin\Debug\net8.0\ /y </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>

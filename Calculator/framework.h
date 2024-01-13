@@ -5,4 +5,5 @@
 #include <windows.h>
 #include <iostream>
 #include <cmath>
+#include <comdef.h>
 #include "sqlite3.h"

@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:18:04:979
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\MICRO-UZI1.png
+..\..\..\..\ImageParser\
+False
+k
+MICRO-UZI1.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 68
+MICRO UZI
+KILLS 1
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 34-> 19
+FIRERATE 1200
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 2
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY =
+
+AMMO CAPACITY 25/75
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.105
+HEAD MULTIPLIER 1.30
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 21.00 studs �- 65.00 studs
+MUZZLE VELOCITY 2000.00 studs,'s
+PENETRATION DEPTH 0.50
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK |1.45,0.20, 0.151
+MAX CAME RA KICK 290,983,0 H
+MIN RECOIL DISPLACEMENT IN WO, 3.00
+MAX RECOIL DISPLACEMENT I990,010,9 70
+MIN RECOIL ROTATION 110.0% OR
+MAX RECOIL ROTATION |2.10,035,0 HI
+HIPFIRE SPREAD FACTOR 009
+HIPFIRE RECOVERY SPEED LO
+HIPFIRE SPREAD DAMPING oR 6)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK I2 0,000,010)
+MAX CAMERA KICK 13.10, 100,044
+MIN RECOIL DISPLACEMENT 0 10,095,920
+MAX RECOIL DISPLACEMENT 0.10, 1.44, 10.00)
+MIN RECOIL ROTATION 1.70, 0.40, 0.131
+MAX RECOIL ROTATION |2.85, 165,036
+
+
+
+Finished at 22:18:14:200
+Time elapsed: 24198
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\MICRO-UZI1.png

@@ -1,0 +1,90 @@
+VERSION:1.00
+Started at 22:24:16:047
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\M79-THUMPER2.png
+..\..\..\..\ImageParser\
+False
+k
+M79-THUMPER2.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 79
+M79 THUMPER
+KILLS 0
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 28x10 -> 9x10
+FIRERATE 90
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 1 30
+ACCURACY -
+
+HIP ACCURACY �
+
+SIGHT ACCURACY �
+
+ammo CAPACITY 1/ 20
+FIRE MODES | SEMI
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |220, -0.50, -0.50|
+MAX RECOIL ROTATION |3.40, -0.20,-0.50|
+SIGHT MAGNIFICATION 2X)
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 15.00
+AIM CAMERA RECOWERY SPEED 15.00
+WEAPON RECOVERY SPEED 15.00
+WEAPON RECOVERY DAMPING 08
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON 90ANDLING
+
+RELOAD TIME 2.5
+EMPTY RELOAD TIME 2.5
+EQUIP SPEED 1350
+AJM MODEL SPEED 160
+AJM MAGNIFKCATION SPEED 10%
+CROSSHAIR SIZE WO
+CROSSHAIR SPREAD RATE iste a ]6 8)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 10%
+MISC
+
+WEAPON walkspeed 14.00
+aiming walkspeed 8.4
+ammo type .22 Long Rifle
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:24:16:066
+Time elapsed: 20709
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\M79-THUMPER2.png

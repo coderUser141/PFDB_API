@@ -1,0 +1,45 @@
+VERSION:1.00
+Started at 22:05:08:147
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\HARVESTER.png
+..\..\..\..\ImageParser\
+k
+True
+HARVESTER.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 165
+HARVESTER
+KILLS 0
+BLADE LENGTH 3.4
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.05
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 78.00
+BACK STAB DAMAGE 152.00
+MAIN ATTACK TIME 0.8 SECONDS
+MAIN ATTACK DELAY 0.1 SECONDS
+ALT ATTACK TIME 0.6 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.3 SECONDS
+QUICK ATTACK TIME 1.0 SECONDS
+QUICK ATTACK DELAY 0.0 SECONDS
+WALKSPEED 14.50
+~~,
+
+
+
+Finished at 22:05:15:200
+Time elapsed: 23677
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\HARVESTER.png

@@ -1,0 +1,45 @@
+VERSION:1.00
+Started at 21:53:10:825
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\BASEBALL-BAT.png
+..\..\..\..\ImageParser\
+k
+True
+BASEBALL-BAT.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 48
+BASEBALL BAT
+KILLS 243
+BLADE LENGTH 5.7
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.30
+TORSO MULTIPLIER 1.20
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 50.00
+BACK STAB DAMAGE 105.00
+MAIN ATTACK TIME 0.5 SECONDS
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.5 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.2 SECONDS
+QUICK ATTACK TIME 0.7 SECONDS
+QUICK ATTACK DELAY 0.0 SECONDS
+WALKSPEED 16.00
+�,
+
+
+
+Finished at 21:53:22:775
+Time elapsed: 25597
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\BASEBALL-BAT.png

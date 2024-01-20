@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:22:30:007
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\DESERT-EAGLE-L51.png
+..\..\..\..\ImageParser\
+False
+k
+DESERT-EAGLE-L51.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 18
+DESERT EAGLE L5
+KILLS 664
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 56 -> 32
+FIRERATE 400
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �
+
+HIP ACCURACY a
+
+SIGHT ACCURACY �
+
+AMMO CAPACITY 8 / 40
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 00s
+HEAD MULTIPLIER 2.00
+TORSO MULTIPLIER 1.30
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 50.00 studs �- 100.00 studs
+MUZZLE VELOCITY 1700.00 studs,'s
+PENETRATION DEPTH 1.0 studs
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 13.0, 0.20, 0H
+MAX CAME RA KICK 4.20, 110,90 0!
+MIN RECOIL DISPLACEMENT IO, 1.8, 720
+MAX RECOIL DISPLACEMENT 10.90, 110,350
+MIN RECOIL ROTATION [70,100 KH
+MAX RECOIL ROTATION [10.30 -1.20,0 X
+HIPFIRE SPREAD FACTOR Ql
+HIPFIRE RECOVERY SPEED Es 6)
+HIPFIRE SPREAD DAMPING 070
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 29,010,080
+MAX CAMERA KICK 14.20,0 10,0 00
+MIN RECOIL DISPLACEMENT 140,150, 2.201
+MAX RECOIL DISPLACEMENT 11.60, 1.70, 14.501
+MIN RECOIL ROTATION (8.70, -1.90, -5.50)
+MAX RECOIL ROTATION 190, -25,45
+
+
+
+Finished at 22:22:31:718
+Time elapsed: 25454
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\DESERT-EAGLE-L51.png

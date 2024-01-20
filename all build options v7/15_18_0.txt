@@ -1,0 +1,44 @@
+VERSION:1.02
+Started at 12:39:16:053
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\TOMAHAWK.png
+..\..\..\..\ImageParser\
+k
+True
+TOMAHAWK.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 83
+TOMAHAWK
+KILLS 4154
+BLADE LENGTH 2?
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.10
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 70.00
+BACK STAB DAMAGE 150.00
+MAIN ATTACK TIME 0.6 SECONDS
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.7 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.2 SECONDS
+QUICK ATTACK TIME 0.7 SECONDS
+QUICK ATTACK DELAY 0.0 SECONDS
+WALKSPEED 16.00
+
+
+
+Finished at 12:39:21:748
+Time elapsed: 26995
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\TOMAHAWK.png

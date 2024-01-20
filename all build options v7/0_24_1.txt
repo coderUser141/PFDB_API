@@ -1,0 +1,95 @@
+VERSION:1.02
+Started at 12:32:37:208
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\STG-441.png
+..\..\..\..\ImageParser\
+True
+k
+STG-441.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 144
+
+9 1G-44
+KILLS 21
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 46 -> 29
+FIRERATE 500
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY �
+
+HIP ACCURACY _
+
+SIGHT ACCURACY _
+
+AMMO CAPACITY 30/120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.125
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 45.00 studs -> 160.00 studs
+MUZZLE VELOCITY 1950.00 studs/s
+PENETRATION DEPTH 1.60 studs
+SUPPRESSION 0.70
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (1.70, -1.05, -0.60)
+MAX CAMERA KICK (2.20, 1.05, 0.40)
+MIN RECOIL DISPLACEMENT (0.70, 0.70, 11.80)
+MAX RECOIL DISPLACEMENT-0.60, 0.90, 12.20)
+MIN RECOIL ROTATION (0.50, 0.40, -0.50)
+MAX RECOIL ROTATION (1.00, -0.40, 0.50)
+HIPFIRE SPREAD FACTOR 0.10
+HIPFIRE RECOVERY SPEED 10.00
+HIPFIRE SPREAD DAMPING 0.70
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (1.50, -0.60, -0.50)
+MAX CAMERA KICK (2.20, 0.60, 0.50)
+MIN RECOIL DISPLACEMENT (0.20, -0.14, 10.10)
+MAX RECOIL DISPLACEMENFO.20, -0.22, 10.90)
+MIN RECOIL ROTATION (0.30, -0.20, -0.50)
+MAX RECOIL ROTATION (0.50, 0.30, 0.50)
+CINLIT LAA PAMELA Arias aan
+
+
+
+Finished at 12:32:37:296
+Time elapsed: 29287
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\STG-441.png

@@ -1,0 +1,91 @@
+VERSION:1.02
+Started at 12:46:41:092
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\OBREZ2.png
+..\..\..\..\ImageParser\
+False
+k
+OBREZ2.png
+1.02
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 117
+
+OBREZ
+KILLS 436
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 50 -> 40
+FIRERATE 90
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �
+
+HIP ACCURACY =
+
+SIGHT ACCURACY s- =
+
+AMMO CAPACITY 9/ 30
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (0.20, 0.08, -0.30)
+MAX RECOIL ROTATION (1.00, 0.20, 0.30)
+SIGHT MAGNIFICATION 4.00
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED ��-'11.00
+AIM CAMERA RECOVERY SPEED 9.00
+WEAPON RECOVERY SPEED 14.00
+WEAPON RECOVERY DAMPING 0.75
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.3 seconds
+EMPTY RELOAD TIME 2.5 seconds
+EQUIP SPEED 15.00
+AIM MODEL SPEED 18.00
+AIM MAGNIFICATION SPEED 12.50
+CROSSHAIR SIZE 40.00
+CROSSHAIR SPREAD RATE 1000.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 8.00
+MISC
+
+WEAPON WALKSPEED 14.50
+AIMING WALKSPEED 8.7
+AMMO TYPE 7.62x54mmaA
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:46:41:108
+Time elapsed: 15674
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\OBREZ2.png

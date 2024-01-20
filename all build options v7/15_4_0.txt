@@ -1,0 +1,44 @@
+VERSION:1.02
+Started at 12:34:02:522
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\MEKLETH.png
+..\..\..\..\ImageParser\
+k
+True
+MEKLETH.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 0
+MEK�LETH
+KILLS 253
+BLADE LENGTH 34
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.20
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 70.00
+BACK STAB DAMAGE 115.00
+MAIN ATTACK TIME 0.5 SECONDS
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.6 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.3 SECONDS
+QUICK ATTACK TIME 0.7 SECONDS
+QUICK ATTACK DELAY 0.0 SECONDS
+WALKSPEED 16.00
+
+
+
+Finished at 12:34:09:647
+Time elapsed: 16073
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\MEKLETH.png

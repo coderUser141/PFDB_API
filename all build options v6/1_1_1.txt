@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 21:52:38:963
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\UMP451.png
+..\..\..\..\ImageParser\
+True
+k
+UMP451.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 5
+UMP45
+KILLS 625
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 38 -> 21
+FIRERATE 600
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+�i
+0 100 200
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY �
+AMMO CAPACITY 25/125
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.105
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 60.00 studs �> 100.00 studs
+MUZZLE VELOCITY 1500.00 studs,'s
+PENETRATION DEPTH 1.40 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK LW 00,0
+MAX CAME RA KICK IL90.010,0 01
+MIN RECOIL DISPLACEMENT IO H.9 4, S20!
+MAX RECOIL DISPLACEMENT I9W9N,9R
+MIN RECOIL ROTATION IN OW OH
+MAX RECOIL ROTATION IL3X,1.0,0R1
+HIPFIRE SPREAD FACTOR 006
+HIPFIRE RECOVERY SPEED LO
+HIPFIRE SPREAD DAMPING oR 6)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (070,040, 0 50)
+MAX CAMERA KICK [120,040,050
+MIN RECOIL DISPLACEMENT 0 10,040,620
+MAX RECOIL DISPLACEMENT (0.10, 0.70, 7.90
+MIN RECOIL ROTATION 100,020,050
+MAX RECOIL ROTATION 11.00, 0.20, 0.30
+
+
+
+Finished at 21:52:47:395
+Time elapsed: 41361
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\UMP451.png

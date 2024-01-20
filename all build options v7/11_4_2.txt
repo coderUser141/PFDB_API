@@ -1,0 +1,89 @@
+VERSION:1.02
+Started at 12:45:04:307
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\SAWED-OFF2.png
+..\..\..\..\ImageParser\
+False
+k
+SAWED-OFF2.png
+1.02
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 90
+SAWED OFF
+KILLS 169
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 9x8 -> 9x8
+FIRERATE � 200 SEMI| INSTANT BURST
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY -
+
+HIP ACCURACY �
+
+SIGHT ACCURACY:
+AMMO CAPACITY 2/20
+FIRE MODES | SEMI | Il |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (0.80, -0.50, -0.80)
+MAX RECOIL ROTATION (1.10, -0.20, -0.50)
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 6.00
+AIM CAMERA RECOVERY SPEED 7.00
+WEAPON RECOVERY SPEED 12.00
+WEAPON RECOVERY DAMPING 0.90
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.1 seconds
+EMPTY RELOAD TIME 2.3 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 16.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 40.00
+CROSSHAIR SPREAD RATE 800.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIRA RECOVER RATE 10.00
+MISC
+
+WEAPON WALKSPEED 15.00
+AIMING WALKSPEED 9.0
+AMMO TYPE 12 gauge
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:45:04:328
+Time elapsed: 25523
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\SAWED-OFF2.png

@@ -1,0 +1,90 @@
+VERSION:1.00
+Started at 22:26:41:939
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\G502.png
+..\..\..\..\ImageParser\
+False
+k
+G502.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 50
+G50
+KILLS 0
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 47 -> 23
+FIRERATE 600
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 10 30
+ACCURACY �
+
+HIP ACCURACY ee
+
+SIGHT ACCURACY _
+
+ammo CAPACITY 8 / 48
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |4.90, -1.20, -0.40|
+MAX RECOIL ROTATION |6.70, 1.40, 0.40|
+SIGHT MAGNIFICATION <.O
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 14.0
+AIM CAMERA RECOWERY SPEED 20.0
+WEAPON RECOVERY SPEED Aras &
+WEAPON RECOVERY DAMPING 0.75
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.1
+EMPTY RELOAD TIME 2.6
+EQUIP SPEED 14.0
+AJM MODEL SPEED 16.0%
+AJM MAGNIFKCATION SPEED 18.0
+CROSSHAIR SIZE = 66 8)
+CROSSHAIR SPREAD RATE WO
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15%
+MISC
+
+WEAPON walkspeed 14.00
+aiming walkspeed 7.4
+ammo type .50 GI
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:26:41:975
+Time elapsed: 17039
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\G502.png

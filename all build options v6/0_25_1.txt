@@ -1,0 +1,92 @@
+VERSION:1.00
+Started at 22:18:31:276
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\G11K21.png
+..\..\..\..\ImageParser\
+True
+k
+G11K21.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 211
+
+G11K2
+KILLS 141
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 28 -> 21
+FIRERATE 2100 B | 460 A | 460 S
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+a es
+0 150 x0
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY �
+AMMO CAPACITY 45 / 180
+FIRE MODES | III | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.06 s
+HEAD MULTIPLIER 1.70
+TORSO MULTIPLIER 1.20
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 90.00 studs �- 145.00 studs
+MUZZLE VELOCITY 2200.00 studs,'s
+PENETRATION DEPTH 2.00
+SUPPRESSION 1.00
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK [LW,0.10, 00)
+MAX CAME RA KICK [L.10,90 10,00
+MIN RECOIL DISPLACEMENT IO, 98,420
+MAX RECOIL DISPLACEMENT IO.90,110,650
+MIN RECOIL ROTATION IN20,9 30,0 HK
+MAX RECOIL ROTATION 1140, 1.0,0 HX)
+HIPFIRE SPREAD FACTOR 005
+HIPFIRE RECOVERY SPEED se 6)
+HIPFIRE SPREAD DAMPING oR 6)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 08,0N,0 8
+MAX CAMERA KICK |1.00,025,0 30
+MIN RECOIL DISPLACEMENT 0 14,0 10,420
+MAX RECOIL DISPLACEMENT (0.14, 0.20, 5.90)
+MIN RECOIL ROTATION 0.30, 0.40, 0.50)
+MAX RECOIL ROTATION 10.40, 0.30,0.50)
+
+
+
+Finished at 22:18:37:950
+Time elapsed: 28358
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\G11K21.png

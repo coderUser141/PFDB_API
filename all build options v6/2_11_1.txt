@@ -1,0 +1,105 @@
+VERSION:1.01
+Started at 19:23:11:964
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\MGV-1761.png
+..\..\..\..\ImageParser\
+True
+k
+MGV-1761.png
+1.01
+
+Finished at 19:23:17:665
+Time elapsed: 5700
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons101\MGV-1761.pngVERSION:1.01
+Started at 19:25:22:656
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons101\MGV-1761.png
+..\..\..\..\ImageParser\
+True
+k
+MGV-1761.png
+1.01
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 176
+MGV-176
+KILLS 112
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 13-> 11
+FIRERATE 1450
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+13 tl
+0 150 X00
+ACCURACY ù
+HIP ACCURACY a
+SIGHT ACCURACY a
+AMMO CAPACITY 161 / 322
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL O.l2s
+HEAD MULTIPLIER 2.00
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 40.00 studs ù 120.00 studs
+MUZZLE VELOCITY 1550.00 studs,'s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 0.0, 0.40)
+MAX CAME RA KICK IOW9W, OW
+MIN RECOIL DISPLACEMENT IO, 920, 420!
+MAX RECOIL DISPLACEMENT 10 50,9:70, 6.101
+MIN RECOIL ROTATION OH 0W, 0H!
+MAX RECOIL ROTATION IORI HV, OR
+HIPFIRE SPREAD FACTOR 003
+HIPFIRE RECOVERY SPEED 160
+HIPFIRE SPREAD DAMPING O75
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (055,045,035)
+MAX CAMERA KICK [100,045,035
+MIN RECOIL DISPLACEMENT 0 10,0 50, 8.20)
+MAX RECOIL DISPLACEMENT (0.10, 1.50, 8.90)
+MIN RECOIL ROTATION 10.60, -0 50, 0.301
+MAX RECOIL ROTATION [1.10,0.50,0.30
+
+
+
+Finished at 19:25:54:668
+Time elapsed: 32011
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons101\MGV-1761.png

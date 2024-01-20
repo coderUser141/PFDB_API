@@ -1,0 +1,93 @@
+VERSION:1.00
+Started at 22:31:15:292
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\KAC-SRR1.png
+..\..\..\..\ImageParser\
+True
+k
+KAC-SRR1.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 125
+KAC SRR
+KILLS 142
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 59 -> 42
+FIRERATE 400
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY �
+
+AMMO CAPACITY 6 / 60
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 00s
+HEAD MULTIPLIER 2.50
+TORSO MULTIPLIER 1.25
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 60.00 studs �- 150.00 studs
+MUZZLE VELOCITY 1500.00 studs,'s
+PENETRATION DEPTH 1.0 studs
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 3.0, 08,0 RH
+MAX CAME RA KICK 4.0, 010,0 HI
+MIN RECOIL DISPLACEMENT IOW,.0 6, 1520
+MAX RECOIL DISPLACEMENT IO.90,-1. 10, 16.50
+MIN RECOIL ROTATION (6.20,-10,0 8
+MAX RECOIL ROTATION IS.30,1.20,0 RX
+HIPFIRE SPREAD FACTOR opus)
+HIPFIRE RECOVERY SPEED oe 6)
+HIPFIRE SPREAD DAMPING 07%
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 130,040.08
+MAX CAMERA KICK 14.40,040,0 30
+MIN RECOIL DISPLACEMENT 0 30,09, 14.20)
+MAX RECOIL DISPLACEMENT 0.30, -1.10, 15.90
+MIN RECOIL ROTATION 11.70, 0.60, 3.50)
+MAX RECOIL ROTATION 20,000, 3.0)
+
+
+
+Finished at 22:31:15:309
+Time elapsed: 11445
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\KAC-SRR1.png

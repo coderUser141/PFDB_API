@@ -1,0 +1,45 @@
+VERSION:1.00
+Started at 21:52:06:366
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\HOCKEY-STICK.png
+..\..\..\..\ImageParser\
+k
+True
+HOCKEY-STICK.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 0
+HOCKEY STICK
+KILLS 8
+BLADE LENGTH 4.4
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.10
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 53.00
+BACK STAB DAMAGE 140.00
+MAIN ATTACK TIME 0.5 SECONDS
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.5 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.2 SECONDS
+QUICK ATTACK TIME 1.2 SECONDS
+QUICK ATTACK DELAY 0.0 SECONDS
+WALKSPEED 16.00
+�,
+
+
+
+Finished at 21:52:15:012
+Time elapsed: 28833
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\HOCKEY-STICK.png

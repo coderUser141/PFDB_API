@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:27:55:923
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\ZIP-222.png
+..\..\..\..\ImageParser\
+False
+k
+ZIP-222.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 61
+
+ZIP 22
+KILLS 263
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 15-> 12
+FIRERATE 1000
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �_
+
+HIP ACCURACY �
+
+SIGHT ACCURACY as
+
+ammo CAPACITY 10 / 180
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.60, -0.50, -0.30|
+MAX RECOIL ROTATION |1.10,0.50, 0.30]
+SIGHT MAGNIFICATION 140
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 18.00
+AIM CAMERA RECOWERY SPEED 15.0
+WEAPON RECOVERY SPEED fuoKe @)
+WEAPON RECOVERY DAMPING 0.55
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 1.7
+EMPTY RELOAD TIME 2.4
+EQUIP SPEED 1S �
+AJM MODEL SPEED 4 �
+A)M MAGNIF KCATION SPEED 4M
+CROSSHAIR SIZE male 6
+CROSSHAIR SPREAD RATE WN
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15%
+MISC
+
+WEAPON walkspeed 15.00
+aiming walkspeed 10.5
+ammo type .22 Long Rifle
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:27:56:824
+Time elapsed: 17703
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\ZIP-222.png

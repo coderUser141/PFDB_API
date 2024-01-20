@@ -1,0 +1,93 @@
+VERSION:1.00
+Started at 22:10:19:624
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\HK21E2.png
+..\..\..\..\ImageParser\
+True
+k
+HK21E2.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 67
+
+HK21E
+KILLS 398
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 38 -> 24
+FIRERATE 800
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY =
+
+SIGHT ACCURACY ee
+
+ammo CAPACITY 100 / 200
+FIRE MODES | AUTO | III | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.20, 0.10, -0.50|
+MAX RECOIL ROTATION |0.40, 0.10, 0.50|
+SIGHT MAGNIFICATION 1.60
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 9.00
+AIM CAMERA RECOWERY SPEED 12.00
+WEAPON RECOVERY SPEED 15.0
+WEAPON RECOVERY DAMPING 0.73
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 7.2
+EMPTY RELOAD TIME 7.3
+EQUIP SPEED 10.0
+AJM MODEL SPEED 10%
+AJM MAGNIFKCATION SPEED 8%
+CROSSHAIR SIZE NM
+CROSSHAIR SPREAD RATE 300%)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE moles
+MISC
+
+WEAPON walkspeed 11.50
+aiming walkspeed 4.8
+ammo type 7.62x51mm NATO
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:10:19:806
+Time elapsed: 22283
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\HK21E2.png

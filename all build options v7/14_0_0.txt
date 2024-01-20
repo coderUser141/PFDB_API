@@ -1,0 +1,37 @@
+VERSION:1.02
+Started at 12:18:14:134
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\T-13-IMPACT.png
+..\..\..\..\ImageParser\
+k
+False
+T-13-IMPACT.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 80
+T-13 IMPACT
+KILLS 4
+BLAST RADIUS 2
+KILLING RADIUS 24
+MAXIMUM DAMAGE 90
+Qf)
+
+
+===== General =====
+<class 'numpy.ndarray'>
+MAXIMUM DAMAGE DU
+90
+18
+0 100 200
+TRIGGER MECHANISMPACT DETONATION
+SPECIAL EFFECTS IMPACT
+STORED CAPACITY 3
+
+
+
+Finished at 12:18:29:152
+Time elapsed: 22151
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\T-13-IMPACT.png

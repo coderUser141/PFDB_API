@@ -1,0 +1,95 @@
+VERSION:1.02
+Started at 12:21:57:783
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\AWS1.png
+..\..\..\..\ImageParser\
+True
+k
+AWS1.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 41
+
+AWS
+KILLS 3083
+OPTICS PMI
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS PM II
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 80 -> 70
+FIRERATE 69
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY =
+
+HIP ACCURACY �
+
+SIGHT ACCURACY a
+
+AMMO CAPACITY 10/60
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.005
+HEAD MULTIPLIER 3.00
+TORSO MULTIPLIER 1.25
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 50.00 studs -> 115.00 studs
+MUZZLE VELOCITY 2500.00 studs/'s
+PENETRATION DEPTH 2.00 studs
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (3.30, -0.60, -0.30)
+MAX CAMERA KICK (3.80, -0.10, 0.30)
+MIN RECOIL DISPLACEMENT (0.10, 0.40, 2.70)
+MAX RECOIL DISPLACEMENT (0.40, 1.00, 3.10)
+MIN RECOIL ROTATION (1.20, -1.00, -0.30)
+MAX RECOIL ROTATION (2.10, 0.20, 0.30)
+HIPFIRE SPREAD FACTOR 0.10
+HIPFIRE RECOVERY SPEED 5.00
+HIPFIRE SPREAD DAMPING 0.70
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (1.10, -0.80, -0.50)
+MAX CAMERA KICK (1.70, 0.40, -1.00)
+MIN RECOIL DISPLACEMENT (-0.10, 0.60, 4.20)
+MAX RECOIL DISPLACEMENT (0.10, 1.00, 4.80)
+MIN RECOIL ROTATION (0.20, 0.08, -0.30)
+MAX RECOIL ROTATION (1.00, 0.20, 0.30)
+CWDUT Maa naecin arin nan
+
+
+
+Finished at 12:22:04:087
+Time elapsed: 27691
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\AWS1.png

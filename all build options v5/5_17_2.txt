@@ -1,0 +1,93 @@
+VERSION:1.00
+Started at 22:31:02:622
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\JURY2.png
+..\..\..\..\ImageParser\
+True
+k
+JURY2.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 114
+
+JURY
+KILLS 1260
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 80 -> 50
+FIRERATE 300
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY �
+
+ammo CAPACITY 5/75
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |1.70,0.50,250|
+MAX RECOIL ROTATION |1.10, 0.50, -2.20|
+SIGHT MAGNIFICATION <0
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 18.00
+AIM CAMERA RECOWERY SPEED 12.00
+WEAPON RECOVERY SPEED 15.00
+WEAPON RECOVERY DAMPING 0%
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 3 seconds
+EMPTY RELOAD TIME 2.9
+EQUIP SPEED 110
+AJM MODEL SPEED 14.0
+AJM MAGNIFKCATION SPEED 180
+CROSSHAIR SIZE 650
+CROSSHAIR SPREAD RATE and
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15%
+MISC
+
+WEAPON walkspeed 14.00
+aiming walkspeed 8.4
+ammo type .45 Long Colt
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:31:02:664
+Time elapsed: 12667
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\JURY2.png

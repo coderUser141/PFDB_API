@@ -1,0 +1,106 @@
+VERSION:1.01
+Started at 19:22:52:425
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\STONER-961.png
+..\..\..\..\ImageParser\
+True
+k
+STONER-961.png
+1.01
+
+Finished at 19:23:06:593
+Time elapsed: 14168
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons101\STONER-961.pngVERSION:1.01
+Started at 19:24:25:847
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons101\STONER-961.png
+..\..\..\..\ImageParser\
+True
+k
+STONER-961.png
+1.01
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 196
+STONER 96
+KILLS 62
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 30 -> 25
+FIRERATE 550
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 x0
+ACCURACY ù
+
+HIP ACCURACY ù
+
+SIGHT ACCURACY a
+AMMO CAPACITY 100 / 200
+FIRE MODES | AUTO | II | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL O22 s
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 80.00 studs > 150.00 studs
+MUZZLE VELOCITY 3100.00 studs
+PENETRATION DEPTH 1.80 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 10.30, 0.20, 08
+MAX CAME RA KICK IO. 70,9.0,0 8
+MIN RECOIL DISPLACEMENT IO 20,9 40, 420!
+MAX RECOIL DISPLACEMENT 19.20.9840
+MIN RECOIL ROTATION IN, OW, ON
+MAX RECOIL ROTATION I9DG.9W,00
+HIPFIRE SPREAD FACTOR 008
+HIPFIRE RECOVERY SPEED LO
+HIPFIRE SPREAD DAMPING oR 6)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 10 0,0N,05
+MAX CAMERA KICK (060,020, 0 50
+MIN RECOIL DISPLACEMENT 020,060, 320
+MAX RECOIL DISPLACEMENT (0.20, 0.50, 3.70
+MIN RECOIL ROTATION (0.60, 005, 0.301
+MAX RECOIL ROTATION 0.90, 0.05, 0.30
+
+
+
+Finished at 19:24:59:231
+Time elapsed: 33383
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons101\STONER-961.png

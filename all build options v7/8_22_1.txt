@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:53:50:689
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\M20111.png
+..\..\..\..\ImageParser\
+False
+k
+M20111.png
+1.02
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 146
+
+M2011
+KILLS 0
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 32 -> 18
+FIRERATE 600
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY �
+
+HIP ACCURACY �
+SIGHTACCURACY �
+
+AMMO CAPACITY 20/100
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.105
+HEAD MULTIPLIER 2.20
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 25.00 studs -> 105.00 studs
+MUZZLE VELOCITY 1800.00 studs/'s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (2.00, -0.60, -0.30)
+MAX CAMERA KICK (2.20, -0.10, 0.30)
+MIN RECOIL DISPLACEMENT (-0.50, 1.60, 5.20)
+MAX RECOIL DISPLACEMENT (0.80, 2.10, 7.80)
+MIN RECOIL ROTATION (3.20, 1.20, -0.30)
+MAX RECOIL ROTATION (5.30, 2.20, 0.30)
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 9.00
+HIPFIRE SPREAD DAMPING 0.70
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (1.40, -0.25, -0.45)
+MAX CAMERA KICK (1.85, 0.25, 0.45)
+MIN RECOIL DISPLACEMENT (-1.20, 3.70, 9.60)
+MAX RECOIL DISPLACEMENT (1.30, 4.05, 9.90)
+MIN RECOIL ROTATION (4.00, -0.80, 0.40)
+MAX RECOIL ROTATION (4.30, 0.70, -0.60)
+CIRLIT LAA PAMELA aTina! aan
+
+
+
+Finished at 12:53:50:712
+Time elapsed: 10519
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\M20111.png

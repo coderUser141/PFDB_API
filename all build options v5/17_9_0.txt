@@ -1,0 +1,45 @@
+VERSION:1.00
+Started at 21:55:54:778
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\TANZANITE-PICK.png
+..\..\..\..\ImageParser\
+k
+True
+TANZANITE-PICK.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 0
+TANZANITE PICK
+KILLS 0
+BLADE LENGTH 1.9
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.20
+TORSO MULTIPLIER 1.20
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 60.00
+BACK STAB DAMAGE 150.00
+MAIN ATTACK TIME 0.5 SECONDS
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.6 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.3 SECONDS
+QUICK ATTACK TIME 0.7 SECONDS
+QUICK ATTACK DELAY 0.0 SECONDS
+WALKSPEED 16.00
+~�,
+
+
+
+Finished at 21:56:01:824
+Time elapsed: 34358
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\TANZANITE-PICK.png

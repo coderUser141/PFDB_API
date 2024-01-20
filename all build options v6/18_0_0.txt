@@ -1,0 +1,45 @@
+VERSION:1.00
+Started at 21:51:39:388
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\SLEDGE-HAMMER.png
+..\..\..\..\ImageParser\
+k
+True
+SLEDGE-HAMMER.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 0
+SLEDGE HAMMER
+KILLS 72
+BLADE LENGTH 5.1
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.00
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 90.00
+BACK STAB DAMAGE 120.00
+MAIN ATTACK TIME 0.7 SECONDS
+MAIN ATTACK DELAY 0.1 SECONDS
+ALT ATTACK TIME 0.8 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.3 SECONDS
+QUICK ATTACK TIME 11 SECONDS
+QUICK ATTACK DELAY 0.0 SECONDS
+WALKSPEED 14.50
+ù,
+
+
+
+Finished at 21:51:51:262
+Time elapsed: 26973
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\SLEDGE-HAMMER.png

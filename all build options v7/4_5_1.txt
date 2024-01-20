@@ -1,0 +1,95 @@
+VERSION:1.02
+Started at 12:14:06:782
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\AG-31.png
+..\..\..\..\ImageParser\
+True
+k
+AG-31.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 76
+
+AG-3
+KILLS 1555
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 38 ->27
+FIRERATE 980
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY a
+
+HIP ACCURACY �_
+
+SIGHT ACCURACY �
+
+AMMO CAPACITY 20/120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.105
+HEAD MULTIPLIER 1.70
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 70.00 studs -> 160.00 studs
+MUZZLE VELOCITY 2500.00 studs/'s
+PENETRATION DEPTH 2.00 studs
+SUPPRESSION 0.70
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (2.60, -0.60, -0.50)
+MAX CAMERA KICK (4.30, -0.10, 0.50)
+MIN RECOIL DISPLACEMENT (-0.30, 0.20, 7.20)
+MAX RECOIL DISPLACEMENT (0.30, 0.50, 12.80)
+MIN RECOIL ROTATION (0.20, 0.50, -0.30)
+MAX RECOIL ROTATION (0.40, -0.50, 0.30)
+HIPFIRE SPREAD FACTOR 0.11
+HIPFIRE RECOVERY SPEED 9.00
+HIPFIRE SPREAD DAMPING 0.80
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (2.10, -0.40, -0.30)
+MAX CAMERA KICK (3.20, 0.40, 0.30)
+MIN RECOIL DISPLACEMENT (-0.10, 0.60, 7.20)
+MAX RECOIL DISPLACEMENT (0.10, 0.90, 8.80)
+MIN RECOIL ROTATION (0.20, -0.20, -0.50)
+MAX RECOIL ROTATION (0.50, 0.20, 0.50)
+CINLIT LAA PAMELA ATinas nan
+
+
+
+Finished at 12:14:10:889
+Time elapsed: 26056
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\AG-31.png

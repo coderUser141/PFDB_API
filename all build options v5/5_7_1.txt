@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:25:02:698
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\OTS-1261.png
+..\..\..\..\ImageParser\
+True
+k
+OTS-1261.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 48
+OTS-126
+KILLS 33
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 37 -> 20
+FIRERATE 600
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+2u
+0 150 300
+ACCURACY �
+HIP ACCURACY a
+SIGHT ACCURACY �
+AMMO CAPACITY 44 / 176
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.105
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 50.00 studs �- 135.00 studs
+MUZZLE VELOCITY 2300.0 studs,'s
+PENETRATION DEPTH 1.20
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK |1.30,-0.15,042
+MAX CAME RA KICK |1.50, 0.35, 0.44
+MIN RECOIL DISPLACEMENT IO 20,9 90, $20!
+MAX RECOIL DISPLACEMENT IOW,140,L0 XI
+MIN RECOIL ROTATION ID D,94, OI
+MAX RECOIL ROTATION 11,0 80,08)
+HIPFIRE SPREAD FACTOR 005
+HIPFIRE RECOVERY SPEED 15%
+HIPFIRE SPREAD DAMPING 0&
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (120,045, 0351
+MAX CAMERA KICK [190,045,035
+MIN RECOIL DISPLACEMENT 025,135,830
+MAX RECOIL DISPLACEMENT 10.25, 1.88, 12.701
+MIN RECOIL ROTATION 10.30,0.20,-L001
+MAX RECOIL ROTATION 11.90, 0.20, 1.00
+
+
+
+Finished at 22:25:02:709
+Time elapsed: 18461
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\OTS-1261.png

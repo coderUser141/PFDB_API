@@ -1,0 +1,92 @@
+VERSION:1.00
+Started at 22:30:24:397
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\AK1051.png
+..\..\..\..\ImageParser\
+True
+k
+AK1051.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 105
+
+AK105
+KILLS 502
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 34 -> 20
+FIRERATE 600
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+Pall
+0 150 300
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY �
+AMMO CAPACITY 30 / 120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.105
+HEAD MULTIPLIER 1.60
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.0
+DAMAGE RANGE 50.00 studs �- 130.00 studs
+MUZZLE VELOCITY 2300.0 studs,'s
+PENETRATION DEPTH 1.0 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK L300, 020
+MAX CAME RA KICK 260,90 0,020
+MIN RECOIL DISPLACEMENT IO, 9 HW, 220
+MAX RECOIL DISPLACEMENT I9DV.98, 30!
+MIN RECOIL ROTATION 920,900,051
+MAX RECOIL ROTATION I0.0,9050,0 X
+HIPFIRE SPREAD FACTOR olors
+HIPFIRE RECOVERY SPEED 16 6)
+HIPFIRE SPREAD DAMPING 070
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK IL7,0�,05
+MAX CAMERA KICK [2.400 30,0 0)
+MIN RECOIL DISPLACEMENT 0 10,020, 2.20
+MAX RECOIL DISPLACEMENT (0.10, 0.30, 2.70
+MIN RECOIL ROTATION (0.20,-0.15, 0.201
+MAX RECOIL ROTATION (0.40, 0.15,0.20
+
+
+
+Finished at 22:30:24:406
+Time elapsed: 12554
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\AK1051.png

@@ -1,0 +1,92 @@
+VERSION:1.00
+Started at 22:32:53:765
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\ALIEN1.png
+..\..\..\..\ImageParser\
+False
+k
+ALIEN1.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 179
+
+ALIEN
+KILLS 6
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 34-> 16
+FIRERATE 580
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 10 00
+ACCURACY �
+
+HIP ACCURACY ae
+
+SIGHT ACCURACY a
+
+AMMO CAPACITY 17 / 102
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.105
+HEAD MULTIPLIER 2.80
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.0
+DAMAGE RANGE 25.00 studs �> 115.00 studs
+MUZZLE VELOCITY 2000.00 studs,'s
+PENETRATION DEPTH 0.50
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 10,008,008
+MAX CAME RA KICK |1.0,010,0 Hi
+MIN RECOIL DISPLACEMENT IN ,.9W, 520
+MAX RECOIL DISPLACEMENT 10.90, 130,650!
+MIN RECOIL ROTATION |5.20,-100, 010
+MAX RECOIL ROTATION (5.30, 120,010)
+HIPFIRE SPREAD FACTOR O10
+HIPFIRE RECOVERY SPEED Es 6)
+HIPFIRE SPREAD DAMPING 045
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK IL 0,020,010)
+MAX CAMERA KICK [160,020,010
+MIN RECOIL DISPLACEMENT 0 15, 0 50, 16.20)
+MAX RECOIL DISPLACEMENT (0.15, 070, 19.90
+MIN RECOIL ROTATION (3.20, -1.50, 0.101
+MAX RECOIL ROTATION |3.60, 1.40, 0.10)
+
+
+
+Finished at 22:32:53:772
+Time elapsed: 10604
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\ALIEN1.png

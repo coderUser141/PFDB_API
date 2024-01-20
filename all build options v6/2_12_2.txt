@@ -1,0 +1,105 @@
+VERSION:1.01
+Started at 19:23:06:601
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\STONER-962.png
+..\..\..\..\ImageParser\
+True
+k
+STONER-962.png
+1.01
+
+Finished at 19:23:11:859
+Time elapsed: 5258
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons101\STONER-962.pngVERSION:1.01
+Started at 19:24:59:235
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons101\STONER-962.png
+..\..\..\..\ImageParser\
+True
+k
+STONER-962.png
+1.01
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 196
+STONER 96
+KILLS 62
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 30 -> 25
+FIRERATE 550
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 x0
+ACCURACY ù
+
+HIP ACCURACY ù
+
+SIGHT ACCURACY a
+AMMO CAPACITY 100 / 200
+FIRE MODES | AUTO | II | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.60, -0.05, -0.30|
+MAX RECOIL ROTATION 10.90, 0.05, 0.30]
+SIGHT MAGNIFICATION LX
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 10.00
+AIM CAMERA RECOWERY SPEED 14.00
+WEAPON RECOVERY SPEED LOO
+WEAPON RECOVERY DAMPING O30
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 6.5 seconds
+EMPTY RELOAD TIME 6.5 seconds
+EQUIP SPEED 10.0
+AJM MODEL SPEED 10%
+AJM MAGNIFKCATION SPEED Bates)
+CROSSHAIR SIZE ese 8)
+CROSSHAIR SPREAD RATE 4
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE moles
+MISC
+
+WEAPON WALKSPEED 12.00
+AIMING WALKSPEED 9.0
+AMMO TYPE 5.56x45mm NATO
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 19:25:22:654
+Time elapsed: 23418
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons101\STONER-962.png

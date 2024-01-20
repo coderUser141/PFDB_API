@@ -1,0 +1,45 @@
+VERSION:1.00
+Started at 22:00:37:325
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\WORLD-BUSTER.png
+..\..\..\..\ImageParser\
+k
+True
+WORLD-BUSTER.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 0
+WORLD BUSTER
+KILLS 0
+BLADE LENGTH 4.9
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.30
+TORSO MULTIPLIER 1.30
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 140.00
+BACK STAB DAMAGE 140.00
+MAIN ATTACK TIME 1.2 SECONDS
+MAIN ATTACK DELAY 0.3 SECONDS
+ALT ATTACK TIME 1.2 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.3 SECONDS
+QUICK ATTACK TIME 1.2 SECONDS
+QUICK ATTACK DELAY 0.3 SECONDS
+WALKSPEED 10.00
+�,
+
+
+
+Finished at 22:00:46:843
+Time elapsed: 26077
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\WORLD-BUSTER.png

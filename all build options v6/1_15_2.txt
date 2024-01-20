@@ -1,0 +1,90 @@
+VERSION:1.00
+Started at 22:09:26:465
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\AUG-A3-PARA-XS2.png
+..\..\..\..\ImageParser\
+True
+k
+AUG-A3-PARA-XS2.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 80
+AUG A3 PARA XS
+KILLS 527
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 34 -> 19
+FIRERATE 780
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+19
+0 100 200
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY a
+ammo CAPACITY 32 / 128
+FIRE MODES | AUTO | SEMI | III |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.20, 0.10, -0.40|
+MAX RECOIL ROTATION |0.40, 0.10, 0.40|
+SIGHT MAGNIFICATION 2X)
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 15.00
+AIM CAMERA RECOWERY SPEED <4.00
+WEAPON RECOVERY SPEED 20.0
+WEAPON RECOVERY DAMPING 0.70
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.2
+EMPTY RELOAD TIME 3.1
+EQUIP SPEED 14.0
+AJM MODEL SPEED 16.0
+AJM MAGNIFKCATION SPEED eae 6)
+CROSSHAIR SIZE NM
+CROSSHAIR SPREAD RATE 4m 0
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE melee
+MISC
+
+WEAPON walkspeed 14.50
+aiming walkspeed 10.1
+ammo type 9x19mm
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:09:26:835
+Time elapsed: 29301
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\AUG-A3-PARA-XS2.png

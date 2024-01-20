@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:09:55:712
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\SKS2.png
+..\..\..\..\ImageParser\
+True
+k
+SKS2.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 13
+SKS
+KILLS 531
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 40 ->29
+FIRERATE 433
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY a
+
+HIP ACCURACY �
+
+SIGHT ACCURACY �
+
+AMMO CAPACITY 20/80
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (0.40, -0.40, -0.40)
+MAX RECOIL ROTATION (0.70, 0.40, 0.10)
+SIGHT MAGNIFICATION 3.50
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED _��-'15.00
+AIM CAMERA RECOVERY SPEED 22.00
+WEAPON RECOVERY SPEED 23.00
+WEAPON RECOVERY DAMPING 0.85
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.3 seconds
+EMPTY RELOAD TIME 3 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 18.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 900.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 18.00
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+AMMO TYPE 7.62x39mm
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:10:05:659
+Time elapsed: 31313
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\SKS2.png

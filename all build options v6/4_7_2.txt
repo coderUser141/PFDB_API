@@ -1,0 +1,94 @@
+VERSION:1.00
+Started at 22:01:03:413
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\HENRY-45-702.png
+..\..\..\..\ImageParser\
+True
+k
+HENRY-45-702.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 96
+HENRY .45-70
+KILLS 121
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 65 -> 45
+FIRERATE 100
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY -
+
+ammo CAPACITY 5/50
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |220, -0.50, -0.50|
+MAX RECOIL ROTATION |3.40, -0.20,-0.50|
+SIGHT MAGNIFICATION 2X)
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 10.00
+AIM CAMERA RECOWERY SPEED 10.00
+WEAPON RECOVERY SPEED 3.0
+WEAPON RECOVERY DAMPING LO
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 3.5 seconds
+EMPTY RELOAD TIME 4 seconds
+EQUIP SPEED 12%
+AJM MODEL SPEED 15%
+AJM MAGNIFKCATION SPEED 10%
+CROSSHAIR SIZE a the8)
+CROSSHAIR SPREAD RATE SOO
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 10%
+MISC
+
+WEAPON walkspeed 14.00
+aiming walkspeed 8.4
+ammo type .45-70
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE Unsuppressed
+
+~~
+
+
+
+Finished at 22:01:15:325
+Time elapsed: 34473
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\HENRY-45-702.png

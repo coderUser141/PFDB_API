@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:22:56:656
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\SCAR-PDW1.png
+..\..\..\..\ImageParser\
+True
+k
+SCAR-PDW1.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 32
+SCAR PDW
+KILLS 214
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 33 -> 19
+FIRERATE 650
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+bes)
+0 150 300
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY �
+AMMO CAPACITY 30 / 120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.18 5
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.0
+DAMAGE RANGE 60.00 studs �> 130.00 studs
+MUZZLE VELOCITY 2200.00 studs,'s
+PENETRATION DEPTH 0.90 studs
+SUPPRESSION 0.85
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK [1.0,00,0H
+MAX CAME RA KICK ILM9M,0 RI
+MIN RECOIL DISPLACEMENT IO, 9,020
+MAX RECOIL DISPLACEMENT IO.90,110,10 8
+MIN RECOIL ROTATION INDIR, OH
+MAX RECOIL ROTATION ILD, 00,08
+HIPFIRE SPREAD FACTOR 008
+HIPFIRE RECOVERY SPEED ras �
+HIPFIRE SPREAD DAMPING OX
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK IL 0,040,050)
+MAX CAMERA KICK [160,040,050
+MIN RECOIL DISPLACEMENT 0 10,0 60, 8.20)
+MAX RECOIL DISPLACEMENT }0.10, 1.00, 10.501
+MIN RECOIL ROTATION 100,020,050
+MAX RECOIL ROTATION 11.20,0.20, 0.30
+
+
+
+Finished at 22:22:59:977
+Time elapsed: 22507
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\SCAR-PDW1.png

@@ -1,0 +1,45 @@
+VERSION:1.00
+Started at 21:55:29:762
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\BARE-FISTS.png
+..\..\..\..\ImageParser\
+k
+True
+BARE-FISTS.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 0
+BARE FISTS
+KILLS 0
+BLADE LENGTH 0.6
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.00
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 30.00
+BACK STAB DAMAGE 60.00
+MAIN ATTACK TIME 0.3 SECONDS
+MAIN ATTACK DELAY 0.0 SECONDS
+ALT ATTACK TIME 0.3 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.0 SECONDS
+QUICK ATTACK TIME 0.4 SECONDS
+QUICK ATTACK DELAY 0.0 SECONDS
+WALKSPEED 17.50
+�,
+
+
+
+Finished at 21:55:44:031
+Time elapsed: 24937
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\BARE-FISTS.png

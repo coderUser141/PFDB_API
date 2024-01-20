@@ -1,0 +1,93 @@
+VERSION:1.02
+Started at 12:46:39:972
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\AK12C1.png
+..\..\..\..\ImageParser\
+True
+k
+AK12C1.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 51
+
+AK12C
+KILLS 16
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 36 ->21
+FIRERATE 700 A| 1000 B| 70058
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+zt
+0 100 7400)
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY �
+AMMO CAPACITY 30/120
+FIRE MODES | AUTO | Ill | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.095
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 55.00 studs -> 100.00 studs
+MUZZLE VELOCITY 2000.00 studs/'s
+PENETRATION DEPTH 1.20 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (1.00, -0.60, -0.30)
+MAX CAMERA KICK (1.20, -0.10, 0.30)
+MIN RECOIL DISPLACEMENT (-0.50, 0.60, 8.20)
+MAX RECOIL DISPLACEMENT (0.80, 1.10, 9.80)
+MIN RECOIL ROTATION (0.20, 0.40, -0.50)
+MAX RECOIL ROTATION (1.90, 2.60, 0.50)
+HIPFIRE SPREAD FACTOR 0.10
+HIPFIRE RECOVERY SPEED 7,00
+HIPFIRE SPREAD DAMPING 0.75
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (1.20, -0.60, -0.50)
+MAX CAMERA KICK (2.00, 0.70, 0.50)
+MIN RECOIL DISPLACEMENT (-0.10, 0.50, 4.20)
+MAX RECOIL DISPLACEMENT (0.10, 1.20, 5.80)
+MIN RECOIL ROTATION (0.60, 0.10, -0.30)
+MAX RECOIL ROTATION (0.90, -0.20, 0.30)
+CMe LIT AAAPANEIL ATIAAI 1 OA
+
+
+
+Finished at 12:46:40:036
+Time elapsed: 16833
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\AK12C1.png

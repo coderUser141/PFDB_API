@@ -1,0 +1,44 @@
+VERSION:1.02
+Started at 12:16:34:161
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\FRYING-PAN.png
+..\..\..\..\ImageParser\
+k
+True
+FRYING-PAN.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 139
+FRYING PAN
+KILLS 74)
+BLADE LENGTH 26
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.00
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 65.00
+BACK STAB DAMAGE 130.00
+MAIN ATTACK TIME 0.6 SECONDS
+MAIN ATTACK DELAY 0.3 SECONDS
+ALT ATTACK TIME 0.6 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.3 SECONDS
+QUICK ATTACK TIME 0.7 SECONDS
+QUICK ATTACK DELAY 0.1 SECONDS
+WALKSPEED 16.00
+
+
+
+Finished at 12:16:34:188
+Time elapsed: 14830
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\FRYING-PAN.png

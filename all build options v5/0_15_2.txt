@@ -1,0 +1,93 @@
+VERSION:1.00
+Started at 22:10:04:950
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\L85A22.png
+..\..\..\..\ImageParser\
+True
+k
+L85A22.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 55
+
+L85A2
+KILLS 766
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 28 -> 24
+FIRERATE 700
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY �
+
+ammo CAPACITY 30 / 120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |(0.10, 0.10, -0.50|
+MAX RECOIL ROTATION |0.40, 0.10, 0.50|
+SIGHT MAGNIFICATION <0
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 17.0
+AIM CAMERA RECOWERY SPEED 20.0
+WEAPON RECOVERY SPEED 16.00
+WEAPON RECOVERY DAMPING O30
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.4
+EMPTY RELOAD TIME 3.6
+EQUIP SPEED Low
+AJM MODEL SPEED 15�
+A)M MAGNIF KCATION SPEED Low
+CROSSHAIR SIZE NM
+CROSSHAIR SPREAD RATE 4m 0
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE moles
+MISC
+
+WEAPON walkspeed 14.00
+aiming walkspeed 8.4
+ammo type 5.56x45mm NATO
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:10:12:075
+Time elapsed: 28228
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\L85A22.png

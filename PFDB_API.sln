@@ -16,6 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{091662A9-DEA1-43A5-A3B7-AFEE38FE4AD9}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		architecture.txt = architecture.txt
 		attachments.db = attachments.db
 	EndProjectSection
 EndProject

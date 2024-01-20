@@ -1,0 +1,90 @@
+VERSION:1.02
+Started at 12:45:57:371
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\SAIGA-12U2.png
+..\..\..\..\ImageParser\
+False
+k
+SAIGA-12U2.png
+1.02
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 95
+SAIGA-12U
+KILLS 1738
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 27x8 -> 11%8
+FIRERATE 390
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �_
+
+HIP ACCURACY �
+
+SIGHT ACCURACY
+
+AMMO CAPACITY 2/20
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (1.20, 0.08, -0.30)
+MAX RECOIL ROTATION (1.60, 0.20, 0.30)
+SIGHT MAGNIFICATION 2.50
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED ��-'11.00
+AIM CAMERA RECOVERY SPEED 11.00
+WEAPON RECOVERY SPEED 16.00
+WEAPON RECOVERY DAMPING 0.90
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2 seconds
+EMPTY RELOAD TIME 2.8 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 10.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIRA RECOVER RATE 15.00
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+AMMO TYPE 12 gauge
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:45:57:605
+Time elapsed: 23900
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\SAIGA-12U2.png

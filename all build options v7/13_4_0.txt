@@ -1,0 +1,37 @@
+VERSION:1.02
+Started at 12:49:10:976
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\PB-GRENADE.png
+..\..\..\..\ImageParser\
+k
+False
+PB-GRENADE.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 135
+PB GRENADE
+KILLS 2
+BLAST RADIUS 42
+KILLING RADIUS 24
+MAXIMUM DAMAGE 250
+i
+
+
+===== General =====
+<class 'numpy.ndarray'>
+MAXIMUM DAMAGE 3D
+350
+50
+0 100 200
+TRIGGER MECHANISMFUSE - 7 SECONDS
+SPECIAL EFFECTS HIGH EXPLOSIVE
+STORED CAPACITY L
+
+
+
+Finished at 12:49:11:025
+Time elapsed: 10032
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\PB-GRENADE.png

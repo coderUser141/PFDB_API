@@ -1,0 +1,36 @@
+VERSION:1.00
+Started at 22:29:29:887
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\BUNDLE-CHARGE.png
+..\..\..\..\ImageParser\
+k
+False
+BUNDLE-CHARGE.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 168
+BUNDLE CHARGE
+KILLS 61
+BLAST RADIUS 50
+KILLING RADIUS 27
+MAXIMUM DAMAGE 1050
+
+
+===== General =====
+<class 'numpy.ndarray'>
+MAXIMUM DAMAGE 1050
+150
+20
+0 100 200
+TRIGGER MECHANISM FUSE - 4.5 SECONDS
+SPECIAL EFFECTS HIGH EXPLOSIVE
+STORED CAPACITY 1
+
+
+
+Finished at 22:29:37:027
+Time elapsed: 11654
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\BUNDLE-CHARGE.png

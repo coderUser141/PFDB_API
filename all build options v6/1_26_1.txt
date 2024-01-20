@@ -1,0 +1,92 @@
+VERSION:1.01
+Started at 19:26:25:757
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons101\BWC9-A1.png
+..\..\..\..\ImageParser\
+True
+k
+BWC9-A1.png
+1.01
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 149
+
+BWCS A
+KILLS 0
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 34 -> 18
+FIRERATE 1000
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+18
+0 100 200
+ACCURACY ù
+HIP ACCURACY a
+SIGHT ACCURACY oe
+AMMO CAPACITY 21/105
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL O.l2s
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.0
+DAMAGE RANGE 25.00 studs ù 75.00 studs
+MUZZLE VELOCITY 2000.00 studs,'s
+PENETRATION DEPTH 0.70 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK [120,080,042
+MAX CAME RA KICK 11.60,90 40,044
+MIN RECOIL DISPLACEMENT |O.30, 1.20, 520)
+MAX RECOIL DISPLACEMENT 10.30,1-70,6.0
+MIN RECOIL ROTATION IL, 013,00)
+MAX RECOIL ROTATION [1.75,9013,0%
+HIPFIRE SPREAD FACTOR 009
+HIPFIRE RECOVERY SPEED 16%
+HIPFIRE SPREAD DAMPING 070
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (015..08, 042)
+MAX CAMERA KICK 1075.0 30,042)
+MIN RECOIL DISPLACEMENT |-0 06, 1.00, 11.50)
+MAX RECOIL DISPLACEMENT 10.08, 1.20, 14 101
+MIN RECOIL ROTATION (1.20, -0.30,-1.00)
+MAX RECOIL ROTATION 11.50,0.50, 1.00
+
+
+
+Finished at 19:26:56:288
+Time elapsed: 30530
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons101\BWC9-A1.png

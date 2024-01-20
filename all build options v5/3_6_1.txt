@@ -1,0 +1,93 @@
+VERSION:1.00
+Started at 22:10:20:681
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\TRG-421.png
+..\..\..\..\ImageParser\
+True
+k
+TRG-421.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 84
+TRG-42
+KILLS 0
+OPTICS SIDEWINDER ED
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS SIDEWINDER ED
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 100 -> 65
+FIRERATE 40
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY EE
+
+HIP ACCURACY a
+
+SIGHT ACCURACY =
+
+AMMO CAPACITY 5/45
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 00s
+HEAD MULTIPLIER 3.00
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 60.00 studs �> 160.00 studs
+MUZZLE VELOCITY 3000.00 studs,'s
+PENETRATION DEPTH 3.00 studs
+SUPPRESSION 5.00
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 3.0, -18,0R
+MAX CAME RA KICK I3.90,-110,0 8
+MIN RECOIL DISPLACEMENT I9.10,040,3.70|
+MAX RECOIL DISPLACEMENT 040,100, 11.10)
+MIN RECOIL ROTATION [2.10,-10,0 8
+MAX RECOIL ROTATION I3H,90.0,0 RI
+HIPFIRE SPREAD FACTOR opus)
+HIPFIRE RECOVERY SPEED oe 6)
+HIPFIRE SPREAD DAMPING 07%
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 20,0 0,0 5)
+MAX CAMERA KICK [2.90 -L 10, -L001
+MIN RECOIL DISPLACEMENT IO 10,060, 13.20
+MAX RECOIL DISPLACEMENT 10.10, 1.00, 14.901
+MIN RECOIL ROTATION 0.20,0.08, 0.30)
+MAX RECOIL ROTATION 11.00, 0.20, 0.30
+
+
+
+Finished at 22:10:25:331
+Time elapsed: 22234
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\TRG-421.png

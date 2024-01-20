@@ -1,0 +1,94 @@
+VERSION:1.02
+Started at 12:30:48:920
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\MG421.png
+..\..\..\..\ImageParser\
+True
+k
+MG421.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 242
+
+MG42
+KILLS 5
+OPTICS ANTI-AIRCRAFT IRONS
+BARREL DEFAULT
+UNDERBARREL FLASHLIGHT
+OTHER FLASHLIGHT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS ANTI-AIRCRAFT IRONS
+BARREL DEFAULT
+UNDERBARREL FLASHLIGHT
+OTHER FLASHLIGHT
+AMMO DEFAULT
+DAMAGE 41 ->25
+FIRERATE 1200
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY Ee
+HIP ACCURACY -
+
+SIGHT ACCURACY _
+
+AMMO CAPACITY 90 / 250
+FIRE MODES | AUTO |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.055
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 20.00 studs -> 120.00 studs
+MUZZLE VELOCITY 2400.00 studs/'s
+PENETRATION DEPTH 2.50 studs
+SUPPRESSION 1.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (-0.50, 0.50, -0.70)
+MAX CAMERA KICK (1.20, -0.60, 0.70)
+MIN RECOIL DISPLACEMENT (-0.30, 0.10, 1.20)
+MAX RECOIL DISPLACEMENT (0.30, 0.30, 2.80)
+MIN RECOIL ROTATION (0.40, -0.70, -0.50)
+MAX RECOIL ROTATION (1.00, 0.60, 0.40)
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 6.00
+HIPFIRE SPREAD DAMPING 0.75
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (-0.20, -0.50, 0.70)
+MAX CAMERA KICK (0.70, 0.50, -0.70)
+MIN RECOIL DISPLACEMENT (0.50, -0.10, 3.20)
+MAX RECOIL DISPLACEMENT (-0.50, 0.15, 3.80)
+MIN RECOIL ROTATION �_ (0.40, -0.80, -0.50)
+MAX RECOIL ROTATION (0.70, 0.80, 0.50)
+CWO Maa naecin arin nen
+
+
+
+Finished at 12:30:53:720
+Time elapsed: 22793
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\MG421.png

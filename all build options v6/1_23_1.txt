@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:16:12:701
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\X95-SMG1.png
+..\..\..\..\ImageParser\
+True
+k
+X95-SMG1.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 115
+X95 SMG
+KILLS 5
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER FLASHLIGHT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER FLASHLIGHT
+AMMO DEFAULT
+DAMAGE 32 -> 19
+FIRERATE 750
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+bes)
+0 1.50 300
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY �
+AMMO CAPACITY 32 / 160
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.165
+HEAD MULTIPLIER 1.50
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.0
+DAMAGE RANGE 45.00 studs � 130.00 studs
+MUZZLE VELOCITY 2000.00 studs,'s
+PENETRATION DEPTH 0.70 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK [120,050,020
+MAX CAME RA KICK 1160.9 0,020!
+MIN RECOIL DISPLACEMENT IO W970
+MAX RECOIL DISPLACEMENT I0.90,110, 3.50
+MIN RECOIL ROTATION IY20,.9 0,00
+MAX RECOIL ROTATION 1140,065,0 KX
+HIPFIRE SPREAD FACTOR 008
+HIPFIRE RECOVERY SPEED ce 6)
+HIPFIRE SPREAD DAMPING O75
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK IL*,00,05)
+MAX CAMERA KICK [2.20.0 0,0 30
+MIN RECOIL DISPLACEMENT I-0 14,045,920
+MAX RECOIL DISPLACEMENT 10. 14,060, 10.901
+MIN RECOIL ROTATION 0.30, 0.30, 0.50)
+MAX RECOIL ROTATION 10.50, 0.30,0.50)
+
+
+
+Finished at 22:16:17:931
+Time elapsed: 25186
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\X95-SMG1.png

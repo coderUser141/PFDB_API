@@ -1,0 +1,90 @@
+VERSION:1.00
+Started at 22:30:54:049
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\DESERT-EAGLE-XIX2.png
+..\..\..\..\ImageParser\
+False
+k
+DESERT-EAGLE-XIX2.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 102
+DESERT EAGLE XIX
+KILLS 60
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 72 -> 33
+FIRERATE 200
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY a
+
+HIP ACCURACY �
+
+SIGHT ACCURACY �
+
+ammo CAPACITY 7 / 21
+FIRE MODES | SEMI
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION | 12.00, -1.50, -6.50|
+MAX RECOIL ROTATION |11.00, -2.30, -? X)|
+SIGHT MAGNIFICATION LX
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 10.00
+AIM CAMERA RECOWERY SPEED 110
+WEAPON RECOVERY SPEED LOO
+WEAPON RECOVERY DAMPING 0%
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.4
+EMPTY RELOAD TIME 2.7
+EQUIP SPEED LL�
+AJM MODEL SPEED 13%
+A)M MAGNIF KCATION SPEED Low
+CROSSHAIR SIZE wi
+CROSSHAIR SPREAD RATE L000
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15%
+MISC
+
+WEAPON walkspeed 14.00
+aiming walkspeed 7.0
+ammo type .50 Action Express
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:30:54:076
+Time elapsed: 12861
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\DESERT-EAGLE-XIX2.png

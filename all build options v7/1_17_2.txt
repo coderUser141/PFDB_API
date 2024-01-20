@@ -1,0 +1,90 @@
+VERSION:1.02
+Started at 12:24:40:192
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\AKS74U2.png
+..\..\..\..\ImageParser\
+True
+k
+AKS74U2.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 88
+AKS/4U
+KILLS 3
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 37->18
+FIRERATE 735
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+a
+0 150 300
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY �
+AMMO CAPACITY 30/120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (0.30, -0.30, -0.20)
+MAX RECOIL ROTATION (1.00, 0.30, 0.20)
+SIGHT MAGNIFICATION 2.20
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED _��-19.00
+AIM CAMERA RECOVERY SPEED 17.00
+WEAPON RECOVERY SPEED 19.00
+WEAPON RECOVERY DAMPING 0.70
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.1 seconds
+EMPTY RELOAD TIME 2.7 seconds
+EQUIP SPEED 16.00
+AIM MODEL SPEED 20.00
+AIM MAGNIFICATION SPEED 14.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 20.00
+MISC
+
+WEAPON WALKSPEED 14.50
+AIMING WALKSPEED 8.7
+AMMO TYPE 5.45x39mm
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:24:46:786
+Time elapsed: 30558
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\AKS74U2.png

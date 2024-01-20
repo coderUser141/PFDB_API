@@ -1,0 +1,90 @@
+VERSION:1.00
+Started at 22:25:21:165
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\OTS-1262.png
+..\..\..\..\ImageParser\
+True
+k
+OTS-1262.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 48
+OTS-126
+KILLS 33
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 37 -> 20
+FIRERATE 600
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+2u
+0 150 300
+ACCURACY �
+HIP ACCURACY a
+SIGHT ACCURACY �
+ammo CAPACITY 44 / 176
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.30, 0.20, -1.00|
+MAX RECOIL ROTATION |1.90, 0.20, 1.00]
+SIGHT MAGNIFICATION 2X)
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 20.0
+AIM CAMERA RECOWERY SPEED 18.00
+WEAPON RECOVERY SPEED 23.0
+WEAPON RECOVERY DAMPING Q35
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.5
+EMPTY RELOAD TIME 3.2
+EQUIP SPEED 16%
+AJM MODEL SPEED 160
+AJM MAGNIFKCATION SPEED 15%
+CROSSHAIR SIZE WO
+CROSSHAIR SPREAD RATE 300%)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE melee
+MISC
+
+WEAPON walkspeed 14.00
+aiming walkspeed 9.8
+ammo type 9x19mm
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:25:21:216
+Time elapsed: 17321
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\OTS-1262.png

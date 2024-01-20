@@ -1,0 +1,94 @@
+VERSION:1.00
+Started at 22:00:26:670
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\HENRY-45-701.png
+..\..\..\..\ImageParser\
+True
+k
+HENRY-45-701.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 96
+HENRY 45-70
+KILLS 121
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 65 -> 45
+FIRERATE 100
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY -
+
+AMMO CAPACITY 5/50
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 00s
+HEAD MULTIPLIER 2.40
+TORSO MULTIPLIER 1.55
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 80.00 studs -> 120.00 studs
+MUZZLE VELOCITY 1800.00 studs,'s
+PENETRATION DEPTH 2.00
+SUPPRESSION 2.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 5.00, -18,0 RH
+MAX CAME RA KICK |5.20,-1.10,0 0!
+MIN RECOIL DISPLACEMENT I0.10,0.90, LU!
+MAX RECOIL DISPLACEMENT 040,110, L050!
+MIN RECOIL ROTATION (6.20, -10,0 HI
+MAX RECOIL ROTATION 17 10,90.0,0 0!
+HIPFIRE SPREAD FACTOR olors
+HIPFIRE RECOVERY SPEED oe 6)
+HIPFIRE SPREAD DAMPING oR 6)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 40,0000
+MAX CAMERA KICK 1470, 090,00)
+MIN RECOIL DISPLACEMENT 0 10,070, 720
+MAX RECOIL DISPLACEMENT (0.10, 1.60, 7.50
+MIN RECOIL ROTATION 2.20, 0.50, 0.50)
+MAX RECOIL ROTATION [340,020,0.00)
+ETO rare a aan
+
+
+
+Finished at 22:00:34:989
+Time elapsed: 36731
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\HENRY-45-701.png

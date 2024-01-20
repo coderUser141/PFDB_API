@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:11:55:851
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\PPSH-411.png
+..\..\..\..\ImageParser\
+True
+k
+PPSH-411.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 92
+PPSH-41
+KILLS 77
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 25 -> 19
+FIRERATE 1000
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+aw 15
+0 150 300
+ACCURACY �
+HIP ACCURACY a
+SIGHT ACCURACY �
+AMMO CAPACITY 71/213
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL O.l2s
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 60.00 studs �> 102.00 studs
+MUZZLE VELOCITY 2000.00 studs,'s
+PENETRATION DEPTH 1.0 studs
+SUPPRESSION 0.69
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK [L008 0H
+MAX CAME RA KICK 140,010,081
+MIN RECOIL DISPLACEMENT IO ,9 70, 820
+MAX RECOIL DISPLACEMENT 10.50, 1.00, 9.50
+MIN RECOIL ROTATION -LOOW, OR
+MAX RECOIL ROTATION IL3,1.0,0 81
+HIPFIRE SPREAD FACTOR 005
+HIPFIRE RECOVERY SPEED 130
+HIPFIRE SPREAD DAMPING O78
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 10 50,055,070)
+MAX CAMERA KICK [1 70,0 55,0 70
+MIN RECOIL DISPLACEMENT 0 30,0 0, 720
+MAX RECOIL DISPLACEMENT 0.30,0.52, 7.90
+MIN RECOIL ROTATION (040,020,090
+MAX RECOIL ROTATION 0.61, -0.15,0.30
+
+
+
+Finished at 22:11:57:215
+Time elapsed: 25046
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\PPSH-411.png

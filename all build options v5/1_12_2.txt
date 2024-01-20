@@ -1,0 +1,93 @@
+VERSION:1.00
+Started at 22:06:33:608
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\M3A12.png
+..\..\..\..\ImageParser\
+True
+k
+M3A12.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 71
+
+M3A1
+KILLS 83
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 48 -> 25
+FIRERATE 450
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 x0
+ACCURACY �
+
+HIP ACCURACY a
+
+SIGHT ACCURACY �
+
+ammo CAPACITY 30 / 120
+FIRE MODES | AUTO |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.20, 0.20, -0.50|
+MAX RECOIL ROTATION 10.50, 0.20, 0.50|
+SIGHT MAGNIFICATION LO
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 19.00
+AIM CAMERA RECOWERY SPEED 15.00
+WEAPON RECOVERY SPEED 19.0
+WEAPON RECOVERY DAMPING O30
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.4
+EMPTY RELOAD TIME 3.1
+EQUIP SPEED Beye �)
+AJM MODEL SPEED 15M
+A)M MAGNIF KCATION SPEED Low
+CROSSHAIR SIZE WO
+CROSSHAIR SPREAD RATE 3750
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 18 �
+MISC
+
+WEAPON walkspeed 14.00
+aiming walkspeed 10.5
+ammo type .45 ACP
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:06:43:074
+Time elapsed: 25935
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\M3A12.png

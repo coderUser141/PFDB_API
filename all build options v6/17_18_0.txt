@@ -1,0 +1,46 @@
+VERSION:1.00
+Started at 22:00:24:275
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\FIXER.png
+..\..\..\..\ImageParser\
+k
+True
+FIXER.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 81
+
+FIXER
+KILLS 0
+BLADE LENGTH 2.3
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.12
+TORSO MULTIPLIER 1.12
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 65.00
+BACK STAB DAMAGE 130.00
+MAIN ATTACK TIME 0.5 SECONDS
+MAIN ATTACK DELAY 0.1 SECONDS
+ALT ATTACK TIME 0.6 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.1 SECONDS
+QUICK ATTACK TIME 0.6 SECONDS
+QUICK ATTACK DELAY 0.1 SECONDS
+WALKSPEED 16.00
+~~,
+
+
+
+Finished at 22:00:34:949
+Time elapsed: 32048
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\FIXER.png

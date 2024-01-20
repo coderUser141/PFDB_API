@@ -1,0 +1,90 @@
+VERSION:1.00
+Started at 22:26:06:585
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\KG-992.png
+..\..\..\..\ImageParser\
+False
+k
+KG-992.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 50
+
+KG-99
+KILLS 0
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 34 -> 20
+FIRERATE 850
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �
+
+HIP ACCURACY a
+SIGHT ACCURACY a
+
+ammo CAPACITY 20 / 100
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.40, 0.10, -0.50|
+MAX RECOIL ROTATION (1.40, 020,0.50|
+SIGHT MAGNIFICATION LO
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 15.00
+AIM CAMERA RECOWERY SPEED 20.00
+WEAPON RECOVERY SPEED paras @
+WEAPON RECOVERY DAMPING 0.70
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.1
+EMPTY RELOAD TIME 2.5
+EQUIP SPEED 16%
+AJM MODEL SPEED melee
+AJM MAGNIFKCATION SPEED 180
+CROSSHAIR SIZE a the8)
+CROSSHAIR SPREAD RATE 4m �
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 150%
+MISC
+
+WEAPON walkspeed 15.50
+aiming walkspeed 7.8
+ammo type 9x19mm
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:26:07:605
+Time elapsed: 16460
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\KG-992.png

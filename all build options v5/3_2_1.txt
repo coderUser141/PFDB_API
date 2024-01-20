@@ -1,0 +1,93 @@
+VERSION:1.00
+Started at 22:06:47:843
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\DRAGUNOV-SVU1.png
+..\..\..\..\ImageParser\
+True
+k
+DRAGUNOV-SVU1.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 38
+DRAGUNOV SVU
+KILLS 27
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 60 -> 50
+FIRERATE 150
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY ae
+
+HIP ACCURACY -_
+
+SIGHT ACCURACY a
+
+AMMO CAPACITY 10 / 60
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 00s
+HEAD MULTIPLIER 1.90
+TORSO MULTIPLIER 1.40
+LIMB MULTIPLIER 1.0
+DAMAGE RANGE 120.00 studs � 200.00 studs
+MUZZLE VELOCITY 2800.00 studs,'s
+PENETRATION DEPTH 2.80
+SUPPRESSION 3.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK IS.D,98, OR
+MAX CAME RA KICK 17 H,-110,0 Hi
+MIN RECOIL DISPLACEMENT 10.10,040, 6.70
+MAX RECOIL DISPLACEMENT 040,100,810
+MIN RECOIL ROTATION IOW.-1LO, OR
+MAX RECOIL ROTATION 1L.10,0.0,0 HX
+HIPFIRE SPREAD FACTOR opus)
+HIPFIRE RECOVERY SPEED ras �
+HIPFIRE SPREAD DAMPING 070
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK I210,08,0 5)
+MAX CAMERA KICK [2.00.0 0,100
+MIN RECOIL DISPLACEMENT IO 10,0 60, 6 70
+MAX RECOIL DISPLACEMENT }0.10, 1.00, 7. 50)
+MIN RECOIL ROTATION 0. 50,008, 0.30)
+MAX RECOIL ROTATION 0,90, 0.20, 0.30
+
+
+
+Finished at 22:06:59:573
+Time elapsed: 30452
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\DRAGUNOV-SVU1.png

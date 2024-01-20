@@ -1,0 +1,36 @@
+VERSION:1.00
+Started at 22:28:53:407
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\DYNAMITE.png
+..\..\..\..\ImageParser\
+k
+False
+DYNAMITE.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 0
+DYNAMITE
+KILLS 81
+BLAST RADIUS 33
+KILLING RADIUS 24
+MAXIMUM DAMAGE 300
+
+
+===== General =====
+<class 'numpy.ndarray'>
+MAXIMUM DAMAGE 300
+300
+15
+0 100 200
+TRIGGER MECHANISM FUSE - 5 SECONDS
+SPECIAL EFFECTS HIGH EXPLOSIVE
+STORED CAPACITY 2
+
+
+
+Finished at 22:28:59:023
+Time elapsed: 9489
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\DYNAMITE.png

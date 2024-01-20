@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:03:23:638
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\COLT-LMG1.png
+..\..\..\..\ImageParser\
+True
+k
+COLT-LMG1.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 0
+COLT LMG
+KILLS 327
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 35 -> 21
+FIRERATE 700
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ad
+0 150 300
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY �
+AMMO CAPACITY 60 / 180
+FIRE MODES | AUTO |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL O17 s�
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 60.00 studs �- 160.00 studs
+MUZZLE VELOCITY 2500.00 studs,'s
+PENETRATION DEPTH 1.40
+SUPPRESSION 1.40
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 5,08, 0H
+MAX CAME RA KICK I2W,.010,0 KI
+MIN RECOIL DISPLACEMENT IN ,9 50, LO
+MAX RECOIL DISPLACEMENT 090,110,900
+MIN RECOIL ROTATION IN F.9 70,070
+MAX RECOIL ROTATION [L.20,1.0,0 X01
+HIPFIRE SPREAD FACTOR 009
+HIPFIRE RECOVERY SPEED 60
+HIPFIRE SPREAD DAMPING O75
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 1110.08.05
+MAX CAMERA KICK |2 50.0 00,0 0)
+MIN RECOIL DISPLACEMENT 0 0.0 0.9 0)
+MAX RECOIL DISPLACEMENT 10.50,060, 10.50)
+MIN RECOIL ROTATION (0.20, 0.10, 0.201
+MAX RECOIL ROTATION 10.50, 0.10,0.20
+
+
+
+Finished at 22:03:23:704
+Time elapsed: 37936
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\COLT-LMG1.png

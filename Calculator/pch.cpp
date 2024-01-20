@@ -194,6 +194,8 @@ namespace sqlite_accessor {
 	}
 
 }
+//how to pass vector from c++ to c#
+//https://stackoverflow.com/questions/31417688/passing-a-vector-array-from-unmanaged-c-to-c-sharp
 
 /*
 attachment list:

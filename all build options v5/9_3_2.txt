@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:17:38:575
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\TEC-92.png
+..\..\..\..\ImageParser\
+False
+k
+TEC-92.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 50
+
+TEC-9
+KILLS 78
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 21-> 16
+FIRERATE 1500
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 2
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY �
+
+ammo CAPACITY 20 / 60
+FIRE MODES | AUTO |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.50, -1.20, -0.50|
+MAX RECOIL ROTATION |1.50, 1.40, 0.50|
+SIGHT MAGNIFICATION LO
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 15.00
+AIM CAMERA RECOWERY SPEED 20.0
+WEAPON RECOVERY SPEED paras @
+WEAPON RECOVERY DAMPING 0.70
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.5
+EMPTY RELOAD TIME 3 seconds
+EQUIP SPEED 16%
+AJM MODEL SPEED melee
+AJM MAGNIFKCATION SPEED 18.0
+CROSSHAIR SIZE NM
+CROSSHAIR SPREAD RATE WN
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15.00%
+MISC
+
+WEAPON walkspeed 15.00
+aiming walkspeed 9.0
+ammo type 9x19mm
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:17:47:572
+Time elapsed: 26388
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\TEC-92.png

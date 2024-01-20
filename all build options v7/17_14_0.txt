@@ -1,0 +1,44 @@
+VERSION:1.02
+Started at 12:14:06:723
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\CLONKER.png
+..\..\..\..\ImageParser\
+k
+True
+CLONKER.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 50
+CLONKER
+KILLS 0
+BLADE LENGTH 34
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.64
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 99.00
+BACK STAB DAMAGE 122.00
+MAIN ATTACK TIME 0.5 SECONDS
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.5 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.2 SECONDS
+QUICK ATTACK TIME 0.7 SECONDS
+QUICK ATTACK DELAY 0.2 SECONDS
+WALKSPEED 16.00
+
+
+
+Finished at 12:14:17:400
+Time elapsed: 14950
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\CLONKER.png

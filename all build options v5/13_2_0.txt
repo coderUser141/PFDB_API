@@ -1,0 +1,37 @@
+VERSION:1.00
+Started at 22:29:02:909
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\RGD-5-HE.png
+..\..\..\..\ImageParser\
+k
+False
+RGD-5-HE.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 54
+RGD-5 HE
+KILLS 37
+BLAST RADIUS 35
+KILLING RADIUS 14
+MAXIMUM DAMAGE 350
+
+
+===== General =====
+<class 'numpy.ndarray'>
+MAXIMUM DAMAGE 350
+3K)
+
+1B
+0 100 200
+TRIGGER MECHANISM FUSE - 3 SECONDS
+SPECIAL EFFECTS HIGH EXPLOSIVE
+STORED CAPACITY 2
+
+
+
+Finished at 22:29:04:212
+Time elapsed: 6567
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\RGD-5-HE.png

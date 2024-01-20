@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 21:58:46:944
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\COLT-MARS1.png
+..\..\..\..\ImageParser\
+True
+k
+COLT-MARS1.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 36
+COLT MARS
+KILLS 0
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 29 -> 21
+FIRERATE 825
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+�i
+0 100 200
+ACCURACY �
+HIP ACCURACY a
+SIGHT ACCURACY -
+AMMO CAPACITY 30 / 150
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.155
+HEAD MULTIPLIER 1.50
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 45.00 studs � 100.00 studs
+MUZZLE VELOCITY 2000.00 studs,'s
+PENETRATION DEPTH 1.50 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK L190, 08,0 RI
+MAX CAME RA KICK |1.70,010,0 81
+MIN RECOIL DISPLACEMENT IO, 920, 6.201
+MAX RECOIL DISPLACEMENT 060,110,700
+MIN RECOIL ROTATION ION OW, OH!
+MAX RECOIL ROTATION [L.0,110,0 X01
+HIPFIRE SPREAD FACTOR oKors
+HIPFIRE RECOVERY SPEED LO
+HIPFIRE SPREAD DAMPING 090
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK [1 50,043,020)
+MAX CAMERA KICK [210,053,020
+MIN RECOIL DISPLACEMENT 024,010, 14.20
+MAX RECOIL DISPLACEMENT }025,0 16, 16.501
+MIN RECOIL ROTATION |-0.20, 0.38, 0.60
+MAX RECOIL ROTATION \0.90,0.43, 0.60
+
+
+
+Finished at 21:58:48:112
+Time elapsed: 36122
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\COLT-MARS1.png

@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:47:22:265
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\FIVE-SEVEN1.png
+..\..\..\..\ImageParser\
+False
+k
+FIVE-SEVEN1.png
+1.02
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 57
+FIVE SEVEN
+KILLS 14
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 29 ->22
+FIRERATE 800
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY = =�_
+
+AMMO CAPACITY 20/100
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.155
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.20
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 80.00 studs -> 120.00 studs
+MUZZLE VELOCITY 2500.00 studs/'s
+PENETRATION DEPTH 1.50 studs
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (2.00, -0.60, -0.30)
+MAX CAMERA KICK (2.20, -0.10, 0.30)
+MIN RECOIL DISPLACEMENT (-0.50, 1.60, 5.20)
+MAX RECOIL DISPLACEMENT (0.80, 2.10, 7.80)
+MIN RECOIL ROTATION (4.20, 1.20, -0.30)
+MAX RECOIL ROTATION (6.30, 2.20, 0.30)
+HIPFIRE SPREAD FACTOR 0.10
+HIPFIRE RECOVERY SPEED 10.00
+HIPFIRE SPREAD DAMPING 0.70
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (1.40, -0.10, -0.30)
+MAX CAMERA KICK (1.70, 0.10, 0.30)
+MIN RECOIL DISPLACEMENT (1.00, 0.50, 13.20)
+MAX RECOIL DISPLACEMENT (1.60, 0.70, 15.80)
+MIN RECOIL ROTATION (3.20, -0.50, -2.30)
+MAX RECOIL ROTATION (4.30, 1.30, -3.30)
+CLALIT LAA PAMELA aTinas aan
+
+
+
+Finished at 12:47:26:945
+Time elapsed: 17568
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\FIVE-SEVEN1.png

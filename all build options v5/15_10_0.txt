@@ -1,0 +1,45 @@
+VERSION:1.00
+Started at 22:16:29:783
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\HUNTING-KNIFE.png
+..\..\..\..\ImageParser\
+k
+True
+HUNTING-KNIFE.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 0
+HUNTING KNIFE
+KILLS 3
+BLADE LENGTH 1.7
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.25
+TORSO MULTIPLIER 1.18
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 65.00
+BACK STAB DAMAGE 120.00
+MAIN ATTACK TIME 0.7 SECONDS
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.6 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.3 SECONDS
+QUICK ATTACK TIME 0.5 SECONDS
+QUICK ATTACK DELAY 0.0 SECONDS
+WALKSPEED 16.00
+~~,
+
+
+
+Finished at 22:16:35:637
+Time elapsed: 20629
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\HUNTING-KNIFE.png

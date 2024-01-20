@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:20:59:101
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\M41.png
+..\..\..\..\ImageParser\
+True
+k
+M41.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 14
+M4
+KILLS 94
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 35 -> 19
+FIRERATE 950
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+15
+0 100 200
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY �
+AMMO CAPACITY 30 / 120
+FIRE MODES | III | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.06 s
+HEAD MULTIPLIER 1.50
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 50.00 studs �- 100.00 studs
+MUZZLE VELOCITY 2200.00 studs,'s
+PENETRATION DEPTH 1.0 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK LW 0M, OR
+MAX CAME RA KICK IL.70,010,0 81
+MIN RECOIL DISPLACEMENT IOW,9W, L2
+MAX RECOIL DISPLACEMENT 090,110, LX
+MIN RECOIL ROTATION IOWIW, OW
+MAX RECOIL ROTATION (1.20, 1.20,0 XH
+HIPFIRE SPREAD FACTOR oKors
+HIPFIRE RECOVERY SPEED LO
+HIPFIRE SPREAD DAMPING oR 6)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK [L 10,043, 0 50)
+MAX CAMERA KICK |2.10,0 30,0 50)
+MIN RECOIL DISPLACEMENT 0 10,020, 11.20
+MAX RECOIL DISPLACEMENT }0. 10,040, 11.901
+MIN RECOIL ROTATION 10.20,0.20,0.501
+MAX RECOIL ROTATION (0.50, 0.20, 0.30
+
+
+
+Finished at 22:21:06:387
+Time elapsed: 24245
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\M41.png

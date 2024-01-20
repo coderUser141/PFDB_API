@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:07:02:006
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\MG362.png
+..\..\..\..\ImageParser\
+True
+k
+MG362.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 33
+
+MG36
+KILLS 456
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 32 -> 21
+FIRERATE 750
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ed
+0 150 x0
+ACCURACY �
+HIP ACCURACY =
+SIGHT ACCURACY �
+ammo CAPACITY 100 / 200
+FIRE MODES | AUTO | II | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.20, -0.18, -0.30|
+MAX RECOIL ROTATION |0.70, 0.20, 0.30]
+SIGHT MAGNIFICATION 20
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 170
+AIM CAMERA RECOWERY SPEED 15.00
+WEAPON RECOVERY SPEED 18.00
+WEAPON RECOVERY DAMPING O30
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 4.7
+EMPTY RELOAD TIME 6.1
+EQUIP SPEED 12.00W
+AJM MODEL SPEED Lew
+A)M MAGNIF KCATION SPEED 15%
+CROSSHAIR SIZE cole @
+CROSSHAIR SPREAD RATE 400 00)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE moles
+MISC
+
+WEAPON walkspeed 12.00
+aiming walkspeed 9.0
+ammo type 5.56x45mm NATO
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:07:02:060
+Time elapsed: 21628
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\MG362.png

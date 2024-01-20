@@ -1,0 +1,92 @@
+VERSION:1.00
+Started at 21:53:15:611
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\BEOWULF-ECR2.png
+..\..\..\..\ImageParser\
+True
+k
+BEOWULF-ECR2.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 21
+BEOWULF ECR
+KILLS 350
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 52 -> 30
+FIRERATE 725
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY �
+
+ammo CAPACITY 10 / 100
+FIRE MODES | AUTO | III | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |020, 0.05, 0.30]
+MAX RECOIL ROTATION 10.60, 0.17, 0.30|
+SIGHT MAGNIFICATION LO
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 18.00
+AIM CAMERA RECOWERY SPEED 15.0
+WEAPON RECOVERY SPEED 20.00
+WEAPON RECOVERY DAMPING 0%
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2
+EMPTY RELOAD TIME 3.1
+EQUIP SPEED 140
+AJM MODEL SPEED 14.0
+AJM MAGNIFKCATION SPEED 130
+CROSSHAIR SIZE NM
+CROSSHAIR SPREAD RATE 300%)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15%
+MISC
+
+WEAPON walkspeed 13.0
+aiming walkspeed 9.1
+ammo type .50 BEOWULF
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 21:53:22:765
+Time elapsed: 34605
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\BEOWULF-ECR2.png

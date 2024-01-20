@@ -1,0 +1,91 @@
+VERSION:1.02
+Started at 12:36:05:378
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\NTW-201.png
+..\..\..\..\ImageParser\
+True
+k
+NTW-201.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 220
+NTW-20
+KILLS 310
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 110 ->99
+FIRERATE 28
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 200 400
+ACCURACY =
+HIP ACCURACY -
+SIGHT ACCURACY _
+AMMO CAPACITY 3/30
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.005
+HEAD MULTIPLIER 10.00
+TORSO MULTIPLIER 5.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 125.00 studs -> 250.00 studs
+MUZZLE VELOCITY 2400.00 studs/s
+PENETRATION DEPTH 20.00 studs
+SUPPRESSION 7.00
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (5.00, 2.10, 2.00)
+MAX CAMERA KICK (6.00, -2.10, 2.00)
+MIN RECOIL DISPLACEMENT (0.10, 0.40, 10.70)
+MAX RECOIL DISPLACEMENT (0.40, 1.00, 17.10)
+MIN RECOIL ROTATION (1.20, -1.00, 0.30)
+MAX RECOIL ROTATION (2.10, -1.20, 0.30)
+HIPFIRE SPREAD FACTOR 0.20
+HIPFIRE RECOVERY SPEED 5.00
+HIPFIRE SPREAD DAMPING 0.70
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (0.30, 0.00, 2.00)
+MAX CAMERA KICK (0.40, 0.00, -2.00)
+MIN RECOIL DISPLACEMENT (0.00, 0.00, 12.20)
+MAX RECOIL DISPLACEMENT (0.00, 0.00, 12.80)
+MIN RECOIL ROTATION (0.30, -0.10, -0.50)
+MAX RECOIL ROTATION (0.40, 0.20, 0.50)
+CINLIT LAA PAMELA aTiAas a nn
+
+
+
+Finished at 12:36:09:956
+Time elapsed: 27847
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\NTW-201.png

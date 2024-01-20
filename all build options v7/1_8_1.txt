@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:16:34:171
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\COLT-SMG-6331.png
+..\..\..\..\ImageParser\
+True
+k
+COLT-SMG-6331.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 49
+COLT SMG 633
+KILLS 57
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 32 ->18
+FIRERATE 1000
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ifs
+0 150 300
+ACCURACY �
+HIP ACCURACY ��
+SIGHT ACCURACY �
+AMMO CAPACITY 32/128
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.125
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 55.00 studs -> 120.00 studs
+MUZZLE VELOCITY 1500.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (1.30, -0.60, -0.30)
+MAX CAMERA KICK (1.90, -0.10, 0.30)
+MIN RECOIL DISPLACEMENT (-0.50, 0.60, 7.20)
+MAX RECOIL DISPLACEMENT (0.80, 1.10, 8.50)
+MIN RECOIL ROTATION (-0.20, 0.50, -0.30)
+MAX RECOIL ROTATION (1.20, 1.20, 0.30)
+HIPFIRE SPREAD FACTOR 0.07
+HIPFIRE RECOVERY SPEED 10.00
+HIPFIRE SPREAD DAMPING 0.80
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (1.50, -0.40, -0.50)
+MAX CAMERA KICK (2.90, 0.30, 0.50)
+MIN RECOIL DISPLACEMENT (-0.10, 0.20, 6.20)
+MAX RECOIL DISPLACEMENT (0.10, 0.40, 7.80)
+MIN RECOIL ROTATION (0.20, -0.25, -0.30)
+MAX RECOIL ROTATION (0.80, 0.30, 0.30)
+CU LIFT AAA ANELY ATIMAAI 1&A
+
+
+
+Finished at 12:16:38:853
+Time elapsed: 26073
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\COLT-SMG-6331.png

@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:12:38:647
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\DRAGUNOV-SVDS2.png
+..\..\..\..\ImageParser\
+True
+k
+DRAGUNOV-SVDS2.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 104
+DRAGUNOV SVDS
+KILLS 1516
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 70 -> 60
+FIRERATE 60
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 200 400
+ACCURACY ae
+
+HIP ACCURACY -_
+
+SIGHT ACCURACY
+ammo CAPACITY 10 / 50
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |-0.50, 0.40, -0.50|
+MAX RECOIL ROTATION 10.40, 0.40,0.50|
+SIGHT MAGNIFICATION 3D
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 60.00
+AIM CAMERA RECOWERY SPEED Tate)
+WEAPON RECOVERY SPEED 10.00
+WEAPON RECOVERY DAMPING Lx
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 3.1 seconds
+EMPTY RELOAD TIME 4 seconds
+EQUIP SPEED 10.0
+AJM MODEL SPEED 11%
+AJM MAGNIFKCATION SPEED 60.0
+CROSSHAIR SIZE COM
+CROSSHAIR SPREAD RATE 1000
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 3%
+MISC
+
+WEAPON walkspeed 12.00
+aiming walkspeed 6.0
+ammo type 7.62x54mmR
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:12:44:075
+Time elapsed: 26324
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\DRAGUNOV-SVDS2.png

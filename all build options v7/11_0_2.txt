@@ -1,0 +1,90 @@
+VERSION:1.02
+Started at 12:39:36:210
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\SUPER-SHORTY2.png
+..\..\..\..\ImageParser\
+False
+k
+SUPER-SHORTY2.png
+1.02
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 36
+SUPER SHORTY
+KILLS 2384
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 24x8 -> 13x8
+FIRERATE 120
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY -
+
+HIP ACCURACY �
+
+SIGHT ACCURACY = �_
+
+AMMO CAPACITY 2/20
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (2.20, -0.50, -0.80)
+MAX RECOIL ROTATION _�_ (3.40, -0.20, -0.50)
+SIGHT MAGNIFICATION a)
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED _��-'15.00
+AIM CAMERA RECOVERY SPEED 15.00
+WEAPON RECOVERY SPEED 15.00
+WEAPON RECOVERY DAMPING 0.60
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 0.9 seconds
+EMPTY RELOAD TIME 0.9 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 10.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 800.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIRA RECOVER RATE 10.00
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+AMMO TYPE 12 gauge
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:39:42:207
+Time elapsed: 45125
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\SUPER-SHORTY2.png

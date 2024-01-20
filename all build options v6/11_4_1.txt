@@ -1,0 +1,90 @@
+VERSION:1.00
+Started at 22:25:13:173
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\SAWED-OFF1.png
+..\..\..\..\ImageParser\
+False
+k
+SAWED-OFF1.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 30
+SAWED OFF
+KILLS 169
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 50x8 -> 9x8
+FIRERATE 200 SEMI | INSTANT BURST
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 2
+ACCURACY =
+
+HIP ACCURACY �
+
+SIGHT ACCURACY �
+AMMO CAPACITY 2/20
+FIRE MODES | SEMI | II |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL O.5Ns
+HEAD MULTIPLIER 1.10
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 30.00 studs � 70.00 studs
+MUZZLE VELOCITY 1300.00 studs,'s
+PENETRATION DEPTH 0.60 studs
+SUPPRESSION 2.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 4,-1.0, OR
+MAX CAME RA KICK |9.00,-110,0 HI
+MIN RECOIL DISPLACEMENT IO10,150, L820
+MAX RECOIL DISPLACEMENT I040, 110,090!
+MIN RECOIL ROTATION 0.20, -10,0 8
+MAX RECOIL ROTATION O70, 1.0,0 HI
+HIPFIRE SPREAD FACTOR olors
+HIPFIRE RECOVERY SPEED oe 6)
+HIPFIRE SPREAD DAMPING oR 6)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 440,050,050)
+MAX CAMERA KICK 510,090,050)
+MIN RECOIL DISPLACEMENT 0 10,020, 11.20
+MAX RECOIL DISPLACEMENT }0.10,0.20, 11.901
+MIN RECOIL ROTATION 10.90, 0 50, 0.501
+MAX RECOIL ROTATION [L.10,-0.20, 0.50)
+
+
+
+Finished at 22:25:13:188
+Time elapsed: 15743
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\SAWED-OFF1.png

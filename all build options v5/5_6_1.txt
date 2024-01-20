@@ -1,0 +1,93 @@
+VERSION:1.00
+Started at 22:24:19:487
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\GROZA-11.png
+..\..\..\..\ImageParser\
+True
+k
+GROZA-11.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 42
+GROZA-1
+KILLS 69
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 37 -> 24
+FIRERATE 750
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY a
+
+SIGHT ACCURACY -
+
+AMMO CAPACITY 30 / 120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.08 s
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 40.00 studs � 140.00 studs
+MUZZLE VELOCITY 2400.00 studs,'s
+PENETRATION DEPTH 1.50 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 118,050,020
+MAX CAME RA KICK IL70,0 0,020
+MIN RECOIL DISPLACEMENT IOH,1.10, 2.001
+MAX RECOIL DISPLACEMENT 10 70,140, 13 6)
+MIN RECOIL ROTATION 1LW,0N,05%
+MAX RECOIL ROTATION 2. 40,050,0 KX
+HIPFIRE SPREAD FACTOR 008
+HIPFIRE RECOVERY SPEED 1L�
+HIPFIRE SPREAD DAMPING O35
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK [2.20, 10,050
+MAX CAMERA KICK [2 70,0 90,0 50)
+MIN RECOIL DISPLACEMENT 0 30,020, 13.20]
+MAX RECOIL DISPLACEMENT 10.40, -0 0, 14.90)
+MIN RECOIL ROTATION (010,025, 0.50
+MAX RECOIL ROTATION 10.00,015.0.50)
+
+
+
+Finished at 22:24:23:107
+Time elapsed: 22365
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\GROZA-11.png

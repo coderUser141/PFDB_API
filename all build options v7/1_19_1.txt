@@ -1,0 +1,94 @@
+VERSION:1.02
+Started at 12:26:15:844
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\FAL-PARA-SHORTY1.png
+..\..\..\..\ImageParser\
+True
+k
+FAL-PARA-SHORTY1.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 98
+FAL PARA SHORTY
+KILLS 51119
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 40 -> 24
+FIRERATE 700
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY a
+
+HIP ACCURACY a
+
+SIGHT ACCURACY _
+
+AMMO CAPACITY 20/140
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.095
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 60.00 studs -> 100.00 studs
+MUZZLE VELOCITY 2000.00 studs/'s
+PENETRATION DEPTH 1.40 studs
+SUPPRESSION 1.00
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (2.60, -0.60, -0.50)
+MAX CAMERA KICK (3.30, -0.10, 0.50)
+MIN RECOIL DISPLACEMENT (-0.30, 0.20, 11.20)
+MAX RECOIL DISPLACEMENT (0.30, 0.50, 12.80)
+MIN RECOIL ROTATION (0.20, 0.50, -0.30)
+MAX RECOIL ROTATION (0.60, -0.50, 0.30)
+HIPFIRE SPREAD FACTOR 0.07
+HIPFIRE RECOVERY SPEED 11.00
+HIPFIRE SPREAD DAMPING 0.90
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (2.20, 0.57, -0.45)
+MAX CAMERA KICK (3.70, -0.57, 0.45)
+MIN RECOIL DISPLACEMENT(-0.10, -0.20, 12.20)
+MAX RECOIL DISPLACEMENT (0.10, 0.10, 15.80)
+MINRECOIL ROTATION �_(-0.20, -0.20, -0.50)
+MAX RECOIL ROTATION (0.50, 0.20, 0.50)
+CU LIFT AAA ANELY ATIMAAI 177A
+
+
+
+Finished at 12:26:17:295
+Time elapsed: 27229
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\FAL-PARA-SHORTY1.png

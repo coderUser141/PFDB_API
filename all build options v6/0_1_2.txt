@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 21:53:41:699
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\AN942.png
+..\..\..\..\ImageParser\
+True
+k
+AN942.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 10
+
+AN-94
+KILLS 2103
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 30 -> 23
+FIRERATE 600 A | 1800 B | 600 S
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+rae)
+0 150 x0
+ACCURACY �
+HIP ACCURACY a
+SIGHT ACCURACY �
+ammo CAPACITY 30 / 120
+FIRE MODES | AUTO | II | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |(0.30,-0.20, -0.50|
+MAX RECOIL ROTATION 10.40, 0.20, 0.50|
+SIGHT MAGNIFICATION <0
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 15.00
+AIM CAMERA RECOWERY SPEED 00
+WEAPON RECOVERY SPEED Aras �
+WEAPON RECOVERY DAMPING O30
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.5
+EMPTY RELOAD TIME 3.2
+EQUIP SPEED 12 �
+AJM MODEL SPEED 15%
+AJM MAGNIFKCATION SPEED Bate 6)
+CROSSHAIR SIZE NM
+CROSSHAIR SPREAD RATE 4m 0
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE moles
+MISC
+
+WEAPON walkspeed 14.00
+aiming walkspeed 8.4
+ammo type 5.45x39mm
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 21:53:52:413
+Time elapsed: 35747
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\AN942.png

@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:24:58:454
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\M45A12.png
+..\..\..\..\ImageParser\
+False
+k
+M45A12.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 34
+
+M45A1
+KILLS 70
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 44 -> 26
+FIRERATE 670
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY �
+
+ammo CAPACITY 10 / 60
+FIRE MODES | SEMI
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION [S20 -0.90, 0.30]
+MAX RECOIL ROTATION |10.00, 120, 0.30]
+SIGHT MAGNIFICATION 2.
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 15.00
+AIM CAMERA RECOWERY SPEED 15.0
+WEAPON RECOVERY SPEED 26.0
+WEAPON RECOVERY DAMPING 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.1
+EMPTY RELOAD TIME 2.9
+EQUIP SPEED 16%
+AJM MODEL SPEED melee
+AJM MAGNIFKCATION SPEED 180
+CROSSHAIR SIZE male 6
+CROSSHAIR SPREAD RATE WN
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15.00
+MISC
+
+WEAPON walkspeed 15.00
+aiming walkspeed 9.0
+ammo type .45 ACP
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:24:58:475
+Time elapsed: 15645
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\M45A12.png

@@ -1,0 +1,90 @@
+VERSION:1.02
+Started at 12:51:56:183
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\AUTOMAG-III2.png
+..\..\..\..\ImageParser\
+False
+k
+AUTOMAG-III2.png
+1.02
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 109
+AUTOMAG III
+KILLS 0
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 68 -> 40
+FIRERATE 280
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY �
+
+HIP ACCURACY =
+
+SIGHT ACCURACY =
+
+AMMO CAPACITY 8 / 48
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (4.60, -1.20, -0.30)
+MAX RECOIL ROTATION (9.30, 2.20, 0.30)
+SIGHT MAGNIFICATION 0)
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED _��-13.00
+AIM CAMERA RECOVERY SPEED 12.00
+WEAPON RECOVERY SPEED 15.00
+WEAPON RECOVERY DAMPING 0.60
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.2 seconds
+EMPTY RELOAD TIME 2.8 seconds
+EQUIP SPEED 16.00
+AIM MODEL SPEED 20.00
+AIM MAGNIFICATION SPEED 18.00
+CROSSHAIR SIZE 20.00
+CROSSHAIR SPREAD RATE 900.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15.00
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+AMMO TYPE .30 Carbine
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:51:56:191
+Time elapsed: 16903
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\AUTOMAG-III2.png

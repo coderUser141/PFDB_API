@@ -1,0 +1,92 @@
+VERSION:1.00
+Started at 22:26:35:219
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\HONEY-BADGER2.png
+..\..\..\..\ImageParser\
+True
+k
+HONEY-BADGER2.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 62
+HONEY BADGER
+KILLS 65
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 33 -> 22
+FIRERATE 800
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 x0
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY �
+
+ammo CAPACITY 30 / 120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.20, -0.30, 0.30]
+MAX RECOIL ROTATION |120, 0.30, 0.30]
+SIGHT MAGNIFICATION LO
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 18.00
+AIM CAMERA RECOWERY SPEED 15.0
+WEAPON RECOVERY SPEED 19.00
+WEAPON RECOVERY DAMPING 0%
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 1.7
+EMPTY RELOAD TIME 2.2
+EQUIP SPEED Lo
+AJM MODEL SPEED 1S 0
+A)M MAGNIF KCATION SPEED Low
+CROSSHAIR SIZE NM
+CROSSHAIR SPREAD RATE 300%)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15%
+MISC
+
+WEAPON walkspeed 14.0
+AIMING walkspeed 9.8
+ammo type 300 AAC Blackout
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Beyond O studs
+
+
+
+Finished at 22:26:40:002
+Time elapsed: 19086
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\HONEY-BADGER2.png

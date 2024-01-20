@@ -1,0 +1,90 @@
+VERSION:1.02
+Started at 12:40:26:159
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\1858-NEW-ARMY2.png
+..\..\..\..\ImageParser\
+False
+k
+1858-NEW-ARMY2.png
+1.02
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 58
+1858 NEW ARMY
+KILLS 162
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 60 -> 35
+FIRERATE 190
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY s- =
+
+AMMO CAPACITY 6/42
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION _� (23.00, -3.20, -4.30)
+MAX RECOIL ROTATION � (27.50, -5.00, -6.30)
+SIGHT MAGNIFICATION 1.70
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED _�s-18.00
+AIM CAMERA RECOVERY SPEED 20.00
+WEAPON RECOVERY SPEED 23.00
+WEAPON RECOVERY DAMPING 0.95
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 3 seconds
+EMPTY RELOAD TIME 3 seconds
+EQUIP SPEED 16.00
+AIM MODEL SPEED 22.00
+AIM MAGNIFICATION SPEED 18,00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 900.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15.00
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+AMMO TYPE 44 Caliber
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:40:43:945
+Time elapsed: 35551
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\1858-NEW-ARMY2.png

@@ -1,0 +1,31 @@
+ARCHITECTURE OF THIS PROJECT: (simply because I'm getting way too overwhelmed with the size and complexity of this project)
+
+Projects and their purposes:
+1. PFDB_SS:
+	This C# project captures screenshots of weapon statistics and names them into computer-friendly names. For example, AK12 becomes 0_0.png, AN94 becomes 0_1.png, etc.
+2. Py_Exec + ImageParserForAPI
+	This C# project is a wrapper for the Python script, which uses PyTesseract to search for text. This may need to be edited for different Phantom Forces versions, but oh well.
+	This takes in the images from PFDB_SS and returns text for each image. (note that this project is the biggest bottleneck for the entire workflow up to this point)
+3. FileParse:
+	This C# project uses a slightly sophisticated algorithm to find the statistics. Note that this may not catch everything, but it will catch about 80% of the errors from 
+	PyTesseract.
+4. StatisticProofread
+	This C# project throws all the data into regular expressions to extract only the important data. 
+	(Future plans: Raise a flag whenever an error is found, and store those flags within a logfile)
+5. P_Invoke + Calculator
+	This C# wrapper project manages the context boundary between the managed C# code and unmanaged C/C++ code. 
+	(Need to do: Figure out roles for C++ vs C#)
+
+Ideal workflow:
+1. Get screenshots of the weapon statistics with PFDB_SS project
+2. Turn images into text using Py_Exec and ImageParserForAPI
+3. FileParse + StatisticProofread to extract data
+4. ComponentTester (for now) brings everything together and will temporarily take the data, make the respective objects (using WeaponClasses), store the data in the database,
+	read the database back and ensure it checks it against the temporary data.
+5. C++ will handle the conversions and math with them, write it to the database, and try to do error-checking
+
+Maybe I will move onto another format rather than databases, but that isn't necessary currently.
+
+TO DO:
+0. Modify Python script to better read the statistics and make sure everything is being read correctly (for examples: stuff is getting cut off)
+1. Finish all regex patterns by analyzing common mistakes/shortcomings

@@ -1,0 +1,36 @@
+VERSION:1.00
+Started at 22:28:33:267
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\ROLY-HG.png
+..\..\..\..\ImageParser\
+k
+False
+ROLY-HG.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 300
+ROLY HG
+KILLS 4
+BLAST RADIUS 30
+KILLING RADIUS 17
+MAXIMUM DAMAGE 250
+
+
+===== General =====
+<class 'numpy.ndarray'>
+MAXIMUM DAMAGE 250
+250
+25
+0 100 200
+TRIGGER MECHANISM FUSE - 5 SECONDS
+SPECIAL EFFECTS NONE
+STORED CAPACITY 3
+
+
+
+Finished at 22:28:33:305
+Time elapsed: 8859
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\ROLY-HG.png

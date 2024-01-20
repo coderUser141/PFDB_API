@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:04:23:329
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\AUG-A21.png
+..\..\..\..\ImageParser\
+True
+k
+AUG-A21.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 39
+AUG A2
+KILLS 165
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 35 -> 20
+FIRERATE 700
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+2u
+0 150 300
+ACCURACY �
+HIP ACCURACY a
+SIGHT ACCURACY �
+AMMO CAPACITY 30 / 120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL O17 s�
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 50.00 studs �- 135.00 studs
+MUZZLE VELOCITY 2500.00 studs,'s
+PENETRATION DEPTH 1.0 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK LW 0W,051
+MAX CAME RA KICK IL.70,0 0,0. 0)
+MIN RECOIL DISPLACEMENT IO, 96, $201
+MAX RECOIL DISPLACEMENT 030,110,950
+MIN RECOIL ROTATION OW OW, OH
+MAX RECOIL ROTATION LDL OR
+HIPFIRE SPREAD FACTOR oKors
+HIPFIRE RECOVERY SPEED LO
+HIPFIRE SPREAD DAMPING 090
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 1L10,.0�,0701
+MAX CAMERA KICK [190,045,050
+MIN RECOIL DISPLACEMENT 0 05,020, 8.20
+MAX RECOIL DISPLACEMENT (0.05,0.50,9.50
+MIN RECOIL ROTATION 0.10, 0.10, -0.301
+MAX RECOIL ROTATION (0.20, 0.20, 0.30
+
+
+
+Finished at 22:04:23:979
+Time elapsed: 39995
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\AUG-A21.png

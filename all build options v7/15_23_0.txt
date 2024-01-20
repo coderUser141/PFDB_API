@@ -1,0 +1,44 @@
+VERSION:1.02
+Started at 12:41:49:217
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\BRIDAL-BRANDISHER.png
+..\..\..\..\ImageParser\
+k
+True
+BRIDAL-BRANDISHER.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 134
+BRIDAL BRANDISHER
+KILLS 26
+BLADE LENGTH 5.6
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 3.00
+TORSO MULTIPLIER 1.05
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 80.00
+BACK STAB DAMAGE 131.00
+MAIN ATTACK TIME 1.0 SECONDS
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 1.0 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.1 SECONDS
+QUICK ATTACK TIME 0.9SECONDS
+QUICK ATTACK DELAY 0.0 SECONDS
+WALKSPEED 19.75
+
+
+
+Finished at 12:41:58:730
+Time elapsed: 28492
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\BRIDAL-BRANDISHER.png

@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:31:37:042
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\GYROJET-CARBINE1.png
+..\..\..\..\ImageParser\
+True
+k
+GYROJET-CARBINE1.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 127
+GYROJET CARBINE
+KILLS 0
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 30 -> 50
+FIRERATE 350
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY a
+SIGHT ACCURACY a
+AMMO CAPACITY 7 / 112
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 00s
+HEAD MULTIPLIER 3.50
+TORSO MULTIPLIER 2.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 25.00 studs � 150.00 studs
+muzzle VELOCITY 1250.00 studs/'s
+PENETRATION DEPTH 0.70 studs
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 11.0,0.0, 020
+MAX CAME RA KICK |1.10,010, 0201
+MIN RECOIL DISPLACEMENT IO, 98, 220
+MAX RECOIL DISPLACEMENT IO.90,110, 350
+MIN RECOIL ROTATION I9W,. 0.0, OR
+MAX RECOIL ROTATION I9DG,90W,0RI
+HIPFIRE SPREAD FACTOR oKors
+HIPFIRE RECOVERY SPEED melee
+HIPFIRE SPREAD DAMPING 070
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 10.40, 0 10, 0.201
+MAX CAMERA KICK (0. 70,0 10,020
+MIN RECOIL DISPLACEMENT 0 10,0 10, 5.20
+MAX RECOIL DISPLACEMENT (010,050, 590
+MIN RECOIL ROTATION (0.20, 020,050
+MAX RECOIL ROTATION 10.40, 0.22,0.30
+
+
+
+Finished at 22:31:37:058
+Time elapsed: 10209
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\GYROJET-CARBINE1.png

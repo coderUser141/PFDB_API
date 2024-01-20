@@ -1,0 +1,93 @@
+VERSION:1.00
+Started at 21:57:13:125
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\G3A32.png
+..\..\..\..\ImageParser\
+True
+k
+G3A32.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 59
+
+G3A3
+KILLS 1658
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 40 -> 30
+FIRERATE 540
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY -
+
+ammo CAPACITY 20 / 120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.68, -0.30, -0.50|
+MAX RECOIL ROTATION |1.44, 0.65, 0.60|
+SIGHT MAGNIFICATION 24
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 20.0
+AIM CAMERA RECOWERY SPEED <1.
+WEAPON RECOVERY SPEED 170
+WEAPON RECOVERY DAMPING 0.65
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.5
+EMPTY RELOAD TIME 3.2
+EQUIP SPEED 14K
+AJM MODEL SPEED 12%
+AJM MAGNIFKCATION SPEED 130
+CROSSHAIR SIZE NM
+CROSSHAIR SPREAD RATE 4m 0
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE moles
+MISC
+
+WEAPON walkspeed 13.00
+aiming walkspeed 8.5
+ammo type 7.62x51mm NATO
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 21:57:20:200
+Time elapsed: 39137
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\G3A32.png

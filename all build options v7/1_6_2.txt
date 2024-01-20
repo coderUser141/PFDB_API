@@ -1,0 +1,90 @@
+VERSION:1.02
+Started at 12:15:09:543
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\COLT-MARS2.png
+..\..\..\..\ImageParser\
+True
+k
+COLT-MARS2.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 36
+COLT MARS
+KILLS 0
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 29 ->21
+FIRERATE 825
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+zt
+0 100 7400)
+ACCURACY �
+HIP ACCURACY a
+SIGHT ACCURACY -_
+AMMO CAPACITY 30/150
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION _�{-0.20, -0.38, -0.60)
+MAX RECOIL ROTATION (0.80, 0.43, 0.60)
+SIGHT MAGNIFICATION 1.50
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED ��- 16.00
+AIM CAMERA RECOVERY SPEED 17.00
+WEAPON RECOVERY SPEED 22.00
+WEAPON RECOVERY DAMPING 0.75
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 1.8 seconds
+EMPTY RELOAD TIME 2.7 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 300.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15.00
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 9.8
+AMMO TYPE 5.56x30mm MARS
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:15:09:593
+Time elapsed: 25772
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\COLT-MARS2.png

@@ -1,0 +1,94 @@
+VERSION:1.02
+Started at 12:16:34:766
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\SCAR-SSR1.png
+..\..\..\..\ImageParser\
+True
+k
+SCAR-SSR1.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 85
+SCAR SSR
+KILLS 1474
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 97 -> 48
+FIRERATE 220
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY a
+
+HIP ACCURACY �
+
+SIGHT ACCURACY _
+
+AMMO CAPACITY 10/60
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.005
+HEAD MULTIPLIER 2.00
+TORSO MULTIPLIER 1.25
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 120.00 studs -> 180.00 studs
+MUZZLE VELOCITY 3000.00 studs/s
+PENETRATION DEPTH 2.60 studs
+SUPPRESSION 1.30
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (4.20, -0.40, -0.30)
+MAX CAMERA KICK (4.60, 0.60, 0.30)
+MIN RECOIL DISPLACEMENT (-0.50, 0.60, 14.20)
+MAX RECOIL DISPLACEMENT (0.80, 1.10, 14.80)
+MIN RECOIL ROTATION (1.80, 0.70, -0.30)
+MAX RECOIL ROTATION (2.50, 1.20, 0.30)
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 6.00
+HIPFIRE SPREAD DAMPING 0.70
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (4.10, -2.60, -0.50)
+MAX CAMERA KICK (4.80, 1.70, 0.50)
+MIN RECOIL DISPLACEMENT (-0.10, 0.50, 10.20)
+MAX RECOIL DISPLACEMENT (0.10, 0.90, 12.80)
+MIN RECOIL ROTATION (1.20, -0.20, -0.30)
+MAX RECOIL ROTATION (1.50, 0.20, 0.30)
+CIR LAF kaa MANIA arinat aan
+
+
+
+Finished at 12:16:39:392
+Time elapsed: 30866
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\SCAR-SSR1.png

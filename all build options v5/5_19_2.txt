@@ -1,0 +1,90 @@
+VERSION:1.00
+Started at 22:31:47:251
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\GYROJET-CARBINE2.png
+..\..\..\..\ImageParser\
+True
+k
+GYROJET-CARBINE2.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 127
+GYROJET CARBINE
+KILLS 0
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 30 -> 50
+FIRERATE 350
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY a
+SIGHT ACCURACY a
+ammo CAPACITY 7 / 112
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.20, -0.20, -0.30|
+MAX RECOIL ROTATION 0.40, 0.22, 0.30
+SIGHT MAGNIFICATION <0
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 15.00
+AIM CAMERA RECOWERY SPEED 18.00
+WEAPON RECOVERY SPEED 16.00
+WEAPON RECOVERY DAMPING Q35
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.8
+EMPTY RELOAD TIME 2.8
+EQUIP SPEED 130
+AJM MODEL SPEED 15%
+AJM MAGNIFKCATION SPEED 14.00
+CROSSHAIR SIZE NM
+CROSSHAIR SPREAD RATE 4m 0
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15%
+MISC
+
+WEAPON walkspeed 14.00
+aiming walkspeed 8.4
+ammo type 13mm Rocket
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:31:47:259
+Time elapsed: 10465
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\GYROJET-CARBINE2.png

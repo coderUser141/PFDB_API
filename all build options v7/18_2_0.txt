@@ -1,0 +1,48 @@
+VERSION:1.02
+Started at 12:09:11:031
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\SWEEPER.png
+..\..\..\..\ImageParser\
+k
+True
+SWEEPER.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 40
+OWEEPER
+KILLS
+BLADE LENGTH 89
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.00
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 60.00
+BACK STAB DAMAGE 113.00
+MAIN ATTACK TIME 0.6 SECONDS
+MAIN ATTACK DELAY 0.1 SECONDS
+ALT ATTACK TIME 0.6 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.1 SECONDS
+
+QUICK ATTACK TIME 0.4SECONDS
+
+QUICK ATTACK DELAY 0.1 SECONDS
+
+WALKSPEED 16.00
+ia ee
+
+
+
+Finished at 12:09:15:791
+Time elapsed: 27309
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\SWEEPER.png

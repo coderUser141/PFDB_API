@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:25:10:751
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\TRG-422.png
+..\..\..\..\ImageParser\
+True
+k
+TRG-422.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 84
+TRG-42
+KILLS 2
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 100 -> 65
+FIRERATE 40
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY �
+
+HIP ACCURACY -
+
+SIGHT ACCURACY a
+
+AMMO CAPACITY 9/45
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (0.20, 0.08, -0.30)
+MAX RECOIL ROTATION (1.00, 0.20, 0.30)
+SIGHT MAGNIFICATION 3.50
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 8.00
+AIM CAMERA RECOVERY SPEED 8.00
+WEAPON RECOVERY SPEED 11.00
+WEAPON RECOVERY DAMPING 0.75
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.7 seconds
+EMPTY RELOAD TIME 5 seconds
+EQUIP SPEED 9.00
+AIM MODEL SPEED 11.00
+AIM MAGNIFICATION SPEED 11.00
+CROSSHAIR SIZE 70.00
+CROSSHAIR SPREAD RATE 1500.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 8.00
+MISC
+
+WEAPON WALKSPEED 12.00
+AIMING WALKSPEED 8.4
+AMMO TYPE .338 Lapua Magnum
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE  =Unsuppressed
+
+
+
+Finished at 12:25:17:659
+Time elapsed: 31916
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\TRG-422.png

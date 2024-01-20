@@ -1,0 +1,93 @@
+VERSION:1.02
+Started at 12:24:08:789
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\AWM2.png
+..\..\..\..\ImageParser\
+True
+k
+AWM2.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 82
+
+AWM
+KILLS 265
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 82->75
+FIRERATE 45
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY �
+
+HIP ACCURACY -
+
+SIGHT ACCURACY a
+
+AMMO CAPACITY 9/45
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (0.20, 0.08, -0.30)
+MAX RECOIL ROTATION (1.00, 0.20, 0.30)
+SIGHT MAGNIFICATION 3.50
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 7.00
+AIM CAMERA RECOVERY SPEED 9.00
+WEAPON RECOVERY SPEED 8.00
+WEAPON RECOVERY DAMPING 0.75
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 3 seconds
+EMPTY RELOAD TIME 3.9 seconds
+EQUIP SPEED 10.00
+AIM MODEL SPEED 14.50
+AIM MAGNIFICATION SPEED 11.00
+CROSSHAIR SIZE 70.00
+CROSSHAIR SPREAD RATE 1500.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 8.00
+MISC
+
+WEAPON WALKSPEED 12.00
+AIMING WALKSPEED 6.0
+AMMO TYPE .338 Lapua Magnum
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:24:20:658
+Time elapsed: 26932
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\AWM2.png

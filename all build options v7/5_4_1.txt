@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:42:21:295
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\SCAR-PDW1.png
+..\..\..\..\ImageParser\
+True
+k
+SCAR-PDW1.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 32
+oCAR PDW
+KILLS 214
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 33 ->19
+FIRERATE 650
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+i
+0 150 300
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY �
+AMMO CAPACITY 30/120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.185
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 60.00 studs -> 130.00 studs
+MUZZLE VELOCITY 2200.00 studs/s
+PENETRATION DEPTH 0.90 studs
+SUPPRESSION 0.85
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (1.20, -0.40, -0.30)
+MAX CAMERA KICK (1.70, 0.60, 0.30)
+MIN RECOIL DISPLACEMENT (-0.50, 0.60, 0.20)
+MAX RECOIL DISPLACEMENT (0.80, 1.10, 10.30)
+MIN RECOIL ROTATION (-0.80, 0.60, -0.30)
+MAX RECOIL ROTATION (1.50, -0.40, 0.30)
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 7,00
+HIPFIRE SPREAD DAMPING 0.80
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (1.30, -0.40, -0.50)
+MAX CAMERA KICK (1.60, 0.40, 0.50)
+MIN RECOIL DISPLACEMENT (-0.10, 0.60, 8.20)
+MAX RECOIL DISPLACEMENT (0.10, 1.00, 10.80)
+MIN RECOIL ROTATION (0.60, -0.20, -0.30)
+MAX RECOIL ROTATION (1.20, 0.20, 0.30)
+CINLIT LAA PAMELA ATinas nan
+
+
+
+Finished at 12:42:27:259
+Time elapsed: 39164
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\SCAR-PDW1.png

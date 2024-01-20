@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:31:11:731
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\TOMMY-GUN1.png
+..\..\..\..\ImageParser\
+True
+k
+TOMMY-GUN1.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 121
+TOMMY GUN
+KILLS 183
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 37->19
+FIRERATE 125
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+is
+0 150 300
+ACCURACY �
+HIP ACCURACY a
+SIGHT ACCURACY �
+AMMO CAPACITY 20/160
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.08 5
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 60.00 studs -> 120.00 studs
+MUZZLE VELOCITY 1500.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 0.65
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (1.05, -0.60, -0.50)
+MAX CAMERA KICK (1.78, -0.10, 0.50)
+MIN RECOIL DISPLACEMENT (-0.30, 1.20, 7.20)
+MAX RECOIL DISPLACEMENT (0.30, 1.50, 10.80)
+MIN RECOIL ROTATION (0.20, 0.50, -0.70)
+MAX RECOIL ROTATION (0.40, -0.50, 0.70)
+HIPFIRE SPREAD FACTOR 0.03
+HIPFIRE RECOVERY SPEED 10.00
+HIPFIRE SPREAD DAMPING 0.90
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (0.90, -0.30, -0.80)
+MAX CAMERA KICK (1.30, 0.30, 0.80)
+MIN RECOIL DISPLACEMENT (-0.10, 0.20, 7.96)
+MAX RECOIL DISPLACEMENT (0.10, 0.50, 9.50)
+MIN RECOIL ROTATION (0.20, -0.20, -0.50)
+MAX RECOIL ROTATION (0.80, 0.20, 0.50)
+CU LIFT AAA ANELY ATIMAAI 1 AN
+
+
+
+Finished at 12:31:18:655
+Time elapsed: 25035
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\TOMMY-GUN1.png

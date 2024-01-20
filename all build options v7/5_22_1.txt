@@ -1,0 +1,95 @@
+VERSION:1.02
+Started at 12:54:27:435
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\HK51B1.png
+..\..\..\..\ImageParser\
+True
+k
+HK51B1.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 157
+
+HK51B
+KILLS 389
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 4] -> 22
+FIRERATE 950
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 7400)
+ACCURACY a
+
+HIP ACCURACY -
+
+SIGHT ACCURACY _
+
+AMMO CAPACITY 100 / 200
+FIRE MODES | AUTO | Ill | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.065
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 20.00 studs -> 90.00 studs
+MUZZLE VELOCITY 2200.00 studs/'s
+PENETRATION DEPTH 1.90 studs
+SUPPRESSION 0.40
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (2.90, -0.60, -0.50)
+MAX CAMERA KICK (3.50, -0.10, 0.50)
+MIN RECOIL DISPLACEMENT (-0.30, 0.40, 5.20)
+MAX RECOIL DISPLACEMENT (0.30, 0.50, 6.80)
+MIN RECOIL ROTATION _�_{-0.50, -1.00, -0.30)
+MAX RECOIL ROTATION (0.90, 1.30, 0.30)
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 7,00
+HIPFIRE SPREAD DAMPING 0.60
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (1.10, -0.60, -0.30)
+MAX CAMERA KICK (2.20, 0.60, 0.30)
+MIN RECOIL DISPLACEMENT (-0.10, -0.40, 5.20)
+MAX RECOIL DISPLACEMENT (0.10, 0.60, 6.80)
+MIN RECOIL ROTATION (0.30, -0.80, -0.50)
+MAX RECOIL ROTATION (0.50, 0.80, 0.50)
+CLALIT LAA MANERA ATiAas aan
+
+
+
+Finished at 12:54:27:447
+Time elapsed: 13328
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\HK51B1.png

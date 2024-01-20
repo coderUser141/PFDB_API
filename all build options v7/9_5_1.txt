@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:34:13:964
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\SKORPION-VZ611.png
+..\..\..\..\ImageParser\
+False
+k
+SKORPION-VZ611.png
+1.02
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+. RANK 87
+SKORPION VZ.61
+KILLS 1014
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 30 ->17
+FIRERATE 850
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �
+
+HIP ACCURACY a
+
+SIGHT ACCURACY s_ =�_
+
+AMMO CAPACITY 20/80
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.145
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 40.00 studs -> 70.00 studs
+MUZZLE VELOCITY 1200.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (1.50, -0.30, -0.30)
+MAX CAMERA KICK (1.70, 0.40, 0.60)
+MIN RECOIL DISPLACEMENT (-1.40, 1.50, 4.20)
+MAX RECOIL DISPLACEMENT (1.70, 3.60, 7.80)
+MIN RECOIL ROTATION (-1.50, 0.60, -1.20)
+MAX RECOIL ROTATION (4.30, 2.60, 1.20)
+HIPFIRE SPREAD FACTOR 0.07
+HIPFIRE RECOVERY SPEED 12.00
+HIPFIRE SPREAD DAMPING 0.80
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (0.70, -0.20, -0.50)
+MAX CAMERA KICK (1.50, 0.30, 0.50)
+MIN RECOIL DISPLACEMENT (-0.20, 0.50, 9.20)
+MAX RECOIL DISPLACEMENT (0.20, 2.50, 11.80)
+MIN RECOIL ROTATION (0.90, -1.10, -1.40)
+MAX RECOIL ROTATION (2.90, 1.90, 1.40)
+CIr�LIT AZAPANECILY ATIAAI 1 AA
+
+
+
+Finished at 12:34:14:027
+Time elapsed: 31971
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\SKORPION-VZ611.png

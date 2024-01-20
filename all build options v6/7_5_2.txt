@@ -1,0 +1,90 @@
+VERSION:1.00
+Started at 22:09:20:098
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\STEVENS-DB2.png
+..\..\..\..\ImageParser\
+True
+k
+STEVENS-DB2.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 81
+STEVENS DB
+KILLS 172
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 36x8 -> 12.75x8
+FIRERATE 200 SEMI | INSTANT BURST
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+lz 75
+0 150 X00
+ACCURACY =
+HIP ACCURACY �
+SIGHT ACCURACY a
+ammo CAPACITY 2/50
+FIRE MODES | SEMI | II |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.50, -0.50, -0.50|
+MAX RECOIL ROTATION |L.10,-0.20,-0.5)|
+SIGHT MAGNIFICATION LO
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 9.00
+AIM CAMERA RECOWERY SPEED 10.00
+WEAPON RECOVERY SPEED LOO
+WEAPON RECOVERY DAMPING Ohe 6)
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.8
+EMPTY RELOAD TIME 3.1
+EQUIP SPEED 10
+AJM MODEL SPEED 16.0
+AJM MAGNIFKCATION SPEED Bae e)
+CROSSHAIR SIZE 4 &
+CROSSHAIR SPREAD RATE SOO
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 10%
+MISC
+
+WEAPON walkspeed 14.00
+aiming walkspeed 8.4
+ammo type 12 gauge
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE Unsuppressed
+
+
+
+Finished at 22:09:26:005
+Time elapsed: 33289
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\STEVENS-DB2.png

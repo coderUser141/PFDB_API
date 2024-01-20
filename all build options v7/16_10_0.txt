@@ -1,0 +1,44 @@
+VERSION:1.02
+Started at 12:18:10:277
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\LONGSWORD.png
+..\..\..\..\ImageParser\
+k
+True
+LONGSWORD.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 124
+LONGSWORD
+KILLS 25
+BLADE LENGTH 49
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.00
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 70.00
+BACK STAB DAMAGE 120.00
+MAIN ATTACK TIME 0.7 SECONDS
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.8 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.2 SECONDS
+QUICK ATTACK TIME 0.9SECONDS
+QUICK ATTACK DELAY 0.0 SECONDS
+WALKSPEED 14.50
+
+
+
+Finished at 12:18:10:511
+Time elapsed: 13358
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\LONGSWORD.png

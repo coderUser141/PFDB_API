@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:39:50:330
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\1858-NEW-ARMY1.png
+..\..\..\..\ImageParser\
+False
+k
+1858-NEW-ARMY1.png
+1.02
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 58
+1858 NEW ARMY
+KILLS 162
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 60 -> 35
+FIRERATE 190
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY s- =
+
+AMMO CAPACITY 6/42
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.005
+HEAD MULTIPLIER 2.50
+TORSO MULTIPLIER 1.45
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 75.00 studs -> 140.00 studs
+MUZZLE VELOCITY 1000.00 studs/'s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (4.00, -0.60, -0.30)
+MAX CAMERA KICK (5.00, -0.10, 0.30)
+MIN RECOIL DISPLACEMENT (0.50, 5.60, 117.20)
+MAX RECOIL DISPLACEMENT (0.80, 6.10, 13.80)
+MIN RECOIL ROTATION _� (26.20, -5.00, -0.30)
+MAX RECOIL ROTATION �_�_ (27.30, 4.20, 0.30)
+HIPFIRE SPREAD FACTOR 0.20
+HIPFIRE RECOVERY SPEED 5.00
+HIPFIRE SPREAD DAMPING 0.70
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (4.30, -0.20, -0.30)
+MAX CAMERA KICK (4.80, -0.10, 0.30)
+MIN RECOIL DISPLACEMENT (2.40, 3.50, 7.20)
+MAX RECOIL DISPLACEMENT (2.60, 4.70, 7.80)
+MIN RECOIL ROTATION �_ (23.00, -3.20, -4.30)
+MAX RECOIL ROTATION � (27.50, -5.00, -6.30)
+CIP�LIT AAAPANCLY ATIAAI 137A
+
+
+
+Finished at 12:39:50:388
+Time elapsed: 35754
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\1858-NEW-ARMY1.png

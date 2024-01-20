@@ -1,0 +1,94 @@
+VERSION:1.02
+Started at 12:27:56:292
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\MG3KWS1.png
+..\..\..\..\ImageParser\
+True
+k
+MG3KWS1.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 10)
+MG3KWS
+KILLS 823
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 40 ->24
+FIRERATE 1000
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY a
+
+HIP ACCURACY -
+
+SIGHT ACCURACY _
+
+AMMO CAPACITY 90 / 300
+FIRE MODES | AUTO |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.065
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 50.00 studs -> 170.00 studs
+MUZZLE VELOCITY 2700.00 studs/s
+PENETRATION DEPTH 1.80 studs
+SUPPRESSION 1.60
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (0.10, -0.30, -0.60)
+MAX CAMERA KICK (2.20, 0.30, 0.60)
+MIN RECOIL DISPLACEMENT (-0.30, -0.10, 1.20)
+MAX RECOIL DISPLACEMENT (0.30, 0.30, 3.80)
+MIN RECOIL ROTATION _�(-0.40, -0.50, -0.30)
+MAX RECOIL ROTATION (0.90, 0.60, 0.40)
+HIPFIRE SPREAD FACTOR 0.09
+HIPFIRE RECOVERY SPEED 3.00
+HIPFIRE SPREAD DAMPING 0.75
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (0.90, -0.52, -0.50)
+MAX CAMERA KICK (1.60, 0.52, 0.50)
+MIN RECOIL DISPLACEMENT (-0.15, -0.15, 2.20)
+MAX RECOIL DISPLACEMENT (0.15, 0.30, 5.30)
+MIN RECOIL ROTATION �_�_(-0.30, -0.40, -0.30)
+MAX RECOIL ROTATION (0.60, 0.40, 0.40)
+CW UT Maa nancin arin aan
+
+
+
+Finished at 12:27:56:422
+Time elapsed: 32059
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\MG3KWS1.png

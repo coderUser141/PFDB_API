@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:29:19:141
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\IZHEVSK-PB1.png
+..\..\..\..\ImageParser\
+False
+k
+IZHEVSK-PB1.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 91
+IZHEVSK PB
+KILLS 22
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 48 -> 19
+FIRERATE 550
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY �
+
+AMMO CAPACITY 8 / 88
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 00s
+HEAD MULTIPLIER 2.10
+TORSO MULTIPLIER 1.40
+LIMB MULTIPLIER 1.0
+DAMAGE RANGE 20.00 studs �> 50.00 studs
+MUZZLE VELOCITY 1800.00 studs,'s
+PENETRATION DEPTH 0.50
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK IOD.W,9W, 0H!
+MAX CAME RA KICK 111,045,001
+MIN RECOIL DISPLACEMENT 10.30, 100, 10.0!
+MAX RECOIL DISPLACEMENT INH 1H, DW
+MIN RECOIL ROTATION IL75,0R,0 RH
+MAX RECOIL ROTATION In H,90W,0 RI
+HIPFIRE SPREAD FACTOR 008
+HIPFIRE RECOVERY SPEED LO
+HIPFIRE SPREAD DAMPING 065
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 075.00.0K)
+MAX CAMERA KICK 1195.00.05)
+MIN RECOIL DISPLACEMENT 10. 10,0 50, 15001
+MAX RECOIL DISPLACEMENT |-0 10,090, 25.00)
+MIN RECOIL ROTATION 11.00, 0&0, 0.40)
+MAX RECOIL ROTATION 11.90, -0.70,0.40)
+
+
+
+Finished at 22:29:19:152
+Time elapsed: 20102
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\IZHEVSK-PB1.png

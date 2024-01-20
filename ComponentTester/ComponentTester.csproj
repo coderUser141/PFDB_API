@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\fileparse\FileParse.csproj" />
     <ProjectReference Include="..\fileread\FileIO.csproj" />
     <ProjectReference Include="..\PyExec\PyExec.csproj" />

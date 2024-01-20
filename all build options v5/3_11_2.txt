@@ -1,0 +1,89 @@
+VERSION:1.00
+Started at 22:15:01:591
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\HECATE-II2.png
+..\..\..\..\ImageParser\
+True
+k
+HECATE-II2.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 150
+HECATE II
+KILLS 1032
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 97 -> 93
+FIRERATE 28
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY =
+HIP ACCURACY =
+SIGHT ACCURACY -
+ammo CAPACITY 7/35
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |0.20, 0.10, -0.50|
+MAX RECOIL ROTATION |0. 30, 0.30, 0.50|
+SIGHT MAGNIFICATION 10.00
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 40
+AIM CAMERA RECOWERY SPEED 40
+WEAPON RECOVERY SPEED 9.00
+WEAPON RECOVERY DAMPING 0%
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 4 seconds
+EMPTY RELOAD TIME 7.5
+EQUIP SPEED 3K
+AJM MODEL SPEED LOW
+A)M MAGNIF KCATION SPEED 36.6
+CROSSHAIR SIZE rshe)
+CROSSHAIR SPREAD RATE LKO MH
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 3%
+MISC
+
+WEAPON walkspeed 11.50
+aiming walkspeed 4.6
+ammo type .50 BMG
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:15:06:574
+Time elapsed: 26041
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\HECATE-II2.png

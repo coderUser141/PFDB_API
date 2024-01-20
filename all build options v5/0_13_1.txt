@@ -1,0 +1,95 @@
+VERSION:1.00
+Started at 22:07:37:722
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\AK471.png
+..\..\..\..\ImageParser\
+True
+k
+AK471.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 47
+
+AK47
+KILLS 433
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 41 -> 30
+FIRERATE 600
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY =
+
+SIGHT ACCURACY -
+
+AMMO CAPACITY 30 / 120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.105
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 70.00 studs �> 140.00 studs
+MUZZLE VELOCITY 2000.00 studs,'s
+PENETRATION DEPTH 1.40
+SUPPRESSION 0.80
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK [2.10,-0.30, 020
+MAX CAME RA KICK 330.9,
+MIN RECOIL DISPLACEMENT IO, 9 6, 14 20)
+MAX RECOIL DISPLACEMENT IOS0, 1 10, 16.50!
+MIN RECOIL ROTATION 210,080,050)
+MAX RECOIL ROTATION I3R0,90580,0 XH
+HIPFIRE SPREAD FACTOR O10
+HIPFIRE RECOVERY SPEED TH
+HIPFIRE SPREAD DAMPING O75
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAME RA KICK nM), 0,0 HI
+MAX CAME RA KICK (3.0, 110,0 0)
+MIN RECOIL DISPLACEMENT IO. 10,0 10, 9.20!
+MAX RECOIL DISPLACEMENT 10.10,0.20, 11.90!
+MIN RECOIL ROTATION 10.005, O20)
+MAX RECOIL ROTATION (1.30.00, 140)
+nn ayy are a AA
+
+
+
+Finished at 22:07:45:044
+Time elapsed: 34415
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\AK471.png

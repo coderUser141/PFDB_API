@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:20:04:929
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\MP412-REX1.png
+..\..\..\..\ImageParser\
+False
+k
+MP412-REX1.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 4
+MP412 REX
+KILLS 269
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 56 -> 28
+FIRERATE 600
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY a
+
+AMMO CAPACITY 6 / 42
+FIRE MODES | SEMI
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 00s
+HEAD MULTIPLIER 3.00
+TORSO MULTIPLIER 1.40
+LIMB MULTIPLIER 1.0
+DAMAGE RANGE 65.00 studs �> 100.00 studs
+MUZZLE VELOCITY 1500.00 studs,'s
+PENETRATION DEPTH 0.50
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK ISM. 08, 0H
+MAX CAME RA KICK I4M,010,0 HI
+MIN RECOIL DISPLACEMENT IO, 5.8, L120!
+MAX RECOIL DISPLACEMENT I0.90,610, 1330!
+MIN RECOIL ROTATION IH2050, 0H
+MAX RECOIL ROTATION 37, 11.4.0 HX!
+HIPFIRE SPREAD FACTOR opus)
+HIPFIRE RECOVERY SPEED oe 6)
+HIPFIRE SPREAD DAMPING 07%
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 130,070, -L 00
+MAX CAMERA KICK 1450, -150,-150
+MIN RECOIL DISPLACEMENT I2.40, 3.50, 28.201
+MAX RECOIL DISPLACEMENT 12.60, 470, 31.501
+MIN RECOIL ROTATION 115.90, 2.20, 6.20
+MAX RECOIL ROTATION (16.90, 3.00, -7.20|
+
+
+
+Finished at 22:20:10:575
+Time elapsed: 23298
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\MP412-REX1.png

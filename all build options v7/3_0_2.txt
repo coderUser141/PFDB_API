@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:19:49:900
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\INTERVENTION2.png
+..\..\..\..\ImageParser\
+True
+k
+INTERVENTION2.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 0
+INTERVENTION
+KILLS 1220
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 90 -> 80
+FIRERATE 38
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 200 400
+ACCURACY a
+
+HIP ACCURACY �
+
+SIGHT ACCURACY _
+
+AMMO CAPACITY 1/42
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (0.20, 0.08, -0.30)
+MAX RECOIL ROTATION (1.00, 0.20, 0.30)
+SIGHT MAGNIFICATION 10.00
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 7.00
+AIM CAMERA RECOVERY SPEED 8.00
+WEAPON RECOVERY SPEED 8.00
+WEAPON RECOVERY DAMPING 0.75
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 3.8 seconds
+EMPTY RELOAD TIME 5.9 seconds
+EQUIP SPEED 10.00
+AIM MODEL SPEED 10,00
+AIM MAGNIFICATION SPEED 9.00
+CROSSHAIR SIZE 70.00
+CROSSHAIR SPREAD RATE 1500.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 8.00
+MISC
+
+WEAPON WALKSPEED 11.25
+AIMING WALKSPEED 5.6
+AMMO TYPE 408 CheyTac
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:19:59:198
+Time elapsed: 21363
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\INTERVENTION2.png

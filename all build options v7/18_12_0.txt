@@ -1,0 +1,48 @@
+VERSION:1.02
+Started at 12:13:02:681
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\MORNING-STAR.png
+..\..\..\..\ImageParser\
+k
+True
+MORNING-STAR.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 197
+MORNING STAR
+KILLS 226
+BLADE LENGTH 53
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.30
+TORSO MULTIPLIER 1.30
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 70.00
+BACK STAB DAMAGE 200.00
+MAIN ATTACK TIME 0.6 SECONDS
+MAIN ATTACK DELAY 0.1 SECONDS
+ALT ATTACK TIME 0.6 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.1 SECONDS
+
+QUICK ATTACK TIME 1.2 SECONDS
+
+QUICK ATTACK DELAY 0.0 SECONDS
+
+WALKSPEED 14.50
+ae ee
+
+
+
+Finished at 12:13:14:472
+Time elapsed: 24844
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\MORNING-STAR.png

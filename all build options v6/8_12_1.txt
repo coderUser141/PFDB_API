@@ -1,0 +1,92 @@
+VERSION:1.00
+Started at 22:28:13:640
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\GI-M11.png
+..\..\..\..\ImageParser\
+False
+k
+GI-M11.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 73
+
+GI M1
+KILLS 27
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 60 -> 34
+FIRERATE 500
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY -
+
+AMMO CAPACITY 7 / 35
+FIRE MODES | SEMI
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 00s
+HEAD MULTIPLIER 1.70
+TORSO MULTIPLIER 1.20
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 25.00 studs �> 90.00 studs
+MUZZLE VELOCITY 1400.00 studs,'s
+PENETRATION DEPTH 1.0 studs
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK �.00,061,0%)
+MAX CAME RA KICK Jo, 0.11.90 70!
+MIN RECOIL DISPLACEMENT IN, 2 0, 10.39
+MAX RECOIL DISPLACEMENT 10.50, 314,15 60)
+MIN RECOIL ROTATION [L0.20,-L00, 0 9!
+MAX RECOIL ROTATION 14, 1,0 HI
+HIPFIRE SPREAD FACTOR 008
+HIPFIRE RECOVERY SPEED 9%
+HIPFIRE SPREAD DAMPING 070
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (2.40, 0 11,0311
+MAX CAMERA KICK 130,010.05)
+MIN RECOIL DISPLACEMENT 0 11,525, 14 39)
+MAX RECOIL DISPLACEMENT 0.10, 5.55, 15.601
+MIN RECOIL ROTATION (10.60, -1.50, 0.31)
+MAX RECOIL ROTATION }12.30, 1.20,0.301
+
+
+
+Finished at 22:28:14:677
+Time elapsed: 17673
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\GI-M11.png

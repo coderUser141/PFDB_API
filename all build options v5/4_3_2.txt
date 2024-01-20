@@ -1,0 +1,92 @@
+VERSION:1.00
+Started at 21:55:39:202
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\AK12BR2.png
+..\..\..\..\ImageParser\
+True
+k
+AK12BR2.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 44
+AK12BR
+KILLS 706
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 39 -> 25
+FIRERATE 700 A | 1000 B | 700 S
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 x0
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY a
+
+ammo CAPACITY 20 / 120
+FIRE MODES | AUTO | II | SEMI
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |-0.05, 0.10, -0.30|
+MAX RECOIL ROTATION |0.15, -0.10, 0.30]
+SIGHT MAGNIFICATION 2.
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 15.00
+AIM CAMERA RECOWERY SPEED 15.0
+WEAPON RECOVERY SPEED 13.00
+WEAPON RECOVERY DAMPING Q35
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.9
+EMPTY RELOAD TIME 3.8
+EQUIP SPEED 12 �
+AJM MODEL SPEED 12%
+AJM MAGNIFKCATION SPEED 10%
+CROSSHAIR SIZE NM
+CROSSHAIR SPREAD RATE ms see)
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 10%
+MISC
+
+WEAPON walkspeed 14.00
+aiming walkspeed 8.4
+ammo type 7.62x54mmR
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 21:56:01:867
+Time elapsed: 53564
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\AK12BR2.png

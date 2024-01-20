@@ -1,0 +1,90 @@
+VERSION:1.02
+Started at 12:34:45:952
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\SKORPION-VZ612.png
+..\..\..\..\ImageParser\
+False
+k
+SKORPION-VZ612.png
+1.02
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+. RANK 87
+SKORPION VZ.61
+KILLS 1014
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 30 ->17
+FIRERATE 850
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �
+
+HIP ACCURACY a
+
+SIGHT ACCURACY s_ =�_
+
+AMMO CAPACITY 20/80
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (0.90, -1.10, -1.40)
+MAX RECOIL ROTATION (2.90, 1.90, 1.40)
+SIGHT MAGNIFICATION re)
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED �- 18.00
+AIM CAMERA RECOVERY SPEED 20.00
+WEAPON RECOVERY SPEED 25.00
+WEAPON RECOVERY DAMPING 0.80
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.1 seconds
+EMPTY RELOAD TIME 2.7 seconds
+EQUIP SPEED 16.00
+AIM MODEL SPEED 20.00
+AIM MAGNIFICATION SPEED 18.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 500.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15.00
+MISC
+
+WEAPON WALKSPEED 15.00
+AIMING WALKSPEED 12.0
+AMMO TYPE .32 ACP
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:34:52:397
+Time elapsed: 39694
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\SKORPION-VZ612.png

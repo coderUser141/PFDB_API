@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:29:05:983
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\MGV-1761.png
+..\..\..\..\ImageParser\
+True
+k
+MGV-1761.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 176
+MGV-176
+KILLS 123
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 13->11
+FIRERATE 1450
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+13 1
+0 150 300
+ACCURACY �
+HIP ACCURACY a
+SIGHT ACCURACY a
+AMMO CAPACITY 161 / 322
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.125
+HEAD MULTIPLIER 2.00
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 40.00 studs -> 120.00 studs
+MUZZLE VELOCITY 1550.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (-0.30, -0.50, -0.40)
+MAX CAMERA KICK (0.30, 0.50, 0.40)
+MIN RECOIL DISPLACEMENT (-0.50, 0.20, 4.20)
+MAX RECOIL DISPLACEMENT (0.50, 0.70, 6.10)
+MINRECOIL ROTATION _�(-0.50, -0.30, -0.30)
+MAX RECOIL ROTATION (0.50, 0.30, 0.30)
+HIPFIRE SPREAD FACTOR 0.03
+HIPFIRE RECOVERY SPEED 16.00
+HIPFIRE SPREAD DAMPING 0.75
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (0.55, -0.45, -0.35)
+MAX CAMERA KICK (1.00, 0.45, 0.35)
+MIN RECOIL DISPLACEMENT (-0.10, 0.50, 8.20)
+MAX RECOIL DISPLACEMENT (0.10, 1.50, 8.90)
+MIN RECOIL ROTATION (0.60, -0.50, -0.30)
+MAX RECOIL ROTATION (1.10, 0.50, 0.30)
+CMU Maa naecin arin aan
+
+
+
+Finished at 12:29:09:082
+Time elapsed: 25966
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\MGV-1761.png

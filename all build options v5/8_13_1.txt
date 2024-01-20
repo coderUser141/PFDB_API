@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:28:48:205
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\HARDBALLER1.png
+..\..\..\..\ImageParser\
+False
+k
+HARDBALLER1.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 84
+HARDBALLER
+KILLS 12
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 42 -> 28
+FIRERATE 425
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY -
+
+AMMO CAPACITY 8 / 56
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.145
+HEAD MULTIPLIER 1.80
+TORSO MULTIPLIER 1.20
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 50.00 studs �- 100.00 studs
+MUZZLE VELOCITY 2000.00 studs,'s
+PENETRATION DEPTH 1.20 studs
+SUPPRESSION 0.25
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 1.0,08,0W
+MAX CAME RA KICK |1.20,010,0 0
+MIN RECOIL DISPLACEMENT IO, 9, 920
+MAX RECOIL DISPLACEMENT IO90,010, L230!
+MIN RECOIL ROTATION [LO20,-L0, O25!
+MAX RECOIL ROTATION [15.30, 1.0, 90.25)
+HIPFIRE SPREAD FACTOR 008
+HIPFIRE RECOVERY SPEED 9%
+HIPFIRE SPREAD DAMPING 070
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK [2.20.0 10,040)
+MAX CAMERA KICK 14.00,0 10,040)
+MIN RECOIL DISPLACEMENT 0 10,4 50, 9.20
+MAX RECOIL DISPLACEMENT }0.10, 3.70, 11.901
+MIN RECOIL ROTATION (9.60, -1.90, 0.40)
+MAX RECOIL ROTATION 110.30, 1.20,0.401
+
+
+
+Finished at 22:28:48:216
+Time elapsed: 17817
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\HARDBALLER1.png

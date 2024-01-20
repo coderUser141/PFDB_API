@@ -1,0 +1,93 @@
+VERSION:1.02
+Started at 12:17:32:148
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\L2A31.png
+..\..\..\..\ImageParser\
+True
+k
+L2A31.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 53
+
+L2A3
+KILLS 19
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 36 -> 24
+FIRERATE 550
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY Ee
+HIP ACCURACY a
+SIGHT ACCURACY a
+
+AMMO CAPACITY 34/136
+FIRE MODES | AUTO |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 011s
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 45.00 studs -> 105.00 studs
+MUZZLE VELOCITY 2000.00 studs/'s
+PENETRATION DEPTH 1.10 studs
+SUPPRESSION 0.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (0.20, -0.60, -0.20)
+MAX CAMERA KICK (1.40, -0.10, 0.20)
+MIN RECOIL DISPLACEMENT (-0.50, 0.70, 4.20)
+MAX RECOIL DISPLACEMENT (0.50, 1.10, 5.80)
+MIN RECOIL ROTATION (-0.50, 0.60, -0.30)
+MAX RECOIL ROTATION (1.10, 0.80, 0.30)
+HIPFIRE SPREAD FACTOR 0,00
+HIPFIRE RECOVERY SPEED 10.00
+HIPFIRE SPREAD DAMPING 0.95
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (1.00, -0.50, -0.50)
+MAX CAMERA KICK (1.50, 0.50, 0.50)
+MIN RECOIL DISPLACEMENT (-0.20, 0.60, 5.70)
+MAX RECOIL DISPLACEMENT (0.20, 1.20, 6.50)
+MIN RECOIL ROTATION (0.20, -0.25, -0.30)
+MAX RECOIL ROTATION (0.80, 0.25, 0.30)
+CU LIFT AAA ANELY ATIMAAI 1&A
+
+
+
+Finished at 12:17:38:094
+Time elapsed: 22134
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\L2A31.png

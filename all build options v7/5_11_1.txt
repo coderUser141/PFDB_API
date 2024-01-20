@@ -1,0 +1,93 @@
+VERSION:1.02
+Started at 12:48:29:514
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\SR-3M1.png
+..\..\..\..\ImageParser\
+True
+k
+SR-3M1.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 69
+
+oR-3M
+KILLS 167
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 35 -> 19
+FIRERATE 900
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+V3
+0 100 7400)
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY a
+AMMO CAPACITY 20/120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.135
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 40.00 studs -> 90.00 studs
+MUZZLE VELOCITY 2000.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.40
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (1.10, -0.30, -0.20)
+MAX CAMERA KICK (2.50, 0.30, 0.20)
+MIN RECOIL DISPLACEMENT (-0.50, 0.60, 8.20)
+MAX RECOIL DISPLACEMENT (0.80, 1.10, 9.80)
+MIN RECOIL ROTATION (-0.40, 0.30, -0.50)
+MAX RECOIL ROTATION (1.30, 1.20, 0.50)
+HIPFIRE SPREAD FACTOR 0.10
+HIPFIRE RECOVERY SPEED 9.00
+HIPFIRE SPREAD DAMPING 0.85
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (1.70, -0.50, -0.50)
+MAX CAMERA KICK (2.90, 0.50, 0.50)
+MIN RECOIL DISPLACEMENT (-0.10, 0.30, 7.20)
+MAX RECOIL DISPLACEMENT (0.10, 0.70, 8.80)
+MIN RECOIL ROTATION (0.20, -0.10, -0.30)
+MAX RECOIL ROTATION (0.60, 0.20, 0.30)
+CLALIT LAA AANA avimals _
+
+
+
+Finished at 12:48:29:525
+Time elapsed: 18416
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\SR-3M1.png

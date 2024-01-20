@@ -1,0 +1,90 @@
+VERSION:1.02
+Started at 12:53:51:922
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\C8A22.png
+..\..\..\..\ImageParser\
+True
+k
+C8A22.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 128
+C8A2
+KILLS 14
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 32 ->18
+FIRERATE 900
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+18
+0 150 300
+ACCURACY �
+HIP ACCURACY ae
+SIGHT ACCURACY �
+AMMO CAPACITY 30/120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (0.90, -0.25, -0.35)
+MAX RECOIL ROTATION (1.40, 0.56, 0.35)
+SIGHT MAGNIFICATION a)
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED �_20.00
+AIM CAMERA RECOVERY SPEED 18.00
+WEAPON RECOVERY SPEED 25.00
+WEAPON RECOVERY DAMPING 0.85
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.2 seconds
+EMPTY RELOAD TIME 2.6 seconds
+EQUIP SPEED 13.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 15.00
+CROSSHAIR SPREAD RATE 300.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15.00
+MISC
+
+WEAPON WALKSPEED 14.50
+AIMING WALKSPEED 8.7
+AMMO TYPE 5.56x45mm NATO
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:53:51:949
+Time elapsed: 10200
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\C8A22.png

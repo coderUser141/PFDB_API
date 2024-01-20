@@ -1,0 +1,90 @@
+VERSION:1.02
+Started at 12:43:45:289
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\ADVANCED-COILGUN2.png
+..\..\..\..\ImageParser\
+False
+k
+ADVANCED-COILGUN2.png
+1.02
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 87
+ADVANCED COILGUN
+KILLS 23
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 20->5
+FIRERATE 3000 B| 850 A| 8505
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY -
+
+HIP ACCURACY a
+
+SIGHT ACCURACY mm
+
+AMMO CAPACITY 29/79
+FIRE MODES | SEMI | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION _�_{-0.02, -0.02, -0.02)
+MAX RECOIL ROTATION (0.20, 0.20, 0.20)
+SIGHT MAGNIFICATION 1.25
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED _��-18.00
+AIM CAMERA RECOVERY SPEED 18.00
+WEAPON RECOVERY SPEED 20.00
+WEAPON RECOVERY DAMPING 0.70
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 1.8 seconds
+EMPTY RELOAD TIME 1.8 seconds
+EQUIP SPEED 14,00
+AIM MODEL SPEED 16.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 200.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 10.00
+MISC
+
+WEAPON WALKSPEED 15.00
+AIMING WALKSPEED 11.4
+AMMO TYPE Angry Pancakes
+ROUND IN CHAMBER None
+RADAR SUPPRESSION RANGE Beyond 20 studs
+
+
+
+Finished at 12:43:45:339
+Time elapsed: 34967
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\ADVANCED-COILGUN2.png

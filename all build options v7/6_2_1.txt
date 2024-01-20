@@ -1,0 +1,95 @@
+VERSION:1.02
+Started at 12:10:27:027
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\SL-81.png
+..\..\..\..\ImageParser\
+True
+k
+SL-81.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 34
+
+oL-8
+KILLS 57
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 38 -> 28
+FIRERATE 650
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY �
+
+HIP ACCURACY ��
+
+SIGHT ACCURACY a
+
+AMMO CAPACITY 30/120
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.095
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.08
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 88.00 studs -> 148.00 studs
+MUZZLE VELOCITY 2800.00 studs/s
+PENETRATION DEPTH 1.30 studs
+SUPPRESSION 0.60
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (1.80, -0.30, -0.50)
+MAX CAMERA KICK (3.00, -0.10, 0.50)
+MIN RECOIL DISPLACEMENT (-0.30, 0.40, 9.20)
+MAX RECOIL DISPLACEMENT (0.30, 0.50, 10.80)
+MIN RECOIL ROTATION (1.20, -0.40, -0.30)
+MAX RECOIL ROTATION (2.00, 0.40, 0.30)
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 9.00
+HIPFIRE SPREAD DAMPING 0.78
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (1.95, -0.25, -0.22)
+MAX CAMERA KICK (2.65, 0.25, 0.22)
+MIN RECOIL DISPLACEMENT (-0.10, 0.40, 10.70)
+MAX RECOIL DISPLACEMENT (0.10, 0.90, 11.80)
+MIN RECOIL ROTATION (0.80, -0.10, -0.10)
+MAX RECOIL ROTATION (1.00, 0.10, 0.10)
+CIMT LAA naMein avinat aan
+
+
+
+Finished at 12:10:36:537
+Time elapsed: 37995
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\SL-81.png

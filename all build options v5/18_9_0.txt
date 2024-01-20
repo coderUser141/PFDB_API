@@ -1,0 +1,44 @@
+VERSION:1.00
+Started at 21:56:32:697
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\STOPPER.png
+..\..\..\..\ImageParser\
+k
+True
+STOPPER.png
+1.00
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 7.18
+STOPPER
+KILLS 0
+BLADE LENGTH 7.1
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.15
+TORSO MULTIPLIER 1.15
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 110.00
+BACK STAB DAMAGE 110.00
+MAIN ATTACK TIME 0.7 SECONDS
+MAIN ATTACK DELAY 0.3 SECONDS
+ALT ATTACK TIME 1.0 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.4 SECONDS
+QUICK ATTACK TIME 0.9 SECONDS
+QUICK ATTACK DELAY 0.3 SECONDS
+WALKSPEED 11.25
+
+
+
+Finished at 21:56:35:294
+Time elapsed: 29689
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\STOPPER.png

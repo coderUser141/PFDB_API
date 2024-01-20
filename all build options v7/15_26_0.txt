@@ -1,0 +1,44 @@
+VERSION:1.02
+Started at 12:43:17:136
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\BALISONG.png
+..\..\..\..\ImageParser\
+k
+True
+BALISONG.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 149
+BALISONG
+KILLS 0
+BLADE LENGTH 05
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.50
+TORSO MULTIPLIER 1.50
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 20.00
+BACK STAB DAMAGE 200.00
+MAIN ATTACK TIME 1.0 SECONDS
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.5 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.2 SECONDS
+QUICK ATTACK TIME 0.5 SECONDS
+QUICK ATTACK DELAY 0.0 SECONDS
+WALKSPEED 16.00
+
+
+
+Finished at 12:43:17:171
+Time elapsed: 24956
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\BALISONG.png

@@ -1,0 +1,92 @@
+VERSION:1.00
+Started at 22:26:21:778
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\OBREZ1.png
+..\..\..\..\ImageParser\
+False
+k
+OBREZ1.png
+1.00
+hi im a secondary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 117
+
+OBREZ
+KILLS 408
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 50 -> 40
+FIRERATE 90
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 100 200
+ACCURACY �
+
+HIP ACCURACY =
+
+SIGHT ACCURACY a
+
+AMMO CAPACITY 5 / 30
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 00s
+HEAD MULTIPLIER 3.00
+TORSO MULTIPLIER 1.25
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 50.00 studs �- 100.00 studs
+MUZZLE VELOCITY 1500.00 studs,'s
+PENETRATION DEPTH 2.00
+SUPPRESSION 5.00
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK IS. 90OW, OR
+MAX CAME RA KICK I9.,010,0 90I
+MIN RECOIL DISPLACEMENT I0.10,040,8.701
+MAX RECOIL DISPLACEMENT I040,100,9.101
+MIN RECOIL ROTATION [L.0,-10, 08
+MAX RECOIL ROTATION 2.10,0.0,0 90I
+HIPFIRE SPREAD FACTOR opus)
+HIPFIRE RECOVERY SPEED oe 6)
+HIPFIRE SPREAD DAMPING 07%
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 1510,08,0 5)
+MAX CAMERA KICK 1540, 0.40, -L.001
+MIN RECOIL DISPLACEMENT 0 10,0 10, 11.20
+MAX RECOIL DISPLACEMENT }0.10,040, 11.901
+MIN RECOIL ROTATION 0.20,0.08, 0.30)
+MAX RECOIL ROTATION 11.00, 0.20, 0.30
+
+
+
+Finished at 22:26:24:041
+Time elapsed: 19057
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\OBREZ1.png

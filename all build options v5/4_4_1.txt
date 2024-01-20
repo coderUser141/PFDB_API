@@ -1,0 +1,94 @@
+VERSION:1.00
+Started at 21:56:35:263
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\G3A31.png
+..\..\..\..\ImageParser\
+True
+k
+G3A31.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 59
+
+G3A3
+KILLS 1658
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 40 -> 30
+FIRERATE 540
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 X00
+ACCURACY �
+
+HIP ACCURACY �
+
+SIGHT ACCURACY -
+
+AMMO CAPACITY 20 / 120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL O.11s
+HEAD MULTIPLIER 2.00
+TORSO MULTIPLIER 1.10
+LIMB MULTIPLIER 1.0
+DAMAGE RANGE 60.00 studs �> 180.00 studs
+MUZZLE VELOCITY 2500.00 studs,'s
+PENETRATION DEPTH 1.50 studs
+SUPPRESSION 1.35
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK 0,-1.0 0)
+MAX CAME RA KICK 2,0 10,0 H
+MIN RECOIL DISPLACEMENT IO H, 920, 720!
+MAX RECOIL DISPLACEMENT OW IN LD!
+MIN RECOIL ROTATION 10.20,0 00,05
+MAX RECOIL ROTATION IN40,OK,0ORI
+HIPFIRE SPREAD FACTOR Qll
+HIPFIRE RECOVERY SPEED TH
+HIPFIRE SPREAD DAMPING OX
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK 1160, 040,001
+MAX CAMERA KICK |2.90,0 0,025)
+MIN RECOIL DISPLACEMENT 0 18,0 30,8 0)
+MAX RECOIL DISPLACEMENT (012,092,990
+MIN RECOIL ROTATION (0.68, -0 30, 0.50)
+MAX RECOIL ROTATION [144,065,060
+
+
+
+Finished at 21:56:35:332
+Time elapsed: 37811
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\G3A31.png

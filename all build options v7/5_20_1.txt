@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:53:38:638
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\C8A21.png
+..\..\..\..\ImageParser\
+True
+k
+C8A21.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 128
+C8A2
+KILLS 14
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 32 ->18
+FIRERATE 900
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+18
+0 150 300
+ACCURACY �
+HIP ACCURACY ae
+SIGHT ACCURACY �
+AMMO CAPACITY 30/120
+FIRE MODES | AUTO | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.135
+HEAD MULTIPLIER 1.50
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 25.00 studs -> 150.00 studs
+MUZZLE VELOCITY 2400.00 studs/s
+PENETRATION DEPTH 0.80 studs
+SUPPRESSION 0.35
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAMERA KICK (1.00, -0.30, -0.20)
+MAX CAMERA KICK (1.10, -0.10, 0.20)
+MIN RECOIL DISPLACEMENT (-0.60, 1.30, 10.20)
+MAX RECOIL DISPLACEMENT (0.80, 1.50, 12.50)
+MIN RECOIL ROTATION (-0.90, 0.45, -1.40)
+MAX RECOIL ROTATION (1.50, 0.76, 1.10)
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 9.00
+HIPFIRE SPREAD DAMPING 0.75
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK (0.85, -0.40, -0.40)
+MAX CAMERA KICK (1.70, 0.40, 0.40)
+MIN RECOIL DISPLACEMENT (-0.30, 0.50, 10.10)
+MAX RECOIL DISPLACEMENT (0.45, 0.70, 12.20)
+MIN RECOIL ROTATION (0.90, -0.25, -0.35)
+MAX RECOIL ROTATION (1.40, 0.56, 0.35)
+CL LIT RAAPAUNETIL ATIAAI 1 OA
+
+
+
+Finished at 12:53:38:666
+Time elapsed: 13281
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\C8A21.png

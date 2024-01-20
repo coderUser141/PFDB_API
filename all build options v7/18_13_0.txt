@@ -1,0 +1,48 @@
+VERSION:1.02
+Started at 12:13:27:527
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\PRESENT.png
+..\..\..\..\ImageParser\
+k
+True
+PRESENT.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 1000
+PRESENT
+KILLS 0
+BLADE LENGTH 09
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+HEAD MULTIPLIER 1.15
+TORSO MULTIPLIER A)
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 72.00
+BACK STAB DAMAGE 140.00
+MAIN ATTACK TIME 0.7 SECONDS
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.7 SECONDS
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+ALT ATTACK DELAY 0.3 SECONDS
+
+QUICK ATTACK TIME 0.6 SECONDS
+
+QUICK ATTACK DELAY 0.2 SECONDS
+
+WALKSPEED 19.75
+ae ee
+
+
+
+Finished at 12:13:33:474
+Time elapsed: 27695
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\PRESENT.png

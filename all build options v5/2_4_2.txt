@@ -1,0 +1,91 @@
+VERSION:1.00
+Started at 22:07:49:701
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\RPK122.png
+..\..\..\..\ImageParser\
+True
+k
+RPK122.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 37
+
+RPK12
+KILLS 782
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+ammo DEFAULT
+DAMAGE 32 -> 21
+FIRERATE 700 A | 1000 B | 700 S
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+�h
+0 150 x0
+ACCURACY �
+HIP ACCURACY �
+SIGHT ACCURACY �
+ammo CAPACITY 45 / 180
+FIRE MODES | AUTO | III | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION |O.20, 0.10, 0.30]
+MAX RECOIL ROTATION |0.80, -0.20, 0.30]
+SIGHT MAGNIFICATION 2X)
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED 15.00
+AIM CAMERA RECOWERY SPEED 18.00
+WEAPON RECOVERY SPEED 0.0
+WEAPON RECOVERY DAMPING O30
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.7
+EMPTY RELOAD TIME 3.7
+EQUIP SPEED 12.00W
+AJM MODEL SPEED 12.00w
+A)M MAGNIF KCATION SPEED LL�
+CROSSHAIR SIZE ales)
+CROSSHAIR SPREAD RATE 45K) 0
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE moles
+MISC
+
+WEAPON walkspeed 12.00
+aiming walkspeed 7.2
+ammo type 5.45x39mm
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppreased
+
+
+
+Finished at 22:07:49:795
+Time elapsed: 26183
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\RPK122.png

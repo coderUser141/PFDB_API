@@ -1,0 +1,92 @@
+VERSION:1.02
+Started at 12:15:09:560
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\BEOWULF-TCR2.png
+..\..\..\..\ImageParser\
+True
+k
+BEOWULF-TCR2.png
+1.02
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 70
+BEOWULF TCR
+KILLS 1610
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 51 -> 36
+FIRERATE 400
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY a
+
+HIP ACCURACY �
+
+SIGHT ACCURACY _
+
+AMMO CAPACITY 10/70
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+MIN RECOIL ROTATION (0.90, -0.10, -0.40)
+MAX RECOIL ROTATION (1.40, 0.30, 0.20)
+SIGHT MAGNIFICATION 2.50
+ACCURACY
+
+HIPFIRE CAMERA RECOVERY SPEED �_��-'17.00
+AIM CAMERA RECOVERY SPEED 18.00
+WEAPON RECOVERY SPEED 20.00
+WEAPON RECOVERY DAMPING 0.75
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+WEAPON HANDLING
+
+RELOAD TIME 2.2 seconds
+EMPTY RELOAD TIME 3.2 seconds
+EQUIP SPEED 11.00
+AIM MODEL SPEED 12.00
+AIM MAGNIFICATION SPEED 10.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 350.00
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+CROSSHAIR RECOVER RATE 15.00
+MISC
+
+WEAPON WALKSPEED 13.00
+AIMING WALKSPEED 7.8
+AMMO TYPE �50 BEOWULF
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE  Unsuppressed
+
+
+
+Finished at 12:15:09:618
+Time elapsed: 25755
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\BEOWULF-TCR2.png

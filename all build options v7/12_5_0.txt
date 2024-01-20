@@ -1,0 +1,36 @@
+VERSION:1.02
+Started at 12:48:15:610
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons102\V40-MINI.png
+..\..\..\..\ImageParser\
+k
+False
+V40-MINI.png
+1.02
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 140
+V40 MINI
+KILLS 86
+BLAST RADIUS 35
+KILLING RADIUS 20
+MAXIMUM DAMAGE 145
+
+
+===== General =====
+<class 'numpy.ndarray'>
+MAXIMUM DAMAGE 149
+145
+20
+0 100 200
+TRIGGER MECHANISMFUSE - 4SECONDS
+SPECIAL EFFECTS VELOCITY
+STORED CAPACITY <)
+
+
+
+Finished at 12:48:15:823
+Time elapsed: 9400
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons102\V40-MINI.png

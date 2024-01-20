@@ -1,0 +1,92 @@
+VERSION:1.00
+Started at 22:18:16:575
+hi im python
+
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\dist\ImageParser.exe
+..\..\..\..\ImageParser\Weapons\WA20001.png
+..\..\..\..\ImageParser\
+True
+k
+WA20001.png
+1.00
+hi im a primary
+
+===== Top =====
+<class 'numpy.ndarray'>
+RANK 200
+WA2000
+KILLS 107
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+
+
+===== General1 =====
+<class 'numpy.ndarray'>
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+AMMO DEFAULT
+DAMAGE 80 -> 40
+FIRERATE 120
+
+
+===== General2 =====
+<class 'numpy.ndarray'>
+<class 'numpy.ndarray'>
+0 150 300
+ACCURACY ae
+HIP ACCURACY a
+
+SIGHT ACCURACY Ee
+
+AMMO CAPACITY 6/42
+FIRE MODES | SEMI |
+
+
+===== Ballistics =====
+<class 'numpy.ndarray'>
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 00s
+HEAD MULTIPLIER 2.50
+TORSO MULTIPLIER 1.20
+LIMB MULTIPLIER 1.00
+DAMAGE RANGE 70.00 studs � 150.00 studs
+MUZZLE VELOCITY 2850.00 studs,'s
+PENETRATION DEPTH 2.80
+SUPPRESSION 3.50
+
+
+===== Advanced1 =====
+<class 'numpy.ndarray'>
+MIN CAME RA KICK IL W,08,00|
+MAX CAME RA KICK |0.30,1.10,0%0
+MIN RECOIL DISPLACEMENT I0.10,040, L270!
+MAX RECOIL DISPLACEMENT IO 40,100, 14.10)
+MIN RECOIL ROTATION IO 0,910,010
+MAX RECOIL ROTATION 10.30, 9.20, 0.0
+HIPFIRE SPREAD FACTOR opus)
+HIPFIRE RECOVERY SPEED ras �
+HIPFIRE SPREAD DAMPING 070
+
+
+===== Advanced2 =====
+<class 'numpy.ndarray'>
+SIGHT ACCURACY
+
+MIN CAMERA KICK I20,0N,05
+MAX CAMERA KICK [260,020,050
+MIN RECOIL DISPLACEMENT 0 10,020, 14.10
+MAX RECOIL DISPLACEMENT 10.10, 30, 16.201
+MIN RECOIL ROTATION 0.10, 0.10, -0.301
+MAX RECOIL ROTATION (0.20,0.20, 0.30
+
+
+
+Finished at 22:18:26:075
+Time elapsed: 27161
+C:\Users\peter\source\repos\Phantom Forces Database\ImageParser\Weapons\WA20001.png

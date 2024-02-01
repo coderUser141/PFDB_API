@@ -1,11 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	  <PreBuildEvent>
+		  C:\Users\Aethelhelm\AppData\Local\Programs\Python\Python312\python -m PyInstaller -path=[C:\Users\Aethelhelm\AppData\Local\Programs\Python\Python312\Scripts] --workpath $(SolutionDir)ImageParserForAPI\build --distpath $(SolutionDir)ImageParserForAPI\dist --onefile $(SolutionDir)ImageParserForAPI\impa.py
+		  xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ImageParserForAPI\ /y /f /v
+		  mkdir $(SolutionDir)PyExec\bin\$(Configuration)\$(TargetFramework)\tessbin
+		  xcopy $(SolutionDir)ImageParserForAPI\tessbin\ $(SolutionDir)PyExec\bin\$(Configuration)\$(TargetFramework)\tessbin\ /y /f /v /e /h /j
+		  xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)PyExec\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
+	  </PreBuildEvent>
   </PropertyGroup>
 
 </Project>

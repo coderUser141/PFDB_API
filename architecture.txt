@@ -15,6 +15,7 @@ Projects and their purposes:
 5. P_Invoke + Calculator
 	This C# wrapper project manages the context boundary between the managed C# code and unmanaged C/C++ code. 
 	(Need to do: Figure out roles for C++ vs C#)
+...
 
 Ideal workflow:
 1. Get screenshots of the weapon statistics with PFDB_SS project
@@ -28,4 +29,15 @@ Maybe I will move onto another format rather than databases, but that isn't nece
 
 TO DO:
 0. Modify Python script to better read the statistics and make sure everything is being read correctly (for examples: stuff is getting cut off)
+	-> this has mostly been done, have figured out how to read damage ranges and values better using boundary identification
 1. Finish all regex patterns by analyzing common mistakes/shortcomings
+
+Common mistakes/shortcomings:
+- clustered damages, like executioner have a tendency to be messed up
+- low damage weapons clip with damage range markers (damage range markers are useless)
+- 5.45x39mm usually becomes 9.45x39mm / 5 and 9 swap sometimes
+- firemode firerates usually mess up by having letters, catch letters that are not following a number -> regex pattern should be able to do some magic here
+- firemode types mess up burst: for example, "IIlll" instead of "IIIII"
+-> identify general trends for damage / suppression
+
+2. Edit FileIO to use SQL

@@ -5,6 +5,15 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+	  <PreBuildEvent>
+		  xcopy $(SolutionDir)Calculator\Calculator.dll $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
+		  C:\Users\Aethelhelm\AppData\Local\Programs\Python\Python312\python -m PyInstaller -path=[C:\Users\Aethelhelm\AppData\Local\Programs\Python\Python312\Scripts] --workpath $(SolutionDir)ImageParserForAPI\build --distpath $(SolutionDir)ImageParserForAPI\dist --onefile $(SolutionDir)ImageParserForAPI\impa.py
+		  xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ImageParserForAPI\ /y /f /v
+		  mkdir $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\tessbin
+		  xcopy $(SolutionDir)ImageParserForAPI\tessbin\ $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\tessbin\ /y /f /v /e /h /j
+		  xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
+	  </PreBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>

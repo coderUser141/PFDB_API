@@ -2,8 +2,8 @@
 
 
 a = Analysis(
-    ['impa.py'],
-    pathex=['C:\\Users\\Aethelhelm\\AppData\\Local\\Programs\\Python\\Python312\\Scripts'],
+    ['C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ImageParserForAPI\\impa.py'],
+    pathex=['ath=[C:\\Users\\Aethelhelm\\AppData\\Local\\Programs\\Python\\Python312\\Scripts]'],
     binaries=[],
     datas=[],
     hiddenimports=[],

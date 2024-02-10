@@ -41,3 +41,25 @@ Common mistakes/shortcomings:
 -> identify general trends for damage / suppression
 
 2. Edit FileIO to use SQL
+
+
+Useful websites:
+
+general:
+https://stackoverflow.com/questions/31417688/passing-a-vector-array-from-unmanaged-c-to-c-sharp (pinvoke)
+https://www.programiz.com/csharp-programming/regex (regex stuff)
+https://www.desmos.com/calculator/o7l7lxuumq (c++ calculator)
+https://math.mit.edu/~stevenj/18.335/newton-sqrt.pdf (c++ calculator)
+https://paste.sh/vVjE9yf_#_96XtnTdkzqtoDJ9ZukrGAxh (database things)
+https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection (DI)
+https://www.youtube.com/watch?v=GAOCe-2nXqc (DI, logging)
+https://www.youtube.com/watch?v=xrGco4O1bfk&themeRefresh=1&theme=dark (pinvoke)
+
+c++ sqlite
+https://stackoverflow.com/questions/3957343/how-to-read-data-from-sqlite-database
+https://www.sqlite.org/cintro.html
+https://www.sqlite.org/rescode.html#ok
+https://www.sqlite.org/c3ref/open.html
+https://www.sqlite.org/c3ref/free_table.html
+https://www.sqlite.org/c3ref/exec.html
+https://www.tutorialspoint.com/sqlite/sqlite_c_cpp.htm

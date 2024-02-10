@@ -19,7 +19,8 @@ namespace PFDB
                 Console.WriteLine(rankToCreditsSummation(0, 2));
                 Console.WriteLine(returnString());
 
-                Console.WriteLine(experienceToRank(rankToExperienceDefault(213) + rankToExperienceDefault(173)));
+                Console.WriteLine(experienceToRank(rankToExperienceDefault(102) + rankToExperienceDefault(198)));
+                Console.WriteLine(experienceToRank(rankToExperienceDefault(102) + rankToExperienceDefault(202)));
 
                 Console.WriteLine(rankToCreditsSummation(231, 324));
 

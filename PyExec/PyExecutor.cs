@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using PFDB.PythonExecutor;
@@ -146,10 +147,10 @@ namespace PFDB
 			/// <param name="filename">File name of the image to be read.</param>
 			/// <param name="weaponType">Type of weapon that the image is reading.</param>
 			/// <param name="tessbinpath">Path to /tessbin/ folder. Unused if <see cref="currentDirectoryHasTessbin"/> is true.</param>
-			/// <returns>A Tuple, with the first item containing the result; the second containing the first stopwatch time (in milliseconds) and the third containing the second stopwatch time (in milliseconds). Note that the second and third items return -1.0 when the function fails.</returns>
+			/// <returns>A Tuple, with the first item containing the result; the second containing the first stopwatch time (in seconds) and the third containing the second stopwatch time (in milliseconds). Note that the second and third items return -1.0 when the function fails.</returns>
 			/// <exception cref="ArgumentNullException"></exception>
 			/// <exception cref="ArgumentException"></exception>
-			public Tuple<string, double, double> execute(string filename, int weaponType, string? tessbinpath)
+			public Benchmark execute(string filename, int weaponType, string? tessbinpath)
 			{
 				if (weaponType > 3 || weaponType < 0)
 				{
@@ -162,14 +163,15 @@ namespace PFDB
 						tessbinpath += "\\";
 					}
 				}
-				DateTime start = DateTime.Now;
-				string startTime = start.ToString("dddd, MMMM, yyyy HH:mm:ss:fff");
-				Stopwatch watch = System.Diagnostics.Stopwatch.StartNew();
+
+				Benchmark benchmark = new Benchmark();
+				benchmark.StartBenchmark();
+				string startTime = benchmark.Start.ToString("dddd, MMMM, yyyy HH:mm:ss:fff");
 
 				ProcessStartInfo pyexecute;
 				if (currentDirectoryHasTessbin)
 				{
-					pyexecute = new ProcessStartInfo(programDirectory + "impa.exe", string.Format("{0} {1} {2} {3}", "-c", fileDirectory + filename, Convert.ToString(weaponType), version));
+					pyexecute = new ProcessStartInfo(programDirectory + "impa.exe", $"-c {fileDirectory + filename} {Convert.ToString(weaponType)} {version}");
 				}
 				else
 				{
@@ -177,7 +179,7 @@ namespace PFDB
 					{
 						throw new ArgumentNullException(nameof(tessbinpath), "If currentDirectoryHasTessbin is false, tessbinpath parameter cannot be empty.");
 					}
-					pyexecute = new ProcessStartInfo(programDirectory + "impa.exe", string.Format("{0} {1} {2} {3} {4}", "-f", tessbinpath, fileDirectory + filename, Convert.ToString(weaponType), version));
+					pyexecute = new ProcessStartInfo(programDirectory + "impa.exe", $"-f {tessbinpath} {fileDirectory + filename} {Convert.ToString(weaponType)} {version}");// 
 				}
 				pyexecute.RedirectStandardOutput = true;
 				pyexecute.UseShellExecute = false;
@@ -193,13 +195,12 @@ namespace PFDB
 							{
 								string result = reader.ReadToEnd();
 
-								DateTime end = DateTime.Now;
-								string endTime = end.ToString("dd, MMMM, yyyy HH:mm:ss:fff");
+
 								string command = "Command used: " + pyexecute.Arguments;
 								command = command.Replace(fileDirectory + filename, "...." + commonExecPath(Environment.ProcessPath ?? "null", fileDirectory + filename).Item2);
 								if (tessbinpath != null) command = command.Replace(tessbinpath, "...." + commonExecPath(Environment.ProcessPath ?? "null", tessbinpath).Item2);
-								watch.Stop();
-								string elapsedTime = Convert.ToString(((double)watch.ElapsedMilliseconds) / ((double)1000)) + " seconds";
+								
+
 								int width = Console.WindowWidth;
 								string line = string.Empty;
 								for (int i = 0; i < width; ++i)
@@ -207,24 +208,29 @@ namespace PFDB
 									line += "_";
 								}
 
-								string finalOutput = $"Time start: \t{startTime}{Environment.NewLine}" +
-									$"Time end: \t{endTime}{Environment.NewLine}" +
-									$"Elapsed time (1): {elapsedTime}, Elapsed time (2): {(end - start).TotalSeconds}{Environment.NewLine}" +
-									$"Executed from: {"...." + commonExecPath(fileDirectory + filename, Environment.ProcessPath ?? "null").Item2}{Environment.NewLine}" +
-									$"{command}{Environment.NewLine}Computer Information:{Environment.NewLine}" +
-									$"Name: {Environment.MachineName}, Processor Count: {Environment.ProcessorCount}, Page Size: {Environment.SystemPageSize}{Environment.NewLine}" +
-									$"Working Set Memory: {Environment.WorkingSet}, .NET Version: {Environment.Version}, Operating System: {Environment.OSVersion}{Environment.NewLine}" +
-									$"{line}" +
-									$"{Environment.NewLine}{Environment.NewLine}" +
-									$"{result}";
 
-								return Tuple.Create(finalOutput, (end - start).TotalSeconds, ((double)watch.ElapsedMilliseconds) / ((double)1000));
+								benchmark.StopBenchmark();
+								string endTime = benchmark.End.ToString("dddd, MMMM, yyyy HH:mm:ss:fff");
+								benchmark.GetElapsedTimeInSeconds(
+									$"Elapsed time 1 (s): {benchmark.StopwatchDateTime.TotalSeconds}, Elapsed time 2 (s): {benchmark.StopwatchNormal}{Environment.NewLine}" +
+                                    $"Time start: \t{startTime}{Environment.NewLine}" +
+                                    $"Time end: \t{endTime}{Environment.NewLine}" +
+                                    $"Executed from: {"...." + commonExecPath(fileDirectory + filename, Environment.ProcessPath ?? "null").Item2}{Environment.NewLine}" +
+                                    $"{command}{Environment.NewLine}Computer Information:{Environment.NewLine}" +
+                                    $"Name: {Environment.MachineName}, Processor Count: {Environment.ProcessorCount}, Page Size: {Environment.SystemPageSize}{Environment.NewLine}" +
+                                    $"Working Set Memory: {Environment.WorkingSet}, .NET Version: {Environment.Version}, Operating System: {Environment.OSVersion}{Environment.NewLine}" +
+                                    $"{line}" +
+                                    $"{Environment.NewLine}{Environment.NewLine}" +
+                                    $"{result}"
+									);
+								return benchmark;
 							}
 						}
 					}
 				}
-
-				return Tuple.Create("failed", -1.0, -1.0);
+				benchmark.StopBenchmark();
+				benchmark.GetElapsedTimeInSeconds("Failed.");
+				return benchmark;
 			}
 
 			public string crop(string filename, int weaponType)
@@ -270,27 +276,71 @@ namespace PFDB
 
 		}
 
-		public class Benchmark : IOutput{
-            public string OutputString { get; init; }
-            public double StopwatchNormal { get; set; }
-			public double StopwatchDateTime { get; set; }
-            public Benchmark(string outputString)
+		public class Benchmark : IOutput
+		{
+			private string outputStr;
+			public string OutputString { get { return outputStr; } }
+
+			private double stopwatchNormal;
+			public double StopwatchNormal { get { return stopwatchNormal; } }
+
+			private TimeSpan stopwatchDateTime;
+            public TimeSpan StopwatchDateTime { get { return stopwatchDateTime; } }
+
+			private DateTime start;
+			public DateTime Start { get { return start; } }
+
+			private DateTime end;
+			public DateTime End { get { return end; } }
+
+			private Stopwatch stopwatch;
+			public Benchmark()
 			{
-				OutputString = outputString;
+				start = DateTime.Now;
+				end = start;
+				stopwatch = new Stopwatch();
+                stopwatchNormal = 0; stopwatchDateTime = TimeSpan.Zero;
+				outputStr = string.Empty;
 			}
-		}
+			public void StartBenchmark()
+			{
+				start = DateTime.Now;
+				stopwatch = Stopwatch.StartNew();
+			}
+			public void StopBenchmark()
+			{
+				end = DateTime.Now;
+				stopwatch.Stop();
+				stopwatchNormal = stopwatch.ElapsedMilliseconds;
+				stopwatchDateTime = (end - start);
+				
+			}
+			public Tuple<double, double> GetElapsedTimeInSeconds()
+			{
+				return Tuple.Create(stopwatchDateTime.TotalSeconds, (double)stopwatchNormal / (double)1000);
+			}
+            public Tuple<double, double> GetElapsedTimeInSeconds(string outputString)
+            {
+				this.outputStr = outputString;
+                return Tuple.Create(stopwatchDateTime.TotalSeconds, (double)stopwatchNormal / (double)1000);
+            }
+        }
 
 		public interface IOutput
 		{
+			public string OutputString{ get; }
 
-			public string OutputString
-			{
-				get;
-			}
+		}
 
+        public class PyTesseractInput : IInputFile
+        {
+            string IInputFile.filename => throw new NotImplementedException();
+        }
 
-
-
+        public interface IInputFile
+		{
+			public string filename { get; }
+			
 		}
 
 		public interface IPythonExecutor
@@ -309,6 +359,8 @@ namespace PFDB
 			/// Phantom Forces Version
 			/// </summary>
 			public string version { get; init; }
+
+			public abstract IOutput execute();
 		}
 	}
 }

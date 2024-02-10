@@ -17,7 +17,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
   </ItemGroup>
 
   <ItemGroup>

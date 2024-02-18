@@ -33,6 +33,7 @@ def categoryweaponcrop(image, wtype, version):
 			if(os.path.exists(fi)):
 				continue
 			else:
+				print(fi + "saved!")
 				cv2.imwrite(fi, crop)
 				break
 	#cv2.imwrite("")

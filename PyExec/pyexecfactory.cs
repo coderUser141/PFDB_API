@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace PFDB
 {
-    namespace pyexec
+    namespace PythonFactory
     {
         public class pyexecfactory
         {
-
-            
-
             public pyexecfactory()
             {
 

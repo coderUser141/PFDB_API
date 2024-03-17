@@ -1,7 +1,7 @@
 ﻿using PFDB.PythonExecution;
 using PFDB.PythonFactory;
 using PFDB.WeaponUtility;
-using PFDB;
+using PFDB.Parsing;
 
 public class ComponentTester
 {
@@ -38,6 +38,7 @@ public class ComponentTester
 		);
 		//factory2.Start();
 
+		System.Environment.SetEnvironmentVariable("the pee pee poo poo man", "you won't be laughing when he finds you", EnvironmentVariableTarget.User);
 
 	}
 }

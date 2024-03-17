@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
-using System.Text;
-using static System.Net.Mime.MediaTypeNames;
 using System.Text.RegularExpressions;
-using System.Numerics;
-using System.Threading.Tasks.Dataflow;
-using System.Threading;
 
 namespace PFDB
 {
-	namespace WeaponUtility
-	{
-		/// <summary>
-		/// Specifies the weapon type.
-		/// </summary>
-		public enum WeaponType
+    namespace WeaponUtility
+    {
+        /// <summary>
+        /// Specifies the weapon type.
+        /// </summary>
+        public enum WeaponType
 		{
 			/// <summary>
 			/// Primary Gun.

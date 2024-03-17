@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using PFDB.WeaponUtility;
 
+Console.Write("");
 
 namespace PFDB
 {
@@ -141,7 +142,9 @@ namespace PFDB
 			private int _acceptableSpaces;
 			private int _acceptableCorruptedWordSpaces; //margin of error
 
-			public StatisticParse(PhantomForcesVersion version, int acceptableSpaces = 3, int acceptableCorruptedWordSpaces = 3, bool consoleWrite = false)
+			internal string Filetext { get { return _filetext; } }
+
+			public StatisticParse(PhantomForcesVersion version, string text, int acceptableSpaces = 3, int acceptableCorruptedWordSpaces = 3, bool consoleWrite = false)
 			{
 				_firstWordLocationSearcher = new IndexSearch("", null);
 				_secondWordLocationSearcher = new IndexSearch("", null);
@@ -149,7 +152,7 @@ namespace PFDB
 				_consoleWrite = consoleWrite;
 				_acceptableCorruptedWordSpaces = acceptableCorruptedWordSpaces;
 				_acceptableSpaces = acceptableSpaces;
-				_filetext = string.Empty;
+				_filetext = text;
 				//_currentPosition = 0;
 			}
 
@@ -391,9 +394,9 @@ namespace PFDB
 			}
 			
 			/// <summary>
-			/// 
+			/// Searches the text to find locations where statistics are likely to be.
 			/// </summary>
-			/// <returns></returns>
+			/// <returns>An <see cref="IEnumerable{int}"/> containing the position of the first character of the first word.</returns>
 			/// <exception cref="Exception"></exception>
 			private IEnumerable<int> grabStatisticLocations()
 			{
@@ -424,29 +427,25 @@ namespace PFDB
 			}
 
 			
-			private void findStatisticInFileRemake(string filepath, SearchTargets target, WeaponType weaponType, IEnumerable<char> endings)
+			public string findStatisticInFile(SearchTargets target, WeaponType weaponType, IEnumerable<char> endings)
 			{
 				if((target <= SearchTargets.FireModes) == false && weaponType != WeaponType.Primary && weaponType != WeaponType.Secondary)
 				{
-					return; //error
+					//return; //error
+					throw new ArgumentException($"The SearchTarget specified does not match the WeaponType specified.");
 				}else if(target >= SearchTargets.BlastRadius && target <= SearchTargets.StoredCapacity && weaponType != WeaponType.Grenade)
 				{
-					return; //error
-				}else if(target >= SearchTargets.FrontStabDamage && weaponType != WeaponType.Melee)
+					//return; //error
+                    throw new ArgumentException($"The SearchTarget specified does not match the WeaponType specified.");
+                }
+                else if(target >= SearchTargets.FrontStabDamage && weaponType != WeaponType.Melee)
 				{
-					return; //error
-				}
+                    //return; //error
+                    throw new ArgumentException($"The SearchTarget specified does not match the WeaponType specified.");
+                }
 
-				try
-				{
-					_filetext = FileParse.fileReader(filepath);
-				}
-				catch
-				{
-					return; //error, log
-				}
-
-				if (_filetext == "") return; // error
+				if (_filetext == "") //return; // error
+					throw new ArgumentException("text was empty");
 
 				//todo: potential to add functionality to read directly from a string or object
 
@@ -475,7 +474,8 @@ namespace PFDB
 							{
 								corruptedWordFixer(_inputWord1);
 								firstWordLocationSearcher.Search();
-								if (firstWordLocationSearcher.isEmpty()) return; //error
+								if (firstWordLocationSearcher.isEmpty()) //return; //error
+									throw new WordNotFoundException($"{_inputWord1} was not found anywhere in the text with one-word case.");
 							}
 							_firstWordLocationSearcher = firstWordLocationSearcher;
 							_secondWordLocationSearcher = secondWordLocationSearcher;
@@ -553,7 +553,8 @@ namespace PFDB
 							if (secondWordLocationSearcher.isEmpty() == false)
 								goto SecondWordFound;
 
-							return; //error
+                            throw new WordNotFoundException("None of the two words were found.");
+                            //return; //error
 
 						SecondWordFound:
 
@@ -572,269 +573,50 @@ namespace PFDB
 				}
 				catch
 				{
-					return; //error, no words were found
+					throw new WordNotFoundException("None of the two words were found.");
+					//return; //error, no words were found
 				}
-				
+
+				StringBuilder result = new StringBuilder();
+				List<char> list = new List<char>(endings);
+				list.AddRange(new List<char>() { (char)32, (char)13, (char)10 });
 
 
+				foreach(int location in locations)
+				{
+					int i = location;
+					try
+					{
+						if (list.Contains(_filetext[i])) break;
+						result.Append(_filetext[i]);
+					}
+					catch (ArgumentOutOfRangeException)
+					{
+						break;
+					}
+                }
+
+				return result.ToString();
 
 
 			}
 
 
 		}
-		/*
-		private class LegacyStatisticParse
-		{
-			
-
-			/*
-			/// <summary>
-			/// Searches if two words' index positions are close enough together (specified by <paramref name="bufferSize"/>) <b>and</b> in order. 
-			/// The currentPosition is updated within this function to wherever the words have been found.
-			/// </summary>
-			/// <param name="currentPosition">The current position. This parameter is updated whenever the two words are sufficiently close together.</param>
-			/// <param name="inputWord2Length">The length of the second input word.</param>
-			/// <param name="bufferSize">The buffer size of the locations of the words. Smaller value means higher accuracy but might not be big enough for some cases. Technically, a big enough value here will find <b>all</b> occurences of the first word followed by the second word, so long as they are in order.</param>
-			/// <param name="indexI">Index of the first word.</param>
-			/// <param name="indexJ">Index of the second word.</param>
-			/// <returns>Returns <see cref="true"/> if the two words are close enough together and in order, <see cref="false"/> otherwise.</returns>
-			private static bool searchTwoWords(ref int currentPosition, int inputWord2Length, int bufferSize, int indexI, int indexJ)
-			{
-				for (int i = 0; i < bufferSize; i++)
-				{
-					//checks if the first word location matches the second word location
-					if (indexI + i == indexJ)
-					{
-						currentPosition = indexJ + inputWord2Length;
-						return true;
-					}
-				}
-				return false;
-			}
-
-			/// <summary>
-			/// Handles the case when searching for two words.
-			/// </summary>
-			/// <param name="currentPosition">The current position. Is updated by <see cref="searchTwoWords(ref int, string, int, int, int)"/></param>
-			/// <param name="filetext">The text to search through.</param>
-			/// <param name="inputWord2">The second word to search for.</param>
-			/// <param name="bufferSize">The buffer size of the locations of the words. Smaller value means higher accuracy but might not be big enough for some cases. Technically, a big enough value here will find <b>all</b> occurences of the first word followed by the second word, so long as they are in order.</param>
-			/// <param name="indexI">Index of the first word.</param>
-			/// <param name="target">The target to search for.</param>
-			/// <returns>Returns true if both the words have been matched by <see cref="searchTwoWords(ref int, string, int, int, int)"/>, false otherwise.</returns>
-			private static bool twoWordCaseHandler(ref int currentPosition, string filetext, string inputWord2, int bufferSize, int indexI, SearchTargets target)
-			{
-				bool found = false;
-				IndexSearch indexSearch = new IndexSearch(filetext, inputWord2);
-				indexSearch.Search();
-				List<int> inputWord2Locations = indexSearch.ListOfIndices;
-				//iterates through all second word locations
-				foreach (int indexJ in inputWord2Locations)
-				{
-					switch (target)
-					{
-						case SearchTargets.Damage:
-						case SearchTargets.DamageRange:
-							{
-								//TODO: investigate if damage and damage range can be separated somehow, and increase readability
-								//		while keeping work as low as possible
-
-								break; //breaks out of switch
-							}
-						case SearchTargets.HeadMultiplier:
-						case SearchTargets.LimbMultiplier:
-						case SearchTargets.TorsoMultiplier:
-							{
-								found = searchTwoWords(ref currentPosition, inputWord2, bufferSize + 10, indexI, indexJ);
-								break; //breaks out of switch
-							}
-						default:
-							{
-								found = searchTwoWords(ref currentPosition, inputWord2, bufferSize, indexI, indexJ);
-								break; //breaks out of switch
-							}
-					}
-					if (found) return found;
-				}
-
-
-				return false;
-			}
-
-			/// <summary>
-			/// Searches for a statistic within the text from the current location until any character flag(s).
-			/// </summary>
-			/// <param name="currentPosition">The current position.</param>
-			/// <param name="filetext">The text to search through.</param>
-			/// <param name="compareChars">A list of characters that stops the reading when encountered.</param>
-			/// <returns>A string containing the statistic until the specified character flag. If currentPosition is outside the range of the text, or if there is no character found that matches the specified character flags, this function will return <see cref="string.Empty"/> </returns>
-			private static string grabStatisticFromLocation(int currentPosition, string filetext, List<char> compareChars)
-			{
-				Func<char, List<char>, bool> matchChar = (compare, flags) => { foreach (char k in flags) { if (compare == k) { return true; } } return false; };
-				string result = string.Empty;
-				try
-				{
-					for (int j = currentPosition; matchChar(filetext[j], compareChars) == false; j++)
-					{
-						result += filetext[j];
-					}
-				}
-				catch (IndexOutOfRangeException) { result = string.Empty; }
-				return result;
-			}
-
-			/// <summary>
-			/// Searches for a target specified within a text. Throws an <see cref="Exception"/> if the first word has not been found.
-			/// </summary>
-			/// <param name="currentPosition">The current position. This value will be updated by <see cref="twoWordCaseHandler(ref int, string, string, int, int, SearchTargets)"/></param>
-			/// <param name="filetext">The text to be searched.</param>
-			/// <param name="target">The target to search for.</param>
-			/// <returns>A string containing the desired statistic specified.</returns>
-			/// <exception cref="Exception"></exception>
-			private static string searchForTarget(ref int currentPosition, string filetext, SearchTargets target)
-			{
-				/*  Algorithm:
-				 *  Find locations of the first word, store them in list
-				 *  Find locations of the second word (if it exists), and store those in list
-				 *  Iterates through each first word location, and checks a certain number of characters ahead to see if any second word locations are there
-				 *  If there are no second words, just find all first words
-				 */
-		/*
-				const int acceptableSpaces = 3;
-				bool found = false;
-				string result = string.Empty;
-				string inputWord1 = "";
-				string? inputWord2 = null;
-
-				//selects input words
-				inputWordsSelection(target, ref inputWord1, ref inputWord2);
-				List<int> inputWord1Locations = new List<int>(indexFinder(filetext, inputWord1));
-
-				//iterate through all first word locations
-				foreach (int indexI in inputWord1Locations)
-				{
-					//2 word case
-					if (inputWord2 != null) found = twoWordCaseHandler(ref currentPosition, filetext, inputWord2, inputWord1.Length + acceptableSpaces + inputWord2.Length, indexI, target);
-					if (found) break;
-
-					//1 word case
-					//rank, suppression, firerate
-
-					//TODO: verify for all other cases
-					if (inputWord1Locations.Count > 0)
-					{
-						found = true;
-						currentPosition = indexI + inputWord1.Length;
-						break;
-					}
-
-					throw new Exception("There are no words that match the first input word.");
-
-				}
-				if (found)
-				{
-					switch (target)
-					{
-						case SearchTargets.HeadMultiplier:
-							{
-								return grabStatisticFromLocation(currentPosition, filetext, new List<char> { 't', 'T' });
-							}
-						case SearchTargets.LimbMultiplier:
-							{
-								return grabStatisticFromLocation(currentPosition, filetext, new List<char> { '=' });
-							}
-						case SearchTargets.TorsoMultiplier:
-							{
-								return grabStatisticFromLocation(currentPosition, filetext, new List<char> { 'l', 'L' });
-							}
-						case SearchTargets.Damage:
-							{
-								return grabStatisticFromLocation(currentPosition, filetext, new List<char> { 'h', 'H' });
-							}
-						default:
-							{
-								//checks for characters 10 (line feed/new line), 12 (form feed/new page), 13 (carriage return) and ends the search there 
-								return grabStatisticFromLocation(currentPosition, filetext, new List<char> { (char)10, (char)12, (char)13 });
-							}
-					}
-				}
-				return result;
-
-			}
-
-
-			/// <summary>
-			/// Finds the statistic specified by <paramref name="target"/>.
-			/// </summary>
-			/// <param name="filepath">Path to the desired file.</param>
-			/// <param name="target">Desired statistic to search for.</param>
-			/// <param name="consoleWrite">Set to true to print to the console, false otherwise.</param>
-			/// <returns>Returns a string with the specified statistic (along with the statistic name).</returns>
-			/// <exception cref="ArgumentNullException"></exception>
-			/// <exception cref="FileNotFoundException"></exception>
-			public static string findStatisticInFile(string filepath, SearchTargets target, bool consoleWrite)
-			{
-
-				string filetext = string.Empty;
-				try
-				{
-					filetext = fileReader(filepath);
-				}
-				catch (ArgumentNullException)
-				{
-					return string.Empty;
-				}
-				catch (FileNotFoundException)
-				{
-					return string.Empty;
-				}
-
-				if (filetext == string.Empty) return string.Empty;
-
-
-				string inputWord1 = "";
-				string? inputWord2 = null;
-				int currentPosition = 0;
-				string result = "";
-
-				//selects input words
-				inputWordsSelection(target, ref inputWord1, ref inputWord2);
-
-				//i have annotated the crap out of this code because i've come back to it after 9 months and i have no clue what i wrote :')
-
-				//generalize searchAlgorithm for later use below
-				try
-				{
-					result = searchForTarget(ref currentPosition, filetext, target);
-				}
-				catch
-				{
-					string corrupted = corruptedWordFixer(ref filetext, inputWord1);
-					File.WriteAllText(filepath, filetext);
-					if (corrupted != string.Empty && consoleWrite) Console.WriteLine(corrupted + " has been corrected to " + inputWord1 + " ");
-
-
-					if (inputWord2 != null)
-					{
-						corrupted = corruptedWordFixer(ref filetext, inputWord2);
-						File.WriteAllText(filepath, filetext);
-						if (corrupted != string.Empty && consoleWrite) Console.WriteLine(corrupted + " has been corrected to " + inputWord2 + " ");
-					}
-
-					result = searchForTarget(ref currentPosition, filetext, target);
-				}
-				return result;
-			}
-		}*/
 
 
 		/// <summary>
 		/// This class handles the text from the files generated after PyTesseract
 		/// </summary>
-		public  class FileParse
+		public class FileParse
 		{
+			private string _filetext = string.Empty;
+			private PhantomForcesVersion _version;
 
+			public FileParse(PhantomForcesVersion version)
+			{
+				_version = version;
+			}
 
 			/// <summary>
 			/// Reads a file. Throws <see cref="ArgumentNullException"/> if filepath is null, and <see cref="FileNotFoundException"/> if the file does not exist.
@@ -843,19 +625,20 @@ namespace PFDB
 			/// <returns>Returns <see cref="string.Empty"/> if the reading failed at all, otherwise returns the text content of the file.</returns>
 			/// <exception cref="ArgumentNullException"></exception>
 			/// <exception cref="FileNotFoundException"></exception>
-			public static string fileReader(string filepath)
+			public string fileReader(string filepath)
 			{
-				string output = string.Empty;
-				if (filepath == null) throw new ArgumentNullException(nameof(filepath), "File path specified cannot be null.");
-				if (!File.Exists(filepath)) throw new FileNotFoundException($"File not found.", filepath);
-				try
-				{
-					output = File.ReadAllText(filepath);
-				}
-				catch
-				{
-					return string.Empty;
-				}
+                if (filepath == null) throw new ArgumentNullException(nameof(filepath), "File path specified cannot be null.");
+                if (!File.Exists(filepath)) throw new FileNotFoundException($"File not found.", filepath);
+                string output;
+                try
+                {
+                    output = File.ReadAllText(filepath);
+                }
+                catch
+                {
+                    output = string.Empty;
+                }
+                _filetext = output;
 				return output;
 			}
 
@@ -865,17 +648,21 @@ namespace PFDB
 			/// <param name="filepath">Path to the desired file.</param>
 			/// <param name="consoleWrite">Set to true to print to the console, false otherwise.</param>
 			/// <returns>Returns a list of strings of the statistics of the file. May be empty.</returns>
-			public static List<string> findAllStatisticsInFile(string filepath, bool consoleWrite)
+			public IEnumerable<string> findAllStatisticsInFile(WeaponType weaponType, int acceptableSpaces = 3, int acceptableCorruptedWordSpaces = 3, bool consoleWrite = false)
 			{
+
 				List<string> temp = new List<string>();
-				foreach (SearchTargets target in Enum.GetValues(typeof(SearchTargets)))
+                StatisticParse statisticParse = new StatisticParse(_version, _filetext, acceptableSpaces, acceptableCorruptedWordSpaces, consoleWrite);
+                foreach (SearchTargets target in Enum.GetValues(typeof(SearchTargets)))
 				{
 					try
 					{
-						//temp.Add(findStatisticInFile(filepath, target, consoleWrite));
+						temp.Add(statisticParse.findStatisticInFile(target, weaponType, new List<char>() { (char)32, (char)13, (char)10 }));
+						_filetext = statisticParse.Filetext; //update, so corrupted words get fixed
 					}
 					catch
 					{
+						continue;
 						//do nothing
 					}
 				}
@@ -887,17 +674,18 @@ namespace PFDB
 			/// </summary>
 			/// <param name="filepath">Path to the desired file.</param>
 			/// <param name="consoleWrite">Set to true to print to the console, false otherwise.</param>
-			/// <returns>Returns a list of tuples, containing both strings of the statistics and the type of statistics (defined by <see cref="SearchTargets"/>) from the file. May be empty.</returns>
-			public static List<Tuple<string, SearchTargets>> findAllStatisticsInFileWithTypes(string filepath, bool consoleWrite)
+			/// <returns>Returns an <see cref="IDictionary{TKey, TValue}"/> where <c>TKey</c> is <see cref="SearchTargets"/> and it matches a corresponding <c>TValue</c> which has the statistic.</returns>
+			public IDictionary<SearchTargets, string> findAllStatisticsInFileWithTypes(WeaponType weaponType, int acceptableSpaces = 3, int acceptableCorruptedWordSpaces = 3, bool consoleWrite = false)
 			{
-				List<Tuple<string, SearchTargets>> temp = new List<Tuple<string, SearchTargets>>();
-				//List<string> temp = new List<string>();
+				IDictionary<SearchTargets, string> temp = new Dictionary<SearchTargets, string>();
+				StatisticParse statisticParse = new StatisticParse(_version, _filetext, acceptableSpaces, acceptableCorruptedWordSpaces, consoleWrite);
 				foreach (SearchTargets target in Enum.GetValues(typeof(SearchTargets)))
 				{
 					try
 					{
-						//temp.Add(Tuple.Create(findStatisticInFile(filepath, target, consoleWrite), target));
-					}
+						temp.Add(target, statisticParse.findStatisticInFile(target, weaponType, new List<char>() { (char)32, (char)13, (char)10 }));
+                        _filetext = statisticParse.Filetext; //update, so corrupted words get fixed
+                    }
 					catch
 					{
 						//do nothing

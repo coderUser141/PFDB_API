@@ -7,10 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <Import Project="..\WeaponUtility\WeaponUtility.projitems" Label="Shared" />
-
   <ItemGroup>
     <None Remove="text.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WeaponUtility2\WeaponUtility2.csproj" />
   </ItemGroup>
 
 </Project>

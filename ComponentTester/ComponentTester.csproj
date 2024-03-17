@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\fileread\FileIO.csproj" />
+    <ProjectReference Include="..\fileparse\FileParse.csproj" />
     <ProjectReference Include="..\PyExec\PyExec.csproj" />
     <ProjectReference Include="..\p_invokewrapper\P_invokeWrapper.csproj" />
     <ProjectReference Include="..\StatisticProofread\StatisticProofread.csproj" />

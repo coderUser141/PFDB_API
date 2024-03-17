@@ -16,4 +16,6 @@
 	  </PreBuildEvent>
   </PropertyGroup>
 
+  <Import Project="..\WeaponUtility\WeaponUtility.projitems" Label="Shared" />
+
 </Project>

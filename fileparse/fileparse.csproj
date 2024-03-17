@@ -7,10 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <Import Project="..\WeaponUtility\WeaponUtility.projitems" Label="Shared" />
+
   <ItemGroup>
-    <None Update="text.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Remove="text.txt" />
   </ItemGroup>
 
 </Project>

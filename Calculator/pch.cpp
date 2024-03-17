@@ -64,22 +64,8 @@ namespace player_statistics_calculator {
 	/// <param name="targetXP">Desired experience to convert.</param>
 	/// <returns>The rank that will have the given experience.</returns>
 	extern "C" DLLEXPORT unsigned long long experienceToRank(unsigned long long targetXP) {
-		unsigned long long counter{ 0 };
-		unsigned long long i{ 0 };
-		//not really necessary, but should theoretically help with calculation time
-		if (targetXP > 500500000) { i = 1000; counter = 499500000; }
-		if (targetXP > 5000050000000) { i = 100000; counter = 4999950000000; }
-		for (; i < targetXP; ++i) {
-			//rank 1 has 1000xp, rank 2 has rank 1 + 2000 = 3000, rank 3 has rank 2 + rank 1 + 3000 = 6000
-			//counter actually has the total xp for each rank here
-			counter += i * 1000;
-			//checks if the counter is just less than the target xp, but adding one more rank would cause it to go over the target xp
-			if (counter + ((i + 1) * 1000) > targetXP && counter <= targetXP) {
-				return i;
-				break;
-			}
-		}
-		return UINT64_MAX;
+		return std::floor(std::sqrt(0.25 + targetXP / static_cast<double>(500)) - 0.5);
+		//return UINT64_MAX;
 	}
 
 	/// <summary>

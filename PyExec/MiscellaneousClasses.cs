@@ -1,156 +1,98 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PFDB.PythonExecution;
+using PFDB.WeaponUtility;
 
 namespace PFDB
 {
-    namespace PythonExecutor
+    namespace PythonExecution
     {
-
         /// <summary>
-        /// Class for weapon type.
+        /// Dummy initialization implementation of <see cref="IOutput"/>.
         /// </summary>
-        public static class WeaponType
+        public class TestOutput : IOutput
         {
             /// <summary>
-            /// Weapon type enumerator for Python script.
+            /// Dummy output string.
             /// </summary>
-            public enum Weapon
+            public string OutputString { get; private set; }
+
+            /// <summary>
+            /// Dummy constructor.
+            /// </summary>
+            public TestOutput()
             {
-                /// <summary>
-                /// Primary Gun.
-                /// </summary>
-                Primary = 1,
-                /// <summary>
-                /// Secondary Gun.
-                /// </summary>
-                Secondary,
-                /// <summary>
-                /// Grenade.
-                /// </summary>
-                Grenade,
-                /// <summary>
-                /// Melee.
-                /// </summary>
-                Melee
+                this.OutputString = "init object";
             }
         }
 
         /// <summary>
-        /// General utility class for Python interop.
+        /// Dummy initialization implementation of <see cref="IPythonExecutable{IOutput}"/>.
         /// </summary>
-        public static class PyUtilityClass
+        public class InitExecutable : IPythonExecutable<IOutput>
         {
-
             /// <summary>
-            /// Compares two file paths and determines a common directory (excludes absolute if a common one is found). Can be used to obfuscate parent root directories when they are not needed.
+            /// Dummy default constructor.
             /// </summary>
-            /// <param name="currentProcessPath">Current directory. Note that this parameter need not be the actual current process directory.</param>
-            /// <param name="foreignPath">Foreign directory. Note that this parameter need not be the actual foreign directory.</param>
-            /// <returns>A <c>Tuple</c>, with the first item containing the path from the common path to the current directory path, and the second item containing the path from the common path to the foreign directory.</returns>
-            /// <exception cref="Exception">Throws exceptions if two paths are unequal when they should be. (illegal case)</exception>
-            public static Tuple<string, string> commonExecPath(string currentProcessPath, string foreignPath)
-            {
-                string tempCurrent = currentProcessPath;
-                string tempForeign = foreignPath;
-                if (!currentProcessPath.StartsWith(foreignPath) && !foreignPath.StartsWith(currentProcessPath))
-                { //distinct, but has common directory
-                    for (int i = 0; i < Math.Min(currentProcessPath.Length, foreignPath.Length); ++i)
-                    {
-                        if (currentProcessPath[i] != foreignPath[i])
-                        {
-                            tempCurrent = tempCurrent.Substring(0, i);
-                            tempForeign = tempForeign.Substring(0, i);
-
-                            if (tempForeign != tempCurrent) throw new Exception($"Something went really wrong: {tempCurrent} should equal {tempForeign}");
-
-                            int lastSlashBeforeSubstringC = tempCurrent.LastIndexOf('\\'); //finds last slash (aka last common directory)
-                            int lastSlashBeforeSubstringF = tempForeign.LastIndexOf('\\');
-
-                            if (lastSlashBeforeSubstringC != lastSlashBeforeSubstringF) throw new Exception($"Something went really wrong: {lastSlashBeforeSubstringC} should equal {lastSlashBeforeSubstringF}");
-
-                            tempCurrent = tempCurrent.Substring(0, lastSlashBeforeSubstringC); //truncates off last slash
-                            tempForeign = tempForeign.Substring(0, lastSlashBeforeSubstringF);
-
-                            if (tempForeign != tempCurrent) throw new Exception($"Something went really wrong: {tempCurrent} should equal {tempForeign}");
-
-                            int lastSlashBeforeSubstringC2 = tempCurrent.LastIndexOf('\\');
-                            int lastSlashBeforeSubstringF2 = tempForeign.LastIndexOf('\\');
-
-                            tempCurrent = currentProcessPath.Substring(lastSlashBeforeSubstringC2);
-                            tempForeign = foreignPath.Substring(lastSlashBeforeSubstringF2);
-                            break;
-                        }
-                    }
-                }
-                else //subset, or the same
-                {
-                    tempCurrent = tempCurrent.Substring(0, Math.Min(currentProcessPath.Length, foreignPath.Length));
-                    tempForeign = tempForeign.Substring(0, Math.Min(currentProcessPath.Length, foreignPath.Length));
-
-                    int lastSlashBeforeSubstringC = tempCurrent.LastIndexOf('\\'); //finds last slash (aka last common directory)
-                    int lastSlashBeforeSubstringF = tempForeign.LastIndexOf('\\');
-                    if (lastSlashBeforeSubstringC == -1) lastSlashBeforeSubstringC = 0; //couldn't find slash in currentDir, make it beginning of string
-                    if (lastSlashBeforeSubstringF == -1) lastSlashBeforeSubstringF = 0;
-
-                    tempCurrent = tempCurrent.Substring(0, lastSlashBeforeSubstringC); //truncates off last slash
-                    tempForeign = tempForeign.Substring(0, lastSlashBeforeSubstringF);
-                    //alternative: tempForeign = tempForeign[..lastSlashBeforeSubstringF];
-
-                    int lastSlashBeforeSubstringC2 = tempCurrent.LastIndexOf('\\');
-                    int lastSlashBeforeSubstringF2 = tempForeign.LastIndexOf('\\');
-                    if (lastSlashBeforeSubstringC2 == -1) lastSlashBeforeSubstringC2 = 0; //couldn't find slash in currentDir, make it beginning of string
-                    if (lastSlashBeforeSubstringF2 == -1) lastSlashBeforeSubstringF2 = 0;
-
-                    tempCurrent = currentProcessPath.Substring(lastSlashBeforeSubstringC2);
-                    tempForeign = foreignPath.Substring(lastSlashBeforeSubstringF2);
-
-                }
-                return Tuple.Create(tempCurrent, tempForeign);
+            public InitExecutable(){
             }
-        }
-
-        /// <summary>
-        /// Default implementation of <see cref="IOutput"/>.
-        /// </summary>
-        public class PythonOutput : IOutput
-        {
-            /// <summary>
-            /// Output string.
-            /// </summary>
-            public string OutputString { get; init; }
 
             /// <summary>
-            /// Default constructor.
+            /// Dummy filename. Set to <c>string.Empty</c> by default;
             /// </summary>
-            /// <param name="outputString">Output string from result.</param>
-            public PythonOutput (string outputString)
+            public string Filename { get; private set; } = string.Empty;
+
+            /// <summary>
+            /// Dummy program directory.
+            /// </summary>
+            public string ProgramDirectory { get; private set; } = string.Empty;
+
+            /// <summary>
+            /// Dummy version.
+            /// </summary>
+            public PhantomForcesVersion Version { get; private set; } = new PhantomForcesVersion("8.0.1");
+
+            /// <summary>
+            /// Dummy input-checker.
+            /// </summary>
+            public void CheckInput()
             {
-                OutputString = outputString;
+                return;
             }
-        }
-
-        /// <summary>
-        /// Implementation of <see cref="IOutput"/> meant to represent a failed execution.
-        /// </summary>
-        public class FailedPythonOutput : IOutput
-        {
 
             /// <summary>
-            /// Output string.
+            /// Dummy producer.
             /// </summary>
-            public string OutputString { get; init; }
-
-
-            /// <summary>
-            /// Default constructor.
-            /// </summary>
-            /// <param name="outputString">Output string from result.</param>
-            public FailedPythonOutput(string outputString)
+            /// <returns>Blank <see cref="ProcessStartInfo"/>.</returns>
+            public ProcessStartInfo GetProcessStartInfo()
             {
-                OutputString = outputString;
+                return new ProcessStartInfo();
+            }
+
+            /// <summary>
+            /// Dummy return.
+            /// </summary>
+            /// <returns>Blank <see cref="TestOutput"/>.</returns>
+            public IOutput ReturnOutput()
+            {
+                return new TestOutput();
+            }
+
+            /// <summary>
+            /// Dummy constructor.
+            /// </summary>
+            /// <param name="filename">Dummy parameter.</param>
+            /// <param name="fileDirectory">Dummy parameter.</param>
+            /// <param name="version">Dummy parameter.</param>
+            /// <param name="weaponType">Dummy parameter.</param>
+            /// <param name="programDirectory">Dummy parameter.</param>
+            /// <returns>The current object for chaining.</returns>
+            public IPythonExecutable<IOutput> Construct(string filename, string fileDirectory, PhantomForcesVersion version, WeaponType weaponType, string programDirectory)
+            {
+                return this;
             }
         }
 

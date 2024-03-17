@@ -55,10 +55,7 @@ class ImageParser:
 			print(data + "\n")
 			f.write(data + "\n")
 			f.close()
-
-	# in regards to the crop for damage and ranges, possibly use the page segmentation mode that is ideal for one line for the range markers
-	# additionally, a way to isolate the text would be very beneficial
-
+	
 	#version 9.0.2 and 9.0.3
 	def cropv902(self, fullscreen_image, wtype, crops):
 		if wtype == 1: #primary
@@ -371,7 +368,7 @@ class ImageParser:
 tessbinfilepath = ""
 #key images: 0_0 (AK12), 0_1 (AN94), 7_6 (E-GUN), 7_7 (AA12), 8_24 (ALIEN), 8_25 (AF2011-A1), 14_0 (RGN UDZS), 17_15 (CLONKER)
 
-print("Current working directory is: " + os.getcwd())
+# print("Current working directory is: " + os.getcwd())
 
 if len(sys.argv) == 1:
 	print("i force fed myself olives for a month, i hated it, but now i love olives")

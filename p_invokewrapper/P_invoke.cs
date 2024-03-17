@@ -24,6 +24,14 @@ namespace PFDB
 
                 Console.WriteLine(rankToCreditsSummation(231, 324));
 
+                DateTime start = new DateTime(2017, 11, 1);
+                DateTime r300 = new DateTime(2020, 9, 22);
+                DateTime now = DateTime.Now;
+                Console.WriteLine(experienceToRank(53000000 + 14600000));
+
+                Console.WriteLine($"time sub 300: {(r300 - start).TotalDays}");
+                Console.WriteLine($"time as 300: {(now - r300).TotalDays}");
+                Console.WriteLine($"time total: {(now - start).TotalDays}");
             }
 
             [DllImport(dllname)] static extern void test();

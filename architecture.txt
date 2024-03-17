@@ -41,6 +41,17 @@ Common mistakes/shortcomings:
 -> identify general trends for damage / suppression
 
 2. Edit FileIO to use SQL
+3. Refactor FileParse
+4. Edit PythonExecutionFactory to create objects easily, but also allow for manual objects to be loaded
+
+
+Optional:
+
+1. Edit PythonExecutionFactory to track Benchmark times, plus actual time
+	-> time saved with parallelization?
+2. Edit FileParse to accept strings directly
+	-> IOutput overload potentially?
+
 
 
 Useful websites:
@@ -63,3 +74,7 @@ https://www.sqlite.org/c3ref/open.html
 https://www.sqlite.org/c3ref/free_table.html
 https://www.sqlite.org/c3ref/exec.html
 https://www.tutorialspoint.com/sqlite/sqlite_c_cpp.htm
+
+taken from ComponentTester.csproj file:
+
+C:\Users\Aethelhelm\AppData\Local\Programs\Python\Python312\python -m PyInstaller -path=[C:\Users\Aethelhelm\AppData\Local\Programs\Python\Python312\Scripts] --workpath $(SolutionDir)ImageParserForAPI\build --distpath $(SolutionDir)ImageParserForAPI\dist --onefile $(SolutionDir)ImageParserForAPI\impa.py

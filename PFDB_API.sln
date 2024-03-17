@@ -20,11 +20,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		attachments.db = attachments.db
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "legacycode", "legacycode\legacycode.csproj", "{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}"
-	ProjectSection(ProjectDependencies) = postProject
-		{1FDCE27F-4876-40F8-98F3-77BA9B21C7BE} = {1FDCE27F-4876-40F8-98F3-77BA9B21C7BE}
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileIO", "fileread\FileIO.csproj", "{90A08430-3034-483C-966C-44B531317C1A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P_invokeWrapper", "p_invokewrapper\P_invokeWrapper.csproj", "{60BFF1DD-807A-42B5-A90D-901BEAABE61F}"
@@ -40,7 +35,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "temprenamer", "temprenamer\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentTester", "ComponentTester\ComponentTester.csproj", "{3C763D2D-FB41-4180-B90E-ECA413C86FB6}"
 	ProjectSection(ProjectDependencies) = postProject
-		{1FDCE27F-4876-40F8-98F3-77BA9B21C7BE} = {1FDCE27F-4876-40F8-98F3-77BA9B21C7BE}
 		{4F7ED044-16AE-463F-A17F-7C5DBFE17331} = {4F7ED044-16AE-463F-A17F-7C5DBFE17331}
 		{561D1C48-FC84-4BC7-B495-06816180561B} = {561D1C48-FC84-4BC7-B495-06816180561B}
 		{601C6893-5492-4F99-925C-950EB6D94121} = {601C6893-5492-4F99-925C-950EB6D94121}
@@ -48,7 +42,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentTester", "Componen
 		{90A08430-3034-483C-966C-44B531317C1A} = {90A08430-3034-483C-966C-44B531317C1A}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{3CD72DB6-C618-4315-A295-EAE0B1D0019B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PythonLogger", "Logger\PythonLogger.csproj", "{3CD72DB6-C618-4315-A295-EAE0B1D0019B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WeaponUtility", "WeaponUtility\WeaponUtility.shproj", "{E72CCD32-C565-4477-A76E-502683A1B4B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -114,18 +110,6 @@ Global
 		{1FDCE27F-4876-40F8-98F3-77BA9B21C7BE}.Release|x64.Build.0 = Release|Any CPU
 		{1FDCE27F-4876-40F8-98F3-77BA9B21C7BE}.Release|x86.ActiveCfg = Release|Any CPU
 		{1FDCE27F-4876-40F8-98F3-77BA9B21C7BE}.Release|x86.Build.0 = Release|Any CPU
-		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Debug|x64.Build.0 = Debug|Any CPU
-		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Debug|x86.Build.0 = Debug|Any CPU
-		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Release|x64.ActiveCfg = Release|Any CPU
-		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Release|x64.Build.0 = Release|Any CPU
-		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Release|x86.ActiveCfg = Release|Any CPU
-		{E98D2D51-71B7-48B8-8F41-CCE32E2788EA}.Release|x86.Build.0 = Release|Any CPU
 		{90A08430-3034-483C-966C-44B531317C1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{90A08430-3034-483C-966C-44B531317C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90A08430-3034-483C-966C-44B531317C1A}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -216,5 +200,10 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AA10F69-0805-4E23-8FF7-28A6423AF140}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		WeaponUtility\WeaponUtility.projitems*{1fdce27f-4876-40f8-98f3-77ba9b21c7be}*SharedItemsImports = 5
+		WeaponUtility\WeaponUtility.projitems*{561d1c48-fc84-4bc7-b495-06816180561b}*SharedItemsImports = 5
+		WeaponUtility\WeaponUtility.projitems*{e72ccd32-c565-4477-a76e-502683a1b4b2}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

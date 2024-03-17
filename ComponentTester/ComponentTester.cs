@@ -1,40 +1,43 @@
-﻿
-using System.Collections.Immutable;
-using System.Text.RegularExpressions;
-using WeaponClasses;
-using System.Data.SQLite;
-using PFDB.PythonExecutor;
-using PFDB.pinvoke;
+﻿using PFDB.PythonExecution;
+using PFDB.PythonFactory;
+using PFDB.WeaponUtility;
+using PFDB;
 
 public class ComponentTester
 {
 	public static void Main(string[] args)
 	{
-		PyTesseractExecutable executable = new PyTesseractExecutable("0_0.png", "C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ImageParserForAPI\\version1010", WeaponType.Weapon.Primary, "1010", "C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ComponentTester\\bin\\Debug\\net8.0", null);
-		PythonExecutor uu = new PythonExecutor();
-        IOutput out1 = uu.Execute(executable);
-		if(out1 is Benchmark t)
+		List<IPythonExecutor> list = new List<IPythonExecutor>();
+		//get number of weapons from database
+		for(int i = 0; i < 19; i++)
 		{
-			Console.WriteLine(t.OutputString);
+			for(int j = 0; j < 4; j++)
+			{
+
+				IPythonExecutor temp = new PythonExecutor(OutputDestination.Console | OutputDestination.File)
+					.LoadOut(new PythonTesseractExecutable().Construct($"{i}_{j}.png", "C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ImageParserForAPI\\version1010", new PhantomForcesVersion("10.1.0"), WeaponUtilityClass.GetWeaponType(i), "C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\PyExec\\bin\\Debug\\net8.0", null));
+
+				
+				list.Add(temp);
+			}
 		}
 
-        string r = "888.999   55.9";
-		Console.WriteLine("gg");
-		List<string> list2 = new List<string>(PFDB.fileparse.FileParse.findAllStatisticsInFile("C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\text.txt",true));
-		Match match = Proofread.regex(list2[5], @"\d+\.\d+");
-		MatchCollection matches = Proofread.regexes(r, @"\d+\.\d+");
-		
-		if (match.Success)
+
+		IPythonExecutionFactory factory = new PythonExecutionFactory<PythonTesseractExecutable>(list);
+		//factory.Start();
+
+
+		IPythonExecutionFactory factory2 = new PythonExecutionFactory<PythonTesseractExecutable>(new Dictionary<int, List<int>>()
 		{
-			Console.WriteLine($"{match.Value} was extracted from {list2[5]}");
-		}
-		else
-		{
-			Console.WriteLine("g");
-		}
-		foreach(Match g in matches)
-		{
-			Console.WriteLine($"{g.Value} was extracted from {r})");
-		}
+			{0, new List<int>(){1,2,3,4,5,6,7 } },
+			{1, new List<int>(){3,4} }, 
+			{2, new List<int>(){2,3} }, 
+			{3, new List<int>(){1} }
+		}, new Dictionary<PhantomForcesVersion, string>() { { new PhantomForcesVersion("10.1.0"), "C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ImageParserForAPI\\version1010" } }, 
+		"C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\PyExec\\bin\\Debug\\net8.0", OutputDestination.Console | OutputDestination.File, null
+		);
+		//factory2.Start();
+
+
 	}
 }

@@ -16,35 +16,35 @@ namespace PFDB
             /// <summary>
             /// The filename of the image to pass to the executor.
             /// </summary>
-            string Filename { get; }
+            public string Filename { get; }
 
             /// <summary>
             /// Directory where the Python executable resides
             /// </summary>
-            string ProgramDirectory { get; }
+            public string ProgramDirectory { get; }
 
             /// <summary>
             /// Phantom Forces Version. "800" = Version 8.0.0; "1001" = Version 10.0.1, etc.
             /// </summary>
-            PhantomForcesVersion Version { get; }
+            public PhantomForcesVersion Version { get; }
 
             /// <summary>
             /// Builds and returns a <see cref="ProcessStartInfo"/> object for program execution.
             /// </summary>
             /// <returns>A <see cref="ProcessStartInfo"/> object.</returns>
-            ProcessStartInfo GetProcessStartInfo();
+            public ProcessStartInfo GetProcessStartInfo();
 
             /// <summary>
             /// Checks the input, if necessary.
             /// </summary>
             /// <exception cref="ArgumentException"/>
-            void CheckInput();
+            public void CheckInput();
 
             /// <summary>
             /// Returns the output.
             /// </summary>
             /// <returns>The <see cref="IOutput"/> object associated with the current class.</returns>
-            IOutput ReturnOutput();
+            public IOutput ReturnOutput();
 
             /// <summary>
             /// Default constructor to be used when instantiating an object.
@@ -55,7 +55,7 @@ namespace PFDB
             /// <param name="version">Phantom Forces Version. "800" = Version 8.0.0; "1001" = Version 10.0.1, etc.</param>
             /// <param name="programDirectory">Directory where the Python executable resides.</param>
             /// <returns></returns>
-            IPythonExecutable<IOutput> Construct(string filename, string fileDirectory, PhantomForcesVersion version, WeaponType weaponType, string programDirectory);
+            public IPythonExecutable<IOutput> Construct(string filename, string fileDirectory, PhantomForcesVersion version, WeaponType weaponType, string programDirectory);
         }
     }
 }

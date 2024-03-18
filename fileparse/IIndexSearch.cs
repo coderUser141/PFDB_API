@@ -12,7 +12,7 @@ namespace PFDB.Parsing
         public string Text { get; }
         public string? Word { get; }
         public bool isEmpty();
-
-        public List<int> Search();
+        public void RemoveFromList(IEnumerable<int> list);
+        public IEnumerable<int> Search();
     }
 }

@@ -10,7 +10,7 @@
             /// <summary>
             /// Starts the factory.
             /// </summary>
-            public abstract void Start();
+            public IPythonExecutionFactoryOutput Start();
         }
 
     }

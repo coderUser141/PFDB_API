@@ -7,6 +7,7 @@ public class ComponentTester
 {
 	public static void Main(string[] args)
 	{
+		/*
 		List<IPythonExecutor> list = new List<IPythonExecutor>();
 		//get number of weapons from database
 		for(int i = 0; i < 19; i++)
@@ -35,10 +36,18 @@ public class ComponentTester
 			{3, new List<int>(){1} }
 		}, new Dictionary<PhantomForcesVersion, string>() { { new PhantomForcesVersion("10.1.0"), "C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ImageParserForAPI\\version1010" } }, 
 		"C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\PyExec\\bin\\Debug\\net8.0", OutputDestination.Console | OutputDestination.File, null
-		);
+		);*/
 		//factory2.Start();
 
-		System.Environment.SetEnvironmentVariable("the pee pee poo poo man", "you won't be laughing when he finds you", EnvironmentVariableTarget.User);
+		System.Environment.SetEnvironmentVariable("pythonSignalText", "smokin' joe rudeboy", EnvironmentVariableTarget.User);
 
-	}
+		IFileParse parse = new FileParse(new PhantomForcesVersion("10.1.0"));
+		parse.fileReader("C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ComponentTester\\bin\\Debug\\net8.0\\PFDB_outputs\\1010\\0_1.png.pfdb");
+		IEnumerable<string> strings = parse.findAllStatisticsInFile(WeaponType.Primary);
+		foreach(string f in strings)
+		{
+            Console.WriteLine(f);
+        }
+		return;
+    }
 }

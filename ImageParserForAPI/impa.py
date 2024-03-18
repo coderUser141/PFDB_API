@@ -14,6 +14,7 @@ def thin_font(image):
 	return (erode)
 
 def testimagepath(image):
+	print(os.environ["pythonSignalText"])
 	if type(image) is str:
 		#print(fullscreen_image)
 		print("Does the file exist? " + str(os.path.exists(image)))
@@ -232,7 +233,7 @@ class ImageParser:
 	def crop_fullscreen(self, fullscreen_image, wtype, version):
 		fullscreen_image = testimagepath(fullscreen_image)
 		crops = []
-		print(version)
+		#print(version)
 		if version == "902":
 			crops = self.cropv902(fullscreen_image, wtype, crops)
 		elif version == "903":

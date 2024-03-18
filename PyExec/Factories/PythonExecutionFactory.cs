@@ -19,6 +19,17 @@ namespace PFDB
         public struct StatusCounter
         {
 			/// <summary>
+			/// Default constructor.
+			/// </summary>
+			/// <param name="SuccessCounter">Counter for successes.</param>
+			/// <param name="FailCounter">Counter for failures.</param>
+			public StatusCounter(int SuccessCounter, int FailCounter)
+			{
+				this.SuccessCounter = SuccessCounter;
+				this.FailCounter = FailCounter;
+			}
+
+			/// <summary>
 			/// The number of successes.
 			/// </summary>
             public int SuccessCounter;
@@ -256,7 +267,7 @@ namespace PFDB
 			/// <summary>
 			/// Starts execution of the factory.
 			/// </summary>
-			public void Start()
+			public IPythonExecutionFactoryOutput Start()
 			{
 
 
@@ -267,15 +278,12 @@ namespace PFDB
 				}
 				catch
 				{
-					//don't do anything
-					return;
+					//error
+					return new PythonExecutionFactoryOutput<TPythonExecutable>(_queue, CheckStatus, new StatusCounter(SuccessCounter:0,FailCounter:_queue.Count), new StatusCounter(SuccessCounter: 0, FailCounter: _queue.Count), new TimeSpan(0), 0, new TimeSpan(0), 0);
 				}
 				StatusCounter QueueStatus = new StatusCounter();
 				StatusCounter ExecutionStatus = new StatusCounter();
 
-
-				if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\")) Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\");
-				if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_log\\")) Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_log\\");
 
 				ThreadPool.SetMinThreads(_coreCount, _coreCount);
 				ThreadPool.SetMaxThreads(_coreCount, _coreCount);
@@ -348,7 +356,7 @@ namespace PFDB
 				}
 				DateTime end = DateTime.Now;
 				stopwatch.Stop();
-
+				return new PythonExecutionFactoryOutput<TPythonExecutable>(_queue, CheckStatus, QueueStatus, ExecutionStatus, totalParallelTimeElapsedDateTime, totalParallelTimeElapsedInMilliseconds, end - start, stopwatch.ElapsedMilliseconds);
 				
 			}
 

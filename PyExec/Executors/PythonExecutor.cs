@@ -136,11 +136,17 @@ namespace PFDB
 				}
 				
 				Output = Input.ReturnOutput();
-				Console.WriteLine((int)Destination | (int)OutputDestination.File);
+				//Console.WriteLine((int)Destination | (int)OutputDestination.File);
 				if (((int)Destination & (int)OutputDestination.File) == (int)OutputDestination.File)
 				{
-					Console.WriteLine(Directory.GetCurrentDirectory() ?? "null folder");
-					File.WriteAllText($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}\\{Input.Filename}.pfdb", Output.OutputString);
+                    //Console.WriteLine(Directory.GetCurrentDirectory() ?? "null folder");
+
+                    if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\")) Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\");
+                    if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_log\\")) Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_log\\");
+                    if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}")) Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}");
+                    if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber}")) Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber}");
+
+                    File.WriteAllText($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}\\{Input.Filename}.pfdb", Output.OutputString);
 					File.WriteAllText($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber}\\{Input.Filename}.pfdblog",
 						$"Filename: {Input.Filename} {Environment.NewLine}" +
 						$"Program Directory: {Input.ProgramDirectory} {Environment.NewLine}" +

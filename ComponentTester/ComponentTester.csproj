@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\fileparse\FileParse.csproj" />
+    <ProjectReference Include="..\Logger\PFDBLogger.csproj" />
     <ProjectReference Include="..\PyExec\PyExec.csproj" />
     <ProjectReference Include="..\p_invokewrapper\P_invokeWrapper.csproj" />
     <ProjectReference Include="..\StatisticProofread\StatisticProofread.csproj" />

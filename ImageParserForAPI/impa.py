@@ -14,7 +14,7 @@ def thin_font(image):
 	return (erode)
 
 def testimagepath(image):
-	print(os.environ["pythonSignalText"])
+	# print(os.environ["pythonSignalText"])
 	if type(image) is str:
 		#print(fullscreen_image)
 		print("Does the file exist? " + str(os.path.exists(image)))
@@ -96,10 +96,12 @@ class ImageParser:
 			crops.append(("DamageInfo",d_crop))
 			crops.append(("FireInfo",f_crop))
 		elif wtype == 3: #grenade
-			r_crop = fullscreen_image[100:320, 1540:1810]
-			d_crop = fullscreen_image[230:450, 1540:1810]
+			r_crop = fullscreen_image[20:250, 1540:1810]
+			da_crop = fullscreen_image[250:355, 1540:1810]
+			d_crop = fullscreen_image[360:580, 1540:1810]
 
 			crops.append(("RankInfo",r_crop))
+			crops.append(("DamageAdvanced",da_crop))
 			crops.append(("DamageInfoG",d_crop))
 		elif wtype == 4: #melee
 			r_crop = fullscreen_image[80:300, 1540:1810]
@@ -256,7 +258,9 @@ class ImageParser:
 	
 	
 	def text_from_image(self, image, cropname, version):
-		
+
+		roi_buffer = 3		
+
 		if type(image) is str:
 			image = cv2.imread(image)
 		if image.size == 0:
@@ -312,7 +316,11 @@ class ImageParser:
 			a = "pythoncvtesting/index_threshold_" + cropname + version + ".png"
 			cv2.imwrite(a, threshold)
 		
-			kernal = cv2.getStructuringElement(cv2.MORPH_RECT, (4,2)) #big version is around 56, 16
+			kernal = cv2.getStructuringElement(cv2.MORPH_RECT, (6,2))
+			if int(version) < 1000:
+				kernal = cv2.getStructuringElement(cv2.MORPH_RECT, (8,2)) #big version is around 56, 16
+			else:
+				kernal = cv2.getStructuringElement(cv2.MORPH_RECT, (4,2)) #big version is around 56, 16
 			a = "pythoncvtesting/index_kernal_" + cropname + version + ".png"
 			cv2.imwrite(a, kernal)
 		
@@ -331,7 +339,7 @@ class ImageParser:
 					#threshold2 = cv2.threshold(sharpened_img, 120, 255, cv2.THRESH_BINARY_INV)[1]
 					#cv2.imwrite("temp2.png", threshold2)
 					#inp = cv2.imread("temp2.png")
-					rois.append((counter,sharpened_img[y:y+h, x:x+w]))
+					rois.append((counter,sharpened_img[y-roi_buffer :y+h+roi_buffer, x-roi_buffer: x+w+roi_buffer]))
 					fi = "pythoncvtesting/index_roi_" + str(counter) + "_" + cropname + version + ".png"
 					cv2.imwrite(fi, rois[counter][1])
 					counter = counter + 1

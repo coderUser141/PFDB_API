@@ -42,11 +42,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentTester", "Componen
 		{90A08430-3034-483C-966C-44B531317C1A} = {90A08430-3034-483C-966C-44B531317C1A}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PythonLogger", "Logger\PythonLogger.csproj", "{3CD72DB6-C618-4315-A295-EAE0B1D0019B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PFDBLogger", "Logger\PFDBLogger.csproj", "{3CD72DB6-C618-4315-A295-EAE0B1D0019B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeaponUtility2", "WeaponUtility2\WeaponUtility2.csproj", "{FE5B2B35-2F24-4386-9AE5-9EDAF24D4B5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend.Server", "Frontend\Frontend.Server\Frontend.Server.csproj", "{C880A9F0-2737-4EBA-BFC7-C1AE62E3A1E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frontend.Server", "Frontend\Frontend.Server\Frontend.Server.csproj", "{C880A9F0-2737-4EBA-BFC7-C1AE62E3A1E8}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "frontend.client", "Frontend\frontend.client\frontend.client.esproj", "{786BD762-CD66-4880-9BE0-FCAC049DB7E9}"
 EndProject

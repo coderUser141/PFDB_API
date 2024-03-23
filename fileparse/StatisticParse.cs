@@ -4,27 +4,44 @@ using System.Text;
 using System;
 using System.Reflection.Metadata.Ecma335;
 using System.Linq;
+using PFDB.ParsingUtility;
 
 namespace PFDB
 {
 	namespace Parsing
 	{
 
+		/// <summary>
+		/// Parses individual statistic from the text provided.
+		/// </summary>
 		public sealed class StatisticParse : IStatisticParse
 		{
 
 			private PhantomForcesVersion _version;
+
+			private SearchTargets _searchTarget = 0;
 			private List<IIndexSearch> _wordLocationSearchers = new List<IIndexSearch>();
 			private string _filetext = string.Empty;
 			private List<string> _inputWordList = new List<string>();
+			IEnumerable<int> _statisticNonGrataLocations = new List<int>();
 
 			private bool _consoleWrite;
-			private SearchTargets _searchTarget = 0;
 			private int _acceptableSpaces;
 			private int _acceptableCorruptedWordSpaces; //margin of error
 
+			/// <summary>
+			/// Returns the text that this class is working with.
+			/// </summary>
 			public string Filetext { get { return _filetext; } }
 
+			/// <summary>
+			/// Default constructor.
+			/// </summary>
+			/// <param name="version">The Phantom Forces Version.</param>
+			/// <param name="text">The text to search through</param>
+			/// <param name="acceptableSpaces">Specifies the acceptable number spaces between words. Default is set to 3.</param>
+			/// <param name="acceptableCorruptedWordSpaces">Specifies the acceptable number spaces that a corrupted word can have. Default is set to 3.</param>
+			/// <param name="consoleWrite"></param>
 			public StatisticParse(PhantomForcesVersion version, string text, int acceptableSpaces = 3, int acceptableCorruptedWordSpaces = 3, bool consoleWrite = false)
 			{
 
@@ -35,8 +52,6 @@ namespace PFDB
 				_filetext = text;
 				//_currentPosition = 0;
 			}
-
-
 
 			/// <summary>
 			/// Attempts to fix corrupted words.
@@ -56,7 +71,7 @@ namespace PFDB
 			/// </summary>
 			/// <param name="inputWord">Desired word to find and replace with.</param>
 			/// <returns>Returns the corrupted word if it has been found, otherwise it returns <see cref="string.Empty"/></returns>
-			private string corruptedWordFixer(string? inputWord)
+			private string _corruptedWordFixer(string? inputWord)
 			{
 				if (inputWord == null) return string.Empty;
 				List<int> wordFirstCharLocations = (List<int>)
@@ -136,7 +151,12 @@ namespace PFDB
 				return string.Empty;
 			}
 
-			private List<string> lister(params string[] words)
+			/// <summary>
+			/// Converts a string array into a list. (lol)
+			/// </summary>
+			/// <param name="words">Any string array.</param>
+			/// <returns>A <see cref="List{T}"/> containing the elements from the string array.</returns>
+			private static List<string> _lister(params string[] words)
 			{
 				return words.ToList();
 			}
@@ -144,7 +164,7 @@ namespace PFDB
 			/// <summary>
 			/// Selects words based on target. See <see cref="SearchTargets"/> for the options.
 			/// </summary>
-			private void inputWordsSelection()
+			private void _inputWordsSelection()
 			{
 				_inputWordList.Clear();
 
@@ -159,104 +179,109 @@ namespace PFDB
 					case SearchTargets.Damage:
 						{
 							//the space is intentional, i may have named something DamageInfo and i'm too lazy to change the python script rn, maybe a todo tbh
-							_inputWordList.AddRange(lister(["damage "]));
+							_inputWordList.AddRange(_lister(["damage "]));
 							//to be selected AGAINST
 							break;
 						}
 					case SearchTargets.DamageRange:
 						{
-							_inputWordList.AddRange(lister(["damage", "range"]));
+							_inputWordList.AddRange(_lister(["damage", "range"]));
 							//to be selected FOR
 							break;
 						}
 					case SearchTargets.Firerate:
-						{ _inputWordList.AddRange(lister(["firerate"])); break; }
+						{ _inputWordList.AddRange(_lister(["firerate"])); break; }
 					case SearchTargets.AmmoCapacity:
-						{ _inputWordList.AddRange(lister(["ammo", "capacity"])); ; break; }
+						{ _inputWordList.AddRange(_lister(["ammo", "capacity"])); ; break; }
 					case SearchTargets.HeadMultiplier:
-						{ _inputWordList.AddRange(lister(["head", "multiplier"])); break; }
+						{ _inputWordList.AddRange(_lister(["head", "multiplier"])); break; }
 					case SearchTargets.TorsoMultiplier:
-						{ _inputWordList.AddRange(lister(["torso", "multiplier"]));  break; }
+						{ _inputWordList.AddRange(_lister(["torso", "multiplier"]));  break; }
 					case SearchTargets.LimbMultiplier:
-						{ _inputWordList.AddRange(lister(["limb", "multiplier"])); break; }
+						{ _inputWordList.AddRange(_lister(["limb", "multiplier"])); break; }
 					case SearchTargets.MuzzleVelocity:
-						{ _inputWordList.AddRange(lister(["muzzle", "velocity"])); break; }
+						{ _inputWordList.AddRange(_lister(["muzzle", "velocity"])); break; }
 					case SearchTargets.Suppression:
-						{ _inputWordList.AddRange(lister(["suppression"])); ; break; }
+						{ _inputWordList.AddRange(_lister(["suppression"])); ; break; }
 					case SearchTargets.PenetrationDepth:
-						{ _inputWordList.AddRange(lister(["penetration", "depth"])); break; }
+						{ _inputWordList.AddRange(_lister(["penetration", "depth"])); break; }
 					case SearchTargets.ReloadTime:
-						{ _inputWordList.AddRange(lister(["reload", "time"])); break; }
+						{ _inputWordList.AddRange(_lister(["reload", "time"])); break; }
 					case SearchTargets.EmptyReloadTime:
-						{ _inputWordList.AddRange(lister(["empty", "reload", "time"])); break; }
+						{ _inputWordList.AddRange(_lister(["empty", "reload", "time"])); break; }
 					case SearchTargets.WeaponWalkspeed:
-						{ _inputWordList.AddRange(lister(["weapon", "walkspeed"])); break; }
+						{ _inputWordList.AddRange(_lister(["weapon", "walkspeed"])); break; }
 					case SearchTargets.AimingWalkspeed:
-						{ _inputWordList.AddRange(lister(["aiming", "walkspeed"])); break; }
+						{ _inputWordList.AddRange(_lister(["aiming", "walkspeed"])); break; }
 					case SearchTargets.AmmoType:
-						{ _inputWordList.AddRange(lister(["ammo", "type"])); break; }
+						{ _inputWordList.AddRange(_lister(["ammo", "type"])); break; }
 					case SearchTargets.SightMagnification:
-						{ _inputWordList.AddRange(lister(["sight", "magnification"])); break; }
+						{ _inputWordList.AddRange(_lister(["sight", "magnification"])); break; }
 					case SearchTargets.MinimumTimeToKill:
-						{ _inputWordList.AddRange(lister(["minimum", "time", "to", "kill"])); break; }
+						{ _inputWordList.AddRange(_lister(["minimum", "time", "to", "kill"])); break; }
 					case SearchTargets.HipfireSpreadFactor:
-						{ _inputWordList.AddRange(lister(["hipfire", "spread", "factor"])); break; }
+						{ _inputWordList.AddRange(_lister(["hipfire", "spread", "factor"])); break; }
 					case SearchTargets.HipfireRecoverySpeed:
-						{ _inputWordList.AddRange(lister(["hipfire", "recovery", "speed"])); break; }
+						{ _inputWordList.AddRange(_lister(["hipfire", "recovery", "speed"])); break; }
 					case SearchTargets.HipfireSpreadDamping:
-						{ _inputWordList.AddRange(lister(["hipfire", "spread", "damping"])); break; }
+						{ _inputWordList.AddRange(_lister(["hipfire", "spread", "damping"])); break; }
 					case SearchTargets.HipChoke:
-						{ _inputWordList.AddRange(lister(["hip", "choke"])); break; }
+						{ _inputWordList.AddRange(_lister(["hip", "choke"])); break; }
 					case SearchTargets.AimChoke:
-						{ _inputWordList.AddRange(lister(["aim", "choke"])); break; }
+						{ _inputWordList.AddRange(_lister(["aim", "choke"])); break; }
 					case SearchTargets.EquipSpeed:
-						{ _inputWordList.AddRange(lister(["equip", "speed"])); break; }
+						{ _inputWordList.AddRange(_lister(["equip", "speed"])); break; }
 					case SearchTargets.AimModelSpeed:
-						{ _inputWordList.AddRange(lister(["aim", "model", "speed"])); break; }
+						{ _inputWordList.AddRange(_lister(["aim", "model", "speed"])); break; }
 					case SearchTargets.AimMagnificationSpeed:
-						{ _inputWordList.AddRange(lister(["aim", "magnification", "speed"])); break; }
+						{ _inputWordList.AddRange(_lister(["aim", "magnification", "speed"])); break; }
 					case SearchTargets.CrosshairSize:
-						{ _inputWordList.AddRange(lister(["crosshair", "size"])); break; }
+						{ _inputWordList.AddRange(_lister(["crosshair", "size"])); break; }
 					case SearchTargets.CrosshairSpreadRate:
-						{ _inputWordList.AddRange(lister(["crosshair", "spread", "rate"])); break; }
+						{ _inputWordList.AddRange(_lister(["crosshair", "spread", "rate"])); break; }
 					case SearchTargets.CrosshairRecoverRate:
-						{ _inputWordList.AddRange(lister(["crosshair", "recover", "rate"])); break; }
+						{ _inputWordList.AddRange(_lister(["crosshair", "recover", "rate"])); break; }
 					case SearchTargets.FireModes:
-						{ _inputWordList.AddRange(lister(["fire", "modes"])); break; }
+						{ _inputWordList.AddRange(_lister(["fire", "modes"])); break; }
 
 					//grenades
 					case SearchTargets.BlastRadius:
-						{ _inputWordList.AddRange(lister(["blast", "radius"])); break; }
+						{ _inputWordList.AddRange(_lister(["blast", "radius"])); break; }
 					case SearchTargets.KillingRadius:
-						{ _inputWordList.AddRange(lister(["killing", "radius"])); break; }
+						{ _inputWordList.AddRange(_lister(["killing", "radius"])); break; }
 					case SearchTargets.MaximumDamage:
-						{ _inputWordList.AddRange(lister(["maximum", "damage"])); break; }
+						{ _inputWordList.AddRange(_lister(["maximum", "damage"])); break; }
 					case SearchTargets.TriggerMechanism:
-						{ _inputWordList.AddRange(lister(["trigger", "mechanism"])); break; }
+						{ _inputWordList.AddRange(_lister(["trigger", "mechanism"])); break; }
 					case SearchTargets.SpecialEffects:
-						{ _inputWordList.AddRange(lister(["special", "effects"])); break; }
+						{ _inputWordList.AddRange(_lister(["special", "effects"])); break; }
 					case SearchTargets.StoredCapacity:
-						{ _inputWordList.AddRange(lister(["stored", "capacity"])); break; }
+						{ _inputWordList.AddRange(_lister(["stored", "capacity"])); break; }
 
 					//melees
 					case SearchTargets.FrontStabDamage:
-						{ _inputWordList.AddRange(lister(["front", "stab", "damage"])); break; }
+						{ _inputWordList.AddRange(_lister(["front", "stab", "damage"])); break; }
 					case SearchTargets.BackStabDamage:
-						{ _inputWordList.AddRange(lister(["back", "stab", "damage"])); break; }
+						{ _inputWordList.AddRange(_lister(["back", "stab", "damage"])); break; }
 					case SearchTargets.MainAttackTime:
-						{ _inputWordList.AddRange(lister(["main", "attack", "time"])); break; }
+						{ _inputWordList.AddRange(_lister(["main", "attack", "time"])); break; }
 					case SearchTargets.MainAttackDelay:
-						{ _inputWordList.AddRange(lister(["main", "attack", "delay"])); break; }
+						{ _inputWordList.AddRange(_lister(["main", "attack", "delay"])); break; }
 					case SearchTargets.AltAttackTime:
-						{ _inputWordList.AddRange(lister(["alt", "attack", "time"])); break; }
+						{ _inputWordList.AddRange(_lister(["alt", "attack", "time"])); break; }
 					case SearchTargets.AltAttackDelay:
-						{ _inputWordList.AddRange(lister(["alt", "attack", "delay"])); break; }
+						{ _inputWordList.AddRange(_lister(["alt", "attack", "delay"])); break; }
 					case SearchTargets.QuickAttackTime:
-						{ _inputWordList.AddRange(lister(["quick", "attack", "time"])); break; }
+						{ _inputWordList.AddRange(_lister(["quick", "attack", "time"])); break; }
 					case SearchTargets.QuickAttackDelay:
-						{ _inputWordList.AddRange(lister(["quick", "attack", "delay"])); break; }
+						{ _inputWordList.AddRange(_lister(["quick", "attack", "delay"])); break; }
 					case SearchTargets.Walkspeed:
-						{ _inputWordList.AddRange(lister(["walkspeed"])); break; }
+						{ _inputWordList.AddRange(_lister(["walkspeed"])); break; }
+					default:
+						{
+							//prevent infinite loop
+							break;
+						}
 				}
 
 				_wordLocationSearchers.Clear();
@@ -267,13 +292,13 @@ namespace PFDB
 
 			}
 
-            /// <summary>
-            /// Searches if two words' index positions are close enough together <b>and</b> in order. 
-            /// </summary>
-            /// <param name="firstWordOrCharSearcher">The <see cref="IIndexSearch"/> implementation that searches for the first character or first word.</param>
-            /// <param name="secondWordSearcher">The <see cref="IIndexSearch"/> implementation that searches for the second word.</param>
-            /// <returns>A <see cref="IEnumerable{int}"/> that contains all the locations of the first word/character where the words are close enough and in order.</returns>
-            private IEnumerable<int> wordProximityChecker(IIndexSearch firstWordOrCharSearcher, IIndexSearch secondWordSearcher)
+			/// <summary>
+			/// Searches if two words' index positions are close enough together <b>and</b> in order. 
+			/// </summary>
+			/// <param name="firstWordOrCharSearcher">The <see cref="IIndexSearch"/> implementation that searches for the first character or first word.</param>
+			/// <param name="secondWordSearcher">The <see cref="IIndexSearch"/> implementation that searches for the second word.</param>
+			/// <returns>A <see cref="IEnumerable{T}"/> that contains all the locations of the first word/character where the words are close enough and in order.</returns>
+			private IEnumerable<int> _wordProximityChecker(IIndexSearch firstWordOrCharSearcher, IIndexSearch secondWordSearcher)
 			{
 				List<int> result = new List<int>();
 				foreach (int i in firstWordOrCharSearcher.ListOfIndices)
@@ -292,11 +317,11 @@ namespace PFDB
 			/// <summary>
 			/// Searches if two words' index positions are close enough together <b>and</b> in order. 
 			/// </summary>
-			/// <param name="firstWordOrCharLocations">The <see cref="IIndexSearch"/> implementation that searches for the first character or first word.</param>
-			/// <param name="secondWordLocations">The <see cref="IIndexSearch"/> implementation that searches for the second word.</param>
+			/// <param name="firstWordOrCharLocations">The <see cref="IEnumerable{T}"/> list that contains the locations of the first character or first word.</param>
+			/// <param name="secondWordLocations">The <see cref="IEnumerable{T}"/> list that contains the locations for the second word.</param>
 			/// <param name="word">The first word. The content doesn't matter, just the length matters.</param>
-			/// <returns>A <see cref="IEnumerable{int}"/> that contains all the locations of the first word/character where the words are close enough and in order.</returns>
-			private IEnumerable<int> wordProximityChecker(IEnumerable<int> firstWordOrCharLocations, IEnumerable<int> secondWordLocations, string word)
+			/// <returns>A <see cref="IEnumerable{T}"/> that contains all the locations of the first word/character where the words are close enough and in order.</returns>
+			private IEnumerable<int> _wordProximityChecker(IEnumerable<int> firstWordOrCharLocations, IEnumerable<int> secondWordLocations, string word)
 			{
 				List<int> result = new List<int>();
 				foreach (int i in firstWordOrCharLocations)
@@ -315,9 +340,10 @@ namespace PFDB
 			/// <summary>
 			/// Searches the text to find locations where statistics are likely to be.
 			/// </summary>
-			/// <returns>An <see cref="IEnumerable{int}"/> containing the position of the first character of the first word.</returns>
+			/// <returns>An <see cref="IEnumerable{T}"/> containing the position of the first character of the first word.</returns>
 			/// <exception cref="Exception"></exception>
-			private IEnumerable<int> grabStatisticLocations()
+			/// <exception cref="WordNotFoundException"></exception>
+			private IEnumerable<int> _grabStatisticLocations()
 			{
 				IEnumerable<int> ints;
 				if(_wordLocationSearchers.Last().ListOfIndices.Count > 0)
@@ -330,95 +356,112 @@ namespace PFDB
 					 * offset since ints starts at original location, but we need an offset to make sure we aren't
 					 * too far away from the next word
 					 */
-                    int offset = 0;
-                    if (_wordLocationSearchers.Count > 2)
-                    {
-                        offset = _inputWordList[0].Length + _inputWordList[1].Length;
-                    }
+					int offset = 0;
+					if (_wordLocationSearchers.Count > 2)
+					{
+						offset = _inputWordList[0].Length + _inputWordList[1].Length;
+					}
 					
 					//temporary list
-                    List<int> tempInts = new List<int>();
+					List<int> tempInts = new List<int>();
 
-                    if (_wordLocationSearchers.All(x => x.ListOfIndices.Count > 0))
+					//checks if ALL the searchers have one word found
+					if (_wordLocationSearchers.All(x => x.ListOfIndices.Count > 0))
 					{
 						//2+ word case, check the first two words
-						ints = wordProximityChecker(_wordLocationSearchers[0], _wordLocationSearchers[1]);
+						ints = _wordProximityChecker(_wordLocationSearchers[0], _wordLocationSearchers[1]);
 						tempInts.AddRange(ints);
 
 						//add offset to each item
-                        for (int j = 0; j < tempInts.ToList().Count; ++j)
-                        {
-                            tempInts[j] += offset;
-                        }
+						for (int j = 0; j < tempInts.ToList().Count; ++j)
+						{
+							tempInts[j] += offset;
+						}
 
-                        //if 2 words, this is ignored
-                        for (int i = 2; i < _wordLocationSearchers.Count; ++i)
+						//if 2 words, this is ignored
+						for (int i = 2; i < _wordLocationSearchers.Count; ++i)
 						{
 							//add offset for every new word encountered
-                            tempInts = wordProximityChecker(tempInts, _wordLocationSearchers[i].ListOfIndices, _wordLocationSearchers[i].Word ?? _inputWordList[i]).ToList();
-                            offset += _inputWordList[i].Length;
-                            for (int j = 0; j < tempInts.ToList().Count; ++j)
-                            {
-                                tempInts[j] += _inputWordList[i].Length;
-                            }
-                        }
+							tempInts = _wordProximityChecker(tempInts, _wordLocationSearchers[i].ListOfIndices, _wordLocationSearchers[i].Word ?? _inputWordList[i]).ToList();
+							offset += _inputWordList[i].Length;
+							for (int j = 0; j < tempInts.ToList().Count; ++j)
+							{
+								tempInts[j] += _inputWordList[i].Length;
+							}
+						}
 
 						//remove offset to give us original positions
-                        for (int j = 0; j < tempInts.ToList().Count; ++j)
-                        {
-                            tempInts[j] -= offset;
-                        }
+						for (int j = 0; j < tempInts.ToList().Count; ++j)
+						{
+							tempInts[j] -= offset;
+						}
 
 
-                        return tempInts;
+						return tempInts;
 					}
 
-					//modified case
+					/*
+					 * if not all of the searchers have their words found,
+					 * then search for them based on their first character
+					 */
+
 
 					IIndexSearch firstWordFirstCharacterLocations = new IndexSearch(_filetext, _wordLocationSearchers[0].Word?[0].ToString());
 					IIndexSearch secondWordFirstCharacterLocations = new IndexSearch(_filetext, _wordLocationSearchers[0].Word?[0].ToString());
 
-                    //2+ word case, check the first two words
-                    ints = wordProximityChecker(firstWordFirstCharacterLocations, secondWordFirstCharacterLocations);
-                    tempInts.AddRange(ints);
+					//2+ word case, check the first two words
+					ints = _wordProximityChecker(firstWordFirstCharacterLocations, secondWordFirstCharacterLocations);
+					tempInts.AddRange(ints);
 
-                    //add offset to each item
-                    for (int j = 0; j < tempInts.ToList().Count; ++j)
-                    {
-                        tempInts[j] += offset;
-                    }
+					//add offset to each item
+					for (int j = 0; j < tempInts.ToList().Count; ++j)
+					{
+						tempInts[j] += offset;
+					}
 
-                    //if 2 words, this is ignored
-                    for (int i = 2; i < _wordLocationSearchers.Count; ++i)
-                    {
+					//if 2 words, this is ignored
+					for (int i = 2; i < _wordLocationSearchers.Count; ++i)
+					{
 						//add offset for every new word encountered
 						IIndexSearch firstCharacterLocations = new IndexSearch(_filetext, (_wordLocationSearchers[i].Word ?? _inputWordList[i])[0].ToString());
-                        tempInts = wordProximityChecker(tempInts, _wordLocationSearchers[i].ListOfIndices, _wordLocationSearchers[i].Word ?? _inputWordList[i]).ToList();
-                        offset += _inputWordList[i].Length;
-                        for (int j = 0; j < tempInts.ToList().Count; ++j)
-                        {
-                            tempInts[j] += _inputWordList[i].Length;
-                        }
-                    }
+						tempInts = _wordProximityChecker(tempInts, _wordLocationSearchers[i].ListOfIndices, _wordLocationSearchers[i].Word ?? _inputWordList[i]).ToList();
+						offset += _inputWordList[i].Length;
+						for (int j = 0; j < tempInts.ToList().Count; ++j)
+						{
+							tempInts[j] += _inputWordList[i].Length;
+						}
+					}
 
-                    //remove offset to give us original positions
-                    for (int j = 0; j < tempInts.ToList().Count; ++j)
-                    {
-                        tempInts[j] -= offset;
-                    }
-                    return tempInts;
-                    
+					//remove offset to give us original positions
+					for (int j = 0; j < tempInts.ToList().Count; ++j)
+					{
+						tempInts[j] -= offset;
+					}
+					return tempInts;
+					
 
-                }
+				}
 				else
 				{
-					throw new Exception("no words were found");
-					//unhandled for now, todo
+					/*
+					 * this exception is intentional 
+					 * i want to keep the filter tight so we don't have random garbage getting in,
+					 * if we don't have at least the last word, we can't be 100% sure that we have the exact statistic
+					 */
+					throw new WordNotFoundException("no words were found");
 				}
 			}
 
-
-			public string findStatisticInFile(SearchTargets target, WeaponType weaponType, IEnumerable<char> endings)
+			/// <summary>
+			/// Finds a statistic defined in <see cref="SearchTargets"/> within the text provided in the constructor.
+			/// </summary>
+			/// <param name="target">Specifies the target to search for.</param>
+			/// <param name="weaponType">Specifies the type of weapon. This is purely used to double-check if the target is valid.</param>
+			/// <param name="endings">Specifies the delimiters (or breakpoints) where the statistic will read until.</param>
+			/// <returns>A string that contains the statistic name and the actual value itself.</returns>
+			/// <exception cref="ArgumentException"></exception>
+			/// <exception cref="WordNotFoundException"></exception>
+			public string FindStatisticInFile(SearchTargets target, WeaponType weaponType, IEnumerable<char> endings)
 			{
 				_inputWordList.Clear();
 				_wordLocationSearchers.Clear();
@@ -428,8 +471,9 @@ namespace PFDB
 					_wordLocationSearchers[i] = new IndexSearch("", null);
 				}
 
-
-				if ((target <= SearchTargets.FireModes) == false && weaponType != WeaponType.Primary && weaponType != WeaponType.Secondary)
+				
+				if ((target <= SearchTargets.FireModes) == false && weaponType != WeaponType.Primary && weaponType != WeaponType.Secondary && 
+					(target >= SearchTargets.HeadMultiplier && target <= SearchTargets.LimbMultiplier && weaponType == WeaponType.Melee) == false)
 				{
 					//return; //error
 					throw new ArgumentException($"The SearchTarget specified does not match the WeaponType specified.");
@@ -450,197 +494,70 @@ namespace PFDB
 
 				_searchTarget = target;
 
-
-				//todo: use inputWordsSelection to generate IIndexSearch DONE
-				inputWordsSelection();
-
-				//for reload time case
-                IEnumerable<int> statisticNonGrataLocations = new List<int>();
+				_inputWordsSelection();
 
 
-                StringBuilder result = new StringBuilder();
-                List<char> list = new List<char>(endings);
-                list.AddRange(new List<char>() { (char)13, (char)10 });
 
-                foreach (IIndexSearch word in _wordLocationSearchers)
-                {
-                    if (word.isEmpty())
-                    {
-                        corruptedWordFixer(word.Word);
-                        word.Search();
-                    }
-                }
+				StringBuilder result = new StringBuilder();
+				List<char> list = new List<char>(endings);
+				list.AddRange(new List<char>() { (char)13, (char)10 });
 
-                switch (target)
+				foreach (IIndexSearch word in _wordLocationSearchers)
 				{
+					if (word.IsEmpty())
+					{
+						_corruptedWordFixer(word.Word);
+						word.Search();
+					}
+				}
 
+				switch (target)
+				{
 					//one word cases
 					case SearchTargets.Firerate:
 					case SearchTargets.Walkspeed:
 						{
-							if (_wordLocationSearchers[0].isEmpty())
-							{
-								corruptedWordFixer(_inputWordList[0]);
-								_wordLocationSearchers[0].Search();
-								if (_wordLocationSearchers[0].isEmpty()) //return; //error
-									throw new WordNotFoundException($"{_inputWordList[0]} was not found anywhere in the text with one-word case.");
-							}
+							_oneWordCaseHander();
 							break;
 						}
-
-
 					//special cases
 					case SearchTargets.Damage:
 						{
-                            if (_wordLocationSearchers[0].isEmpty())
-                            {
-                                corruptedWordFixer(_inputWordList[0]);
-                                _wordLocationSearchers[0].Search();
-                                if (_wordLocationSearchers[0].isEmpty()) //return; //error
-                                    throw new WordNotFoundException($"{_inputWordList[0]} was not found anywhere in the text with one-word case.");
-                            }
-
+							_oneWordCaseHander();
 							//if legacy version, eliminate damage range instances
-							if (_version.VersionNumber < 900) 
-							{
-								_inputWordList.Clear();
-								_wordLocationSearchers.Clear();
-								_inputWordList.AddRange(lister(["damage", "range"]));
-								foreach (string word in _inputWordList)
-								{
-									_wordLocationSearchers.Add(new IndexSearch(_filetext, word));
-								}
-								try
-								{
-                                    statisticNonGrataLocations = grabStatisticLocations();
-								}
-								finally
-								{
-									_inputWordList.Clear();
-									_wordLocationSearchers.Clear();
-									inputWordsSelection();
-								}
-							}
-                            break;
+							if (_version.IsLegacy)
+								_getStatisticNonGrataLocations(["damage", "range"]);
+							break;
 						}
-
-                    case SearchTargets.Suppression:
-                        {
-                            if (_wordLocationSearchers[0].isEmpty())
-                            {
-                                corruptedWordFixer(_inputWordList[0]);
-                                _wordLocationSearchers[0].Search();
-                                if (_wordLocationSearchers[0].isEmpty()) //return; //error
-                                    throw new WordNotFoundException($"{_inputWordList[0]} was not found anywhere in the text with one-word case.");
-                            }
-                            _inputWordList.Clear();
-                            _wordLocationSearchers.Clear();
-                            _inputWordList.AddRange(lister(["suppression", "range"]));
-                            foreach (string word in _inputWordList)
-                            {
-                                _wordLocationSearchers.Add(new IndexSearch(_filetext, word));
-                            }
-                            try
-                            {
-                                statisticNonGrataLocations = grabStatisticLocations();
-                            }
-                            finally
-                            {
-                                _inputWordList.Clear();
-                                _wordLocationSearchers.Clear();
-                                inputWordsSelection();
-                            }
-                            break;
-						}
-                    case SearchTargets.Rank:
-                        {
-                            if (_wordLocationSearchers[0].isEmpty())
-                            {
-                                corruptedWordFixer(_inputWordList[0]);
-                                _wordLocationSearchers[0].Search();
-                                if (_wordLocationSearchers[0].isEmpty()) //return; //error
-                                    throw new WordNotFoundException($"{_inputWordList[0]} was not found anywhere in the text with one-word case.");
-                            }
-                            IIndexSearch rankinfoSearch = new IndexSearch(_filetext, "RankInfo");
-                            _wordLocationSearchers[0].RemoveFromList(rankinfoSearch.ListOfIndices);
-                            break;
-                        }
-                    case SearchTargets.ReloadTime:
+					case SearchTargets.Suppression:
 						{
-
-							_inputWordList.Clear();
-							_wordLocationSearchers.Clear();
-							_inputWordList.AddRange(lister(["empty", "reload", "time"]));
-                            foreach (string word in _inputWordList)
-                            {
-                                _wordLocationSearchers.Add(new IndexSearch(_filetext, word));
-                            }
-							try
-							{
-                                statisticNonGrataLocations = grabStatisticLocations();
-							}
-							finally
-							{
-								_inputWordList.Clear();
-								_wordLocationSearchers.Clear();
-								inputWordsSelection();
-							}
+							_oneWordCaseHander();
+							_getStatisticNonGrataLocations(["suppression", "range"]);
+							break;
+						}
+					case SearchTargets.Rank:
+						{
+							_oneWordCaseHander();
+							IIndexSearch rankinfoSearch = new IndexSearch(_filetext, "RankInfo");
+							_wordLocationSearchers[0].RemoveFromList(rankinfoSearch.ListOfIndices);
+							break;
+						}
+					case SearchTargets.ReloadTime:
+						{
+							_getStatisticNonGrataLocations(["empty", "reload", "time"]);
 							break;
 						}
 
 					//case where we have 2+ words
 					default:
 						{
-							/*
-							if (firstWordLocationSearcher.isEmpty())
-							{
-								corruptedWordFixer(_inputWord1);
-								firstWordLocationSearcher.Search();
-								if (firstWordLocationSearcher.isEmpty())
-								{
-									if (secondWordLocationSearcher.isEmpty())
-									{
-										corruptedWordFixer(_inputWord2);
-										secondWordLocationSearcher.Search();
-										if (secondWordLocationSearcher.isEmpty())
-										{
-											return; //error
-										}
-										else
-										{
-											_firstWordLocationSearcher = firstWordLocationSearcher;
-											_secondWordLocationSearcher = secondWordLocationSearcher;
-											//modified grabstatistic
-										}
-									}
-								}
-							}
-
-							secondWordLocationSearcher.Search();
-							if (secondWordLocationSearcher.isEmpty())
-							{
-								corruptedWordFixer(_inputWord2);
-								secondWordLocationSearcher.Search();
-								if (secondWordLocationSearcher.isEmpty())
-								{
-									return; //error
-								}
-							}*/
-
-
-							foreach(IIndexSearch word in _wordLocationSearchers)
-							{
-								if (word.isEmpty())
-								{
-									corruptedWordFixer(word.Word);
-									word.Search();
-								}
-							}
-
 							if (_wordLocationSearchers.Last().ListOfIndices.Count > 0) goto Success;
-
+							/*
+							 * this exception is intentional 
+							 * i want to keep the filter tight so we don't have random garbage getting in,
+							 * if we don't have at least the last word, we can't be 100% sure that we have the exact statistic
+							 */
 							throw new WordNotFoundException($"None of the {_inputWordList.Count} words were found.");
-
 						}
 				}
 
@@ -648,81 +565,37 @@ namespace PFDB
 
 				List<int> locations = new List<int>(); //dummy list
 				try
-                {
-                    if (_version.VersionNumber >= 900 && (_searchTarget == SearchTargets.DamageRange || _searchTarget == SearchTargets.Damage)) goto DamageRangeSkip; //skip because we expect it not to be there
-                    locations = grabStatisticLocations().ToList();
-                }
+				{
+					if (_version.IsLegacy == false && 
+						(_searchTarget == SearchTargets.DamageRange || _searchTarget == SearchTargets.Damage)) 
+							goto DamageRangeSkip; //skip because we expect it not to be there
+
+					locations = _grabStatisticLocations().ToList();
+				}
 				catch
 				{
 					throw new WordNotFoundException("None of the two words were found.");
 					//return; //error, no words were found
 				}
 
-            DamageRangeSkip:
+			DamageRangeSkip:
 
-                int temp = 0;
-				if (_searchTarget == SearchTargets.ReloadTime)
-				{
-					foreach(int u in locations) {
-						foreach (int t in statisticNonGrataLocations)
-						{
-							//Console.WriteLine($"empty position {t}, reload position {u}, t forward {t + "empty".Length + _acceptableSpaces}, t backward {t - "empty".Length - _acceptableSpaces}");
-							//if "empty" is close enough to "reload time", we can conclude that it's not what we want and we should remove it
-							if ((t < u && t + "empty".Length + _acceptableSpaces > u) || 
-								(t > u && t - "empty".Length - _acceptableSpaces < u))
-							{
-								temp = u;
-							}
-						}
-                    }
-                    locations.RemoveAll(x => x == temp);
-                } 
-				else if(_searchTarget == SearchTargets.Suppression)
-				{
-                    foreach (int u in locations)
-                    {
-                        foreach (int t in statisticNonGrataLocations)
-                        {
-                            //if "suppression range" is close enough to "suppression", we can conclude that it's not what we want and we should remove it
-                            if ((t < u && t + "suppression".Length + _acceptableSpaces > u) || (t == u) ||
-                                (t > u && t - "suppression".Length - _acceptableSpaces < u))
-                            {
-                                temp = u;
-                            }
-                        }
-                    }
-                    locations.RemoveAll(x => x == temp);
-                }
-                else if (_searchTarget == SearchTargets.Damage)
-                {
-                    foreach (int u in locations)
-                    {
-                        foreach (int t in statisticNonGrataLocations)
-                        {
-                            //if "damage range" is close enough to "damage", we can conclude that it's not what we want and we should remove it
-                            if ((t < u && t + "damage".Length + _acceptableSpaces > u) || (t == u) ||
-                                (t > u && t - "damage".Length - _acceptableSpaces < u))
-                            {
-                                temp = u;
-                            }
-                        }
-                    }
-                    locations.RemoveAll(x => x == temp);
-                }else if((_searchTarget == SearchTargets.Damage ||  _searchTarget == SearchTargets.DamageRange) && _version.VersionNumber >= 900)
+				locations = _removeStatisticNonGrataLocations(locations);
+				if((_searchTarget == SearchTargets.Damage ||  _searchTarget == SearchTargets.DamageRange) && _version.VersionNumber >= 900)
 				{
 					IIndexSearch indexSearch = new IndexSearch(_filetext, "index ");
 					locations.AddRange(indexSearch.ListOfIndices);
 				}
 
-
+				List<string> statisticFilter = new List<string>();
 
 				foreach (int location in locations)
 				{
 					int i = location;
-					StringBuilder r = new StringBuilder(string.Empty); 
-					for(; list.Contains(_filetext[i]) == false && i < _filetext.Length;++i)
+					StringBuilder r = new StringBuilder(string.Empty);
+					for (; list.Contains(_filetext[i]) == false && i < _filetext.Length; ++i)
 					{
-						//technically this try block can be removed, but its safer to leave it for now, im sick of debugging strange errors
+						//technically this try wrapper can be removed, but its safer to leave it for now, im sick of debugging strange errors
 						try
 						{
 							r.Append(_filetext[i]);
@@ -732,18 +605,136 @@ namespace PFDB
 							break;
 						}
 					}
-					result.Append(r);
-                    result.Append('\t');
-                }
+					statisticFilter.Add(r.ToString());
+				}
+
+				switch (statisticFilter.Count)
+				{
+					case 0: throw new WordNotFoundException("No words were found.");
+					case 1: break;
+					default: //2 or more
+					{
+						for(int u = 0; u < statisticFilter.Count; ++u)
+						{
+							for(int v = 0; v < statisticFilter.Count; ++v)
+							{
+								if(statisticFilter[u].Trim() == statisticFilter[v].Trim() && u != v)
+								{
+									statisticFilter.RemoveAt(int.Max(u, v));
+										break; //i only expect one duplicate
+								}
+							}
+						}
+						break;
+					}
+				}
+
+				foreach (string g in statisticFilter)
+					result.Append($"{g}\t");
 
 
 
+				if(_consoleWrite) Console.WriteLine(result.ToString());
+				return result.ToString();
 
-                return result.ToString();
-
+				
 
 			}
 
+			/// <summary>
+			/// Filters undesirable locations that are near the desired locations. 
+			/// </summary>
+			/// <param name="initialLocations">The initial list of locations.</param>
+			/// <returns>A filtered list without any of the unwelcome positions. Also returns because I'm tired of debugging this source file.</returns>
+			private List<int> _removeStatisticNonGrataLocations(List<int> initialLocations)
+			{
+				int temp = 0;
+				foreach (int u in initialLocations)
+				{
+					foreach (int t in _statisticNonGrataLocations)
+					{
+						switch (_searchTarget)
+						{
+							case SearchTargets.ReloadTime:
+								{
+									//Console.WriteLine($"empty position {t}, reload position {u}, t forward {t + "empty".Length + _acceptableSpaces}, t backward {t - "empty".Length - _acceptableSpaces}");
+									//if "empty" is close enough to "reload time", we can conclude that it's not what we want and we should remove it
+									if ((t < u && t + "empty".Length + _acceptableSpaces > u) || 
+										(t == u) ||
+										(t > u && t - "empty".Length - _acceptableSpaces < u))
+									{
+										temp = u;
+									}
+									break;
+								}
+							case SearchTargets.Damage:
+								{
+									if ((t < u && t + "damage".Length + _acceptableSpaces > u) || 
+										(t == u) ||
+										(t > u && t - "damage".Length - _acceptableSpaces < u))
+									{
+										temp = u;
+									}
+									break;
+								}
+							case SearchTargets.Suppression:
+								{
+									if ((t < u && t + "suppression".Length + _acceptableSpaces > u) || 
+										(t == u) ||
+										(t > u && t - "suppression".Length - _acceptableSpaces < u))
+									{
+										temp = u;
+									}
+									break;
+								}
+						}
+					}
+				}
+
+				initialLocations.RemoveAll(x => x == temp && x != 0);
+
+				return initialLocations;
+			}
+
+			/// <summary>
+			/// Gets the locations of statistics we want to select against.
+			/// </summary>
+			/// <param name="statisticName">The name of the statistic to select against. Example: <c>["empty","reload","time"]</c> will select against "empty reload time".</param>
+			private void _getStatisticNonGrataLocations(params string[] statisticName)
+			{
+				_inputWordList.Clear();
+				_wordLocationSearchers.Clear();
+				_inputWordList.AddRange(_lister(statisticName));
+				foreach (string word in _inputWordList)
+				{
+					_wordLocationSearchers.Add(new IndexSearch(_filetext, word));
+				}
+				try
+				{
+					_statisticNonGrataLocations = _grabStatisticLocations();
+				}
+				finally
+				{
+					_inputWordList.Clear();
+					_wordLocationSearchers.Clear();
+					_inputWordsSelection();
+				}
+			}
+
+			/// <summary>
+			/// Checks if one-word cases have no words at all.
+			/// </summary>
+			/// <exception cref="WordNotFoundException"></exception>
+			private void _oneWordCaseHander()
+			{
+				if (_wordLocationSearchers[0].IsEmpty())
+				{
+					_corruptedWordFixer(_inputWordList[0]);
+					_wordLocationSearchers[0].Search();
+					if (_wordLocationSearchers[0].IsEmpty()) //return; //error
+						throw new WordNotFoundException($"{_inputWordList[0]} was not found anywhere in the text with one-word case.");
+				}
+			}
 
 		}
 	}

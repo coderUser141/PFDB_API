@@ -5,7 +5,7 @@
         /// <summary>
         /// Implementation of <see cref="IOutput"/> meant to represent a failed execution.
         /// </summary>
-        internal class FailedPythonOutput : IOutput
+        internal sealed class FailedPythonOutput : IOutput
         {
 
             /// <summary>

@@ -67,6 +67,17 @@ namespace PFDB
             }
 
             /// <summary>
+            /// Returns true if the version is earlier than <c>9.0.0</c>.
+            /// </summary>
+            public bool IsLegacy
+            {
+                get
+                {
+                    return VersionNumber >= 900;
+                }
+            }
+
+            /// <summary>
             /// Equality operator.
             /// </summary>
             /// <param name="first">First object to compare.</param>

@@ -20,7 +20,7 @@ namespace PFDB
             IEnumerable<IPythonExecutor> PythonExecutors { get; }
 
             /// <summary>
-            /// The counter for the number of items that pass or fail <see cref="PythonExecutionFactory{TPythonExecutable}.CheckFactory"/>.
+            /// The counter for the number of items that pass or fail <see cref="PythonExecutionFactory{TPythonExecutable}._checkFactory"/>.
             /// </summary>
             StatusCounter CheckStatusCounter { get; }
 

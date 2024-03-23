@@ -1,15 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
-using System.Collections;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.IO;
-using System.Security.Cryptography;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
-using PFDB.PythonExecution;
+using PFDB.Logging;
 
 
 namespace PFDB
@@ -139,14 +133,28 @@ namespace PFDB
 				//Console.WriteLine((int)Destination | (int)OutputDestination.File);
 				if (((int)Destination & (int)OutputDestination.File) == (int)OutputDestination.File)
 				{
-                    //Console.WriteLine(Directory.GetCurrentDirectory() ?? "null folder");
+					//Console.WriteLine(Directory.GetCurrentDirectory() ?? "null folder");
 
-                    if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\")) Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\");
-                    if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_log\\")) Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_log\\");
-                    if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}")) Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}");
-                    if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber}")) Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber}");
+					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\"))
+					{
+						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\");
+						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\PFDB_outputs\\ because it did not exist.");
+					}
+					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_log\\"))
+					{
+						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_log\\");
+						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\PFDB_log\\ because it did not exist.");
+					}
+					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}")) {
+						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}");
+						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber} because it did not exist.");
+					}
+					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber}")) {
+						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber}");
+						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber} because it did not exist.");
+					}
 
-                    File.WriteAllText($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}\\{Input.Filename}.pfdb", Output.OutputString);
+					File.WriteAllText($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}\\{Input.Filename}.pfdb", Output.OutputString);
 					File.WriteAllText($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber}\\{Input.Filename}.pfdblog",
 						$"Filename: {Input.Filename} {Environment.NewLine}" +
 						$"Program Directory: {Input.ProgramDirectory} {Environment.NewLine}" +

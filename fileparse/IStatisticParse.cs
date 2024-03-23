@@ -1,12 +1,13 @@
-﻿using PFDB.WeaponUtility;
+﻿using PFDB.ParsingUtility;
+using PFDB.WeaponUtility;
 using System.Collections.Generic;
 
 namespace PFDB.Parsing
 {
-    internal interface IStatisticParse
-    {
-        string Filetext { get; }
+	internal interface IStatisticParse
+	{
+		string Filetext { get; }
 
-        string findStatisticInFile(SearchTargets target, WeaponType weaponType, IEnumerable<char> endings);
-    }
+		string FindStatisticInFile(SearchTargets target, WeaponType weaponType, IEnumerable<char> endings);
+	}
 }

@@ -2,11 +2,25 @@
 using PFDB.PythonFactory;
 using PFDB.WeaponUtility;
 using PFDB.Parsing;
+using System.Collections.Immutable;
+using PFDB.ParsingUtility;
+using PFDB.Logging;
+using Microsoft.Extensions.Configuration;
 
 public class ComponentTester
 {
 	public static void Main(string[] args)
 	{
+
+		//PFDBLogger.Setup();
+
+		PFDBLogger logger = new PFDBLogger(".pfdblog");
+
+		PFDBLogger.LogInformation("lalalal", parameter: ["lala"]);
+		//logger.ConfigurationRoot.GetValue<string>()
+
+		//Log.Information("peepeepoopoo man");
+
 		/*
 		List<IPythonExecutor> list = new List<IPythonExecutor>();
 		//get number of weapons from database
@@ -27,27 +41,33 @@ public class ComponentTester
 		IPythonExecutionFactory factory = new PythonExecutionFactory<PythonTesseractExecutable>(list);
 		//factory.Start();
 
+		*/
 
-		IPythonExecutionFactory factory2 = new PythonExecutionFactory<PythonTesseractExecutable>(new Dictionary<int, List<int>>()
-		{
-			{0, new List<int>(){1,2,3,4,5,6,7 } },
-			{1, new List<int>(){3,4} }, 
-			{2, new List<int>(){2,3} }, 
-			{3, new List<int>(){1} }
-		}, new Dictionary<PhantomForcesVersion, string>() { { new PhantomForcesVersion("10.1.0"), "C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ImageParserForAPI\\version1010" } }, 
-		"C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\PyExec\\bin\\Debug\\net8.0", OutputDestination.Console | OutputDestination.File, null
-		);*/
-		//factory2.Start();
 
 		System.Environment.SetEnvironmentVariable("pythonSignalText", "smokin' joe rudeboy", EnvironmentVariableTarget.User);
-
-		IFileParse parse = new FileParse(new PhantomForcesVersion("10.1.0"));
-		parse.fileReader("C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ComponentTester\\bin\\Debug\\net8.0\\PFDB_outputs\\1010\\0_1.png.pfdb");
-		IEnumerable<string> strings = parse.findAllStatisticsInFile(WeaponType.Primary);
-		foreach(string f in strings)
+		
+		PythonExecutionFactory<PythonTesseractExecutable> factory2 = new PythonExecutionFactory<PythonTesseractExecutable>(new Dictionary<int, List<int>>()
 		{
-            Console.WriteLine(f);
-        }
+			{14, new List<int>(){0,1,2 } }
+		}, new Dictionary<PhantomForcesVersion, string>() { { new PhantomForcesVersion("9.0.2"), "C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ImageParserForAPI\\version902" } }, 
+		"C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\PyExec\\bin\\Debug\\net8.0", OutputDestination.File, null
+		);
+		//PythonExecutionFactoryOutput<PythonTesseractExecutable> pythonExecutionFactoryOutput = factory2.Start();
+		
+		
+		
+		IFileParse parse = new FileParse(new PhantomForcesVersion("10.1.0"));
+		parse.FileReader("C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ComponentTester\\bin\\Debug\\net8.0\\PFDB_outputs\\1010\\0_1.png.pfdb");
+		IDictionary<SearchTargets, string> valuePairs = parse.FindAllStatisticsInFileWithTypes(WeaponType.Primary);
+		ImmutableSortedDictionary<SearchTargets, string> r = valuePairs.ToImmutableSortedDictionary();
+		foreach(SearchTargets p in r.Keys)
+		{
+			//Console.WriteLine(r[p]);
+			
+		}
+
+
+		PFDBLogger.LogInformation("Application has finished execution.");
 		return;
-    }
+	}
 }

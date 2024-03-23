@@ -9,7 +9,7 @@ namespace PFDB
         /// <summary>
         /// Class that benchmarks how fast certain operations are finished, and inherits from <see cref="IOutput"/>.
         /// </summary>
-        public class Benchmark : IOutput
+        public sealed class Benchmark : IOutput
 		{
 			private string outputStr;
 			/// <summary>

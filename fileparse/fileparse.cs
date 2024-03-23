@@ -99,7 +99,8 @@ namespace PFDB
 			{
 				IDictionary<SearchTargets, string> temp = new Dictionary<SearchTargets, string>();
 				IStatisticParse statisticParse = new StatisticParse(_version, _filetext, acceptableSpaces, acceptableCorruptedWordSpaces, consoleWrite);
-				foreach (SearchTargets target in Enum.GetValues(typeof(SearchTargets)))
+
+				foreach (SearchTargets target in ParsingUtilityClass.GetSearchTargetsForWeapon(weaponType))
 				{
 					try
 					{

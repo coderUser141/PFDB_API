@@ -188,6 +188,16 @@
 			SpecialEffects,
 
 			/// <summary>
+			/// Throw velocity. How fast a grenade is thrown from the hand. Only for grenades.
+			/// </summary>
+			ThrowVelocity,
+
+			/// <summary>
+			/// Throw angle. From which angle offset the grenade is thrown from the hand. Only for grenades.
+			/// </summary>
+			ThrowAngle,
+
+			/// <summary>
 			/// Stored capacity. The amount of the specific grenade you can carry. Only for grenades.
 			/// </summary>
 			StoredCapacity,

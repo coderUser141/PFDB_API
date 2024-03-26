@@ -48,11 +48,13 @@ public class ComponentTester
 		
 		PythonExecutionFactory<PythonTesseractExecutable> factory2 = new PythonExecutionFactory<PythonTesseractExecutable>(new Dictionary<int, List<int>>()
 		{
-			{14, new List<int>(){0,1,2 } }
-		}, new Dictionary<PhantomForcesVersion, string>() { { new PhantomForcesVersion("9.0.2"), "C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ImageParserForAPI\\version902" } }, 
+			{8, new List<int>(){0,1,2,3,4,5,6,7,8,9,10,11,12,13,14 } },
+			{9, new List<int>(){0,1,2,3,4,5} },
+			{10, new List<int>(){0,1,2,3,4,5} }
+		}, new Dictionary<PhantomForcesVersion, string>() { { new PhantomForcesVersion("10.1.0"), "C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ImageParserForAPI\\version1010" } }, 
 		"C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\PyExec\\bin\\Debug\\net8.0", OutputDestination.File, null
 		);
-		//PythonExecutionFactoryOutput<PythonTesseractExecutable> pythonExecutionFactoryOutput = factory2.Start();
+		PythonExecutionFactoryOutput<PythonTesseractExecutable> pythonExecutionFactoryOutput = factory2.Start();
 		
 		
 		

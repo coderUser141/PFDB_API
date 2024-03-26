@@ -232,11 +232,11 @@ namespace PFDB
                 {
                     weaponType = WeaponType.Primary;
                 }
-                else if (categoryNumber > 8 && categoryNumber < 12)
+                else if (categoryNumber >= 8 && categoryNumber < 12)
                 {
                     weaponType = WeaponType.Secondary;
                 }
-                else if (categoryNumber > 11 && categoryNumber < 15)
+                else if (categoryNumber >= 12 && categoryNumber < 15)
                 {
                     weaponType = WeaponType.Grenade;
                 }

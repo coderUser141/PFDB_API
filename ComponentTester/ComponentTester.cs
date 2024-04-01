@@ -6,6 +6,7 @@ using System.Collections.Immutable;
 using PFDB.ParsingUtility;
 using PFDB.Logging;
 using Microsoft.Extensions.Configuration;
+using PFDB.Proofreading;
 
 public class ComponentTester
 {
@@ -64,9 +65,11 @@ public class ComponentTester
 		ImmutableSortedDictionary<SearchTargets, string> r = valuePairs.ToImmutableSortedDictionary();
 		foreach(SearchTargets p in r.Keys)
 		{
-			//Console.WriteLine(r[p]);
-			
+			Console.WriteLine(r[p]);
 		}
+
+		StatisticProofread proofread = new StatisticProofread(new PhantomForcesVersion("10.1.0"));
+		proofread.ApplyRegularExpression(PFDB.StatisticUtility.StatisticOptions.MagazineCapacity, r[SearchTargets.AmmoCapacity]);
 
 
 		PFDBLogger.LogInformation("Application has finished execution.");

@@ -6,6 +6,8 @@ using System.Collections.Immutable;
 using PFDB.ParsingUtility;
 using PFDB.Logging;
 using Microsoft.Extensions.Configuration;
+using PFDB.StatisticUtility;
+using PFDB.Proofreading;
 
 public class ComponentTester
 {
@@ -57,13 +59,41 @@ public class ComponentTester
 		
 		
 		IFileParse parse = new FileParse(new PhantomForcesVersion("10.1.0"));
-		parse.FileReader("C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ComponentTester\\bin\\Debug\\net8.0\\PFDB_outputs\\1010\\0_1.png.pfdb");
+		parse.FileReader("C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ComponentTester\\bin\\Debug\\net8.0\\PFDB_outputs\\902\\0_5.png.pfdb");
 		IDictionary<SearchTargets, string> valuePairs = parse.FindAllStatisticsInFileWithTypes(WeaponType.Primary);
 		ImmutableSortedDictionary<SearchTargets, string> r = valuePairs.ToImmutableSortedDictionary();
+		List<IStatistic> statistics = new List<IStatistic>();
+		StatisticProofread statisticProofread = new StatisticProofread(new PhantomForcesVersion("10.1.0"));
 		foreach(SearchTargets p in r.Keys)
 		{
 			//Console.WriteLine(r[p]);
-			
+			if(p == SearchTargets.AmmoCapacity)
+			{
+				IStatistic magcap = statisticProofread.ApplyRegularExpression(StatisticOptions.MagazineCapacity, r[p]);
+				IStatistic rescap = statisticProofread.ApplyRegularExpression(StatisticOptions.ReserveCapacity, r[p]);
+				if(magcap is ISingleStatistic t && rescap is ISingleStatistic y)
+				{
+					string res = string.Empty;
+					bool needsRevision = false;
+					try
+					{
+						int magcapint = Convert.ToInt32(t.StatisticLine);
+						int rescapint = Convert.ToInt32(y.StatisticLine);
+						res = (magcapint + rescapint).ToString();
+					}
+					catch
+					{
+						PFDBLogger.LogWarning("Magazine and/or reserve capacity could not be converted to integers", parameter: [magcap, rescap]);
+						res = t.StatisticLine + y.StatisticLine;
+						needsRevision = true;
+					}
+					statistics.AddRange([t,y,new SingleStatistic(needsRevision, res, statisticProofread.Version, StatisticOptions.TotalAmmoCapacity)]);
+					continue;
+				}
+
+
+			}
+			statistics.Add(statisticProofread.ApplyRegularExpression(StatisticProofread.SearchTargetToStatisticOption(p), r[p]));
 		}
 
 

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.FileIO;
 using PFDB.ParsingUtility;
 using PFDB.StatisticUtility;
 using PFDB.WeaponUtility;
@@ -17,6 +18,7 @@ namespace PFDB
 		public class StatisticProofread
 		{
 			private PhantomForcesVersion _version;
+			public PhantomForcesVersion Version { get { return _version; } }
 			//private Regex _regexPattern;
 			private static Dictionary<StatisticOptions, Regex> regexDictionary = new Dictionary<StatisticOptions, Regex>()
 			{
@@ -30,11 +32,35 @@ namespace PFDB
 				{StatisticOptions.FireModes, new Regex(@"\|\x20{0,2}(AUTO|SEMI|[Il]{0,6})") }
 
 			};
+
+
 			public static void Main(string[] args)
 			{
 
 				return;
 
+			}
+
+			
+			public static SearchTargets StatisticOptionToSearchTarget(StatisticOptions option)
+			{
+				//IEnumerable<string> list = Enum.GetNames<StatisticOptions>();
+				SearchTargets outparam;
+				bool found = Enum.TryParse(option.ToString(), true, out outparam);
+				if (found) return outparam;
+
+				if (new List<string>() { StatisticOptions.ReserveCapacity.ToString(), StatisticOptions.MagazineCapacity.ToString(), StatisticOptions.TotalAmmoCapacity.ToString() }.Contains(option.ToString())) return SearchTargets.AmmoCapacity;
+
+				throw new ArgumentException("The argument was invalid");
+			}
+
+			
+			public static StatisticOptions SearchTargetToStatisticOption(SearchTargets target)
+			{
+				StatisticOptions outparam;
+				bool found = Enum.TryParse(target.ToString(), true, out outparam);
+				if (found) return outparam;
+				throw new ArgumentException("The argument was invalid");
 			}
 
 			public StatisticProofread(PhantomForcesVersion version)
@@ -54,8 +80,8 @@ namespace PFDB
 						{
 							//_regexPattern = new Regex(@"\d+\x20{0,2}\/\x20{0,2}(\d+)");
 							Match match = regexDictionary[statisticTarget].Match(inputString);
-							string statisticInputString = _regexStringVerifier(match);
-							statistic = new Statistic(match.Success == false, statisticInputString, _version);
+							string statisticInputString = _regexStringVerifier(match, inputString);
+							statistic = new SingleStatistic(match.Success == false, statisticInputString, _version, statisticTarget);
 							break;
 						}
 					case StatisticOptions.DamageRange: //i realized that the handling is the exact same
@@ -71,14 +97,14 @@ namespace PFDB
 								matchCollection = new Regex(@"(\d+\.?\d*)").Matches(inputString);
 								foreach (Match t in matchCollection) {
 									if (t.Success) {
-										strings.Add(_regexStringVerifier(t));
+										strings.Add(_regexStringVerifier(t, inputString));
 									}
 									else
 									{
 										needsRevision = true;
 									}
 								}
-								statistic = new RangedStatistic(needsRevision, strings, _version);
+								statistic = new RangedStatistic(needsRevision, strings, _version, statisticTarget);
 								break;
 							}
 
@@ -99,22 +125,22 @@ namespace PFDB
 							{
 								if (t.Success)
 								{
-									strings.Add(_regexStringVerifier(t));
+									strings.Add(_regexStringVerifier(t, inputString));
 								}
 								else
 								{
 									needsRevision = true;
 								}
 							}
-							statistic = new RangedStatistic(needsRevision, strings, _version);
+							statistic = new RangedStatistic(needsRevision, strings, _version, statisticTarget);
 							break;
 							// \x20?(\d+\x20?[a-zA-Z])\x20?
 						}
 					default:
 						{
 							Match match = new Regex(@"\d+\.?\d*").Match(inputString);
-							string statisticInputString = _regexStringVerifier(match);
-							statistic = new Statistic(match.Success == false, statisticInputString, _version);
+							string statisticInputString = _regexStringVerifier(match, inputString);
+							statistic = new SingleStatistic(match.Success == false, statisticInputString, _version, statisticTarget);
 							//default
 							//\d+\.\d+
 							break;
@@ -124,12 +150,12 @@ namespace PFDB
 				//return new Statistic(false, "blah");
 			}
 
-			private static string _regexStringVerifier(Match match)
+			private static string _regexStringVerifier(Match match, string inputString = "")
 			{
-				string statisticInputString = string.Empty;
+				string statisticInputString = inputString;
 				if (match.Success)
 				{
-					if (match.Groups.Count > 0)
+					if (match.Groups.Count > 1)
 					{
 						statisticInputString = match.Groups[1].Value;
 					}
@@ -141,7 +167,7 @@ namespace PFDB
 
 				return statisticInputString;
 			}
-
+			/*
 			public static Match regex(string text, string pattern)
 			{
 				//Statistic t = new Statistic();
@@ -155,7 +181,7 @@ namespace PFDB
 			{
 				Regex regex = new Regex(@pattern);
 				return regex.Matches(text);
-			}
+			}*/
 		}
 	}
 }

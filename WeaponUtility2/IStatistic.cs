@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PFDB.WeaponUtility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace PFDB.StatisticUtility
 {
 	public interface IStatistic
 	{
+		public PhantomForcesVersion Version { get; }
+		public StatisticOptions Option { get; }
 		public bool NeedsRevision { get; }
 	}
 }

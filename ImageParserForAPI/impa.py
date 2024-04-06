@@ -339,7 +339,13 @@ class ImageParser:
 					#threshold2 = cv2.threshold(sharpened_img, 120, 255, cv2.THRESH_BINARY_INV)[1]
 					#cv2.imwrite("temp2.png", threshold2)
 					#inp = cv2.imread("temp2.png")
-					rois.append((counter,sharpened_img[y-roi_buffer :y+h+roi_buffer, x-roi_buffer: x+w+roi_buffer]))
+					bufferstarty = y-roi_buffer
+					bufferstartx = x-roi_buffer
+					bufferendy = y+h+roi_buffer
+					bufferendx = x+w+roi_buffer
+					if bufferstartx < 0: bufferstartx = 0
+					if bufferstarty < 0: bufferstarty = 0
+					rois.append((counter,sharpened_img[bufferstarty:bufferendy , bufferstartx:bufferendx]))
 					fi = "pythoncvtesting/index_roi_" + str(counter) + "_" + cropname + version + ".png"
 					cv2.imwrite(fi, rois[counter][1])
 					counter = counter + 1

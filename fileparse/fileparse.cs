@@ -54,7 +54,7 @@ namespace PFDB
 					throw new ArgumentNullException(nameof(filepath), "File path specified cannot be null.");
 				}
 				if (File.Exists(filepath) == false) {
-					PFDBLogger.LogFatal($"The tessbin path specified at {filepath} does not exist.Ensure that the directory exists, then try again.");
+					PFDBLogger.LogFatal($"The path specified at {filepath} does not exist. Ensure that the directory and file exists, then try again.");
 					throw new FileNotFoundException($"File not found.", filepath); 
 				}
 				string output;
@@ -67,6 +67,8 @@ namespace PFDB
 				{
 					output = string.Empty;
 				}
+
+
 				_filetext = output;
 				return output;
 			}
@@ -99,7 +101,8 @@ namespace PFDB
 			{
 				IDictionary<SearchTargets, string> temp = new Dictionary<SearchTargets, string>();
 				IStatisticParse statisticParse = new StatisticParse(_version, _filetext, acceptableSpaces, acceptableCorruptedWordSpaces, consoleWrite);
-				foreach (SearchTargets target in Enum.GetValues(typeof(SearchTargets)))
+
+				foreach (SearchTargets target in ParsingUtilityClass.GetSearchTargetsForWeapon(weaponType))
 				{
 					try
 					{

@@ -581,7 +581,7 @@ namespace PFDB
 			DamageRangeSkip:
 
 				locations = _removeStatisticNonGrataLocations(locations);
-				if((_searchTarget == SearchTargets.Damage ||  _searchTarget == SearchTargets.DamageRange) && _version.VersionNumber >= 900)
+				if((_searchTarget == SearchTargets.Damage ||  _searchTarget == SearchTargets.DamageRange) && _version.IsLegacy == false)
 				{
 					IIndexSearch indexSearch = new IndexSearch(_filetext, "index ");
 					locations.AddRange(indexSearch.ListOfIndices);

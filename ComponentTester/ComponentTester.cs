@@ -33,16 +33,11 @@ public class ComponentTester
 
 				IPythonExecutor temp = new PythonExecutor(OutputDestination.Console | OutputDestination.File)
 					.LoadOut(new PythonTesseractExecutable().Construct($"{i}_{j}.png", "C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ImageParserForAPI\\version1010", new PhantomForcesVersion("10.1.0"), WeaponUtilityClass.GetWeaponType(i), "C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\PyExec\\bin\\Debug\\net8.0", null));
-
-				
 				list.Add(temp);
 			}
 		}
-
-
 		IPythonExecutionFactory factory = new PythonExecutionFactory<PythonTesseractExecutable>(list);
 		//factory.Start();
-
 		*/
 
 
@@ -63,7 +58,7 @@ public class ComponentTester
 		IDictionary<SearchTargets, string> valuePairs = parse.FindAllStatisticsInFileWithTypes(WeaponType.Primary);
 		ImmutableSortedDictionary<SearchTargets, string> r = valuePairs.ToImmutableSortedDictionary();
 		List<IStatistic> statistics = new List<IStatistic>();
-		StatisticProofread statisticProofread = new StatisticProofread(new PhantomForcesVersion("10.1.0"));
+		StatisticProofread statisticProofread = new StatisticProofread(new PhantomForcesVersion(9,0,2));
 		foreach(SearchTargets p in r.Keys)
 		{
 			//Console.WriteLine(r[p]);
@@ -90,11 +85,12 @@ public class ComponentTester
 					statistics.AddRange([t,y,new SingleStatistic(needsRevision, res, statisticProofread.Version, StatisticOptions.TotalAmmoCapacity)]);
 					continue;
 				}
-
-
 			}
 			statistics.Add(statisticProofread.ApplyRegularExpression(StatisticProofread.SearchTargetToStatisticOption(p), r[p]));
 		}
+
+		StatisticCollection statistics1 = (StatisticCollection)statistics;
+
 
 
 		PFDBLogger.LogInformation("Application has finished execution.");

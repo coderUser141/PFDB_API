@@ -17,8 +17,8 @@ namespace PFDB
 
 		public class StatisticProofread
 		{
-			private PhantomForcesVersion _version;
-			public PhantomForcesVersion Version { get { return _version; } }
+			private WeaponIdentification _WID;
+			public WeaponIdentification WeaponID { get { return _WID; } }
 			//private Regex _regexPattern;
 			private static Dictionary<StatisticOptions, Regex> regexDictionary = new Dictionary<StatisticOptions, Regex>()
 			{
@@ -63,9 +63,9 @@ namespace PFDB
 				throw new ArgumentException("The argument was invalid");
 			}
 
-			public StatisticProofread(PhantomForcesVersion version)
+			public StatisticProofread(WeaponIdentification weaponID)
 			{
-				_version = version;
+				_WID = weaponID;
 			}
 
 
@@ -81,7 +81,7 @@ namespace PFDB
 							//_regexPattern = new Regex(@"\d+\x20{0,2}\/\x20{0,2}(\d+)");
 							Match match = regexDictionary[statisticTarget].Match(inputString);
 							string statisticInputString = _regexStringVerifier(match, inputString);
-							statistic = new SingleStatistic(match.Success == false, statisticInputString, _version, statisticTarget);
+							statistic = new SingleStatistic(match.Success == false, statisticInputString, _WID, statisticTarget);
 							break;
 						}
 					case StatisticOptions.DamageRange: //i realized that the handling is the exact same
@@ -92,7 +92,7 @@ namespace PFDB
 							List<string> strings = new List<string>();
 							bool needsRevision = false;
 
-							if (_version.IsLegacy)
+							if (_WID.Version.IsLegacy)
 							{
 								matchCollection = new Regex(@"(\d+\.?\d*)").Matches(inputString);
 								foreach (Match t in matchCollection) {
@@ -104,7 +104,7 @@ namespace PFDB
 										needsRevision = true;
 									}
 								}
-								statistic = new RangedStatistic(needsRevision, strings, _version, statisticTarget);
+								statistic = new RangedStatistic(needsRevision, strings, _WID, statisticTarget);
 								break;
 							}
 
@@ -132,7 +132,7 @@ namespace PFDB
 									needsRevision = true;
 								}
 							}
-							statistic = new RangedStatistic(needsRevision, strings, _version, statisticTarget);
+							statistic = new RangedStatistic(needsRevision, strings, _WID, statisticTarget);
 							break;
 							// \x20?(\d+\x20?[a-zA-Z])\x20?
 						}
@@ -140,7 +140,7 @@ namespace PFDB
 						{
 							Match match = new Regex(@"\d+\.?\d*").Match(inputString);
 							string statisticInputString = _regexStringVerifier(match, inputString);
-							statistic = new SingleStatistic(match.Success == false, statisticInputString, _version, statisticTarget);
+							statistic = new SingleStatistic(match.Success == false, statisticInputString, _WID, statisticTarget);
 							//default
 							//\d+\.\d+
 							break;

@@ -145,21 +145,21 @@ namespace PFDB
 						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_log\\");
 						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\PFDB_log\\ because it did not exist.");
 					}
-					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}")) {
-						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}");
-						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber} because it did not exist.");
+					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.WeaponID.Version.VersionNumber}")) {
+						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.WeaponID.Version.VersionNumber}");
+						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.WeaponID.Version.VersionNumber} because it did not exist.");
 					}
-					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber}")) {
-						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber}");
-						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber} because it did not exist.");
+					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.WeaponID.Version.VersionNumber}")) {
+						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.WeaponID.Version.VersionNumber}");
+						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.WeaponID.Version.VersionNumber} because it did not exist.");
 					}
 
-					File.WriteAllText($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.Version.VersionNumber}\\{Input.Filename}.pfdb", Output.OutputString);
-					File.WriteAllText($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.Version.VersionNumber}\\{Input.Filename}.pfdblog",
+					File.WriteAllText($"{Directory.GetCurrentDirectory()}\\PFDB_outputs\\{Input.WeaponID.Version.VersionNumber}\\{Input.Filename}.pfdb", Output.OutputString);
+					File.WriteAllText($"{Directory.GetCurrentDirectory()}\\PFDB_log\\{Input.WeaponID.Version.VersionNumber}\\{Input.Filename}.pfdblog",
 						$"Filename: {Input.Filename} {Environment.NewLine}" +
 						$"Program Directory: {Input.ProgramDirectory} {Environment.NewLine}" +
 						((Output is Benchmark benchmark) ? $"Elapsed time by DateTime (s): { benchmark.StopwatchDateTime.TotalSeconds}, Elapsed time by Stopwatch (s): { benchmark.StopwatchNormal.ElapsedMilliseconds / (double)1000}{Environment.NewLine}": "") +
-						((Input is PythonTesseractExecutable inputpyt) ? ($"PF Version: {inputpyt.Version} {Environment.NewLine}" +
+						((Input is PythonTesseractExecutable inputpyt) ? ($"PF Version: {inputpyt.WeaponID.Version.VersionNumber} {Environment.NewLine}" +
 						$"Weapon Type: {inputpyt.WeaponType} {Environment.NewLine}" +
 						$"Command Executed: {inputpyt.CommandExecuted} {Environment.NewLine}" +
 						$"FileDirectory {inputpyt.FileDirectory} {Environment.NewLine}") : "")

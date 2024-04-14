@@ -9,7 +9,7 @@ namespace PFDB.StatisticUtility
 {
 	public interface IStatistic
 	{
-		public PhantomForcesVersion Version { get; }
+		public WeaponIdentification WeaponID { get; }
 		public StatisticOptions Option { get; }
 		public bool NeedsRevision { get; }
 	}

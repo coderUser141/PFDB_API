@@ -12,17 +12,17 @@ namespace PFDB
 		{
 			private bool _needsRevision;
 			private IEnumerable<string> _statistics;
-			private PhantomForcesVersion _version;
+			private WeaponIdentification _WID;
 			private StatisticOptions _option;
 
 			public StatisticOptions Option {  get { return _option; } }
-			public PhantomForcesVersion Version { get { return _version; } }
+			public WeaponIdentification WeaponID { get { return _WID; } }
 			public IEnumerable<string> Statistics { get { return _statistics; } }
 			public bool NeedsRevision { get { return _needsRevision; } }
 
-			protected internal RangedStatistic(bool needsRevision, IEnumerable<string> statisticList, PhantomForcesVersion version, StatisticOptions option)
+			protected internal RangedStatistic(bool needsRevision, IEnumerable<string> statisticList, WeaponIdentification weaponID, StatisticOptions option)
 			{
-				_version = version;
+				_WID = weaponID;
 				_statistics = statisticList;
 				_needsRevision = needsRevision;
 				_option = option;

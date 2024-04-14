@@ -17,7 +17,7 @@ namespace PFDB
 		public sealed class StatisticParse : IStatisticParse
 		{
 
-			private PhantomForcesVersion _version;
+			private WeaponIdentification _WID;
 
 			private SearchTargets _searchTarget = 0;
 			private List<IIndexSearch> _wordLocationSearchers = new List<IIndexSearch>();
@@ -28,6 +28,8 @@ namespace PFDB
 			private bool _consoleWrite;
 			private int _acceptableSpaces;
 			private int _acceptableCorruptedWordSpaces; //margin of error
+			
+			public WeaponIdentification WeaponID { get { return _WID; } }
 
 			/// <summary>
 			/// Returns the text that this class is working with.
@@ -37,15 +39,15 @@ namespace PFDB
 			/// <summary>
 			/// Default constructor.
 			/// </summary>
-			/// <param name="version">The Phantom Forces Version.</param>
+			/// <param name="weaponID">The Phantom Forces Version.</param>
 			/// <param name="text">The text to search through</param>
 			/// <param name="acceptableSpaces">Specifies the acceptable number spaces between words. Default is set to 3.</param>
 			/// <param name="acceptableCorruptedWordSpaces">Specifies the acceptable number spaces that a corrupted word can have. Default is set to 3.</param>
 			/// <param name="consoleWrite"></param>
-			public StatisticParse(PhantomForcesVersion version, string text, int acceptableSpaces = 3, int acceptableCorruptedWordSpaces = 3, bool consoleWrite = false)
+			public StatisticParse(WeaponIdentification weaponID, string text, int acceptableSpaces = 3, int acceptableCorruptedWordSpaces = 3, bool consoleWrite = false)
 			{
 
-				_version = version;
+				_WID = weaponID;
 				_consoleWrite = consoleWrite;
 				_acceptableCorruptedWordSpaces = acceptableCorruptedWordSpaces;
 				_acceptableSpaces = acceptableSpaces;
@@ -525,7 +527,7 @@ namespace PFDB
 						{
 							_oneWordCaseHander();
 							//if legacy version, eliminate damage range instances
-							if (_version.IsLegacy)
+							if (_WID.Version.IsLegacy)
 								_getStatisticNonGrataLocations(["damage", "range"]);
 							break;
 						}
@@ -566,7 +568,7 @@ namespace PFDB
 				List<int> locations = new List<int>(); //dummy list
 				try
 				{
-					if (_version.IsLegacy == false && 
+					if (_WID.Version.IsLegacy == false && 
 						(_searchTarget == SearchTargets.DamageRange || _searchTarget == SearchTargets.Damage)) 
 							goto DamageRangeSkip; //skip because we expect it not to be there
 
@@ -581,7 +583,7 @@ namespace PFDB
 			DamageRangeSkip:
 
 				locations = _removeStatisticNonGrataLocations(locations);
-				if((_searchTarget == SearchTargets.Damage ||  _searchTarget == SearchTargets.DamageRange) && _version.IsLegacy == false)
+				if((_searchTarget == SearchTargets.Damage ||  _searchTarget == SearchTargets.DamageRange) && _WID.Version.IsLegacy == false)
 				{
 					IIndexSearch indexSearch = new IndexSearch(_filetext, "index ");
 					locations.AddRange(indexSearch.ListOfIndices);

@@ -20,7 +20,7 @@ namespace PFDB
             public IPythonExecutable<IOutput> Input { get; }
 
             /// <summary>
-            /// Signal state for <see cref="PythonFactory.IPythonExecutionFactory.Start()"/>.
+            /// Signal state for <see cref="PFDB.PythonFactory.PythonExecutionFactory.Start()"/>.
             /// </summary>
             ManualResetEvent manualEvent { get; set; }
 

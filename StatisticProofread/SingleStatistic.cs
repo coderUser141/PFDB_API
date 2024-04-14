@@ -10,17 +10,17 @@ namespace PFDB
 			private bool _needsRevision;
 			private string _statisticLine;
 
-			private PhantomForcesVersion _version;
+			private WeaponIdentification _WID;
 			private StatisticOptions _option;
 			public string StatisticLine {  get { return _statisticLine; } }
 			public bool NeedsRevision {  get { return _needsRevision; } }
-			public PhantomForcesVersion Version { get { return _version; } }
+			public WeaponIdentification WeaponID { get { return _WID; } }
 			public StatisticOptions Option { get { return _option; } }
 
 			/*protected internal*/
-			public SingleStatistic(bool needsRevision, string statisticLine, PhantomForcesVersion version, StatisticOptions option)
+			public SingleStatistic(bool needsRevision, string statisticLine, WeaponIdentification weaponID, StatisticOptions option)
 			{
-				_version = version;
+				_WID = weaponID;
 				_option = option;
 				_statisticLine = statisticLine;
 				_needsRevision = needsRevision;

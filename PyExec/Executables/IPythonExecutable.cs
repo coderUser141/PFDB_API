@@ -26,13 +26,18 @@ namespace PFDB
             /// <summary>
             /// Phantom Forces Version. "800" = Version 8.0.0; "1001" = Version 10.0.1, etc.
             /// </summary>
-            public PhantomForcesVersion Version { get; }
+            public WeaponIdentification WeaponID { get; }
 
-            /// <summary>
-            /// Builds and returns a <see cref="ProcessStartInfo"/> object for program execution.
-            /// </summary>
-            /// <returns>A <see cref="ProcessStartInfo"/> object.</returns>
-            public ProcessStartInfo GetProcessStartInfo();
+			/// <summary>
+			/// WeaponType of the weapon, telling the Python application where to read.
+			/// </summary>
+			WeaponType WeaponType { get; }
+
+			/// <summary>
+			/// Builds and returns a <see cref="ProcessStartInfo"/> object for program execution.
+			/// </summary>
+			/// <returns>A <see cref="ProcessStartInfo"/> object.</returns>
+			public ProcessStartInfo GetProcessStartInfo();
 
             /// <summary>
             /// Checks the input, if necessary.
@@ -52,10 +57,10 @@ namespace PFDB
             /// <param name="filename">Name of the file to be read by the Python application.</param>
             /// <param name="fileDirectory">Directory where the images for reading reside.</param>
             /// <param name="weaponType">WeaponType of the weapon, telling the Python application where to read.</param>
-            /// <param name="version">Phantom Forces Version. "800" = Version 8.0.0; "1001" = Version 10.0.1, etc.</param>
+            /// <param name="weaponID">Phantom Forces Version. "800" = Version 8.0.0; "1001" = Version 10.0.1, etc.</param>
             /// <param name="programDirectory">Directory where the Python executable resides.</param>
             /// <returns></returns>
-            public IPythonExecutable<IOutput> Construct(string filename, string fileDirectory, PhantomForcesVersion version, WeaponType weaponType, string programDirectory);
+            public IPythonExecutable<IOutput> Construct(string filename, string fileDirectory, WeaponIdentification weaponID, WeaponType weaponType, string programDirectory);
         }
     }
 }

@@ -12,6 +12,11 @@ namespace PFDB.Parsing
 	public interface IFileParse
 	{
 		/// <summary>
+		/// Phantom Forces weapon identification.
+		/// </summary>
+		public WeaponIdentification WeaponID { get; }
+
+		/// <summary>
 		/// Reads the file. Throws <see cref="ArgumentNullException"/> if filepath is null, and <see cref="FileNotFoundException"/> if the file does not exist.
 		/// </summary>
 		/// <param name="filepath">The path to the file.</param>

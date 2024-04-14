@@ -60,7 +60,7 @@ public class ComponentTester
 		}*/
 		
 		
-		IFileParse parse = new FileParse(new PhantomForcesVersion("10.1.0"));
+		IFileParse parse = new FileParse(new WeaponIdentification(new PhantomForcesVersion("10.1.0"),0,5,0));
 		parse.FileReader("C:\\Users\\Aethelhelm\\source\\repos\\PFDB_API\\ComponentTester\\bin\\Debug\\net8.0\\PFDB_outputs\\902\\0_5.png.pfdb");
 		IDictionary<SearchTargets, string> valuePairs = parse.FindAllStatisticsInFileWithTypes(WeaponType.Primary);
 		ImmutableSortedDictionary<SearchTargets, string> r = valuePairs.ToImmutableSortedDictionary();
@@ -89,7 +89,7 @@ public class ComponentTester
 						res = t.StatisticLine + y.StatisticLine;
 						needsRevision = true;
 					}
-					statistics.AddRange([t,y,new SingleStatistic(needsRevision, res, statisticProofread.Version, StatisticOptions.TotalAmmoCapacity)]);
+					statistics.AddRange([t,y,new SingleStatistic(needsRevision, res, statisticProofread, StatisticOptions.TotalAmmoCapacity)]);
 					continue;
 				}
 

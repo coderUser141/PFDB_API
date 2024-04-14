@@ -14,76 +14,84 @@ namespace PFDB
         /// </summary>
         public sealed class PythonTesseractExecutable : IPythonExecutable<IOutput>
 		{
+			private WeaponIdentification _WID;
+			private WeaponType _weaponType;
+			private string _fileDirectory;
+			private string _filename;
+			private string _programDirectory;
+			private string? _tessbinPath;
+			private string _commandExecuted;
+
 			/// <summary>
 			/// Name of the file to be read by the Python application.
 			/// </summary>
-			public string Filename { get; private set; }
+			public string Filename { get { return _filename; } }
 
 			/// <summary>
 			/// Directory where the images for reading reside.
 			/// </summary>
-			public string FileDirectory { get; private set; }
+			public string FileDirectory { get { return _fileDirectory; } }
 
 			/// <summary>
 			/// WeaponType of the weapon, telling the Python application where to read.
 			/// </summary>
-			public WeaponType WeaponType { get; private set; }
+			public WeaponType WeaponType { get { return _weaponType; } }
 			
 			/// <summary>
 			/// Directory where the Python executable resides.
 			/// </summary>
-			public string ProgramDirectory { get; private set; }
+			public string ProgramDirectory { get { return _programDirectory; } }
 
 			/// <summary>
 			/// Path to "tessbin" folder. If null, "tessbin" folder is assumed to be in the same working directory.
 			/// </summary>
-			public string? TessbinPath { get; private set; }
+			public string? TessbinPath { get { return _tessbinPath; } }
 
             /// <summary>
             /// Command executed by this program.
             /// </summary>
-            public string CommandExecuted { get; private set; }
+            public string CommandExecuted { get { return _commandExecuted; } }
 
             /// <summary>
             /// Phantom Forces Version. "800" = Version 8.0.0; "1001" = Version 10.0.1, etc.
             /// </summary>
-            public PhantomForcesVersion Version { get; private set; }
+            public WeaponIdentification WeaponID { get { return _WID; } }
 
             private bool _internalExecution = true;
             private bool _untrustedConstruction = true;
 
-            /// <summary>
-            /// Unused constructor. Use <see cref="Construct(string, string, PhantomForcesVersion, WeaponType, string)"/> or <see cref="Construct(string, string, PhantomForcesVersion, WeaponType, string, string?)"/> instead.
-            /// </summary>
-            public PythonTesseractExecutable()
-            {
-                Filename = string.Empty;
-                WeaponType = 0;
-                TessbinPath = null;
-                FileDirectory = string.Empty;
-                Version = new PhantomForcesVersion("8.0.0");
-                ProgramDirectory = string.Empty;
-                CommandExecuted = string.Empty;
+			/// <summary>
+			/// Unused constructor. Use <see cref="Construct(string, string, WeaponIdentification, WeaponType, string)"/> or <see cref="Construct(string, string, WeaponIdentification, WeaponType, string, string?)"/> instead.
+			/// </summary>
+			public PythonTesseractExecutable()
+			{
+				_WID = new WeaponIdentification(new PhantomForcesVersion(8, 0, 0), 0, 0, 0);
+				_fileDirectory = string.Empty;
+				_filename = string.Empty;
+				_programDirectory = string.Empty;
+				_tessbinPath = null;
+				_weaponType = 0;
+				_commandExecuted = string.Empty;
             }
 
-            /// <summary>
-            /// Default constructor. <see cref="TessbinPath"/> is assumed to be in the same current working directory. If you need <see cref="TessbinPath"/> to be set to a different directory, use <see cref="Construct(string, string, PhantomForcesVersion, WeaponType, string, string?)"/>.
-            /// </summary>
-            /// <param name="filename">Name of the file to be read by the Python application.</param>
-            /// <param name="fileDirectory">Directory where the images for reading reside.</param>
-            /// <param name="weaponType">WeaponType of the weapon, telling the Python application where to read.</param>
-            /// <param name="version">Phantom Forces Version. "800" = Version 8.0.0; "1001" = Version 10.0.1, etc.</param>
-            /// <param name="programDirectory">Directory where the Python executable resides.</param>
-            public IPythonExecutable<IOutput> Construct(string filename, string fileDirectory, PhantomForcesVersion version, WeaponType weaponType, string programDirectory)
+			/// <summary>
+			/// Default constructor. <see cref="TessbinPath"/> is assumed to be in the same current working directory. If you need <see cref="TessbinPath"/> to be set to a different directory, use <see cref="Construct(string, string, WeaponIdentification, WeaponType, string, string?)"/>.
+			/// </summary>
+			/// <param name="filename">Name of the file to be read by the Python application.</param>
+			/// <param name="fileDirectory">Directory where the images for reading reside.</param>
+			/// <param name="weaponType">WeaponType of the weapon, telling the Python application where to read.</param>
+			/// <param name="weaponID">Phantom Forces weapon identification.</param>
+			/// <param name="programDirectory">Directory where the Python executable resides.</param>
+			public IPythonExecutable<IOutput> Construct(string filename, string fileDirectory, WeaponIdentification weaponID, WeaponType weaponType, string programDirectory)
             {
-                Filename = filename;
-                WeaponType = weaponType;
-                TessbinPath = null;
-                if (TessbinPath != null)
+                _filename = filename;
+                _weaponType = weaponType;
+                _tessbinPath = null;
+                if (_tessbinPath != null)
                 {
-                    if (TessbinPath.EndsWith('\\') == false)
+                    if (_tessbinPath.EndsWith('\\') == false)
                     {
-                        TessbinPath += '\\';
+                        _tessbinPath += '\\';
                     }
                 }
                 if (programDirectory.EndsWith('\\') == false)
@@ -94,33 +102,33 @@ namespace PFDB
                 {
                     fileDirectory += '\\';
                 }
-                FileDirectory = fileDirectory;
-                Version = version;
-                ProgramDirectory = programDirectory;
-                CommandExecuted = string.Empty;
+                _fileDirectory = fileDirectory;
+				_WID = weaponID;
+                _programDirectory = programDirectory;
+                _commandExecuted = string.Empty;
                 _untrustedConstruction = false;
                 return this;
             }
 
-            /// <summary>
-            /// Default constructor.
-            /// </summary>
-            /// <param name="filename">Name of the file to be read by the Python application.</param>
-            /// <param name="fileDirectory">Directory where the images for reading reside.</param>
-            /// <param name="weaponType">WeaponType of the weapon, telling the Python application where to read.</param>
-            /// <param name="version">Phantom Forces Version. "800" = Version 8.0.0; "1001" = Version 10.0.1, etc.</param>
-            /// <param name="programDirectory">Directory where the Python executable resides.</param>
-            /// <param name="tessbinPath">Path to "tessbin" folder. If null, "tessbin" folder is assumed to be in the same working directory.</param>
-            public PythonTesseractExecutable Construct(string filename, string fileDirectory, PhantomForcesVersion version, WeaponType weaponType, string programDirectory, string? tessbinPath )
+			/// <summary>
+			/// Default constructor.
+			/// </summary>
+			/// <param name="filename">Name of the file to be read by the Python application.</param>
+			/// <param name="fileDirectory">Directory where the images for reading reside.</param>
+			/// <param name="weaponType">WeaponType of the weapon, telling the Python application where to read.</param>
+			/// <param name="weaponID">Phantom Forces weapon identification.</param>
+			/// <param name="programDirectory">Directory where the Python executable resides.</param>
+			/// <param name="tessbinPath">Path to "tessbin" folder. If null, "tessbin" folder is assumed to be in the same working directory.</param>
+			public PythonTesseractExecutable Construct(string filename, string fileDirectory, WeaponIdentification weaponID, WeaponType weaponType, string programDirectory, string? tessbinPath )
             {
-                Filename = filename;
-                WeaponType = weaponType;
-                TessbinPath = tessbinPath;
-                if (TessbinPath != null)
+                _filename = filename;
+                _weaponType = weaponType;
+                _tessbinPath = tessbinPath;
+                if (_tessbinPath != null)
                 {
-                    if (TessbinPath.EndsWith('\\') == false)
+                    if (_tessbinPath.EndsWith('\\') == false)
                     {
-                        TessbinPath += '\\';
+                        _tessbinPath += '\\';
                     }
                 }
                 if (programDirectory.EndsWith('\\') == false)
@@ -131,10 +139,10 @@ namespace PFDB
                 {
                     fileDirectory += '\\';
                 }
-                FileDirectory = fileDirectory;
-                Version = version;
-                ProgramDirectory = programDirectory;
-                CommandExecuted = string.Empty;
+                _fileDirectory = fileDirectory;
+                _WID = new WeaponIdentification(new PhantomForcesVersion(8,0,0), 0, 0, 0);
+                _programDirectory = programDirectory;
+                _commandExecuted = string.Empty;
                 _untrustedConstruction = false;
                 return this;
             }
@@ -149,24 +157,24 @@ namespace PFDB
 				StringBuilder command = new StringBuilder("Command used: ");
 				if (TessbinPath == null)
 				{
-					pyexecute = new ProcessStartInfo(ProgramDirectory + "impa.exe", $"-c {FileDirectory + Filename} {Convert.ToString((int)WeaponType)} {Version.VersionNumber.ToString()}");
+					pyexecute = new ProcessStartInfo(ProgramDirectory + "impa.exe", $"-c {FileDirectory + Filename} {Convert.ToString((int)WeaponType)} {WeaponID.Version.VersionNumber.ToString()}");
 					command.Append(pyexecute.Arguments);
 					command = command.Replace(FileDirectory + Filename, "...." + PyUtilityClass.CommonExecutionPath(Environment.ProcessPath ?? "null", FileDirectory + Filename).Item2);
 				}
 				else
 				{
-					pyexecute = new ProcessStartInfo(ProgramDirectory + "impa.exe", $"-f {TessbinPath} {FileDirectory + Filename} {Convert.ToString((int)WeaponType)} {Version.VersionNumber.ToString()}");
+					pyexecute = new ProcessStartInfo(ProgramDirectory + "impa.exe", $"-f {TessbinPath} {FileDirectory + Filename} {Convert.ToString((int)WeaponType)} {WeaponID.Version.VersionNumber.ToString()}");
 					command.Append(pyexecute.Arguments);
 					command = command.Replace(TessbinPath, "...." + PyUtilityClass.CommonExecutionPath(Environment.ProcessPath ?? "null", TessbinPath).Item2);
 				}
-				CommandExecuted = command.ToString();
+				_commandExecuted = command.ToString();
 				pyexecute.RedirectStandardOutput = true;
 				pyexecute.UseShellExecute = false;
 				return pyexecute;
 			}
 
             /// <summary>
-            /// Checks if the parameters passed through <see cref="PythonTesseractExecutable.Construct(string, string, PhantomForcesVersion, WeaponType, string, string?)"/> are valid.
+            /// Checks if the parameters passed through <see cref="PythonTesseractExecutable.Construct(string, string, WeaponIdentification, WeaponType, string, string?)"/> are valid.
             /// </summary>
             /// <exception cref="ArgumentException"></exception>
 			/// <exception cref="DirectoryNotFoundException"></exception>

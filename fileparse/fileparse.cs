@@ -20,16 +20,21 @@ namespace PFDB
 		public sealed class FileParse : IFileParse
 		{
 			private string _filetext = string.Empty;
-			private PhantomForcesVersion _version;
+			private WeaponIdentification _weaponID;
 			private string _filepath = string.Empty;
+
+			/// <summary>
+			/// The weapon ID of the current file.
+			/// </summary>
+			public WeaponIdentification WeaponID { get { return _weaponID; } }
 
 			/// <summary>
 			/// Default constructor.
 			/// </summary>
-			/// <param name="version">Specifies the version of Phantom Forces for the text provided.</param>
-			public FileParse(PhantomForcesVersion version)
+			/// <param name="weaponID">Specifies the weaponID for the text provided.</param>
+			public FileParse(WeaponIdentification weaponID)
 			{
-				_version = version;
+				_weaponID = weaponID;
 			}
 
 			/// <summary>
@@ -100,7 +105,7 @@ namespace PFDB
 			public IDictionary<SearchTargets, string> FindAllStatisticsInFileWithTypes(WeaponType weaponType, int acceptableSpaces = 3, int acceptableCorruptedWordSpaces = 3, bool consoleWrite = false)
 			{
 				IDictionary<SearchTargets, string> temp = new Dictionary<SearchTargets, string>();
-				IStatisticParse statisticParse = new StatisticParse(_version, _filetext, acceptableSpaces, acceptableCorruptedWordSpaces, consoleWrite);
+				IStatisticParse statisticParse = new StatisticParse(_weaponID, _filetext, acceptableSpaces, acceptableCorruptedWordSpaces, consoleWrite);
 
 				foreach (SearchTargets target in ParsingUtilityClass.GetSearchTargetsForWeapon(weaponType))
 				{

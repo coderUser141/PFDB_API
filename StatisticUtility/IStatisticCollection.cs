@@ -10,7 +10,7 @@ namespace PFDB.StatisticUtility
 	public interface IStatisticCollection
 	{
 		public bool CollectionNeedsRevision { get; }
-		public PhantomForcesVersion Version { get; }
+		public WeaponIdentification WeaponID { get; }
 
 		public IEnumerable<IStatistic> Statistics { get; }
 	}

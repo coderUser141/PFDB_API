@@ -30,7 +30,8 @@ Maybe I will move onto another format rather than databases, but that isn't nece
 TO DO:
 0. Modify Python script to better read the statistics and make sure everything is being read correctly (for examples: stuff is getting cut off)
 	-> this has mostly been done, have figured out how to read damage ranges and values better using boundary identification
-1. Finish all regex patterns by analyzing common mistakes/shortcomings
+1. Finish all regex patterns by analyzing common mistakes/shortcomings DONE
+
 
 Common mistakes/shortcomings:
 - clustered damages, like executioner have a tendency to be messed up
@@ -40,16 +41,16 @@ Common mistakes/shortcomings:
 - firemode types mess up burst: for example, "IIlll" instead of "IIIII"
 -> identify general trends for damage / suppression
 
-2. Edit FileIO to use SQL
-3. Refactor FileParse
-4. Edit PythonExecutionFactory to create objects easily, but also allow for manual objects to be loaded
+2. Edit FileIO to use SQL -> SCRAPPED
+3. Refactor FileParse -> DONE
+4. Edit PythonExecutionFactory to create objects easily, but also allow for manual objects to be loaded -> DONE
 
 
 Optional:
 
-1. Edit PythonExecutionFactory to track Benchmark times, plus actual time
-	-> time saved with parallelization?
-2. Edit FileParse to accept strings directly
+1. Edit PythonExecutionFactory to track Benchmark times, plus actual time -> DONE
+	-> time saved with parallelization? 
+2. Edit FileParse to accept strings directly -> DONE
 	-> IOutput overload potentially?
 
 

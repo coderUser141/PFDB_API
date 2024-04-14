@@ -30,7 +30,7 @@ namespace PFDB.WeaponUtility
 			StringBuilder stringBuilder = new StringBuilder();
 			stringBuilder.Append(_dummyDigit);
 
-			_version = Version;
+			_version = version;
 			_category = category;
 			_rank = rank;
 			_rankTieBreaker = rankTieBreaker;

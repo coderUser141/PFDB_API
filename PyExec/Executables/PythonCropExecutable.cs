@@ -12,46 +12,51 @@ namespace PFDB
 		/// </summary>
 		public sealed class PythonCropExecutable : IPythonExecutable<IOutput>
 		{
+			private WeaponIdentification _WID;
+			private WeaponType _weaponType;
+			private string _fileDirectory;
+			private string _filename;
+			private string _programDirectory;
+
 
 			/// <summary>
 			/// Phantom Forces Version. "800" = Version 8.0.0; "1001" = Version 10.0.1, etc.
 			/// </summary>
-			public PhantomForcesVersion Version { get; private set; }
+			public WeaponIdentification WeaponID { get { return _WID; } }
 
 			/// <summary>
 			/// WeaponType of the weapon, telling the Python application where to read.
 			/// </summary>
-			public WeaponType WeaponType { get; private set; }
+			public WeaponType WeaponType { get { return _weaponType; } }
 
 			/// <summary>
 			/// Directory where the images for reading reside.
 			/// </summary>
-			public string FileDirectory { get; private set; }
+			public string FileDirectory { get { return _fileDirectory; } }
 
 			/// <summary>
 			/// Name of the file to be read by the Python application.
 			/// </summary>
-			public string Filename { get; private set; }
+			public string Filename { get { return _filename; } }
 
 			/// <summary>
 			/// Directory where the Python executable resides.
 			/// </summary>
-			public string ProgramDirectory { get; private set; }
+			public string ProgramDirectory { get { return _programDirectory; } }
 
 			private bool _internalExecution = true;
 			private bool _untrustedConstruction = true;
 
-
 			/// <summary>
-			/// Unused constructor.
+			/// Unused constructor. Use <see cref="Construct(string, string, WeaponIdentification, WeaponType, string)"/> instead.
 			/// </summary>
 			public PythonCropExecutable()
 			{
-				Filename = string.Empty;
-				WeaponType = 0;
-				FileDirectory = string.Empty;
-				Version = new PhantomForcesVersion("8.0.0");
-				ProgramDirectory = string.Empty;
+				_WID = new WeaponIdentification(new PhantomForcesVersion(8,0,0),0,0,0);
+				_fileDirectory = string.Empty;
+				_filename = string.Empty;
+				_programDirectory = string.Empty;
+				_weaponType = 0;
 			}
 
 			/// <summary>
@@ -60,9 +65,9 @@ namespace PFDB
 			/// <param name="filename">Name of the file to be read by the Python application.</param>
 			/// <param name="fileDirectory">Directory where the images for reading reside.</param>
 			/// <param name="weaponType">WeaponType of the weapon, telling the Python application where to read.</param>
-			/// <param name="version">Phantom Forces Version. "800" = Version 8.0.0; "1001" = Version 10.0.1, etc.</param>
+			/// <param name="weaponID">Phantom Forces weapon identification.</param>
 			/// <param name="programDirectory">Directory where the Python executable resides.</param>
-			public IPythonExecutable<IOutput> Construct(string filename, string fileDirectory, PhantomForcesVersion version, WeaponType weaponType, string programDirectory)
+			public IPythonExecutable<IOutput> Construct(string filename, string fileDirectory, WeaponIdentification weaponID, WeaponType weaponType, string programDirectory)
 			{
 				if (!programDirectory.EndsWith('\\'))
 				{
@@ -72,17 +77,17 @@ namespace PFDB
 				{
 					fileDirectory += '\\';
 				}
-				FileDirectory = fileDirectory;
-				Filename = filename;
-				Version = version;
-				this.WeaponType = weaponType;
-				ProgramDirectory = programDirectory;
+				_fileDirectory = fileDirectory;
+				_filename = filename;
+				_WID = weaponID;
+				_weaponType = weaponType;
+				_programDirectory = programDirectory;
 				_untrustedConstruction = false;
 				return this;
 			}
 
 			/// <summary>
-			/// Checks if the parameters passed through <see cref="PythonCropExecutable.Construct(string, string, PhantomForcesVersion, WeaponType, string)"/> are valid.
+			/// Checks if the parameters passed through <see cref="PythonCropExecutable.Construct(string, string, WeaponIdentification, WeaponType, string)"/> are valid.
 			/// </summary>
 			/// <exception cref="ArgumentException"></exception>
 			/// <exception cref="FileNotFoundException"></exception>
@@ -123,7 +128,7 @@ namespace PFDB
 			public ProcessStartInfo GetProcessStartInfo()
 			{
 				ProcessStartInfo pyexecute;
-				pyexecute = new ProcessStartInfo(ProgramDirectory + "impa.exe", string.Format("{0} {1} {2} {3}", "-w", FileDirectory + Filename, Convert.ToString(WeaponType), Version.VersionNumber.ToString()));
+				pyexecute = new ProcessStartInfo(ProgramDirectory + "impa.exe", string.Format("{0} {1} {2} {3}", "-w", FileDirectory + Filename, Convert.ToString(WeaponType), WeaponID.Version.VersionNumber.ToString()));
 				pyexecute.RedirectStandardOutput = true;
 				pyexecute.UseShellExecute = false;
 				return pyexecute;

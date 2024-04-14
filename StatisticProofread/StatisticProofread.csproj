@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Logger\PFDBLogger.csproj" />
+    <ProjectReference Include="..\ParsingUtility\ParsingUtility.csproj" />
+    <ProjectReference Include="..\StatisticUtility\StatisticUtility.csproj" />
     <ProjectReference Include="..\WeaponUtility2\WeaponUtility2.csproj" />
   </ItemGroup>
 

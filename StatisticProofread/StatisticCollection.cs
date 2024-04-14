@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PFDB.Proofreading
 {
-	public class StatisticCollection : List<IStatistic>
+	public class StatisticCollection : List<IStatistic>, IStatisticCollection
 	{
 		public bool CollectionNeedsRevision {  get {
 				return this.All(x => x.NeedsRevision); 
@@ -17,6 +17,8 @@ namespace PFDB.Proofreading
 
 		private PhantomForcesVersion _version;
 		public PhantomForcesVersion Version { get { return _version; } }
+
+		public IEnumerable<IStatistic> Statistics => this;
 
 		public new void Add(IStatistic item)
 		{

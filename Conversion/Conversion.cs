@@ -24,6 +24,15 @@ namespace PFDB.Weapons
 			_statisticCollection = statisticCollection;
 			_version = statisticCollection.Version;
 		}
+		
+		public Conversion(IPythonExecutor pythonExecutor){
+		    _WID = pythonExecutor.Input.WeaponID;
+		    if(pythonExecutor.Output is InitOutput init)
+		        pythonExecutor.ReturnOutput();
+		    
+		    
+		}
+		
 
 	}
 }

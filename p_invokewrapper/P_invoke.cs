@@ -12,7 +12,7 @@ namespace PFDB
         public class PINVOKE
         {
 
-            const string dllname = "Calculator.dll";
+            public const string dllname = "Calculator.dll";
             public static void Main(string[] args)
             {
                 write();

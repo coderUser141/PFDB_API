@@ -2,29 +2,34 @@
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using PFDB.Logging;
+using PFDB.PythonExecutionUtility;
 using PFDB.WeaponUtility;
 
 
 namespace PFDB
 {
-    namespace PythonExecution
-    {
-        /// <summary>
-        /// Input (consumed) object for <see cref="PythonExecutor"/>, specified for PyTesseract. This object is responsible for calling the Python script directly.
-        /// </summary>
-        public sealed class PythonTesseractExecutable : IPythonExecutable<IOutput>
+	namespace PythonExecution
+	{
+		/// <summary>
+		/// Input (consumed) object for <see cref="PythonExecutor"/>, specified for PyTesseract. This object is responsible for calling the Python script directly.
+		/// </summary>
+		public class PythonTesseractExecutable : IPythonExecutable
 		{
-			private WeaponIdentification _WID;
-			private WeaponType _weaponType;
-			private string _fileDirectory;
-			private string _filename;
-			private string _programDirectory;
-			private string? _tessbinPath;
-			private string _commandExecuted;
+			private protected WeaponIdentification _WID;
+			private protected WeaponType _weaponType;
+			private protected string _fileDirectory;
+			private protected string _filename;
+			private protected string _programDirectory;
+			private protected string? _tessbinPath;
+			private protected string _commandExecuted;
+			private protected bool _isDefaultConversion;
 
-			/// <summary>
-			/// Name of the file to be read by the Python application.
-			/// </summary>
+
+			private bool _internalExecution = true;
+			private bool _untrustedConstruction = true;
+
+			/// <inheritdoc/>
 			public string Filename { get { return _filename; } }
 
 			/// <summary>
@@ -32,14 +37,10 @@ namespace PFDB
 			/// </summary>
 			public string FileDirectory { get { return _fileDirectory; } }
 
-			/// <summary>
-			/// WeaponType of the weapon, telling the Python application where to read.
-			/// </summary>
+			/// <inheritdoc/>
 			public WeaponType WeaponType { get { return _weaponType; } }
-			
-			/// <summary>
-			/// Directory where the Python executable resides.
-			/// </summary>
+
+			/// <inheritdoc/>
 			public string ProgramDirectory { get { return _programDirectory; } }
 
 			/// <summary>
@@ -47,24 +48,25 @@ namespace PFDB
 			/// </summary>
 			public string? TessbinPath { get { return _tessbinPath; } }
 
-            /// <summary>
-            /// Command executed by this program.
-            /// </summary>
-            public string CommandExecuted { get { return _commandExecuted; } }
+			/// <summary>
+			/// Command executed by this program.
+			/// </summary>
+			public string CommandExecuted { get { return _commandExecuted; } }
 
-            /// <summary>
-            /// Phantom Forces Version. "800" = Version 8.0.0; "1001" = Version 10.0.1, etc.
-            /// </summary>
-            public WeaponIdentification WeaponID { get { return _WID; } }
 
-            private bool _internalExecution = true;
-            private bool _untrustedConstruction = true;
+			/// <inheritdoc/>
+			public WeaponIdentification WeaponID { get { return _WID; } }
+
+			/// <inheritdoc/>
+			public bool IsDefaultConversion { get { return _isDefaultConversion; } }
+
 
 			/// <summary>
-			/// Unused constructor. Use <see cref="Construct(string, string, WeaponIdentification, WeaponType, string)"/> or <see cref="Construct(string, string, WeaponIdentification, WeaponType, string, string?)"/> instead.
+			/// Unused constructor. Use <see cref="Construct(string, string, WeaponIdentification, WeaponType, string, bool)"/> or <see cref="Construct(string, string, WeaponIdentification, WeaponType, string, string?, bool)"/> instead.
 			/// </summary>
 			public PythonTesseractExecutable()
 			{
+				PFDBLogger.LogDebug("PythonTesseractExecutable unused constructor called");
 				_WID = new WeaponIdentification(new PhantomForcesVersion(8, 0, 0), 0, 0, 0);
 				_fileDirectory = string.Empty;
 				_filename = string.Empty;
@@ -72,43 +74,40 @@ namespace PFDB
 				_tessbinPath = null;
 				_weaponType = 0;
 				_commandExecuted = string.Empty;
-            }
+			}
 
-			/// <summary>
-			/// Default constructor. <see cref="TessbinPath"/> is assumed to be in the same current working directory. If you need <see cref="TessbinPath"/> to be set to a different directory, use <see cref="Construct(string, string, WeaponIdentification, WeaponType, string, string?)"/>.
-			/// </summary>
-			/// <param name="filename">Name of the file to be read by the Python application.</param>
-			/// <param name="fileDirectory">Directory where the images for reading reside.</param>
-			/// <param name="weaponType">WeaponType of the weapon, telling the Python application where to read.</param>
-			/// <param name="weaponID">Phantom Forces weapon identification.</param>
-			/// <param name="programDirectory">Directory where the Python executable resides.</param>
-			public IPythonExecutable<IOutput> Construct(string filename, string fileDirectory, WeaponIdentification weaponID, WeaponType weaponType, string programDirectory)
-            {
-                _filename = filename;
-                _weaponType = weaponType;
-                _tessbinPath = null;
-                if (_tessbinPath != null)
-                {
-                    if (_tessbinPath.EndsWith('\\') == false)
-                    {
-                        _tessbinPath += '\\';
-                    }
-                }
-                if (programDirectory.EndsWith('\\') == false)
-                {
-                    programDirectory += '\\';
-                }
-                if (fileDirectory.EndsWith('\\') == false)
-                {
-                    fileDirectory += '\\';
-                }
-                _fileDirectory = fileDirectory;
+
+			/// <inheritdoc/>
+			public IPythonExecutable Construct(string filename, string fileDirectory, WeaponIdentification weaponID, WeaponType weaponType, string programDirectory, bool isDefaultConversion = true)
+			{
+
+				PFDBLogger.LogDebug("PythonTesseractExecutable used constructor called");
+				_filename = filename;
+				_weaponType = weaponType;
+				_isDefaultConversion = isDefaultConversion;
+				_tessbinPath = null;
+				if (_tessbinPath != null)
+				{
+					if (_tessbinPath.EndsWith('\\') == false)
+					{
+						_tessbinPath += '\\';
+					}
+				}
+				if (programDirectory.EndsWith('\\') == false)
+				{
+					programDirectory += '\\';
+				}
+				if (fileDirectory.EndsWith('\\') == false)
+				{
+					fileDirectory += '\\';
+				}
+				_fileDirectory = fileDirectory;
 				_WID = weaponID;
-                _programDirectory = programDirectory;
-                _commandExecuted = string.Empty;
-                _untrustedConstruction = false;
-                return this;
-            }
+				_programDirectory = programDirectory;
+				_commandExecuted = string.Empty;
+				_untrustedConstruction = false;
+				return this;
+			}
 
 			/// <summary>
 			/// Default constructor.
@@ -119,39 +118,39 @@ namespace PFDB
 			/// <param name="weaponID">Phantom Forces weapon identification.</param>
 			/// <param name="programDirectory">Directory where the Python executable resides.</param>
 			/// <param name="tessbinPath">Path to "tessbin" folder. If null, "tessbin" folder is assumed to be in the same working directory.</param>
-			public PythonTesseractExecutable Construct(string filename, string fileDirectory, WeaponIdentification weaponID, WeaponType weaponType, string programDirectory, string? tessbinPath )
-            {
-                _filename = filename;
-                _weaponType = weaponType;
-                _tessbinPath = tessbinPath;
-                if (_tessbinPath != null)
-                {
-                    if (_tessbinPath.EndsWith('\\') == false)
-                    {
-                        _tessbinPath += '\\';
-                    }
-                }
-                if (programDirectory.EndsWith('\\') == false)
-                {
-                    programDirectory += '\\';
-                }
-                if (fileDirectory.EndsWith('\\') == false)
-                {
-                    fileDirectory += '\\';
-                }
-                _fileDirectory = fileDirectory;
-                _WID = new WeaponIdentification(new PhantomForcesVersion(8,0,0), 0, 0, 0);
-                _programDirectory = programDirectory;
-                _commandExecuted = string.Empty;
-                _untrustedConstruction = false;
-                return this;
-            }
+			/// <param name="isDefaultConversion">Specifies if the images supplied are for default conversion.</param>
+			public PythonTesseractExecutable Construct(string filename, string fileDirectory, WeaponIdentification weaponID, WeaponType weaponType, string programDirectory, string? tessbinPath, bool isDefaultConversion = true)
+			{
+				PFDBLogger.LogDebug("PythonTesseractExecutable used constructor called");
+				_filename = filename;
+				_weaponType = weaponType;
+				_tessbinPath = tessbinPath;
+				_isDefaultConversion = isDefaultConversion;
+				if (_tessbinPath != null)
+				{
+					if (_tessbinPath.EndsWith('\\') == false)
+					{
+						_tessbinPath += '\\';
+					}
+				}
+				if (programDirectory.EndsWith('\\') == false)
+				{
+					programDirectory += '\\';
+				}
+				if (fileDirectory.EndsWith('\\') == false)
+				{
+					fileDirectory += '\\';
+				}
+				_fileDirectory = fileDirectory;
+				_WID = weaponID;
+				_programDirectory = programDirectory;
+				_commandExecuted = string.Empty;
+				_untrustedConstruction = false;
+				return this;
+			}
 
-            /// <summary>
-            /// Constructs the <see cref="ProcessStartInfo"/> object depending on if <see cref="TessbinPath"/> is null.
-            /// </summary>
-            /// <returns>A <see cref="ProcessStartInfo"/> object that can be executed to read the image specified by <see cref="Filename"/></returns>
-            public ProcessStartInfo GetProcessStartInfo()
+			/// <inheritdoc/>
+			public virtual ProcessStartInfo GetProcessStartInfo()
 			{
 				ProcessStartInfo pyexecute;
 				StringBuilder command = new StringBuilder("Command used: ");
@@ -173,85 +172,79 @@ namespace PFDB
 				return pyexecute;
 			}
 
-            /// <summary>
-            /// Checks if the parameters passed through <see cref="PythonTesseractExecutable.Construct(string, string, WeaponIdentification, WeaponType, string, string?)"/> are valid.
-            /// </summary>
-            /// <exception cref="ArgumentException"></exception>
+			/// <inheritdoc/>
+			/// <exception cref="ArgumentException"></exception>
 			/// <exception cref="DirectoryNotFoundException"></exception>
 			/// <exception cref="FileNotFoundException"></exception>
 			/// <exception cref="PythonAggregateException"></exception>
-            public void CheckInput()
+			public virtual void CheckInput()
 			{
 				_internalExecution = false;
 				PythonAggregateException aggregateException = new PythonAggregateException();
 				if ((int)WeaponType > 4 || (int)WeaponType < 1)
-                {
-                    //this shouldn't be logged, the factory ideally should catch and log it
-                    aggregateException.exceptions.Add(new ArgumentException("weaponType cannot be greater than 3 or less than 0."));
+				{
+					//this shouldn't be logged, the factory ideally should catch and log it
+					aggregateException.exceptions.Add(new ArgumentException("weaponType cannot be greater than 3 or less than 0."));
 				}
 				if (TessbinPath == null)
 				{
 					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\tessbin\\"))
-                    {
-                        //this shouldn't be logged, the factory ideally should catch and log it
-                        aggregateException.exceptions.Add(new DirectoryNotFoundException($"The tessbin path specified at {Directory.GetCurrentDirectory()}\\tessbin\\ does not exist. Ensure that the directory exists, then try again."));
+					{
+						//this shouldn't be logged, the factory ideally should catch and log it
+						aggregateException.exceptions.Add(new DirectoryNotFoundException($"The tessbin path specified at {Directory.GetCurrentDirectory()}\\tessbin\\ does not exist. Ensure that the directory exists, then try again."));
 					}
 				}
 				else
 				{
-                    if (!Directory.Exists(TessbinPath + "\\tessbin\\"))
-                    {
-                        //this shouldn't be logged, the factory ideally should catch and log it
-                        aggregateException.exceptions.Add(new DirectoryNotFoundException($"The tessbin path specified at {TessbinPath}\\tessbin\\ does not exist. Ensure that the directory exists, then try again."));
-                    }
-                }
+					if (!Directory.Exists(TessbinPath + "\\tessbin\\"))
+					{
+						//this shouldn't be logged, the factory ideally should catch and log it
+						aggregateException.exceptions.Add(new DirectoryNotFoundException($"The tessbin path specified at {TessbinPath}\\tessbin\\ does not exist. Ensure that the directory exists, then try again."));
+					}
+				}
 				if(!File.Exists(ProgramDirectory + "impa.exe"))
-                {
-                    //this shouldn't be logged, the factory ideally should catch and log it
-                    aggregateException.exceptions.Add(new FileNotFoundException($"The application file, specified at {ProgramDirectory + "impa.exe"} does not exist."));
-                }
-                if (!File.Exists(FileDirectory + Filename))
-                {
-                    //this shouldn't be logged, the factory ideally should catch and log it
-                    aggregateException.exceptions.Add(new FileNotFoundException($"The input file, specified at {FileDirectory + Filename} does not exist."));
-                }
+				{
+					//this shouldn't be logged, the factory ideally should catch and log it
+					aggregateException.exceptions.Add(new FileNotFoundException($"The application file, specified at {ProgramDirectory + "impa.exe"} does not exist."));
+				}
+				if (!File.Exists(FileDirectory + Filename))
+				{
+					//this shouldn't be logged, the factory ideally should catch and log it
+					aggregateException.exceptions.Add(new FileNotFoundException($"The input file, specified at {FileDirectory + Filename} does not exist."));
+				}
 
 
-                if (aggregateException.exceptions.Count == 1)
-                {
-                    throw aggregateException.exceptions[0];
-                }
-                else if (aggregateException.exceptions.Count > 1)
-                {
-                    throw aggregateException;
-                }
-                else
-                {
-                    return;
-                }
-            }
+				if (aggregateException.exceptions.Count == 1)
+				{
+					throw aggregateException.exceptions[0];
+				}
+				else if (aggregateException.exceptions.Count > 1)
+				{
+					throw aggregateException;
+				}
+				else
+				{
+					return;
+				}
+			}
 
-			/// <summary>
-			/// Executes the Python application
-			/// </summary>
-			/// <returns></returns>
-			public IOutput ReturnOutput()
-            {
-                if (_internalExecution || _untrustedConstruction)
-                {
-                    //this shouldn't be logged, the factory ideally should catch and log it
-                    return new FailedPythonOutput("The methods Construct() and CheckInputs() have not been called. Do not try to invoke this method directly.");
-                }
-                
-                Benchmark benchmark = new Benchmark();
+			/// <inheritdoc/>
+			public virtual IOutput ReturnOutput()
+			{
+				if (_internalExecution || _untrustedConstruction)
+				{
+					//this shouldn't be logged, the factory ideally should catch and log it
+					return new FailedPythonOutput("The methods Construct() and CheckInputs() have not been called. Do not try to invoke this method directly.");
+				}
+				
+				Benchmark benchmark = new Benchmark();
 				benchmark.StartBenchmark();
 				string startTime = benchmark.Start.ToString("dddd, MMMM, yyyy HH:mm:ss:fff");
 
 				ProcessStartInfo pyexecute = GetProcessStartInfo();
-
 				using (Process? execute = Process.Start(pyexecute))
 				{
-					if (execute != null)
+					if (execute != null && execute.HasExited != true)
 					{
 						using (StreamReader reader = execute.StandardOutput)
 						{
@@ -272,11 +265,11 @@ namespace PFDB
 				}
 				benchmark.StopBenchmark();
 
-                //this shouldn't be logged, the factory ideally should catch and log it
-                return new FailedPythonOutput("Failed.");
+				//this shouldn't be logged, the factory ideally should catch and log it
+				return new FailedPythonOutput("Failed.");
 				
 			}
 
-        }
+		}
 	}
 }

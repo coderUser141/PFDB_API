@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using PFDB.PythonExecutionUtility;
 using System;
 using System.Diagnostics;
 
@@ -92,6 +93,12 @@ namespace PFDB
 			{
 				this.outputStr = outputString;
 				return Tuple.Create(stopwatchDateTime.TotalSeconds, (double)stopwatch.ElapsedMilliseconds / (double)1000);
+			}
+
+			/// <inheritdoc/>
+			public new string ToString()
+			{
+				return OutputString;
 			}
 		}
 	}

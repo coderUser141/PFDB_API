@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using PFDB.PythonExecutionUtility;
 using PFDB.WeaponUtility;
 
 namespace PFDB
@@ -10,23 +11,20 @@ namespace PFDB
 		/// <summary>
 		/// Input (consumed) object for <see cref="PythonExecutor"/>, specified for image cropping. This object is responsible for calling the Python script directly.
 		/// </summary>
-		public sealed class PythonCropExecutable : IPythonExecutable<IOutput>
+		public sealed class PythonCropExecutable : IPythonExecutable
 		{
 			private WeaponIdentification _WID;
 			private WeaponType _weaponType;
 			private string _fileDirectory;
 			private string _filename;
 			private string _programDirectory;
+			private bool _isDefaultConversion;
 
 
-			/// <summary>
-			/// Phantom Forces Version. "800" = Version 8.0.0; "1001" = Version 10.0.1, etc.
-			/// </summary>
+			/// <inheritdoc/>
 			public WeaponIdentification WeaponID { get { return _WID; } }
 
-			/// <summary>
-			/// WeaponType of the weapon, telling the Python application where to read.
-			/// </summary>
+			/// <inheritdoc/>
 			public WeaponType WeaponType { get { return _weaponType; } }
 
 			/// <summary>
@@ -34,23 +32,22 @@ namespace PFDB
 			/// </summary>
 			public string FileDirectory { get { return _fileDirectory; } }
 
-			/// <summary>
-			/// Name of the file to be read by the Python application.
-			/// </summary>
+			/// <inheritdoc/>
 			public string Filename { get { return _filename; } }
 
-			/// <summary>
-			/// Directory where the Python executable resides.
-			/// </summary>
+			/// <inheritdoc/>
 			public string ProgramDirectory { get { return _programDirectory; } }
+
+			/// <inheritdoc/>
+			public bool IsDefaultConversion { get { return _isDefaultConversion; } }
 
 			private bool _internalExecution = true;
 			private bool _untrustedConstruction = true;
 
 			/// <summary>
-			/// Unused constructor. Use <see cref="Construct(string, string, WeaponIdentification, WeaponType, string)"/> instead.
+			/// Unused constructor. Use <see cref="Construct(string, string, WeaponIdentification, WeaponType, string, bool)"/> instead.
 			/// </summary>
-			public PythonCropExecutable()
+			internal PythonCropExecutable()
 			{
 				_WID = new WeaponIdentification(new PhantomForcesVersion(8,0,0),0,0,0);
 				_fileDirectory = string.Empty;
@@ -59,15 +56,8 @@ namespace PFDB
 				_weaponType = 0;
 			}
 
-			/// <summary>
-			/// Constructs the executable.
-			/// </summary>
-			/// <param name="filename">Name of the file to be read by the Python application.</param>
-			/// <param name="fileDirectory">Directory where the images for reading reside.</param>
-			/// <param name="weaponType">WeaponType of the weapon, telling the Python application where to read.</param>
-			/// <param name="weaponID">Phantom Forces weapon identification.</param>
-			/// <param name="programDirectory">Directory where the Python executable resides.</param>
-			public IPythonExecutable<IOutput> Construct(string filename, string fileDirectory, WeaponIdentification weaponID, WeaponType weaponType, string programDirectory)
+			/// <inheritdoc/>
+			public IPythonExecutable Construct(string filename, string fileDirectory, WeaponIdentification weaponID, WeaponType weaponType, string programDirectory, bool isDefaultConversion = true)
 			{
 				if (!programDirectory.EndsWith('\\'))
 				{
@@ -83,15 +73,11 @@ namespace PFDB
 				_weaponType = weaponType;
 				_programDirectory = programDirectory;
 				_untrustedConstruction = false;
+				_isDefaultConversion = isDefaultConversion;
 				return this;
 			}
 
-			/// <summary>
-			/// Checks if the parameters passed through <see cref="PythonCropExecutable.Construct(string, string, WeaponIdentification, WeaponType, string)"/> are valid.
-			/// </summary>
-			/// <exception cref="ArgumentException"></exception>
-			/// <exception cref="FileNotFoundException"></exception>
-			/// <exception cref="PythonAggregateException"></exception>
+			/// <inheritdoc/>
 			public void CheckInput()
 			{
 				PythonAggregateException aggregateException = new PythonAggregateException();
@@ -121,10 +107,7 @@ namespace PFDB
 				}
 			}
 
-			/// <summary>
-			/// Constructs the <see cref="ProcessStartInfo"/> object.
-			/// </summary>
-			/// <returns>A <see cref="ProcessStartInfo"/> object that can be executed to read the image specified by <see cref="Filename"/></returns>
+			/// <inheritdoc/>
 			public ProcessStartInfo GetProcessStartInfo()
 			{
 				ProcessStartInfo pyexecute;

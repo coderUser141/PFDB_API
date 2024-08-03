@@ -1,8 +1,11 @@
 ﻿using PFDB.Logging;
 using PFDB.PythonExecution;
+using PFDB.PythonExecutionUtility;
+using PFDB.PythonFactoryUtility;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Text;
 using System.Threading;
 
 namespace PFDB
@@ -10,51 +13,38 @@ namespace PFDB
 	namespace PythonFactory
 	{
 		/// <summary>
-		/// 
+		/// Defines a factory output that contains the output from <see cref="PythonExecutionFactory{TPythonExecutable}"/>. 
+		/// Also includes various status counters which indicate the success rate of various stages of <see cref="PythonExecutionFactory{TPythonExecutable}"/>.
+		/// Additionally, includes benchmarks on execution times for <see cref="PythonExecutionFactory{TPythonExecutable}"/>.
 		/// </summary>
-		/// <typeparam name="TPythonExecutable"></typeparam>
-		public sealed class PythonExecutionFactoryOutput<TPythonExecutable> : IPythonExecutionFactoryOutput where TPythonExecutable : IPythonExecutable<IOutput>, new()
+		public sealed class PythonExecutionFactoryOutput : IPythonExecutionFactoryOutput
 		{
-			/// <summary>
-			/// The list of internal <see cref="IPythonExecutor"/> objects.
-			/// </summary>
+			/// <inheritdoc/>
 			public IEnumerable<IPythonExecutor> PythonExecutors { get;  }
 
-			/// <summary>
-			/// The counter for the number of items that pass or fail <see cref="PythonExecutionFactory{TPythonExecutable}._checkFactory"/>.
-			/// </summary>
+			/// <inheritdoc/>
 			public StatusCounter CheckStatusCounter { get; }
 
-			/// <summary>
-			/// The counter for the number of items that pass or fail being queued via <see cref="ThreadPool.QueueUserWorkItem(WaitCallback)"/>.
-			/// </summary>
+			/// <inheritdoc/>
 			public StatusCounter QueueStatusCounter { get; }
 
-			/// <summary>
-			/// The counter for the number of items that pass or fail during execution from <see cref="IPythonExecutor.Execute(object?)"/>.
-			/// </summary>
+			/// <inheritdoc/>
 			public StatusCounter ExecutionStatusCounter { get; }
 
-			/// <summary>
-			/// Total parallel execution time of the entire factory (across all threads). Calculated with <see cref="DateTime"/>.
-			/// </summary>
+			/// <inheritdoc/>
 			public TimeSpan TotalParallelExecutionTimeFromDateTime { get; }
 
-			/// <summary>
-			/// Total parallel execution time of the entire factory (across all threads) in milliseconds. Calculated with <see cref="Stopwatch"/>.
-			/// </summary>
+			/// <inheritdoc/>
 			public long TotalParallelExecutionTimeFromStopwatchInMilliseconds { get; }
 
-
-			/// <summary>
-			/// Actual serial execution time of the entire factory (on main thread). Calculated with <see cref="DateTime"/>.
-			/// </summary>
+			/// <inheritdoc/>
 			public TimeSpan ActualExecutionTimeFromDateTime { get; }
 
-			/// <summary>
-			/// Actual serial execution time of the entire factory (on main thread). Calculated with <see cref="Stopwatch"/>.
-			/// </summary>
+			/// <inheritdoc/>
 			public long ActualExecutionTimeFromStopwatchInMilliseconds { get; }
+
+			/// <inheritdoc/>
+			public bool IsDefaultConversion { get; }
 
 			/// <summary>
 			/// Default constructor.
@@ -67,8 +57,9 @@ namespace PFDB
 			/// <param name="totalParallelExecutionTimeFromStopwatchInMilliseconds">Total parallel execution time of the entire factory (across all threads) in milliseconds. Calculated with <see cref="Stopwatch"/>.</param>
 			/// <param name="actualElapsedExecutionTimeFromDateTime">Actual serial execution time of the entire factory (on main thread). Calculated with <see cref="DateTime"/>.</param>
 			/// <param name="actualExecutionTimeFromStopwatchInMilliseconds">Actual serial execution time of the entire factory (on main thread). Calculated with <see cref="Stopwatch"/>.</param>
-			public PythonExecutionFactoryOutput(IEnumerable<IPythonExecutor> pythonExecutors, StatusCounter checkStatusCounter, StatusCounter queueStatusCounter, StatusCounter executionStatusCounter, TimeSpan totalParallelExecutionTimeFromDateTime, long totalParallelExecutionTimeFromStopwatchInMilliseconds, TimeSpan actualElapsedExecutionTimeFromDateTime, long actualExecutionTimeFromStopwatchInMilliseconds)
+			public PythonExecutionFactoryOutput(IEnumerable<IPythonExecutor> pythonExecutors,bool isDefaultConversion, StatusCounter checkStatusCounter, StatusCounter queueStatusCounter, StatusCounter executionStatusCounter, TimeSpan totalParallelExecutionTimeFromDateTime, long totalParallelExecutionTimeFromStopwatchInMilliseconds, TimeSpan actualElapsedExecutionTimeFromDateTime, long actualExecutionTimeFromStopwatchInMilliseconds)
 			{
+				IsDefaultConversion = isDefaultConversion;
 				PythonExecutors = pythonExecutors;
 				CheckStatusCounter = checkStatusCounter;
 				QueueStatusCounter = queueStatusCounter;
@@ -88,6 +79,15 @@ namespace PFDB
 			$"\t\tQueue failures {QueueStatusCounter.FailCounter} {Environment.NewLine}" +
 			$"\t\tExecution successes {ExecutionStatusCounter.SuccessCounter} " +
 			$"\t\tExecution failures {ExecutionStatusCounter.FailCounter} ");
+			}
+
+			/// <inheritdoc/>
+			public new string ToString()
+			{
+				StringBuilder builder = new StringBuilder();
+				foreach(IPythonExecutor pyt in PythonExecutors)
+					builder.Append( $"{pyt.ToString()}, {Environment.NewLine}" );
+				return builder.ToString();
 			}
 		}
 	}

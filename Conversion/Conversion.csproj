@@ -5,11 +5,12 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <UserSecretsId>2b3412fd-0106-4db7-a52b-14b5df0e5185</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConversionUtility\ConversionUtility.csproj" />
-    <ProjectReference Include="..\StatisticProofread\StatisticProofread.csproj" />
+    <ProjectReference Include="..\FileParse\FileParse.csproj" />
+    <ProjectReference Include="..\PyExec\PyExec.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,8 +7,4 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\StatisticUtility\StatisticUtility.csproj" />
-  </ItemGroup>
-
 </Project>

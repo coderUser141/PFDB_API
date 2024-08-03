@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PFDB.Logging;
+using System;
 using System.Text.RegularExpressions;
 
 namespace PFDB
@@ -31,7 +32,7 @@ namespace PFDB
 		/// <summary>
 		/// Specifies the version of Phantom Forces.
 		/// </summary>
-		public sealed class PhantomForcesVersion
+		public sealed class PhantomForcesVersion : IComparable<PhantomForcesVersion>
 		{
 			private string _versionString;
 
@@ -73,7 +74,7 @@ namespace PFDB
 			{
 				get
 				{
-					return VersionNumber >= 900;
+					return VersionNumber < 900;
 				}
 			}
 
@@ -178,7 +179,28 @@ namespace PFDB
 				}
 				else
 				{
-					_versionString = versionString;
+					ReadOnlySpan<char> span = versionString;
+					if(span.Length == 3)
+					{
+						int majorVersion = int.Parse(span[..1]);
+						int minorVersion = int.Parse(span.Slice(1, 1));
+						int revision = int.Parse(span.Slice(2, 1));
+						_versionString = $"{majorVersion}.{minorVersion}.{revision}";
+					}
+					else if(span.Length == 4)
+					{
+						int majorVersion = int.Parse(span[..2]);
+						int minorVersion = int.Parse(span.Slice(2, 1));
+						int revision = int.Parse(span.Slice(3, 1));
+						_versionString = $"{majorVersion}.{minorVersion}.{revision}";
+					}else if (span.Contains('.'))
+					{
+						_versionString = versionString;
+					}
+					else
+					{
+						throw new ArgumentException("invalid version");
+					}
 				}
 			}
 
@@ -194,10 +216,7 @@ namespace PFDB
 				{
 					if (obj is PhantomForcesVersion objc)
 					{
-						if (objc.VersionNumber == this.VersionNumber)
-						{
-							return true;
-						}
+						return objc.VersionNumber == this.VersionNumber;
 					}
 				}
 				return false;
@@ -209,7 +228,19 @@ namespace PFDB
 			/// <returns>The default hash return.</returns>
 			public override int GetHashCode()
 			{
-				return base.GetHashCode();
+				return VersionNumber;
+			}
+
+			/// <inheritdoc/>
+			public int CompareTo(PhantomForcesVersion? other)
+			{
+				if (other is null) throw new ArgumentNullException("Object being compared to cannot be null");
+				
+				if(other < this) return 1;
+				if (other == this) return 0;
+				if (other > this) return -1;
+
+				throw new Exception("uh what");
 			}
 		}
 
@@ -226,7 +257,16 @@ namespace PFDB
 			/// <exception cref="ArgumentException"></exception>
 			public static WeaponType GetWeaponType(int categoryNumber)
 			{
-				if (categoryNumber > 19) throw new ArgumentException("The parameter cannot exceed 19.", nameof(categoryNumber));
+				if (categoryNumber > 19) 
+				{
+					PFDBLogger.LogWarning("The category number cannot exceed 19.");
+					throw new ArgumentException("The category number cannot exceed 19.", nameof(categoryNumber));
+				}
+				if(categoryNumber < 0)
+				{
+					PFDBLogger.LogWarning("The category number cannot be negative.");
+					throw new ArgumentException("The category number cannot be negative.", nameof(categoryNumber));
+				}
 				WeaponType weaponType = 0;
 				if (categoryNumber < 8)
 				{
@@ -245,6 +285,38 @@ namespace PFDB
 					weaponType = WeaponType.Melee;
 				}
 				return weaponType;
+			}
+
+			/// <summary>
+			/// Gets the category type of the supplied category number.
+			/// </summary>
+			/// <param name="categoryNumber">A number that ranges from 0 to 18 inclusively.</param>
+			/// <returns>The category type of the specified number.</returns>
+			/// <exception cref="ArgumentException"></exception>
+			public static Categories GetCategoryType(int categoryNumber)
+			{
+				if(categoryNumber > 18)
+				{
+					PFDBLogger.LogWarning("The category number cannot exceed 19");
+					throw new ArgumentException("The category number cannot exceed 19.", nameof(categoryNumber));
+				}
+				if(categoryNumber < 0)
+				{
+
+					PFDBLogger.LogWarning("The category number cannot be negative");
+					throw new ArgumentException("The category number cannot be negative.", nameof(categoryNumber));
+				}
+				return (Categories)categoryNumber;
+			}
+
+			/// <summary>
+			/// Gets the weapon type given a category type.
+			/// </summary>
+			/// <param name="category">The category type.</param>
+			/// <returns>The weapon type that the category belongs to.</returns>
+			public static WeaponType GetWeaponType(Categories category)
+			{
+				return GetWeaponType((int)category);
 			}
 		}
 	}

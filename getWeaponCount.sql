@@ -1,0 +1,1 @@
+SELECT category, categoryNumber, COUNT(DISTINCT "weaponName") FROM "cumulativeChanges" GROUP BY "categoryNumber" ORDER BY "categoryNumber" + 0;

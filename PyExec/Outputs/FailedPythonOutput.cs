@@ -1,4 +1,6 @@
-﻿namespace PFDB
+﻿using PFDB.PythonExecutionUtility;
+
+namespace PFDB
 {
     namespace PythonExecution
     {
@@ -22,7 +24,13 @@
             {
                 OutputString = outputString;
             }
-        }
+
+			/// <inheritdoc/>
+			public new string ToString()
+			{
+				return OutputString;
+			}
+		}
 
     }
 }

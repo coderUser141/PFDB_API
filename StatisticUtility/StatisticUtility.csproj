@@ -7,8 +7,4 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\WeaponUtility2\WeaponUtility2.csproj" />
-	</ItemGroup>
-
 </Project>

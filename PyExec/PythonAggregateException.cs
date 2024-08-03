@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-Console.Write("");
-
 namespace PFDB
 {
 	/// <summary>

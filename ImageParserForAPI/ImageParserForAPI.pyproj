@@ -25,9 +25,6 @@
     <Compile Include="impa.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="imp.exe" />
-  </ItemGroup>
-  <ItemGroup>
     <Interpreter Include="env\">
       <Id>env</Id>
       <Version>0.0</Version>

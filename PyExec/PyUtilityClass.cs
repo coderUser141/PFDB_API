@@ -4,8 +4,6 @@ namespace PFDB
 {
     namespace PythonExecution
     {
-        //}
-
         /// <summary>
         /// General utility class for Python interop.
         /// </summary>

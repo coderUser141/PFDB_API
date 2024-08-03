@@ -1,17 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Logger\PFDBLogger.csproj" />
-    <ProjectReference Include="..\ParsingUtility\ParsingUtility.csproj" />
-    <ProjectReference Include="..\StatisticUtility\StatisticUtility.csproj" />
-    <ProjectReference Include="..\WeaponUtility2\WeaponUtility2.csproj" />
-  </ItemGroup>
 
 </Project>

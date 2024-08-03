@@ -7,124 +7,57 @@ using System.Collections.ObjectModel;
 using PFDB.WeaponUtility;
 using System.Diagnostics;
 using PFDB.Logging;
+using PFDB.SQLite;
+using PFDB.PythonExecutionUtility;
+using PFDB.PythonFactoryUtility;
 
 namespace PFDB
 {
 	namespace PythonFactory
 	{
 
-		/// <summary>
-		/// Status counter for work items.
-		/// </summary>
-		public struct StatusCounter
-		{
-			/// <summary>
-			/// Default constructor.
-			/// </summary>
-			/// <param name="SuccessCounter">Counter for successes.</param>
-			/// <param name="FailCounter">Counter for failures.</param>
-			public StatusCounter(int SuccessCounter, int FailCounter)
-			{
-				this.SuccessCounter = SuccessCounter;
-				this.FailCounter = FailCounter;
-			}
-
-			/// <summary>
-			/// The number of successes.
-			/// </summary>
-			public int SuccessCounter;
-			/// <summary>
-			/// The number of failures.
-			/// </summary>
-			public int FailCounter;
-		}
-
 
 		/// <summary>
-		/// The number of logical processors the central processing unit (CPU) has.
+		/// Defines a factory class to execute various classes that inherit from <see cref="IPythonExecutable"/> via <see cref="IPythonExecutor"/>.
 		/// </summary>
-		public enum Cores
-		{
-			/// <summary>
-			/// Single core.
-			/// </summary>
-			Single = 1,
-			/// <summary>
-			/// Dual core.
-			/// </summary>
-			Dual,
-			/// <summary>
-			/// Quadruple core.
-			/// </summary>
-			Four = 4,
-			/// <summary>
-			/// Sextuple core.
-			/// </summary>
-			Six = 6,
-			/// <summary>
-			/// Octuple core.
-			/// </summary>
-			Eight = 8,
-			/// <summary>
-			/// Decuple core.
-			/// </summary>
-			Ten = 10,
-			/// <summary>
-			/// Duodecuple core.
-			/// </summary>
-			Twelve = 12,
-			/// <summary>
-			/// Quattordecuple core.
-			/// </summary>
-			Fourteen = 14,
-			/// <summary>
-			/// Sexdecuple core.
-			/// </summary>
-			Sixteen = 16,
-			/// <summary>
-			/// Octodecuple core.
-			/// </summary>
-			Eighteen = 18,
-			/// <summary>
-			/// Vigintuple core.
-			/// </summary>
-			Twenty = 20
-		}
-
-		/// <summary>
-		/// Defines a factory class to execute various classes that inherit from <see cref="IPythonExecutable{IOutput}"/> via <see cref="IPythonExecutor"/>.
-		/// </summary>
-		/// <typeparam name="TPythonExecutable">A concrete type that implements <see cref="IPythonExecutable{IOutput}"/>.</typeparam>
-		public sealed class PythonExecutionFactory<TPythonExecutable> /*: IPythonExecutionFactory<IOutput>*/ where TPythonExecutable : IPythonExecutable<IOutput>, new()
+		/// <typeparam name="TPythonExecutable">A concrete type that implements <see cref="IPythonExecutable"/>.</typeparam>
+		public sealed class PythonExecutionFactory<TPythonExecutable> : IPythonExecutionFactory<TPythonExecutable> where TPythonExecutable : IPythonExecutable, new()
 		{
 			private readonly List<IPythonExecutor> _queue;
 			private readonly int _coreCount;
 			private readonly int _initialQueueCount;
+			private bool _isDefaultConversion;
+			private IPythonExecutionFactoryOutput? _factoryOutput = null;
 
-			
+			/// <inheritdoc/>
+			public IPythonExecutionFactoryOutput? FactoryOutput { get { return _factoryOutput; } }
 
-			private void _constructorHelper(OutputDestination outputDestination, int categoryGroup, int weaponNumber, string path, PhantomForcesVersion version, string programDirectory, string? tessbinPath)
+			/// <inheritdoc/>
+			public bool IsDefaultConversion { get { return _isDefaultConversion; } }
+
+			private void _constructorHelper(OutputDestination outputDestination, Categories categoryGroup, int weaponNumber, string path, PhantomForcesVersion version, string programDirectory, string? tessbinPath)
 			{
 				PythonExecutor py = new PythonExecutor(outputDestination);
 				TPythonExecutable pythonExecutable = new();
-				if (version.VersionString == "8.0.0" || version.VersionString == "8.0.1" || version.VersionString == "8.0.2")
+				PFDBLogger.LogDebug("PythonExecutionFactory information. Is current object a PythonTesseractExecutable?", parameter: pythonExecutable is PythonTesseractExecutable);
+				if (version.IsLegacy)
 				{
 					if(pythonExecutable is PythonTesseractExecutable pyt) {
 						_queue.Add(py
 							.LoadOut(pyt
-								.Construct($"{categoryGroup}_{weaponNumber}_1.png", path, version, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, tessbinPath)));
+								.Construct($"{(int)categoryGroup}_{weaponNumber}_1.png", path, WeaponTable.WeaponIDCache[version].First(x => x.weaponNumber == weaponNumber || (Categories)x.categoryNumber == categoryGroup).weaponID, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, tessbinPath, _isDefaultConversion)));
 						_queue.Add(py
 							.LoadOut(pyt
-								.Construct($"{categoryGroup}_{weaponNumber}_2.png", path, version, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, tessbinPath)));
+								.Construct($"{(int)categoryGroup}_{weaponNumber}_2.png", path, WeaponTable.WeaponIDCache[version].First(x => x.weaponNumber == weaponNumber || (Categories)x.categoryNumber == categoryGroup).weaponID, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, tessbinPath, _isDefaultConversion)));
 					}
-					else
+					else 
 					{
 						_queue.Add(py
 							.LoadOut(pythonExecutable
-								.Construct($"{categoryGroup}_{weaponNumber}_1.png", path, version, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory)));
+								.Construct($"{(int)categoryGroup}_{weaponNumber}_1.png", path, WeaponTable.WeaponIDCache[version].First(x => x.weaponNumber == weaponNumber || (Categories)x.categoryNumber == categoryGroup).weaponID, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, _isDefaultConversion)));
 						_queue.Add(py
 							.LoadOut(pythonExecutable
-								.Construct($"{categoryGroup}_{weaponNumber}_2.png", path, version, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory)));
+								.Construct($"{(int)categoryGroup}_{weaponNumber}_2.png", path, WeaponTable.WeaponIDCache[version].First(x => x.weaponNumber == weaponNumber || (Categories)x.categoryNumber == categoryGroup).weaponID, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, _isDefaultConversion)));
 					}
 
 					
@@ -135,13 +68,13 @@ namespace PFDB
 					{
 						_queue.Add(py
 							.LoadOut(pyt
-								.Construct($"{categoryGroup}_{weaponNumber}.png", path, version, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, tessbinPath)));
+								.Construct($"{(int)categoryGroup}_{weaponNumber}.png", path, WeaponTable.WeaponIDCache[version].First(x => x.weaponNumber == weaponNumber || (Categories)x.categoryNumber == categoryGroup).weaponID, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, tessbinPath, _isDefaultConversion)));
 					}
 					else
 					{
 						_queue.Add(py
 							.LoadOut(pythonExecutable
-								.Construct($"{categoryGroup}_{weaponNumber}.png", path, version, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory)));
+								.Construct($"{(int)categoryGroup}_{weaponNumber}.png", path, WeaponTable.WeaponIDCache[version].First(x => x.weaponNumber == weaponNumber || (Categories)x.categoryNumber == categoryGroup).weaponID, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, _isDefaultConversion)));
 					}
 				}
 			}
@@ -151,17 +84,20 @@ namespace PFDB
 			/// Constructs the factory from pre-defined values.
 			/// </summary>
 			/// <param name="weaponIDs">An <see cref="IDictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the category of the weapons, and <c>TValue</c> contains the weapons' numbers (in the abovementioned category).</param>
-			/// <param name="versionAndPathPairs">An <see cref="IDictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the Phantom Forces version, and <c>TValue</c> refers to the absolute path of the <c>TKey</c>'s version.</param>
+			/// <param name="versionAndPathPairs">An <see cref="IDictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the Phantom Forces version, and <c>TValue</c> refers to the absolute path of where <c>TKey</c>'s version's images can be found.</param>
 			/// <param name="programDirectory">The program directory of the Python executable.</param>
 			/// <param name="outputDestination">Specifies the output destination.</param>
 			/// <param name="tessbinPath">Specifies the absolute path of <c>/tessbin/</c> folder. If null, assumes such folder is in the same working directory.</param>
 			/// <param name="coreCount">Specifies the core count manually. Default is dual (2) cores.</param>
-			public PythonExecutionFactory(IDictionary<int,List<int>> weaponIDs, IDictionary<PhantomForcesVersion, string> versionAndPathPairs, string programDirectory, OutputDestination outputDestination, string? tessbinPath, Cores coreCount = Cores.Dual)
+			/// <param name="isDefaultConversion">Specifies if the images supplied are for default conversion.</param>
+			public PythonExecutionFactory(IDictionary<Categories,List<int>> weaponIDs, IDictionary<PhantomForcesVersion, string> versionAndPathPairs, string programDirectory, OutputDestination outputDestination, string? tessbinPath, Cores coreCount = Cores.Dual, bool isDefaultConversion = true)
 			{
 				_coreCount = (int)coreCount;
 				_queue = new List<IPythonExecutor>();
-				foreach (PhantomForcesVersion version in versionAndPathPairs.Keys) {
-					foreach (int categoryGroup in weaponIDs.Keys) {
+				_isDefaultConversion = isDefaultConversion;
+				foreach (PhantomForcesVersion version in versionAndPathPairs.Keys)
+				{
+					foreach (Categories categoryGroup in weaponIDs.Keys) {
 						foreach (int weapon in weaponIDs[categoryGroup]) {
 							_constructorHelper(outputDestination, categoryGroup, weapon, versionAndPathPairs[version], version, programDirectory, tessbinPath);
 						}
@@ -174,17 +110,20 @@ namespace PFDB
 			/// Constructs the factory from pre-defined values.
 			/// </summary>
 			/// <param name="weaponIDs">An <see cref="IDictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the category of the weapons, and <c>TValue</c> contains the weapons' numbers (in the abovementioned category).</param>
-			/// <param name="versionAndPathPairs">An <see cref="IDictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the Phantom Forces version, and <c>TValue</c> refers to the absolute path of the <c>TKey</c>'s version.</param>
+			/// <param name="versionAndPathPairs">An <see cref="IDictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the Phantom Forces version, and <c>TValue</c> refers to the absolute path of where <c>TKey</c>'s version's images can be found.</param>
 			/// <param name="programDirectory">The program directory of the Python executable.</param>
 			/// <param name="outputDestination">Specifies the output destination.</param>
 			/// <param name="tessbinPath">Specifies the absolute path of <c>/tessbin/</c> folder. If null, assumes such folder is in the same working directory.</param>
 			/// <param name="coreCount">Specifies the core count manually. Default is dual (2) cores.</param>
-			public PythonExecutionFactory(IDictionary<int, Collection<int>> weaponIDs, IDictionary<PhantomForcesVersion, string> versionAndPathPairs, string programDirectory, OutputDestination outputDestination, string? tessbinPath, Cores coreCount = Cores.Dual)
+			/// <param name="isDefaultConversion">Specifies if the images supplied are for default conversion.</param>
+			public PythonExecutionFactory(IDictionary<Categories, Collection<int>> weaponIDs, IDictionary<PhantomForcesVersion, string> versionAndPathPairs, string programDirectory, OutputDestination outputDestination, string? tessbinPath, Cores coreCount = Cores.Dual, bool isDefaultConversion = true)
 			{
 				_coreCount = (int)coreCount;
 				_queue = new List<IPythonExecutor>();
-				foreach (PhantomForcesVersion version in versionAndPathPairs.Keys) {
-					foreach (int categoryGroup in weaponIDs.Keys) {
+				_isDefaultConversion = isDefaultConversion;
+				foreach (PhantomForcesVersion version in versionAndPathPairs.Keys)
+				{
+					foreach (Categories categoryGroup in weaponIDs.Keys) {
 						foreach (int weapon in weaponIDs[categoryGroup]) {
 							_constructorHelper(outputDestination, categoryGroup, weapon, versionAndPathPairs[version], version, programDirectory, tessbinPath);
 						}
@@ -192,51 +131,13 @@ namespace PFDB
 				}
 				_initialQueueCount = _queue.Count;
 			}
-
-			/// <summary>
-			/// Loads an <see cref="IQueryable{IPythonExecutor}"/> into the factory, with an optional core count.
-			/// </summary>
-			/// <param name="pythonExecutors">A queryable list of <see cref="IPythonExecutor"/>.</param>
-			/// <param name="coreCount">Core count to manually specify. The default value for this parameter is dual (2) core.</param>
-			public PythonExecutionFactory(IQueryable<IPythonExecutor> pythonExecutors, Cores coreCount = Cores.Dual)
+			
+			private void _queueChecker()
 			{
-				_coreCount = (int)coreCount;
-				_queue = [.. pythonExecutors];
-				_initialQueueCount = _queue.Count;
-			}
+				if(_queue.Any() == false)
+				{
 
-			/// <summary>
-			/// Loads an <see cref="IQueryable{IPythonExecutor}"/> into the factory. Core count is specified based on the processor's logical processor count.
-			/// </summary>
-			/// <param name="pythonExecutors">A queryable list of <see cref="IPythonExecutor"/>.</param>
-			public PythonExecutionFactory(IQueryable<IPythonExecutor> pythonExecutors)
-			{
-				_coreCount = Environment.ProcessorCount;
-				_queue = [.. pythonExecutors];
-				_initialQueueCount = _queue.Count;
-			}
-
-			/// <summary>
-			/// Loads an <see cref="IEnumerable{IPythonExecutor}"/> into the factory, with an optional core count.
-			/// </summary>
-			/// <param name="pythonExecutors">An enumerable list of <see cref="IPythonExecutor"/>.</param>
-			/// <param name="coreCount">Core count to manually specify. The default value for this parameter is dual (2) core.</param>
-			public PythonExecutionFactory(IEnumerable<IPythonExecutor> pythonExecutors, Cores coreCount = Cores.Dual)
-			{
-				_coreCount = (int)coreCount;
-				_queue = new List<IPythonExecutor>(pythonExecutors);
-				_initialQueueCount = _queue.Count;
-			}
-
-			/// <summary>
-			/// Loads an <see cref="IEnumerable{IPythonExecutor}"/> into the factory. Core count is specified based on the processor's logical processor count.
-			/// </summary>
-			/// <param name="pythonExecutors">An enumerable list of <see cref="IPythonExecutor"/>.</param>
-			public PythonExecutionFactory(IEnumerable<IPythonExecutor> pythonExecutors)
-			{
-				_coreCount = Environment.ProcessorCount;
-				_queue = new List<IPythonExecutor>(pythonExecutors);
-				_initialQueueCount = _queue.Count;
+				}
 			}
 
 			private StatusCounter _checkFactory()
@@ -270,9 +171,16 @@ namespace PFDB
 			}
 
 			/// <summary>
-			/// Starts execution of the factory.
+			/// Starts execution of the factory. Checks the factory to see if it is valid.
+			/// <list type="bullet">
+			///		<item>If invalid, this function will return a <see cref="IPythonExecutionFactoryOutput"/> with no successes and all fails for both checking and queuing.</item>
+			///		<item>If valid, it continues as usual.</item>
+			/// </list>
+			/// Regardless of either case, <see cref="FactoryOutput"/> <b>will</b> be populated.
+			/// <para>It then begins executing the list of executors that have been supplied. Execution is synchronous and multithreaded. Number of objects executed synchronously depends on the number of logical processors (cores) the machine has. It waits for the synchronized objects to succeed. If any objects have not succeeded in 5 minutes, the factory will bypass and continue to execute.</para>
 			/// </summary>
-			public PythonExecutionFactoryOutput<TPythonExecutable> Start()
+			/// <inheritdoc/>
+			public IPythonExecutionFactoryOutput Start()
 			{
 
 
@@ -284,7 +192,9 @@ namespace PFDB
 				catch
 				{
 					//error
-					return new PythonExecutionFactoryOutput<TPythonExecutable>(_queue, CheckStatus, new StatusCounter(SuccessCounter:0,FailCounter:_queue.Count), new StatusCounter(SuccessCounter: 0, FailCounter: _queue.Count), new TimeSpan(0), 0, new TimeSpan(0), 0);
+
+					_factoryOutput = new PythonExecutionFactoryOutput(_queue,_isDefaultConversion, CheckStatus, new StatusCounter(SuccessCounter:0,FailCounter:_queue.Count), new StatusCounter(SuccessCounter: 0, FailCounter: _queue.Count), new TimeSpan(0), 0, new TimeSpan(0), 0);
+					return _factoryOutput;
 				}
 				StatusCounter QueueStatus = new StatusCounter();
 				StatusCounter ExecutionStatus = new StatusCounter();
@@ -326,8 +236,10 @@ namespace PFDB
 					ManualResetEvent[] manualEvents = new ManualResetEvent[size];
 					for(int k = 0; k < size; k++)
 					{
-						manualEvents[k] = listForQueue[j][k].manualEvent;
-
+						if (listForQueue[j][k] is IAwaitable awaitable)
+						{
+							manualEvents[k] = awaitable.ManualEvent;
+						}
 						try
 						{
 							ThreadPool.QueueUserWorkItem(new WaitCallback(listForQueue[j][k].Execute));
@@ -383,7 +295,8 @@ namespace PFDB
 				}
 				DateTime end = DateTime.Now;
 				stopwatch.Stop();
-				return new PythonExecutionFactoryOutput<TPythonExecutable>(_queue, CheckStatus, QueueStatus, ExecutionStatus, totalParallelTimeElapsedDateTime, totalParallelTimeElapsedInMilliseconds, end - start, stopwatch.ElapsedMilliseconds);
+				_factoryOutput = new PythonExecutionFactoryOutput(_queue,_isDefaultConversion, CheckStatus, QueueStatus, ExecutionStatus, totalParallelTimeElapsedDateTime, totalParallelTimeElapsedInMilliseconds, end - start, stopwatch.ElapsedMilliseconds);
+				return _factoryOutput;
 				
 			}
 

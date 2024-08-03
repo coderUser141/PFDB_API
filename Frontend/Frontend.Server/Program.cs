@@ -1,10 +1,14 @@
 
+using PFDB.Logging;
+using PFDB.SQLite;
+
 namespace Frontend.Server
 {
     public class Program
     {
         public static void Main(string[] args)
         {
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -14,8 +18,9 @@ namespace Frontend.Server
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            var app = builder.Build();
-
+			PFDBLogger logger = new PFDBLogger(".pfdblog");
+			WeaponTable.InitializeEverything();
+			var app = builder.Build();
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
@@ -33,9 +38,12 @@ namespace Frontend.Server
 
             app.MapControllers();
 
+			app.MapControllerRoute("PFDBTest", "{controller=PFDB}");
+
             app.MapFallbackToFile("/index.html");
 
-            app.Run();
+
+			app.Run();
         }
     }
 }

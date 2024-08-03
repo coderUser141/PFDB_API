@@ -7,12 +7,12 @@
     <Nullable>enable</Nullable>
 	  <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
 	  <PreBuildEvent>
-		  xcopy $(SolutionDir)Calculator\Calculator.dll $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
-		  
-		  xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ImageParserForAPI\ /y /f /v
-		  mkdir $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\tessbin
-		  xcopy $(SolutionDir)ImageParserForAPI\tessbin\ $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\tessbin\ /y /f /v /e /h /j
-		  xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
+xcopy $(SolutionDir)Calculator\Calculator.dll $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v		  
+xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ImageParserForAPI\ /y /f /v
+mkdir $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\tessbin
+xcopy $(SolutionDir)ImageParserForAPI\tessbin\ $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\tessbin\ /y /f /v /e /h /j
+xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
+xcopy $(SolutionDir)weapon_database.db $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
 	  </PreBuildEvent>
   </PropertyGroup>
 
@@ -23,12 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\fileparse\FileParse.csproj" />
-    <ProjectReference Include="..\Logger\PFDBLogger.csproj" />
+    <ProjectReference Include="..\FileParse\FileParse.csproj" />
     <ProjectReference Include="..\PyExec\PyExec.csproj" />
     <ProjectReference Include="..\p_invokewrapper\P_invokeWrapper.csproj" />
-    <ProjectReference Include="..\StatisticProofread\StatisticProofread.csproj" />
-    <ProjectReference Include="..\WeaponClasses\WeaponClasses.csproj" />
+    <ProjectReference Include="..\WeaponStructure\WeaponStructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -78,6 +78,21 @@ namespace PFDB
 				}
 			}
 
+			public int MultipleScreenshotsCheck()
+			{
+				if (IsLegacy)
+				{
+					return 2;
+				}else if(VersionNumber > 1012)
+				{
+					return 2;
+				}
+				else
+				{
+					return 1;
+				}
+			}
+
 			/// <summary>
 			/// Equality operator.
 			/// </summary>

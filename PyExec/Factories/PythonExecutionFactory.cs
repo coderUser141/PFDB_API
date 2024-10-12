@@ -40,6 +40,51 @@ namespace PFDB
 				PythonExecutor py = new PythonExecutor(outputDestination);
 				TPythonExecutable pythonExecutable = new();
 				PFDBLogger.LogDebug("PythonExecutionFactory information. Is current object a PythonTesseractExecutable?", parameter: pythonExecutable is PythonTesseractExecutable);
+
+				for(int index = 0; index < version.MultipleScreenshotsCheck(); index++)
+				{
+					if(pythonExecutable is PythonTesseractExecutable pytessexec)
+					{
+						_queue.Add(
+							py.LoadOut(
+								pytessexec.Construct(
+									$"{(int)categoryGroup}_{weaponNumber}_{(version.IsLegacy ? index + 1 : index)}.png",
+									path,
+									WeaponTable.WeaponIDCache[version].First(
+										x => x.weaponNumber == weaponNumber ||
+										(Categories)x.categoryNumber == categoryGroup
+										).weaponID,
+									WeaponUtilityClass.GetWeaponType(categoryGroup),
+									programDirectory,
+									tessbinPath,
+									_isDefaultConversion
+								)
+							)
+						);
+					}
+					else
+					{
+						_queue.Add(
+							py.LoadOut(
+								pythonExecutable.Construct(
+									$"{(int)categoryGroup}_{weaponNumber}_{(version.IsLegacy ? index + 1 : index)}.png",
+									path,
+									WeaponTable.WeaponIDCache[version].First(
+										x => x.weaponNumber == weaponNumber ||
+										(Categories)x.categoryNumber == categoryGroup
+										).weaponID,
+									WeaponUtilityClass.GetWeaponType(categoryGroup),
+									programDirectory,
+									_isDefaultConversion
+								)
+							)
+						);
+					}
+				}
+
+
+
+				/*
 				if (version.IsLegacy)
 				{
 					if(pythonExecutable is PythonTesseractExecutable pyt) {
@@ -61,6 +106,26 @@ namespace PFDB
 					}
 
 					
+				}else if(version.MultipleScreenshotsCheck() == 2 && !version.IsLegacy)
+				{
+					if (pythonExecutable is PythonTesseractExecutable pyt)
+					{
+						_queue.Add(py
+							.LoadOut(pyt
+								.Construct($"{(int)categoryGroup}_{weaponNumber}_0.png", path, WeaponTable.WeaponIDCache[version].First(x => x.weaponNumber == weaponNumber || (Categories)x.categoryNumber == categoryGroup).weaponID, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, tessbinPath, _isDefaultConversion)));
+						_queue.Add(py
+							.LoadOut(pyt
+								.Construct($"{(int)categoryGroup}_{weaponNumber}_1.png", path, WeaponTable.WeaponIDCache[version].First(x => x.weaponNumber == weaponNumber || (Categories)x.categoryNumber == categoryGroup).weaponID, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, tessbinPath, _isDefaultConversion)));
+					}
+					else
+					{
+						_queue.Add(py
+							.LoadOut(pythonExecutable
+								.Construct($"{(int)categoryGroup}_{weaponNumber}_0.png", path, WeaponTable.WeaponIDCache[version].First(x => x.weaponNumber == weaponNumber || (Categories)x.categoryNumber == categoryGroup).weaponID, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, _isDefaultConversion)));
+						_queue.Add(py
+							.LoadOut(pythonExecutable
+								.Construct($"{(int)categoryGroup}_{weaponNumber}_1.png", path, WeaponTable.WeaponIDCache[version].First(x => x.weaponNumber == weaponNumber || (Categories)x.categoryNumber == categoryGroup).weaponID, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, _isDefaultConversion)));
+					}
 				}
 				else
 				{
@@ -76,7 +141,7 @@ namespace PFDB
 							.LoadOut(pythonExecutable
 								.Construct($"{(int)categoryGroup}_{weaponNumber}.png", path, WeaponTable.WeaponIDCache[version].First(x => x.weaponNumber == weaponNumber || (Categories)x.categoryNumber == categoryGroup).weaponID, WeaponUtilityClass.GetWeaponType(categoryGroup), programDirectory, _isDefaultConversion)));
 					}
-				}
+				}*/
 			}
 
 

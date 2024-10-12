@@ -2,6 +2,7 @@
 using PFDB.SQLite;
 using PFDB.WeaponStructure;
 using PFDB.WeaponUtility;
+using Frontend.Server;
 
 namespace Frontend.Server.Controllers
 {
@@ -9,14 +10,20 @@ namespace Frontend.Server.Controllers
 	[Route("[controller]")]
 	public class PFDBController : Controller
 	{
+
+		public static Dictionary<PhantomForcesVersion, PhantomForcesDataModel> phantomForcesData = new();
+
 		public PFDBController()
 		{
+			
 		}
 
-		[HttpGet(Name = "GetPFDB")]
-		public PhantomForcesDataModel Get()
+		[HttpGet("pfdb/{version}")]
+		public PhantomForcesDataModel Get(int version)
 		{
-			return new PhantomForcesDataModel(PhantomForcesDataModel.GetWeaponCollection(new PhantomForcesVersion("9.0.2")));
+			return phantomForcesData[new PhantomForcesVersion(version.ToString())];
 		}
+
+		
 	}
 }

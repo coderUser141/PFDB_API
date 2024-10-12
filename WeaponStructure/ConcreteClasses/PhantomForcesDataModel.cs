@@ -73,7 +73,15 @@ namespace PFDB.WeaponStructure
 				{
 					IDefaultConversion defaultConversion;
 					var keyvalue = WeaponTable.WeaponIDCache.ToDictionary();
-					var tuple = keyvalue[phantomForcesVersion].First(x => x.weaponNumber == j && x.categoryNumber == (int)category);
+					(WeaponIdentification weaponID, int categoryNumber, int weaponNumber) tuple;
+					try
+					{
+						tuple = keyvalue[phantomForcesVersion].First(x => x.weaponNumber == j && x.categoryNumber == (int)category);
+					}
+					catch
+					{
+						break;
+					}
 					try
 					{
 						string filename = @$"{Directory.GetCurrentDirectory()}\{PythonExecutor.OutputFolderName}\{phantomForcesVersion.VersionNumber}\{(int)category}_{j}.png.pfdb";
@@ -93,17 +101,17 @@ namespace PFDB.WeaponStructure
 						case WeaponType.Secondary:
 							{
 								IConversionCollection conversionCollection = new ConversionCollection(defaultConversion);
-								weapon = new Gun(WeaponTable., conversionCollection, category);
+								weapon = new Gun(tuple.weaponID.WeaponName, conversionCollection, category);
 								break;
 							}
 						case WeaponType.Grenade:
 							{
-								weapon = new Grenade("placeholder name", defaultConversion, category);
+								weapon = new Grenade(tuple.weaponID.WeaponName, defaultConversion, category);
 								break;
 							}
 						case WeaponType.Melee:
 							{
-								weapon = new Melee("placeholder name", defaultConversion, category);
+								weapon = new Melee(tuple.weaponID.WeaponName, defaultConversion, category);
 								break;
 							}
 						default:

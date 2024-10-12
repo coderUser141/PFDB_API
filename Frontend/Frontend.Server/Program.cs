@@ -1,12 +1,17 @@
 
 using PFDB.Logging;
 using PFDB.SQLite;
+using PFDB.WeaponStructure;
+using PFDB.WeaponUtility;
+using Frontend.Server.Controllers;
 
 namespace Frontend.Server
 {
     public class Program
     {
-        public static void Main(string[] args)
+
+
+		public static void Main(string[] args)
         {
 
             var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +25,11 @@ namespace Frontend.Server
 
 			PFDBLogger logger = new PFDBLogger(".pfdblog");
 			WeaponTable.InitializeEverything();
+			
+			foreach (PhantomForcesVersion version in WeaponTable.ListOfVersions)
+			{
+				PFDBController.phantomForcesData.Add(version, new PhantomForcesDataModel(PhantomForcesDataModel.GetWeaponCollection(version)));
+			}
 			var app = builder.Build();
             app.UseDefaultFiles();
             app.UseStaticFiles();

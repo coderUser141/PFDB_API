@@ -27,7 +27,7 @@ namespace PFDB.SQLite
 
 		public static Dictionary<PhantomForcesVersion, HashSet<(WeaponIdentification weaponID, int categoryNumber, int weaponNumber)>> WeaponIDCache { get { return (Dictionary<PhantomForcesVersion, HashSet<(WeaponIdentification weaponID, int categoryNumber, int weaponNumber)>>)_weaponIDCache; } }
 		public static Dictionary<PhantomForcesVersion, Dictionary<Categories,int>> WeaponCounts { get { return (Dictionary<PhantomForcesVersion, Dictionary<Categories, int>>)_weaponCountsCache; } }
-		public static ImmutableList<PhantomForcesVersion> ListOfVersions { get { return (ImmutableList<PhantomForcesVersion>)_listOfVersions; } }
+		public static List<PhantomForcesVersion> ListOfVersions { get { return _listOfVersions.ToList(); } }
 
 		/// <summary>
 		/// Initializes and populates all fields within this class for requests. Slow time to execute, so it is best for this to be called during initialization.

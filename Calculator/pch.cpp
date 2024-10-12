@@ -65,7 +65,6 @@ namespace player_statistics_calculator {
 	/// <returns>The rank that will have the given experience.</returns>
 	extern "C" DLLEXPORT unsigned long long experienceToRank(unsigned long long targetXP) {
 		return std::floor(std::sqrt(0.25 + targetXP / static_cast<double>(500)) - 0.5);
-		//return UINT64_MAX;
 	}
 
 	/// <summary>
@@ -80,9 +79,6 @@ namespace player_statistics_calculator {
 
 		unsigned long long startSum = 1000 * ((startRank * startRank + startRank) / 2);
 		unsigned long long endSum = 1000 * ((targetRank * targetRank + targetRank) / 2);
-		//for (unsigned long long i = 0; i <= targetRank; i++)requirement += i * (ULONG)1000;
-		//for (unsigned long long j = 0; j <= startRank; j++)requirement -= j * (ULONG)1000;
-		//requirement -= startRankProgress;
 		return endSum - startSum - startRankProgress;
 	}
 
@@ -122,26 +118,14 @@ namespace player_statistics_calculator {
 
 
 
-namespace weapon_statistics_calculator {
-
-	extern "C" DLLEXPORT void hollowPoint() {
-
-	}
-
-	extern "C" DLLEXPORT void armorPiercing() {
-
-	}
-
-}
-
 namespace sqlite_accessor {
 
 	int callback(void* data, int argcount, char** argv, char** column_name) {
 		std::cout << (char*)data << '\n';
 		for (int i{ 0 }; i < argcount; ++i) {
-			std::cout << column_name[i] << ": " << argv[i] << '\n';
+			//std::cout << column_name[i] << ": " << argv[i] << '\n';
 		}
-		std::cout << '\n';
+		//std::cout << '\n';
 		return 0;
 	}
 
@@ -171,8 +155,11 @@ namespace sqlite_accessor {
 		sqlite3_close(db);
 	}
 
-	extern "C" DLLEXPORT void write() {
-		bla();
+	extern "C" DLLEXPORT void write(int* ints) {
+		for (int i = 0; i < sizeof(ints) / sizeof(int); ++i) {
+			std::cout << i << '\n';
+		}
+		//bla();
 	}
 
 	extern "C" DLLEXPORT BSTR returnString(){

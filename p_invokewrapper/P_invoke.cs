@@ -15,27 +15,11 @@ namespace PFDB
             public const string dllname = "Calculator.dll";
             public static void Main(string[] args)
             {
-                write();
-                Console.WriteLine(rankToCreditsSummation(0, 2));
-                Console.WriteLine(returnString());
-
-                Console.WriteLine(experienceToRank(rankToExperienceDefault(102) + rankToExperienceDefault(198)));
-                Console.WriteLine(experienceToRank(rankToExperienceDefault(102) + rankToExperienceDefault(202)));
-
-                Console.WriteLine(rankToCreditsSummation(231, 324));
-
-                DateTime start = new DateTime(2017, 11, 1);
-                DateTime r300 = new DateTime(2020, 9, 22);
-                DateTime now = DateTime.Now;
-                Console.WriteLine(experienceToRank(53000000 + 14600000));
-
-                Console.WriteLine($"time sub 300: {(r300 - start).TotalDays}");
-                Console.WriteLine($"time as 300: {(now - r300).TotalDays}");
-                Console.WriteLine($"time total: {(now - start).TotalDays}");
+				write([1, 2, 3, 4, 5]);
             }
 
             [DllImport(dllname)] static extern void test();
-            [DllImport(dllname)] static extern void write();
+            [DllImport(dllname)] static extern void write(int[] ints);
             [DllImport(dllname)]
             [return: MarshalAs(UnmanagedType.BStr)]
             public static extern string returnString();

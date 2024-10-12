@@ -5,64 +5,67 @@
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:local="clr-namespace:PFDB_SS"
 		mc:Ignorable="d"
-		Title="MainWindow" Height="200" Width="300" PreviewLostKeyboardFocus="Window_PreviewLostKeyboardFocus">
+		Title="MainWindow" Height="250" Width="450" PreviewLostKeyboardFocus="Window_PreviewLostKeyboardFocus">
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*"/>
 			<ColumnDefinition Width="*"/>
 			<ColumnDefinition Width="*"/>
-			<ColumnDefinition Width="*"/>
-		</Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
-		
-		<Button Grid.Column="0" Grid.Row="1" Content="Screenshot" Click="Button_Click"/>
-		<TextBlock Text="Weapon #:" Grid.Column="0" Grid.Row="0"/>
-		<TextBox Grid.Column="1" Grid.Row="0" Name="WeaponNum" Text="{Binding WeaponDisplayNumber, UpdateSourceTrigger=PropertyChanged}"/>
-		<TextBlock Text="Category #:" Grid.Column="2" Grid.Row="0"/>
-		<TextBox Grid.Column="3" Grid.Row="0" Name="CategoryNum" Text="{Binding CategoryDisplayNumber, UpdateSourceTrigger=PropertyChanged}"/>
-		<TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding WeaponDisplayNumber}"/>
-		<TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding CategoryDisplayNumber}"/>
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Screenshot #"/>
+        <TextBox Grid.Column="1" Grid.Row="0" Name="ScreenshotNum" Text="{Binding ScreenshotDisplayNumber, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Grid.Column="2" Grid.Row="0" Text="Weapon #:"/>
+		<TextBox Grid.Column="3" Grid.Row="0" Name="WeaponNum" Text="{Binding WeaponDisplayNumber, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock Grid.Column="4" Grid.Row="0" Text="Category #:"/>
+		<TextBox Grid.Column="5" Grid.Row="0" Name="CategoryNum" Text="{Binding CategoryDisplayNumber, UpdateSourceTrigger=PropertyChanged}"/>
 
-		<TextBox Grid.Row="2" Grid.Column="0" Text="Primary&#x0d;&#x0a;Screen"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding ScreenshotDisplayNumber}"/>
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding WeaponDisplayNumber}"/>
+        <TextBlock Grid.Row="1" Grid.Column="5" Text="{Binding CategoryDisplayNumber}"/>
+
+        <TextBox Grid.Row="2" Grid.Column="0" Text="Primary&#x0d;&#x0a;Screen"/>
 		<TextBox Grid.Row="2" Grid.Column="2" Text="Secondary&#x0d;&#x0a;Screen"/>
 		<RadioButton Grid.Row="2" Grid.Column="1" x:Name="PrimaryScreenButton" Checked="PrimaryScreenButton_Checked" IsChecked="{Binding PrimaryScreenButtonCheckedProp}"/>
 		<RadioButton Grid.Row="2" Grid.Column="3" x:Name="SecondaryScreenButton" Checked="SecondaryScreenButton_Checked" IsChecked="{Binding SecondaryScreenButtonCheckedProp}"/>
 
-		<Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="*"></RowDefinition>
 				<RowDefinition Height="*"></RowDefinition>
 				<RowDefinition Height="*"></RowDefinition>
 			</Grid.RowDefinitions>
 			<TextBox Grid.Row="0" Text="Number of Screenshots"/>
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1" Grid.RowSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBox Grid.Column="0" Text="One"/>
-                <RadioButton Grid.Column="1"/>
-                <TextBox Grid.Column="2" Text="Two"/>
-                <RadioButton Grid.Column="3"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBox Grid.Column="0" Grid.Row="0" Text="One"/>
+                <RadioButton Grid.Column="1" Grid.Row="0" x:Name="OneScreenshot" Checked="OneScreenshot_Checked" IsChecked="{Binding OneSelected}"/>
+                <TextBox Grid.Column="2" Grid.Row="0" Text="Two"/>
+                <RadioButton Grid.Column="3" Grid.Row="0" x:Name="TwoScreenshot" Checked="TwoScreenshot_Checked" IsChecked="{Binding TwoSelected}"/>
+                <TextBox Grid.Column="0" Grid.Row="1" Text="Three"/>
+                <RadioButton Grid.Column="1" Grid.Row="1" x:Name="ThreeScreenshot" Checked="ThreeScreenshot_Checked" IsChecked="{Binding ThreeSelected}"/>
             </Grid>
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="3*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
+        </Grid>
 
-                <TextBox Grid.Column="0" Text="Three"/>
-                <RadioButton Grid.Column="1"/>
-            </Grid>
-		</Grid>
-		
-	</Grid>
+        <Button Grid.Column="3" Grid.Row="3" Content="Screenshot" Click="Screenshot"/>
+        <Button Grid.Column="4" Grid.Row="3" Content="Browse Folders" Click="OpenFolder"/>
+    </Grid>
 </Window>

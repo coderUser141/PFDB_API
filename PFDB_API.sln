@@ -11,7 +11,7 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ImageParserForAPI", "ImageP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PyExec", "PyExec\PyExec.csproj", "{561D1C48-FC84-4BC7-B495-06816180561B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileParse", "Fileparse\FileParse.csproj", "{1FDCE27F-4876-40F8-98F3-77BA9B21C7BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileParse", "FileParse\FileParse.csproj", "{1FDCE27F-4876-40F8-98F3-77BA9B21C7BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{091662A9-DEA1-43A5-A3B7-AFEE38FE4AD9}"
 	ProjectSection(SolutionItems) = preProject
@@ -58,6 +58,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLiteHandler", "SQLiteHandler\SQLiteHandler.csproj", "{FE8C472A-1D59-4C7A-BC15-713A759E1650}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeaponStructure", "WeaponStructure\WeaponStructure.csproj", "{94EC1DF6-4361-4EE6-8557-DC44BCB890F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualProofread", "ManualProofread\ManualProofread.csproj", "{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -273,6 +275,18 @@ Global
 		{94EC1DF6-4361-4EE6-8557-DC44BCB890F6}.Release|x64.Build.0 = Release|Any CPU
 		{94EC1DF6-4361-4EE6-8557-DC44BCB890F6}.Release|x86.ActiveCfg = Release|Any CPU
 		{94EC1DF6-4361-4EE6-8557-DC44BCB890F6}.Release|x86.Build.0 = Release|Any CPU
+		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Debug|x64.Build.0 = Debug|Any CPU
+		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Debug|x86.Build.0 = Debug|Any CPU
+		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Release|x64.ActiveCfg = Release|Any CPU
+		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Release|x64.Build.0 = Release|Any CPU
+		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Release|x86.ActiveCfg = Release|Any CPU
+		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

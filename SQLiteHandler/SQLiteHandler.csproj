@@ -6,6 +6,13 @@
     <Nullable>enable</Nullable>
     <OutputType>Library</OutputType>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <PreBuildEvent Condition="Exists('C:/')"><!--Windows Build-->
+		  xcopy $(SolutionDir)weapon_database.db $(SolutionDir)SQLiteHandler\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
+	  </PreBuildEvent>
+    <PreBuildEvent Condition="Exists('/usr/bin')"><!--Linux Build-->
+      cp -vaf $(SolutionDir)weapon_database.db $(SolutionDir)SQLiteHandler/bin/$(Configuration)/$(TargetFramework)
+    </PreBuildEvent>
+    <Configurations>Debug;Release;Generalx64BuildDebug;Generalx64BuildRelease</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,8 +27,5 @@
     <ProjectReference Include="..\WeaponUtility2\WeaponUtility2.csproj" />
   </ItemGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="xcopy $(SolutionDir)weapon_database.db $(SolutionDir)SQLiteHandler\bin\$(Configuration)\$(TargetFramework)\ /y /f /v" />
-  </Target>
 
 </Project>

@@ -8,10 +8,15 @@
     <SpaRoot>..\frontend.client</SpaRoot>
     <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:4200</SpaProxyServerUrl>
-	  <PreBuildEvent>
-		  xcopy $(SolutionDir)weapon_database.db $(SolutionDir)Frontend\Frontend.Server\ /y /f /v
+    <PreBuildEvent Condition="Exists('C:/')"><!--Windows Build-->
+      xcopy $(SolutionDir)weapon_database.db $(SolutionDir)Frontend\Frontend.Server\ /y /f /v
 		  xcopy $(SolutionDir)weapon_database.db $(SolutionDir)Frontend\Frontend.Server\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
 	  </PreBuildEvent>
+    <PreBuildEvent Condition="Exists('/usr/bin')"><!--Linux Build-->
+      cp -vaf $(SolutionDir)weapon_database.db $(SolutionDir)Frontend/Frontend.Server
+		  cp -vaf $(SolutionDir)weapon_database.db $(SolutionDir)Frontend/Frontend.Server/bin/$(Configuration)/$(TargetFramework)
+    </PreBuildEvent>
+    <Configurations>Debug;Release;Generalx64BuildDebug;Generalx64BuildRelease</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

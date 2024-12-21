@@ -369,10 +369,13 @@ FodyWeavers.xsd
 /ImageParserForAPI/env
 /fileparse/text.txt
 
+# untrack sqlite library
 *.c
 /Calculator/sqlite3.h
 /Calculator/sqlite3ext.h
 /Calculator/Calculator.exp
+
+# untrack build outputs (otherwise git will track THOUSANDS of items)
 /buildoutputbackup
 /all build options v*/
 /ImageParserForAPI/version1001
@@ -384,4 +387,14 @@ FodyWeavers.xsd
 /ImageParserForAPI/temp.png
 /ImageParserForAPI/version1011
 /Frontend/Frontend.Server/PFDB_outputs
+
+# untrack vscode workspace
 PFDB_API.code-workspace
+
+# untrack python virtual environment.
+# python virtual environment is assumed to be in the root directory here
+lib/
+lib64/
+lib64
+pyvenv.cfg
+bin/

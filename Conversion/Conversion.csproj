@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <UserSecretsId>2b3412fd-0106-4db7-a52b-14b5df0e5185</UserSecretsId>
+    <Configurations>Debug;Release;Generalx64BuildDebug;Generalx64BuildRelease</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

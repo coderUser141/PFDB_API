@@ -6,13 +6,21 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	  <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
-	  <PreBuildEvent>
-xcopy $(SolutionDir)Calculator\Calculator.dll $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v		  
-xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ImageParserForAPI\ /y /f /v
-mkdir $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\tessbin
-xcopy $(SolutionDir)ImageParserForAPI\tessbin\ $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\tessbin\ /y /f /v /e /h /j
-xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
-xcopy $(SolutionDir)weapon_database.db $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
+	  <PreBuildEvent Condition="Exists('C:/')"><!--Windows build-->
+      xcopy $(SolutionDir)Calculator\Calculator.dll $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v		  
+      xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ImageParserForAPI\ /y /f /v
+      mkdir $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\tessbin
+      xcopy $(SolutionDir)ImageParserForAPI\tessbin\ $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\tessbin\ /y /f /v /e /h /j
+      xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
+      xcopy $(SolutionDir)weapon_database.db $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
+	  </PreBuildEvent>
+    <PreBuildEvent Condition="Exists('/usr/bin')"><!--Linux build-->
+      cp -vaf $(SolutionDir)Calculator/Calculator.dll $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)		  
+      cp -vaf $(SolutionDir)ImageParserForAPI/dist/impa $(SolutionDir)ImageParserForAPI
+      mkdir $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)/tessbin
+      cp -vaf $(SolutionDir)ImageParserForAPI/tessbin $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)/tessbin
+      cp -vaf $(SolutionDir)ImageParserForAPI/dist/impa $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)
+      cp -vaf $(SolutionDir)weapon_database.db $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)
 	  </PreBuildEvent>
 	  <Configurations>Debug;Release;Generalx64BuildDebug;Generalx64BuildRelease</Configurations>
   </PropertyGroup>

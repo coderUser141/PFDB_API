@@ -14,13 +14,21 @@
       xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
       xcopy $(SolutionDir)weapon_database.db $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
 	  </PreBuildEvent>
-    <PreBuildEvent Condition="Exists('/usr/bin')"><!--Linux build-->
+    <PreBuildEvent Condition="Exists('/usr/bin') and Exists('$(SolutionDir)')"><!--Linux build-->
       cp -vaf $(SolutionDir)Calculator/Calculator.dll $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)		  
       cp -vaf $(SolutionDir)ImageParserForAPI/dist/impa $(SolutionDir)ImageParserForAPI
       mkdir $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)/tessbin
       cp -vaf $(SolutionDir)ImageParserForAPI/tessbin $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)/tessbin
       cp -vaf $(SolutionDir)ImageParserForAPI/dist/impa $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)
       cp -vaf $(SolutionDir)weapon_database.db $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)
+	  </PreBuildEvent>
+    <PreBuildEvent Condition="Exists('/usr/bin') and !Exists('$(SolutionDir)')"><!--Linux build-->
+      cp -vaf ../../../../Calculator/Calculator.dll ../../../../ComponentTester/bin/$(Configuration)/$(TargetFramework)		  
+      cp -vaf ../../../../ImageParserForAPI/dist/impa ../../../../ImageParserForAPI
+      mkdir ../../../../ComponentTester/bin/$(Configuration)/$(TargetFramework)/tessbin
+      cp -vaf ../../../../ImageParserForAPI/tessbin ../../../../ComponentTester/bin/$(Configuration)/$(TargetFramework)/tessbin
+      cp -vaf ../../../../ImageParserForAPI/dist/impa ../../../../ComponentTester/bin/$(Configuration)/$(TargetFramework)
+      cp -vaf ../../../../weapon_database.db ../../../../ComponentTester/bin/$(Configuration)/$(TargetFramework)
 	  </PreBuildEvent>
 	  <Configurations>Debug;Release;Generalx64BuildDebug;Generalx64BuildRelease</Configurations>
   </PropertyGroup>

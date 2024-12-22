@@ -9,8 +9,11 @@
     <PreBuildEvent Condition="Exists('C:/')"><!--Windows Build-->
 		  xcopy $(SolutionDir)weapon_database.db $(SolutionDir)SQLiteHandler\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
 	  </PreBuildEvent>
-    <PreBuildEvent Condition="Exists('/usr/bin')"><!--Linux Build-->
+    <PreBuildEvent Condition="Exists('/usr/bin') and Exists('$(SolutionDir)')"><!--Linux Build, solution build-->
       cp -vaf $(SolutionDir)weapon_database.db $(SolutionDir)SQLiteHandler/bin/$(Configuration)/$(TargetFramework)
+    </PreBuildEvent>
+    <PreBuildEvent Condition="Exists('/usr/bin') and !Exists('$(SolutionDir)')"><!--Linux Build, solution build-->
+      cp -vaf ../../../../weapon_database.db ../../../../SQLiteHandler/bin/$(Configuration)/$(TargetFramework)
     </PreBuildEvent>
     <Configurations>Debug;Release;Generalx64BuildDebug;Generalx64BuildRelease</Configurations>
   </PropertyGroup>

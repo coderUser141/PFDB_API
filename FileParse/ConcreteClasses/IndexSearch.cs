@@ -81,6 +81,9 @@ namespace PFDB
 #pragma warning restore CS8604
 				}
 				catch { }
+				//if not found, skip (it don't matter)
+
+				//prevent negative startindex
 				if (startIndex < 0 || startIndex > Text.Length - 1)
 				{
 					startIndex = 0;
@@ -94,15 +97,19 @@ namespace PFDB
 					_isChar ? _filetext.Contains(Word[0], StringComparisonMethod) : _filetext.Contains(Word, StringComparisonMethod);
 					)
 				{
+					//try adding the found index. if lastfoundindex returns -1 (not found), stop the loop
 					try
 					{
+						
 						ListOfIndices.Add(
 							_isChar ? _filetext.LastIndexOf(Word[0]) : _filetext.LastIndexOf(Word, StringComparisonMethod)
 							);
-						_filetext = (_isChar) ? _filetext.Remove(_filetext.LastIndexOf(Word[0])) : _filetext.Remove(_filetext.LastIndexOf(Word, StringComparisonMethod), Word.Length);
+						_filetext = _isChar ? _filetext.Remove(_filetext.LastIndexOf(Word[0])) : _filetext.Remove(_filetext.LastIndexOf(Word, StringComparisonMethod), Word.Length);
 					}
 					catch (ArgumentOutOfRangeException) { break; }
 				}
+				//clean up and make sure there isn't a -1 in the list
+				ListOfIndices.RemoveAll(x => x == -1);
 				return ListOfIndices;
 			}
 		}

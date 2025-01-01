@@ -22,7 +22,12 @@ namespace PFDB
 			private string _filetext = string.Empty;
 			private WeaponIdentification _WID;
 			private string _filepath = string.Empty;
-
+			private bool _fileSupplied = false;
+			
+			/// <summary>
+			/// Returns the current handled text.
+			/// </summary>
+			public string FileText {get {return _filetext;}}
 
 			/// <inheritdoc/>
 			public WeaponIdentification WeaponID { get { return _WID; } }
@@ -65,12 +70,13 @@ namespace PFDB
 				}
 				string output;
 
-				if (_filetext == string.Empty) //if there is already text, we do NOT want to interrupt it
+				if (_filetext == string.Empty) //if there is already text, we do NOT want to overwrite it
 				{
 					try
 					{
 						output = File.ReadAllText(filepath);
 						_filepath = filepath;
+						_fileSupplied = true;
 					}
 					catch
 					{
@@ -91,7 +97,7 @@ namespace PFDB
 			/// <summary>
 			/// Finds all the statistics in a file. 
 			/// Repeatedly calls <see cref="IStatisticParse.FindStatisticInFile(SearchTargets, IEnumerable{char})"/> for every valid <see cref="SearchTargets"/> that apply for the weapon. By default, only stops when a new line or carriage return character is found.
-			/// <para>Special case for <see cref="SearchTargets.AmmoCapacity"/>: Attempts to read for both <see cref="StatisticOptions.ReserveCapacity"/> and <see cref="StatisticOptions.MagazineCapacity"/> and tries to convert to an integer. If integer conversion fails, <see cref="StatisticOptions.TotalAmmoCapacity"/> will be the concatenation of the abovementioned options. Note that if it succeeds, it will the be algebraic sum of both.</para>
+			/// <para>Special case for <see cref="SearchTargets.AmmoCapacity"/>: Attempts to read for both <see cref="StatisticOptions.ReserveCapacity"/> and <see cref="StatisticOptions.MagazineCapacity"/> and tries to convert to an integer. If integer conversion fails, <see cref="StatisticOptions.TotalAmmoCapacity"/> will be the concatenation of the abovementioned options. Note that if it succeeds, it will be the algebraic sum of both.</para>
 			/// <para>If corrupted words are found through <see cref="StatisticParse._corruptedWordFixer(string?)"/> and fixed, this function will update the file accordingly. It will also update <see cref="_filepath"/>.</para>
 			/// </summary>
 			/// <inheritdoc/>
@@ -146,7 +152,7 @@ namespace PFDB
 								//add three new statistics: magazine capacity, reserve capacity, and total capacity
 								statistics.AddRange(
 									[new Statistic(needsRevision, magcapfirst, magcap.WeaponID, magcap.Option),
-										new Statistic(needsRevision, rescapfirst, magcap.WeaponID, magcap.Option), 
+										new Statistic(needsRevision, rescapfirst, magcap.WeaponID, rescap.Option), 
 										new Statistic(needsRevision, res, proofread.WeaponID, StatisticOptions.TotalAmmoCapacity)]
 									);
 							}
@@ -159,8 +165,8 @@ namespace PFDB
 					}
 					catch(WordNotFoundException ex)
 					{
-						PFDBLogger.LogInformation($"An exception was raised while searching the file. Internal Message: {ex.Message}", parameter: $"In {_filepath} searching for {target}");
-
+						PFDBLogger.LogWarning($"An exception was raised while searching the text{(_fileSupplied ? " from " + _filepath : "")}. Internal Message: {ex.Message}", parameter: $"In {_filepath} searching for {target}");
+						PFDBLogger.LogDebug($"{ex.StackTrace}");
 					}
 					catch (ArgumentException)
 					{
@@ -168,7 +174,8 @@ namespace PFDB
 					}
 					catch(Exception ex)
 					{
-						PFDBLogger.LogWarning($"An exception was raised while searching the file. Internal Message: {ex.Message}", parameter: $"In {_filepath} searching for {target}");
+						PFDBLogger.LogWarning($"An exception was raised while searching the text{(_fileSupplied ? " from " + _filepath : "")}. Internal Message: {ex.Message}", parameter: $"In {_filepath} searching for {target}");
+						PFDBLogger.LogDebug($"{ex.StackTrace}");
 						//do nothing
 					}
 
@@ -182,7 +189,7 @@ namespace PFDB
 
 
 					//only update if changed, otherwise just keep it the same
-					if(filecopy != _filetext)
+					if(filecopy != _filetext && _fileSupplied)
 						File.WriteAllText(_filepath, _filetext);
 				}
 				return statistics;

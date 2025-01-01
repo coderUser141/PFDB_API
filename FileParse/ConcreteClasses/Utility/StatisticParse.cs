@@ -4,6 +4,8 @@ using System.Text;
 using System;
 using System.Linq;
 using PFDB.ParsingUtility;
+using PFDB.Logging;
+using System.Linq.Expressions;
 
 namespace PFDB
 {
@@ -82,26 +84,36 @@ namespace PFDB
 				}
 
 				
-				if (target <= SearchTargets.FireModes && _WID.WeaponType != WeaponType.Primary && _WID.WeaponType != WeaponType.Secondary && 
-					(target >= SearchTargets.HeadMultiplier && target <= SearchTargets.LimbMultiplier && _WID.WeaponType == WeaponType.Melee) == false)
+				if (target <= SearchTargets.FireModes && 
+				_WID.WeaponType != WeaponType.Primary && 
+				_WID.WeaponType != WeaponType.Secondary && 
+					(target >= SearchTargets.HeadMultiplier && 
+					target <= SearchTargets.LimbMultiplier && 
+					_WID.WeaponType == WeaponType.Melee) == false
+					)
 				{
 					//return; //error
-					throw new ArgumentException($"The SearchTarget specified does not match the WeaponType specified.");
+					PFDBLogger.LogWarning($"The SearchTarget specified does not match the WeaponType specified. SearchTarget: {target}, WeaponType: {_WID.WeaponType}. Weapon ID: {_WID.ID}, Weapon Name: {_WID.WeaponName}");
+					throw new ArgumentException($"The SearchTarget specified does not match the WeaponType specified. SearchTarget: {target}, WeaponType: {_WID.WeaponType}. Weapon ID: {_WID.ID}, Weapon Name: {_WID.WeaponName}");
 				}
 				else if (target >= SearchTargets.BlastRadius && target <= SearchTargets.StoredCapacity && _WID.WeaponType != WeaponType.Grenade)
 				{
 					//return; //error
-					throw new ArgumentException($"The SearchTarget specified does not match the WeaponType specified.");
+					PFDBLogger.LogWarning($"The SearchTarget specified does not match the WeaponType specified. SearchTarget: {target}, WeaponType: {_WID.WeaponType}. Weapon ID: {_WID.ID}, Weapon Name: {_WID.WeaponName}");
+					throw new ArgumentException($"The SearchTarget specified does not match the WeaponType specified. SearchTarget: {target}, WeaponType: {_WID.WeaponType}. Weapon ID: {_WID.ID}, Weapon Name: {_WID.WeaponName}");
 				}
 				else if (target >= SearchTargets.FrontStabDamage && _WID.WeaponType != WeaponType.Melee)
 				{
 					//return; //error
-					throw new ArgumentException($"The SearchTarget specified does not match the WeaponType specified.");
+					PFDBLogger.LogWarning($"The SearchTarget specified does not match the WeaponType specified. SearchTarget: {target}, WeaponType: {_WID.WeaponType}. Weapon ID: {_WID.ID}, Weapon Name: {_WID.WeaponName}");
+					throw new ArgumentException($"The SearchTarget specified does not match the WeaponType specified. SearchTarget: {target}, WeaponType: {_WID.WeaponType}. Weapon ID: {_WID.ID}, Weapon Name: {_WID.WeaponName}");
 				}
 
-				if (_filetext == "") //return; // error
-					throw new ArgumentException("text was empty");
-
+				if (_filetext == "")
+				{ //return; // error
+					PFDBLogger.LogWarning("The supplied text was empty.");
+					throw new ArgumentException("The supplied text was empty.");
+				}
 				_searchTarget = target;
 
 				_inputWordsSelection();
@@ -110,11 +122,13 @@ namespace PFDB
 				StringBuilder result = new StringBuilder();
 				List<char> endingsList = new List<char>(endings);
 				endingsList.AddRange(new List<char>() { (char)13, (char)10 });
+				// do NOT attempt to run _corruptedWordFixer here or you WILL regret it...
 
 				foreach (IIndexSearch word in _wordLocationSearchers)
 				{
+					//Console.WriteLine(target);
 					if (word.IsEmpty())
-					{
+					{	
 						_corruptedWordFixer(word.Word);
 						word.Search();
 					}
@@ -132,16 +146,25 @@ namespace PFDB
 					//special cases
 					case SearchTargets.Damage:
 						{
-							_oneWordCaseHander();
 							//if legacy version, eliminate damage range instances
 							if (_WID.Version.IsLegacy)
+							{
+								_oneWordCaseHander();
 								_getStatisticNonGrataLocations(["damage", "range"]);
+							}
 							break;
 						}
 					case SearchTargets.Suppression:
 						{
 							_oneWordCaseHander();
-							_getStatisticNonGrataLocations(["suppression", "range"]);
+							try
+							{
+								_getStatisticNonGrataLocations(["suppression", "range"]);
+							}
+							catch (WordNotFoundException)
+							{
+								//do nothing, it couldn't find "suppression range" so we good :D
+							}
 							break;
 						}
 					case SearchTargets.Rank:
@@ -161,6 +184,8 @@ namespace PFDB
 					default:
 						{
 							if (_wordLocationSearchers.Last().ListOfIndices.Count > 0) goto Success;
+							// damage range will never be found in a new version
+							if (target == SearchTargets.DamageRange && _WID.Version.IsLegacy == false) { goto Success; }
 							/*
 							 * this exception is intentional 
 							 * i want to keep the filter tight so we don't have random garbage getting in,
@@ -184,7 +209,8 @@ namespace PFDB
 				}
 				catch
 				{
-					throw new WordNotFoundException("None of the two words were found.");
+					PFDBLogger.LogWarning("None of the two words (\"damage\" or \"range\") were found.");
+					throw new WordNotFoundException("None of the two words (\"damage\" or \"range\") were found.");
 					//return; //error, no words were found
 				}
 
@@ -216,17 +242,25 @@ namespace PFDB
 
 				// reads from the start of each location to any character specified in endingsList
 				foreach (int location in locations)
-				{
-					int i = location;
+				{ 
 					StringBuilder r = new StringBuilder(string.Empty);
-					for (; endingsList.Contains(_filetext[i]) == false && i < _filetext.Length; ++i)
+
+					for (int i = location; i < _filetext.Length; ++i)
 					{
-						//technically this try wrapper can be removed, but its safer to leave it for now, im sick of debugging strange errors
-						try
+						if (endingsList.Contains(_filetext[i]) == false)
 						{
-							r.Append(_filetext[i]);
+							char test = _filetext[i];
+							//technically this try wrapper can be removed, but its safer to leave it for now, im sick of debugging strange errors
+							try
+							{
+								r.Append(_filetext[i]);
+							}
+							catch (ArgumentOutOfRangeException)
+							{
+								break;
+							}
 						}
-						catch (ArgumentOutOfRangeException)
+						else
 						{
 							break;
 						}
@@ -281,16 +315,18 @@ namespace PFDB
 			/// </summary>
 			/// <param name="inputWord">Desired word to find and replace with.</param>
 			/// <returns>Returns the corrupted word if it has been found, otherwise it returns <see cref="string.Empty"/></returns>
-			internal string _corruptedWordFixer(string? inputWord)
+			internal string 
+				_corruptedWordFixer(string? inputWord)
 			{
-				if (inputWord == null) return string.Empty;
+					if (inputWord == null) return string.Empty;
 				List<int> wordFirstCharLocations = (List<int>)
-													new IndexSearch(_filetext, inputWord.ToUpperInvariant()[0].ToString())
+													new IndexSearch(_filetext, inputWord.ToUpperInvariant()[0].ToString(), false)
 													.Search();
 				StringBuilder tempInputWord = new StringBuilder(inputWord);
 
 				/////////////// double check this line, it may change, i might remove it ////////////////////
-				wordFirstCharLocations.RemoveAll((i) => i > _filetext.IndexOf("Does the file exist?", StringComparison.CurrentCultureIgnoreCase));
+				// removed it because it removed actual legitimate entries
+				//wordFirstCharLocations.RemoveAll((i) => i > _filetext.IndexOf("Does the file exist?", StringComparison.CurrentCultureIgnoreCase));
 				wordFirstCharLocations.TrimExcess();
 
 				string corruptedWord1 = ""; //to replace
@@ -313,11 +349,18 @@ namespace PFDB
 					 * 		we are actually comparing letters, and not spaces. if there is a match, we increment letterMatch
 					 * when letterMatch equals the length of the word, we can then replace it with the correct word.
 					 */
+					//reset search variables
+					tempInputWord = new StringBuilder(inputWord);
+					//Console.WriteLine(_filetext.Substring(IndexI, tempInputWord.Length + _acceptableCorruptedWordSpaces));
+					letterMatch = 0;
+					actualSpaces = 0;
 
 					for (int i = IndexI; i < IndexI + tempInputWord.Length + _acceptableCorruptedWordSpaces; i++) //for each char of the file at the chars location
 					{
+						if (i == -1) continue; //prevent indexOutOfRangeException
 						for (int j = 0; j < tempInputWord.Length; j++) //through the word's character length
 						{
+							
 							//skips over spaces and increments i only if we are still in the first word "region", otherwise is ignored
 							if (_filetext[i] == 32 && i + 1 < IndexI + tempInputWord.Length + _acceptableSpaces)
 							{
@@ -326,11 +369,12 @@ namespace PFDB
 								continue; //skips innermost loop if there is a space
 							}
 
-							/*testing variables, ideally do not remove
+							/*testing variables, ideally do not remove*/
 							//string location = filetext.Substring(i, 20); //1423
-							//char testi = filetext[i];
-							//char testj = tempInputWord1[j];
-							*/
+							//char testi = _filetext[i];
+							//char testj = tempInputWord[j];
+							//PFDBLogger.LogDebug($"_filetext[{i}] = {testi}, tempInputWord[{j}] = {testj}");
+							
 
 							//looks for matches, and sees if i is in a location where l is, and vice versa
 							if (_filetext[i].ToString().ToLower() == tempInputWord[j].ToString().ToLower() ||
@@ -354,7 +398,7 @@ namespace PFDB
 							corruptedWord1 += _filetext[i];
 						}
 						//replace the whole word with the correct word, and add space padding after
-						_filetext = _filetext.Replace(corruptedWord1, inputWord + " ", StringComparison.CurrentCultureIgnoreCase);
+						_filetext = _filetext.Replace(corruptedWord1.TrimEnd(), inputWord.ToUpper() + " ", StringComparison.CurrentCultureIgnoreCase);
 						return corruptedWord1;
 					}
 				}
@@ -659,7 +703,10 @@ namespace PFDB
 					 * i want to keep the filter tight so we don't have random garbage getting in,
 					 * if we don't have at least the last word, we can't be 100% sure that we have the exact statistic
 					 */
-					throw new WordNotFoundException("no words were found");
+					StringBuilder builder = new StringBuilder();
+					foreach(string t in _inputWordList) builder.Append($"{t} ");
+					PFDBLogger.LogWarning($"Could not find any instances of {builder} in the text supplied.");
+					throw new WordNotFoundException($"Could not find any instances of {builder} in the text supplied.");
 				}
 			}
 
@@ -754,10 +801,9 @@ namespace PFDB
 					_corruptedWordFixer(_inputWordList[0]);
 					_wordLocationSearchers[0].Search();
 					if (_wordLocationSearchers[0].IsEmpty()) //return; //error
-						throw new WordNotFoundException($"{_inputWordList[0]} was not found anywhere in the text with one-word case.");
+						throw new WordNotFoundException($"{_inputWordList[0].ToUpper()} was not found anywhere in the text with one-word case.");
 				}
 			}
-
 		}
 	}
 }

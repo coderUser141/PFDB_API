@@ -53,13 +53,13 @@ namespace PFDB.Proofreading
 		public new void AddRange(IEnumerable<IStatistic> statistics) { 
 			if(statistics.Any(x => x.WeaponID != this._WID))
 			{
-				PFDBLogger.LogError($"Cannot add IStatistic objects to StatisticCollection. Version numbers are invalid. StatisticCollection version: {_WID.Version.VersionString}");
-				throw new ArgumentException($"Cannot add IStatistic object to StatisticCollection. Version numbers are invalid. StatisticCollection version: {_WID.Version.VersionString}");
+				PFDBLogger.LogError($"Cannot add IStatistic objects to StatisticCollection. Version numbers are invalid. StatisticCollection version: {_WID.Version.VersionString}, IStatistic version: {statistics.First().WeaponID.Version.VersionString}");
+				throw new ArgumentException($"Cannot add IStatistic object to StatisticCollection. Version numbers are invalid. StatisticCollection version: {_WID.Version.VersionString}, IStatistic version: {statistics.First().WeaponID.Version.VersionString}");
 			}
 			base.AddRange(statistics);
 		}
 
-		/// <inheritdoc/>
+		/*
 		public void AddRange(IStatisticCollection statistics)
 		{
 			if(statistics.WeaponID.Version != this._WID.Version)
@@ -69,7 +69,7 @@ namespace PFDB.Proofreading
 			}
 
 			base.AddRange(statistics.Statistics);
-		}
+		}*/
 
 		/// <summary>
 		/// Initializes an empty collection with a default size of 0.
@@ -87,7 +87,7 @@ namespace PFDB.Proofreading
 		public StatisticCollection(WeaponIdentification weaponID, int capacity) : base(capacity) {
 			_WID = weaponID;
 		}
-
+		
 		/// <summary>
 		/// Initializes a collection with items from a specified collection.
 		/// </summary>

@@ -40,7 +40,8 @@ namespace PFDB.StatisticUtility
 		/// <param name="statistics">The statistic to add.</param>
 		public void AddRange(IEnumerable<IStatistic> statistics);
 
-		/// <inheritdoc cref="AddRange(IEnumerable{IStatistic})"/>
-		void AddRange(IStatisticCollection collection);
+		// This method conflicts with AddRange(IEnumerable<IStatistic>) because
+		// the compiler cannot figure out which call to use :(
+		//void AddRange(IStatisticCollection collection);
 	}
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.FileIO;
+using PFDB.Logging;
 using PFDB.ParsingUtility;
 using PFDB.StatisticUtility;
 using PFDB.WeaponUtility;
@@ -15,9 +16,16 @@ namespace PFDB
 	namespace Proofreading
 	{
 
+		/// <summary>
+		/// Defines a class that automatically proofreads and tries to fix statistics read from a file (or alternatively, manually fed in).
+		/// </summary>
 		public class StatisticProofread
 		{
 			private WeaponIdentification _WID;
+
+			/// <summary>
+			/// The weapon ID to be used for weapon type and version checking.
+			/// </summary>
 			public WeaponIdentification WeaponID { get { return _WID; } }
 			//private Regex _regexPattern;
 			private static Dictionary<StatisticOptions, Regex> regexDictionary = new Dictionary<StatisticOptions, Regex>()
@@ -34,14 +42,12 @@ namespace PFDB
 			};
 
 
-			public static void Main(string[] args)
-			{
-
-				return;
-
-			}
-
-			
+			/// <summary>
+			/// Converts a <see cref="StatisticOptions"/> object to a <see cref="SearchTargets"/> object.
+			/// </summary>
+			/// <param name="option">The <see cref="StatisticOptions"/> object to convert. </param>
+			/// <returns>An equivalent <see cref="SearchTargets"/> object.</returns>
+			/// <exception cref="ArgumentException"></exception>
 			public static SearchTargets StatisticOptionToSearchTarget(StatisticOptions option)
 			{
 				//IEnumerable<string> list = Enum.GetNames<StatisticOptions>();
@@ -51,24 +57,40 @@ namespace PFDB
 
 				if (new List<string>() { StatisticOptions.ReserveCapacity.ToString(), StatisticOptions.MagazineCapacity.ToString(), StatisticOptions.TotalAmmoCapacity.ToString() }.Contains(option.ToString())) return SearchTargets.AmmoCapacity;
 
-				throw new ArgumentException("The argument was invalid");
+				PFDBLogger.LogError($"No suitable conversion was found for {option}");
+				throw new ArgumentException($"No suitable conversion was found for {option}");
 			}
 
-			
+			/// <summary>
+			/// Converts a <see cref="SearchTargets"/> object to a <see cref="StatisticOptions"/> object. Note that passing <see cref="SearchTargets.AmmoCapacity"/> will result in an <see cref="ArgumentException"/> (ambiguous reference to <see cref="StatisticOptions.TotalAmmoCapacity"/>, <see cref="StatisticOptions.ReserveCapacity"/>, and <see cref="StatisticOptions.MagazineCapacity"/>.   )
+			/// </summary>
+			/// <param name="target">The <see cref="SearchTargets"/> object to convert.</param>
+			/// <returns>An equivalent <see cref="StatisticOptions"/> object.</returns>
+			/// <exception cref="ArgumentException"></exception>
 			public static StatisticOptions SearchTargetToStatisticOption(SearchTargets target)
 			{
 				StatisticOptions outparam;
 				bool found = Enum.TryParse(target.ToString(), true, out outparam);
 				if (found) return outparam;
-				throw new ArgumentException("The argument was invalid");
+				PFDBLogger.LogError($"No suitable conversion was found for {target}");
+				throw new ArgumentException($"No suitable conversion was found for {target}");
 			}
 
+			/// <summary>
+			/// Constructor.
+			/// </summary>
+			/// <param name="weaponID">Weapon ID, for weapon type and game version.</param>
 			public StatisticProofread(WeaponIdentification weaponID)
 			{
 				_WID = weaponID;
 			}
 
-
+			/// <summary>
+			/// Applies a regular expression for the given <see cref="StatisticOptions"/> parameter against the given input string. 
+			/// </summary>
+			/// <param name="statisticTarget">Determines which statistic is being parsed (and thus which regular expression is applied).</param>
+			/// <param name="inputString">The input string to parse.</param>
+			/// <returns>A concete object inheriting from <see cref="IStatistic"/> containing the statistic parsed.</returns>
 			public IStatistic ApplyRegularExpression (StatisticOptions statisticTarget, string inputString)
 			{
 				IStatistic statistic;
@@ -92,6 +114,7 @@ namespace PFDB
 							List<string> strings = new List<string>();
 							bool needsRevision = false;
 
+							//...shouldn't have spoken too soon, legacy is different...
 							if (_WID.Version.IsLegacy)
 							{
 								matchCollection = new Regex(@"(\d+\.?\d*)").Matches(inputString);

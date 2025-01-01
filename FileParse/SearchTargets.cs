@@ -91,6 +91,9 @@
 			/// </summary>
 			AmmoType,
 
+			/// <summary>
+			/// Sight magnification. Defines zoom of the weapon when aiming.
+			/// </summary>
 			SightMagnification,
 
 			/// <summary>

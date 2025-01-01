@@ -50,6 +50,7 @@ namespace PFDB
 			/// Default constructor.
 			/// </summary>
 			/// <param name="pythonExecutors">The list of internal <see cref="IPythonExecutor"/> objects.</param>
+			/// <param name="isDefaultConversion">Indicates whetheer the <see cref="IPythonExecutor"/> objects are used for the default conversion.</param>
 			/// <param name="checkStatusCounter">The counter for the number of items that pass or fail <see cref="PythonExecutionFactory{TPythonExecutable}._checkFactory"/>.</param>
 			/// <param name="queueStatusCounter">The counter for the number of items that pass or fail being queued via <see cref="ThreadPool.QueueUserWorkItem(WaitCallback)"/>.</param>
 			/// <param name="executionStatusCounter">The counter for the number of items that pass or fail during execution from <see cref="IPythonExecutor.Execute(object?)"/>.</param>

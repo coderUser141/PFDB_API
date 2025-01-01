@@ -35,4 +35,32 @@ public class ComponentTester
 		PFDBLogger.LogInformation("Application has finished execution.");
 		return;
 	}
+
+	public void initiate(){
+		WeaponTable.InitializeEverything();
+	}
+
+	public void buildSpecificVersion(){
+		//verify path
+		string path = "somethingidk";
+		PhantomForcesVersion version = new PhantomForcesVersion(10,0,1);
+
+		if(Directory.Exists(path) == false){
+			throw new DirectoryNotFoundException();
+		}
+		
+		
+
+
+		//verify number of images
+		
+	}
+
+
+
+
+
+
 }
+
+

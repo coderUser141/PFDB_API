@@ -11,12 +11,20 @@ using PFDB.SQLite;
 
 namespace PFDB.WeaponStructure
 {
+	/// <summary>
+	/// Defines 
+	/// </summary>
 	public class PhantomForcesDataModel : IPhantomForcesDataModel  
 	{
 
 		private IClassCollection _classCollection;
+
+		/// <summary>
+		/// Exposes the underlying collection of weapon classes.
+		/// </summary>
 		public IClassCollection ClassCollection { get { return _classCollection; } }
 
+		
 		public static IWeaponCollection GetWeaponCollection(IPythonExecutionFactoryOutput factory)
 		{
 			if (factory.IsDefaultConversion) //default conversion, which means we have only ONE conversion per weapon

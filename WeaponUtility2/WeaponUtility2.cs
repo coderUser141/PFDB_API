@@ -78,6 +78,10 @@ namespace PFDB
 				}
 			}
 
+			/// <summary>
+			/// Determines the number of screenshots that were taken for the given version.
+			/// </summary>
+			/// <returns>The number of screenshots for the given version</returns>
 			public int MultipleScreenshotsCheck()
 			{
 				if (IsLegacy)

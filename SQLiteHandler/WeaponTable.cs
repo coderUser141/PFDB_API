@@ -10,7 +10,9 @@ using PFDB.Logging;
 
 namespace PFDB.SQLite
 {
-
+	/// <summary>
+	/// Defines a class that interfaces with SQL databases, and retrieves data from them. This data is meant to be used downstream for the API, and allows quicker access than manually running impa(.py).
+	/// </summary>
 	public static class WeaponTable
 	{
 		private static string _databasePath = "weapon_database.db";
@@ -24,9 +26,17 @@ namespace PFDB.SQLite
 		private static IDictionary<PhantomForcesVersion,Dictionary<Categories, int>> _weaponCountsCache = new Dictionary<PhantomForcesVersion, Dictionary<Categories, int>>();
 		private static IEnumerable<PhantomForcesVersion> _listOfVersions = new List<PhantomForcesVersion>();
 
-
+		/// <summary>
+		/// Defines a dictionary that maps a Phantom Forces version with a collection of weapon IDs for the particular version (also includes category and weapon numbers).
+		/// </summary>
 		public static Dictionary<PhantomForcesVersion, HashSet<(WeaponIdentification weaponID, int categoryNumber, int weaponNumber)>> WeaponIDCache { get { return (Dictionary<PhantomForcesVersion, HashSet<(WeaponIdentification weaponID, int categoryNumber, int weaponNumber)>>)_weaponIDCache; } }
+		/// <summary>
+		/// Defines a dictionary that maps a Phantom Forces version to a dictionary that maps each category (in the specified version) to the number of weapons in the specified category.
+		/// </summary>
 		public static Dictionary<PhantomForcesVersion, Dictionary<Categories,int>> WeaponCounts { get { return (Dictionary<PhantomForcesVersion, Dictionary<Categories, int>>)_weaponCountsCache; } }
+		/// <summary>
+		/// Lists all the versions in the database.
+		/// </summary>
 		public static List<PhantomForcesVersion> ListOfVersions { get { return _listOfVersions.ToList(); } }
 
 		/// <summary>

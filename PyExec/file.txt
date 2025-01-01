@@ -1,0 +1,2543 @@
+ADVANCED SIAIS —
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.17s
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.08
+WIPCIRE RECOVERY CPEENR 200
+
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 8.00
+HIPFIRE SPREAD DAMPING 0.75
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+RELOAD TIME 2.3 seconds
+
+EMPTY RELOAD TIME 3.1 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+CROSSHAIR RECOVER RATE 15.00
+
+MISC
+
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppressed
+
+AK12
+KILLS 2362
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+- 20
+(0) (70) me an "
+130
+0) 80 300
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+AMMO CAPACITY 30/120
+AMMO TYPE 9.45x39mm
+FIRERATE TOO A|1000B| 7005S
+FIREMODES | AUTO | Ill | SEMI |
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.205
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.05
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 10.00
+HIPFIRE SPREAD DAMPING 0.90
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 2.00
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2.5 seconds
+EMPTY RELOAD TIME 3.2 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+
+CROSSHAIR RECOVER RATE 20.00
+
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+ROUND IN CHAMBER One
+
+RANK 10
+
+AN-94
+KILLS 2103
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+300 | 43
+
+) (50) "(120) "
+0] 150 300
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+AMMO CAPACITY 30/120
+AMMO TYPE 9.45x39mm
+FIRERATE 600A|1800B|600S
+FIRE MODES | AUTO | Il | SEMI |
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.08 s
+MUZZLE VELOCITY 950.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 1.80
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.05
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 15.00
+HIPFIRE SPREAD DAMPING 0.80
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.25
+ACCURACY
+HIP CHOKE 0.35
+
+AIM CHOKE 0.35
+
+WEAPON HANDLING
+
+RELOAD TIME 1.8 seconds
+EMPTY RELOAD TIME 1.8 seconds
+EQUIP SPEED 14.00
+AIM MODEL SPEED 16.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 200.00
+
+CROSSHAIR RECOVER RATE 10.00
+
+MISC
+
+WEAPON WALKSPEED 15.00
+
+AIMING WALKSPEED 11.4
+
+ROUND IN CHAMBER None
+obility,and aiming Speed. ond on .
+
+E-GUN
+KILLS 14
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+15 2
+
+&P) (50) (sano 200
+HEAD MULTIPLIER 1.50
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+AMMO CAPACITY 25/200
+PELLET COUNT x1
+AMMO TYPE Angry Pancakes
+FIRERATE 3000 B|850A|85058
+FIRE MODES | IIlll | AUTO | SEMI |
+aes oo
+“aaah ™ Ne
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.00 s
+MUZZLE VELOCITY 1250.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 0.25
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.08
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 9.00
+HIPFIRE SPREAD DAMPING 0.70
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2 seconds
+EMPTY RELOAD TIME 2.8 seconds
+EQUIP SPEED 16.00
+AIM MODEL SPEED 20.00
+AIM MAGNIFICATION SPEED 18.00
+CROSSHAIR SIZE 20.00
+CROSSHAIR SPREAD RATE 900.00
+
+CROSSHAIR RECOVER RATE 15.00
+
+MISC
+
+obility.and aiming speed -
+AIMIWG WALKSPEEL ; 8.4
+ROUND IN CHAMBER None
+RANAR SIUIPPRESSION RANGE oy
+
+RANK 201
+
+AF2011-Al
+KILLS 12
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+42
+
+"(0) (25) 29 .
+(8) 100 0? 200
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.25
+LIMB MULTIPLIER 1.00
+
+AMMO TYPE .45 ACP
+FIRERATB99000 SEMI | INSTANT BURST
+FIRE MODES | i |
+
+
+= = a
+
+
+a . . ~~ rr oh ae
+X - ke NS Sa %,
+al ¥ > vila yw Fn
+m eR Se
+Ps “war Qei i - - : " a
+J ot al oe AY ans . - =. +<v¥K, ae 's ¥
+? ao “Site fo ¢ ~- oS te “et
+; q - _ oo") . ~e — J 1g © Lor -
+- ~— rd . Q eres ioe ~ ‘4 2 . :
+> ye ip -, - - —: a ms Sy! b ae i ai =
+i ~~) > eee te oe if A > ° bs Es
+r >. ¢< m2 ¥ “~~, © ate a tO Mg “St 4
+. ' . > =, ’ = oon ete
+oe twee” Dee a, ea NS
+v Mee s-y | ie! , ans - s .
+- re ~ : 7 «- b
+» _™~, $73 es “ot ~* i a ; :
+: ~ 5 il — = 7 228 ~ og — ~ ¢ + ~~, * ~~ -* we
+. - Ox
+a hee eee Aare oe!
+‘1 See Sekes agar ®
+= _ Me »- » ~. _- / °
+Seer Sr eS se wT ye
+.<" ed CP wn fe oe en Tey a
+adi, , = < [4 _——* = ‘> * “= —
+Pade © ae" is oe 2. ~ . “ - ’ i. cy a
+ee ae ERS Baas yr og eee SP ww "Sie
+=> 3 ss — - , a oe : Se > z=
+& Ss . ron =o
+" » oo + » —— - . é
+2m PS 4 Ma - — * oms a = 2 > +. -
+3 - - < a > « _ “ip -
+cc a= 4
+* “ ’ wt $ - ‘ . 3
+“i. a ' m4 > - 7 » i .
+> ‘ > > oa a 4. (= ; ’ i ’ . ;
+: ! 4 ' od — » ‘ 4 . 3 ’
+eh jane _ es ae ii
+_ me . — : CS ets '’
+nal F te =~ a a >> 2 “ cS _
+. re eo es a : ee ee -.
+ ——— - a ac ene: T, at, es eS se > o
++. wt ’ . ‘ © fee - a = ws <
+Ce -! ~<a 23% 4-4 ns a
+. e. “% a « “4 = ~ -
+ae 2 ~a. - nal ae ‘ 7 \ r phe « * =
+a ? . _ ’ 2 7. 25 2 M . a.
+=p Cae TERR. - , . Reece gees
+pe at or er . re ¢ =
+— « + ee, ne Pee > ~ 7 a . a .
+ee Ste es he ee ee . = TY "
+7 as , OS Ors - “ - a « ad mi - : _ fe =~, al
+
+
+18
+O 100 200
+TRIGGER MECHANIBMAACT DETONATION
+SPECIAL EFFECTS IMPACT
+STORED CAPACITY 3
+
+| ————
+
+= SS
+~ ‘
+? : ‘i - - _
+. r 4 a ae . 1: 2 °
+> oe ee 7 7
+; > > Sb Sy as ———
+* fi > as, “pa - te
+as ae 1 oe —ee
+AS = . 4 . +. 1 ° ‘a
+t# - (atx /+ . 7% ’ ’ .
+a ‘.* ~ a, ws 7. tae ee . :
+< <.. OF mle + Ms » SS ot
+4 = xa a _— 1i-— eos a
+“ - 4 - - 4 % y?,) a Sn er z c
+fF Tee 2 7 Se a
+: ’ D : <a eo wa m ‘
+: . “I —— "a “- See ee > =" -
+i “a er ~~ ; 7 : Kol Pow
+hie: <4 ; . . ®. o _ , - ¢ wh
+oS * - - - p _ a ce
+y ; — = . ae
+rae Se |
+ate “bs i awe ba = ¥
+ae 7 ; x ix~_* . ’ .
+- 7 a. ° . >
+& “ ‘ . et - -
+“J _ Disp .
+
+~
+‘
+
+ots, es ae. in
+
+Rok
+4 . Le
+ue ie ak
+
+
+eee
+
+Es Frome
+
+
+
+“a! : ~*~ e — eo
+7 ee pike Sy
+or eee 2 ee ; - 1A
+z% te a a aaa
+~ > a> E \e ~ Seb. ,. ae - > *~.
+Phe a Se NS 0S Rs IT ek ee Ok) Le
+> 5 OP ent ‘ “ale; - , nn ge ee
+— a ae oe: fa | ; P Tues te. oo
+2 « o .* ~ 2) tor - a cf te ~y + ° = Lae. ee
+. r¥ . + “se <b =~
++: See Pe _" ty ~ aa Ra Mp. “ a a
+eg Ol oe ett ee kD : ee et
+x wien =e  . or Pt. v. / >
+. Sh et ee “+
+2 ae ae ss
+; - rete mec
+- Ses Se eS “1 So nS : s
+pS eG Err Sa ae xe eh
+= ~s peed, a = 7 po PO R P .
+2 ere SS. 7 s. & P Ex & os,
+> om a ot’ on ¢ ‘ — a see
+— “a ee gr oa Mes x” thee M4 +
+, ~al » * —“s i a “ + 1 ~ on. FL ge > “-* =a Pi
+ee. a SS Se es a ts 3 i ee
+oe. =~ 2 oat _ S. - gee be ~S
+.« % a Os - e- ~ « -«- ">" 7 . > +"
+we gy ae a c c ps ty
+ie tm , Si ee at > E ;
+PR . was a ee oC’ a 4 2 ~
+= . Ps A c .* oS, A ot) -
+ame =e = oe
+2 : “ # i ;
+i Ske “is or ao .
+* ~ % bad - @ a ».
+C4 Se. SF | EN > 2. teak ‘
+age - — es i Ce, fa . ~
+“" a. 2 — . - » . = ~— > s -
+—_" . es ~ <> a —_ ~~ ame ~ =
+VT bar 2 44 : . a -4 ad c rt ~ = -
+a ; Co 4 » .* yy - “<i - ? y “ - <4 _* -.~aigh me
+” 4 ee . . » +, sian O~._ 2 :
+“< c“% + a,’ q*- *+ a - > eee > tah = .
+eS Te ee ene. eae .— f a» Sata - ‘
+a i * . w= oe > ~ &y
+eed ate & POS ee me = = —
+i « a ae a r. 4 ~ : . ‘
+eth. * >» cae — 7 : ~_ pa = - ‘ im,
+¢ woe «Pee a ° “ : a > ‘ o “a .
+"yea “S- > a wet e Th - 4 Ky — - _ <q
+as & toes en Se ae 4 ~ oa — :
+er he wt ‘. =& tw ae, —>- — - ~~ 7. 4 , “=
+. 7 *» c tee ~<a ee > . Oa ~ > —_—
+Se. 8 SP — o- * e
+>  - » i. +164 «es = ff ~~ ———  - ee A
+
+RANK 50
+
+CLONKER
+KILLS 0
+HEAD MULTIPLIER 1.64
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 55.00
+BACK STAB DAMAGE 122.00
+
+MAIN ATTACK TIME 0.5 SECONDS
+
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.5 SECONDS
+ALT ATTACK DELAY 0.2 SECONDS
+QUICK ATTACK TIME 0.7 SECONDS
+QUICK ATTACK DELAY 0.2 SECONDS
+WALKSPEED 16.00
+| 2 See
+
+==
+_
+€ r :
+SS
+~~. = *.. sa 2
+—— :
+. mg " , ;
+« - ~~h A i. ’ * -
+—s" = a , =< rs
+: — 4 ie a . ~~ - ae aw ‘
+~~ —< ras, - - , * WHERE .
+. o - . A ~ :
+a .* = pS a - ; im
+ag . + ~~ =. —— crs ~ a
+5+ is — “> —_. ~~ ‘ a . * .
+: ; ; - + ~ we < ‘
+= ae * - ot 4 << > = a - ie .
+~~ = FPA «. %, -™¥ ‘~~ aT > ;
+c hae , 22 te -* Se 48
+; ~ .. ef _“* -— bs » i- od Ms
+eae Pe st. 5 . ‘hs a? = #. -
+' ; ee
+S » : “ LQ -" _ ? = 7
+a . a A : '
+= a uN : + aS rer
+ute: ; — = hy ats Pb o- of
+eS 3 ; , en aes
+er _ 7a : . _ . -2° eee
+5 Cw es " —
+; ’ ’ - ° ~
+ene . mtd : — -
+xX : <~_* . =
+~"1
+4 . ; -
+> =e ~. ers, , :
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.12s
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.08
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 8.00
+HIPFIRE SPREAD DAMPING 0.75
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2.3 seconds
+EMPTY RELOAD TIME 3.1 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+
+CROSSHAIR RECOVER RATE 15.00
+
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 84
+ROUND IN CHAMBER One
+a YAR ,. IPPRESS | PN be | 1 " " : a
+
+RANK O
+
+AK12
+KILLS 2363
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+- 20
+(0) (70) me an "
+130
+0) 80 300
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+AMMO CAPACITY 30/120
+AMMO TYPE 5.45x39mm
+FIRERATE TOO A|1000B| 7005S
+FIREMODES | AUTO | Iil | SEMI |
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.07 s
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.05
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 10.00
+HIPFIRE SPREAD DAMPING 0.90
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 2.00
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2.5 seconds
+EMPTY RELOAD TIME 3.2 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+
+CROSSHAIR RECOVER RATE 20.00
+
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+ROUND IN CHAMBER One
+= JAR p. IPPRESS | PPS bE | 1 " ecm a
+
+RANK 10
+
+AN-94
+KILLS 2103
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+300 | 43
+
+) (50) "(120) "
+0] 150 300
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+AMMO CAPACITY 30/120
+AMMO TYPE 5.45x39mm
+FIRERATE 600 A|1800B|600S
+FIRE MODES | AUTO | Il | SEMI |
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.08 s
+MUZZLE VELOCITY 950.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 1.80
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.05
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 15.00
+HIPFIRE SPREAD DAMPING 0.80
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.25
+ACCURACY
+HIP CHOKE 0.35
+
+AIM CHOKE 0.35
+
+WEAPON HANDLING
+
+RELOAD TIME 1.8 seconds
+EMPTY RELOAD TIME 1.8 seconds
+EQUIP SPEED 14.00
+AIM MODEL SPEED 16.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 200.00
+
+CROSSHAIR RECOVER RATE 10.00
+
+MISC
+
+WEAPON WALKSPEED 15.00
+
+AIMING WALKSPEED 11.4
+
+ROUND IN CHAMBER None
+
+2 AN AR SIIPPRESSION RANIGEF and 20 studs
+— = _ SE Bias
+
+RANK 87
+
+E-GUN
+KILLS 14
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+15 2
+
+&P) (50) (sano 200
+HEAD MULTIPLIER 1.50
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+AMMO CAPACITY 25 / 200
+PELLET COUNT x1
+AMMO TYPE Angry Pancakes
+FIRERATE 3000 B| 850A|850S
+FIRE MODES | IIIIl | AUTO | SEMI |
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.00 s
+MUZZLE VELOCITY 1250.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 0.25
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.08
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 9.00
+HIPFIRE SPREAD DAMPING 0.70
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2 seconds
+EMPTY RELOAD TIME 2.8 seconds
+EQUIP SPEED 16.00
+AIM MODEL SPEED 20.00
+AIM MAGNIFICATION SPEED 18.00
+CROSSHAIR SIZE 20.00
+CROSSHAIR SPREAD RATE 900.00
+
+CROSSHAIR RECOVER RATE 15.00
+
+MISC
+
+WEAPON WALKSPEED 14.00
+
+AIMING WALKSPEED 8.4
+
+ROUND IN CHAMBER None
+
+—2ANAR SUPPRESSION RANGE 1 ines ‘ecoer
+*
+
+RANK 201
+
+AF2011-Al
+KILLS 12
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+42
+
+"(0) (25) 29 .
+(8) 100 0? 200
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.25
+LIMB MULTIPLIER 1.00
+
+PAILS WAP PAE mor le
+AMMO TYPE .45 ACP
+FIRERATB99000 SEMI | INSTANT BURST
+FIRE MODES | il |
+
+}
+: o> 9 tb (lore ’ : » ~~
+. = * : ° ' .
+> athe Bogle oe
+Pig oN ~
+J + -
+’ _" * «
+ee »
+“ ‘
+
+_- a
+
+a *
+
+oa
+" bs bs
+
+
+
+= =
+i
+-
+.
+e
+- a : ; oy —
+; = -
+~ + =
+~ -« = _~ 7 >
+- d x a
+
+
+18
+0 100 200
+TRIGGER MECHANIBSMAACT DETONATION
+SPECIAL EFFECTS IMPACT
+> TORED CAPACITY 3
+
+eas aa & o" >
+. - * 4 a"
+sabe Ss ~~, = % Pu ad ——
+. ~ “a ~~ ~.. - i rs ~ »* ' A id ~— »
+Ra ae a “tig Sages fee
+gt SEN Sa eS ES
+is - oo + int = sas rs 2 sah Cw < a> a. c-
+he Sete CTS >> eo 5 a eg nl hy a ne
+APE CS Fee me
+a" ~ 2. f—. = ar oe => se ae
+=. a En SN oe —_s
+Se eM FN rk a ~“
+: «eo — tee te att 4 Ye = ~*
+b - ® - = Tye . 2 77 - . As
+a <2 oe Rg de VEE Bete ee
+™=* Me. aah ce he = See = F*
+— 4 © en —" LS ty ans a AE |
+~ age ett hey ae Nak eS ee
+mh a = Mine oe, ab, oe + aS. Sa. ot
+- ,. . ; -. i. a a ~ _ : ee
+SEES ae eae
+eR Awe oS ae Ser ant
+se ere ERS oe
+oh 4 - ? ” ~ ws we “ . . ° ~—*
+~ a : ryt » Ae ¥, i... aon ° ohn ~~ Tal 7. ~ .*
+_ > ~ ; 2 eer. <* . a ™ ‘
+* ~*~ * - P. ee rms > - he
+f Ries > 4 * rd om T hot = = _
+- 4 Rg = ye x 1 = ye al
+se . a 7 ’ oe ies ~'s Dal he _ 1. .
+tr, bun tS Vt a, y Pa ban
+“ 7 a a > a et = at one hake, . .
+=s == .. Se - oe
+= - £ = * = - ~ ses
+= ~ _— , = - ~~ oe +. =
+a i e- e . . a
+ce Fy
+
+‘ N
++E te. b
+eal ty . eM
+AL *
+sisted
+ahaa ids Se?
+’ : &
+i oa
+Sis ‘ "ee %
+i, oa 4. r
+a @' ;
+¥ a > ' “e ‘ 4 bs
+' oe P eh. as : , re 7 ep ‘o = _ = sy
+%. 4 aoe. * ¥ ; - * Pm ha ae +. ae _ a
+: » ie ‘ — Py of , al % > =~ uJ - 2 . ae - =
+%\ ‘ - Pe ~~ ‘ “ey “Wes : ‘’ a. > ae ~~ ¢ "
+‘ * + hy ae r . 4 i + ‘
+* to) _" ak : e eos ~ ara ae * ae :
+“3 5. > +, > 2 j Ly P ) -—
+- o*® y ’ if 4 ‘ - “ ys “
+a “> ne: SS ean 7
+: x oe r w :
+
+-
+. Anim Ars ~
+‘ >) z on, P+ -—"
+ve. a. , *
+a = Ave &
+\ ’ . ~~
+
+
+
+=, =
++
+7 -
+«
+- = ~ —
+— ~~
+, . - .
+» _—
+~~ « a —_— = . 2 3
+— °
+_ > 7
+
+RANK 50
+
+CLONKER
+KILLS 0
+HEAD MULTIPLIER 1.64
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 55.00
+BACK STAB DAMAGE 122.00
+
+MAIN ATTACK TIME 0.5 SECONDS
+
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.5 SECONDS
+ALT ATTACK DELAY 0.2 SECONDS
+QUICK ATTACK TIME 0.7 SECONDS
+QUICK ATTACK DELAY 0.2 SECONDS
+WALKSPEED 16.00
+
+> ee... « of oe : — = Se tee eee ee oe ne “O
+Retwtawt ete pes, RR a
+. ’ ~. es —— i a a a - a»  »
+“ieegpe Se e+. _ a Pa LoS 2 oot
+ ~ , Sn = AN. soot ox . ay we - - a >
+eRe Rr ai ee
+. ea ° wd oe SE ee ee Ste SY eS ees
+SRS, Ge eco nek eS
+ae ee se ee ee:
+na ees a ee we ns ys
+. . a. aye § ; . x = ad - ~ tn * *. ‘
+Rae a ee oe *
+* im a et ’ 2 ne 2 ae te PS - -
+oye " . . ~ - . - 7 a - ) eR . " . =. ~ es» >
+gt, Re ee
+aR RS ae aS ar i eS
+ee Se i? - 2 ORS SS ore
+a. * s “a a abe? os ee Sobel “”~ ‘ a 7. =? 5 :
+Tifa : LA, a? . tn pa as ba eX ~~ re - ms
+Se AR See
+y a | af a - +. - >
+Awstigts Gt Cag eet
+" . 4 ras ~~ *
+tee si » a .  eP ‘hes -
+Nace 3a <etee ,  e e,
+
+78 . » * 7 ~ ~~ . eee.
+ee —_— oe * _—— te ~ “< v,.- Gam = ~~ aa oh
+_— ~ ~~ me 7 a Ce ° :
+
+ae h —“ _— Poe TA
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.12s
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.08
+
+HIPFIRE RECOVERY SPEED 8.00
+HIPFIRE SPREAD DAMPING 0.75
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+
+HIP CHOKE 0.00
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+RELOAD TIME 2.30 seconds
+EMPTY RELOAD TIME 3.10 seconds
+
+Crvl (ho CD EcETY, 73 oy
+
+WEAPON HANDLING
+
+RELOAD TIME 2.30 seconds
+EMPTY RELOAD TIME 3.10 seconds
+EFQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+CROSSHAIR RECOVER RATE 15.00
+
+MISC
+
+CROSSHAIR SPREAD RATE 400.00
+CROSSHAIR RECOVER RATE 15.00
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+ROUND IN CHAMBER One
+RANAR SIIPPRESSION RANGE = 1 ineunnrecceri
+
+RANK O
+
+AK12
+KILLS 2363
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+a . 20
+
+(QO) (70) "(1303 .
+0 150 300
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+AMMO CAPACITY 30/120
+AMMO TYPE 9.45x39mm
+FIRERATE TOO A|1000B| 7005S
+FIREMODES | AUTO | Ill | SEMI |
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.07 s
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.05
+
+HIPFIRE RECOVERY SPEED 10.00
+HIPFIRE SPREAD DAMPING 0.90
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 2.00
+ACCURACY
+
+HIP CHOKE 0.00
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+RELOAD TIME 2.50 seconds
+EMPTY RELOAD TIME 3.20 seconds
+
+Crvl (ho CD EcETY, 79 ory
+
+WEAPON HANDLING
+
+RELOAD TIME 2.50 seconds
+EMPTY RELOAD TIME 3.20 seconds
+EFQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+CROSSHAIR RECOVER RATE 20.00
+
+MISC
+
+CROSSHAIR SPREAD RATE 400.00
+CROSSHAIR RECOVER RATE 20.00
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+ROUND IN CHAMBER One
+RANAR SIIPPRESSION RANGE 1 Ineunnrecceri
+
+RANK 10
+
+AN-94
+KILLS 2103
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+{20 . 73
+
+(Q) (5D) “O 20) 7
+0] 150 300
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+AMMO CAPACITY 30/120
+AMMO TYPE 9.45x39mm
+FIRERATE 600 A|1800B|6005S
+FIRE MODES | AUTO | Il | SEMI |
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.07 s
+MUZZLE VELOCITY 950.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 1.80
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.05
+
+HIPFIRE RECOVERY SPEED 15.00
+HIPFIRE SPREAD DAMPING 0.80
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.25
+ACCURACY
+
+HIP CHOKE 0.35
+AIM CHOKE 0.35
+STATIC SPREAD 0.01
+
+WEAPON HANDLING
+RELOAD TIME 1.80 seconds
+
+CAs0D TY DE! MAT) Trs4e 71 On caranoAe
+
+WEAPON HANDLING
+
+RELOAD TIME 1.80 seconds
+EMPTY RELOAD TIME 1.80 seconds
+FQOQUIP SPEED 14.00
+AIM MODEL SPEED 16.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 200.00
+
+CROSSHAIR RECOVER RATE 10.00
+
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 200.00
+CROSSHAIR RECOVER RATE 10.00
+MISC
+
+WEAPON WALKSPEED 15.00
+AIMING WALKSPEED 11.4
+ROLINE IN CHAMBER None
+
+RANK 8&7
+
+E-GUN
+KILLS 14
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+7! = ; a}
+
+(0) (60) = 2
+10G 00) 200
+
+HEAD MULTIPLIER 1.50
+
+TORSO MULTIPLIER 1.00
+
+LIMB MULTIPLIER 1.00
+
+HEAD MULTIPLIER 1.50
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+AMMO CAPACITY 25 / 200
+PELLET COUNT x1
+AMMO TYPE Angry Pancakes
+FIRERATE 2500 B|850A|850S
+FIRE MODES | IIlll | AUTO | SEMI |
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.00 s
+MUZZLE VELOCITY 1250.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 0.25
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.08
+
+HIPFIRE RECOVERY SPEED 9.00
+HIPFIRE SPREAD DAMPING 0.70
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+
+HIP CHOKE 0.00
+AIM CHOKE 0.00
+STATIC SPREAD 0.01
+BIASED SPREAD xX: 2.50 ¥: 0.00
+
+WEAPON HANDLING
+
+DEC!) rATY TrAse Sn) caranAe
+
+BIASED SPREAD x: 2.50 ¥° 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2.00 seconds
+EMPTY RELOAD TIME 2.80 seconds
+EFQUIP SPEED 16.00
+AIM MODEL SPEED 20.00
+AIM MAGNIFICATION SPEED 18.00
+CROSSHAIR SIZE 20.00
+CROSSHAIR SPREAD RATE 500.00
+
+CROSSHAIR RECOVER RATE 15.00
+
+AIM MAGNIFICATION SPEED 18.00
+CROSSHAIR SIZE 20.00
+CROSSHAIR SPREAD RATE 900.00
+CROSSHAIR RECOVER RATE 15.00
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WAIL KSPFFI RA
+
+RANK 201
+
+AF2011-ATl
+KILLS 12
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+4?
+
+(0) (25) Oo .
+8] 10p °°? 200
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.25
+LIMB MULTIPLIER 1.00
+ABRALRAM® FC ADA MIT 164 {/11%
+
+TORSO MULTIPLIER 1.25
+LIMB MULTIPLIER 1.00
+AMMO CAPACITY 16/112
+AMMO TYPE .45 ACP
+FIRERATB99000 SEMI | INSTANT BURST
+FIRE MODES | Wl |
+
+
+
+
+<<. —~ a i —
+ee ——. - =.
+- ——-~ _ —— -_ aad =
+- ~~
+= Ss Se - ae -
+~ — — —— —. = i 5 = = ating << _
+: > > - . >= =
+= —_——— , ee aan — be
+_ —— << = ~ =
+a - . oa : . = 7
+: , . < ; _—~- ‘i
+> — - a —_ = > te
+* —_ -
+CO — - * ~ . =— —
+= ¢ . —— — = yw, a = =
+— _
+_ = . ~ 2 ——
+- “? —— <<. :
+——=—s = ss
+~~ - - - SS  — 2 _——
+=, : - “eee
+= > ~- - " a > r
+. =e » ——_* = - x
+= ~ = — — a —_
+_
+—_— “a — ee, - =
+- — —<— —
+' _- ro — - -
+ae ae
+
+
+O LK 25
+TRIGGER MECHANIBSMACT DETONATION
+SPECIAL EFFECTS IMPACT
+STORED CAPACITY 3
+THROW VELOCITY 135 studs/s
+THROW ANGLE 0.0°
+GRENADE ACCELERATIONO.O, -80.0, 0.0)
+FRICTION FACTOR 0.20
+cClractTicijTyv CartTtneo nin
+
+THROW ANGLE 0.0°
+GRENADE ACCELERATIONO.0, -80.0, 0.0)
+FRICTION FACTOR 0.20
+ELASTICITY FACTOR 0.10
+
+
+
+
+. -
+af ~
+= - —_- =
+- -
+— on <p =
+. _ oo",
+. —
+- - = »
+~ | ~ » ~ _
+~~ - —_—
+™~ a - 7 ir =. a
+° = ann
+= ~~ ~
+' - > -
+oe ——
+
+RANK 50
+
+CLONKER
+KILLS 0
+HEAD MULTIPLIER 1.64
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 95.00
+BACK STAB DAMAGE 122.00
+MAIN ATTACK TIME 0.5 SECONDS
+
+ALT ATTACK TIME 0.5 SECONDS
+
+ALT ATTACK TIME 0.5 SECONDS
+QUICK ATTACK TIME 0.7 SECONDS
+WALKSPEED 16.00
+
+Sie ot ee ya a ee Ee ON a _~a
+Les SS es eae Foch wae
+er ae ae ae ee =~ . = |
+c + > . + ~ wm» - ~ + ~ . - . - “pp * ~ ~~. -
+oe la .* P — ae a a
+eS Seen ae eae Soe a
+ae | ASS St a
+. 7 - aan —_—— ba % & > & a 7 _* re ce — eS =
+e — — : *s wy “et = : ‘
+ig Stee st eae SQh> Se ees
+< Me * . : ~ aa” e - © _ 29 —_-- ~~
+—N ee +S Sa a SS
+s 2 ; =* “y* bs ,_—.*> wy hel % : i i. me
+he Sa > ee PL ot a
+Re gE eS et = ne
+7 . | \. : - me. . . — Kp
+a. if) Bo. Pie ee ee ee
+- +. A 73 © 2° i- v7? « > b> en _ -
+: a ee ~ : ee : =o we > ‘ ion Ne
+“, oP on = _- ~ 5, . , i ok - ‘ ~ y- as
+} ” 4 ~ o ’ : Was oat
+in See Se ek ae Se
+“ - — a : ~~ "i ® vr fy anne ree ‘ 7 * a < c gf f wT
+0 Oe peer ta . == Oe ea
+a Ded . he », nail oe, 7 >. - } . ao a P 4
+. _ =’ ts” ee a _
+wl . * —s - ‘x 4 pares oe S ~ ——
+¥ d 7 * . -s s. ae _ he, on q +> Neg . >.”
+a“, we .. as ee OR eee “ .
+; + rr 2: ; , _— + "ag! 7
+Sab J ae ate Ss ee he
+. | a >. -
+’ err Ww d
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.12s
+MUZZLE VELOCITY 2950.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+RADAR SUPPRESSION RANGE Unsuppressed
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 8.00
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 8.00
+HIPFIRE SPREAD DAMPING 0.75
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2.30 seconds
+EMPTY RELOAD TIME 3.10 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+CROSSHAIR RECOVER RATE 15.00
+
+LOOK SWAY MULT 1.00
+
+CROSSHAIR RECOVER RATE 15.00
+LOOK SWAY MULT 1.00
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+ROUND IN CHAMBER One
+
+RANK O
+
+AK12
+KILLS 2364
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+> 7 20
+
+(Q) (70) "(130) .
+0) 150 300
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+AMMO CAPACITY 30/120
+AMMO TYPE 9.45x39mm
+FIRERATE 700 A|1000B| 7005
+FIREMODES | AUTO | Ill | SEMI |
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.07 s
+MUZZLE VELOCITY 2950.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+RADAR SUPPRESSION RANGE Unsuppressed
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 10.00
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 10.00
+HIPFIRE SPREAD DAMPING 0.90
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 2.00
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2.50 seconds
+EMPTY RELOAD TIME 3.20 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+CROSSHAIR RECOVER RATE 20.00
+
+LOOK SWAY MULT 0.50
+
+CROSSHAIR RECOVER RATE 20.00
+LOOK SWAY MULT 0.50
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+ROUND IN CHAMBER One
+
+RANK 10
+
+AN-94
+KILLS 2103
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+30 73
+(0) (50) ia 20) "
+0 150 300
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+AMMO CAPACITY 30/120
+AMMO TYPE 9.45x39mm
+FIRERATE 600A|1800B|6005S
+FIREMODES | AUTO | Il | SEMI |
+
+MINIMUM TIME TO KILL 0.07 s
+
+MUZZLE VELOCITY 950.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 1.80
+
+RADAR SUPPRESSION RANGEBeyond 20 studs
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 15.00
+HIPFIRE SPREAD DAMPING 0.80
+
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 15.00
+HIPFIRE SPREAD DAMPING 0.80
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.25
+ACCURACY
+
+HIP CHOKE 0.35
+AIM CHOKE 0.35
+
+STATIC SPREAD 0.01
+
+WEAPON HANDLING
+
+RELOAD TIME 1.80 seconds
+EMPTY RELOAD TIME 1.80 seconds
+EQUIP SPEED 14.00
+AIM MODEL SPEED 16.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 200.00
+CROSSHAIR RECOVER RATE 10.00
+
+LOOK SWAY MULT 1.00
+
+CROSSHAIR RECOVER RATE 10.00
+LOOK SWAY MULT 1.00
+MISC
+
+WEAPON WALKSPEED 15.00
+AIMING WALKSPEED 11.4
+ROUND IN CHAMBER None
+
+RANK 87
+
+E-GUN
+KILLS 14
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+om - 2
+
+£9) (60) 2 .
+10@ 00) 200
+
+HEAD MULTIPLIER 1.50
+
+TORSO MULTIPLIER 1.00
+
+LIMB MULTIPLIER 1.00
+
+HEAD MULTIPLIER 1.50
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+AMMO CAPACITY 25 / 200
+PELLET COUNT x1
+AMMO TYPE Angry Pancakes
+FIRERATE 2500B|850A|850S$
+
+PVEEIMEPWELIPVE PEPE PO? PL UU S
+
+MUZZLE VELOCITY 1250.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 0.25
+
+RADAR SUPPRESSION RANGE Unsuppressed
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 9.00
+HIPFIRE SPREAD DAMPING 0.70
+
+PEEr fF PPak. wP Pale ks PF oP ke TO ee
+
+HIPFIRE RECOVERY SPEED 9.00
+HIPFIRE SPREAD DAMPING 0.70
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+
+HIP CHOKE 0.00
+AIM CHOKE 0.00
+
+STATIC SPREAD 0.01
+
+WEAPON HANDLING
+
+RELOAD TIME 2.00 seconds
+EMPTY RELOAD TIME 2.80 seconds
+EQUIP SPEED 16.00
+AIM MODEL SPEED 20.00
+AIM MAGNIFICATION SPEED 18.00
+CROSSHAIR SIZE 20.00
+CROSSHAIR SPREAD RATE 200.00
+
+CROSSHAIR RECOVER RATE 15.00
+
+roar 6M AI AS On OP OUP _ rr
+
+CROSSHAIR SPREAD RATE 500.00
+CROSSHAIR RECOVER RATE 15.00
+LOOK SWAY MULT 1.00
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+ROUND IN CHAMBER None
+
+RANK 201
+
+AF2011-Al
+KILLS 12
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+42
+
+“(0) (25) 20 .
+(8) 100 2? 200
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.25
+LIMB MULTIPLIER 1.00
+
+TORSO MULTIPLIER a.20
+LIMB MULTIPLIER 1.00
+AMMO CAPACITY 16/112
+AMMO TYPE 45 ACP
+FIRERATB99000 SEMI | INSTANT BURST
+FIRE MODES | Wl |
+
+
+‘last saw
+ces, tried a
+ends. |..~
+
+ly tell, but
+tine We
+
+
+
+< x ee
+
+' wa , ©:
+eee Ste ian Pattie oo
+ae ae ee : 2 aS . -
+Sd 6° bb Sgt “eT hep . ee Se a -
+eMac he ety so 2. : - " alien a * Ss -
+“hiod eee pat Shah ay 5 ot he. at
+BRE eA Ny cc aL IR sex pr —
+pe bis atrieet PEPER mS? +7 ies
+
+abe :. a ne Noes’ ONS J ~ S ,; . 3 : ; ; : LN vo
+coe Ye ay ari eR Mice ay Le Been, ~ & 8 - “s
+ao ke “, rk ma ~ahyP tae Ed yar re ' SLE
+Shep nese aah - - eda | YY SS na a Si Pont
+, 7 re 72 "> Raat 7. ™ 7 —— . Ss >>- * oe co
+a ba rd i's eRe eee € ee oe Lee:
+Sete ees yards Bee pea saa et Ny, Ss ‘) jie
+rie ech na ee Sts fe? ale eet nae ai ; “* “ se Pat
+Ant oie 47 ent Rad ‘ o5%) Sa Nate ais >,
+
+vat Meigs t bs a Say - . meer e ss - Mg s .,
+ite Se hy . hia Po aa te SP, = am,
+‘Sa fhe Se iP ag | rs a nite : “* , “A We
+
+mks eo Due he heen, Teg he 7 2 a ,
+PAR Set She ws Se ee a a SUPTCy:
+Shh shes? sips yen ae 3 tes +S Ayers .
+? ee petee neces eins Tee. . ~~ > iS
+“ ceye ae y; we . , a Sa ad y we ieee , ee ee x -~ * ’
+yeah Bice baad: eg as ay a ae --.
+ey - +a) ‘aa Pie: Ciyin we *< >} ¥ u ro By 4 ‘ - a. we
+Ree Waar ct KAS Na ae . ;
+WR a ae vy ‘ ant it « ar ty >
+
+pase ees eL DASE ot Sa yi
+
+f ABS.) cae as wea Re sae as) .
+
+Rae ona we ipne's
+
+arty r
+
+
+0 13 25
+TRIGGER MECHANIBSAACT DETONATION
+SPECIAL EFFECTS IMPACT
+STORED CAPACITY 3
+THROW VELOCITY 135 studs/s
+THROW ANGLE 0.0°
+GRENADE ACCELERATIONO.O, -80.0, 0.0)
+FRICTION FACTOR 0.20
+
+THROW ANGLE 0.0°
+GRENADE ACCELERATIONO.0, -80.0, 0.0)
+FRICTION FACTOR 0.20
+ELASTICITY FACTOR 0.10
+
+
+. la Ss T Saw Se,
+ces, tried a fF
+ends. 1..~
+
+ly tell, but
+tine ae
+
+
+
+oe *se™.
+2 ¥ —— . a
+~N Lo oy
+. FAS oe mets
+BE Site oa te es
+Ph ee aare aa =" a Fine Mis +
+, = 9 oety, ti 2 “ . , > . - +>
+oe NaF era es arpa, ee a » eg. ie ee
+esa : a i+ +? tee ~ . - ® _ « a‘ = —
+- “3 “bre - ~ : > = ; ° i, : arp, a . _ ;
+
+Rea a! He Hay re ca, pas es *. Ws we
+et oY. : oh s2 <a 4 ' “? we ro ‘ ~ ~“" J ; i - i a. | he
+Bas >. ideas > eer sce ‘
+wks Puta bho OTR, ca Pe yaaa + Qe Seu. ;
+SS gia ey Re was thy ge daa [ tt von i rs,
+Shep aaa ee EST SI Si Ph ns \
+7 - P43) > ° Sy ‘. . pe - ~~ ; ea > “ ‘ <f
+
+a - er * Bb Ty > t ae ae} + AA bs e , .
+Cates be ee ome m Wye Nee ~ a
+ey Palate Tilia ‘ Rect? Sai ee Ye — >.
+paps Seno ee thee ae oan Sees 3S a Ps
+vee: t 4 ~ ch 4 fesuty 3 ; a , A J ' ;
+Usa ae Adele its fr3 ie \Oeeg b} s eH
+
+PRESEN GS Dah ty a a a ds Thess } <a .4
+Leaves ee age Rd Sea! =e ee glk
+“Whe BS oe ns sh N, ‘ zu, $ ays A , i oe .* aot 7
+easeaian? ee rz Somers Mane MP iy 28 = Set:
+Pesta): Sea aT 3 +
+Pate eae Heres aaa
+Sipe ang zt ar Ve ri i- 5. ee
+
+A 4 ene Stee cf bis aby
+* RNAS ee aasak tate at ee
+eas eae eS: ~~
+Pe eR ee
+
+RANK 50
+
+CLONKER
+KILLS 0
+HEAD MULTIPLIER 1.64
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 55.00
+BACK STAB DAMAGE 122.00
+
+MAIN ATTACK TIME 0.5 SECONDS
+
+ALT ATTACK TIME 0.5 SECONDS
+QUICK ATTACK TIME 0.7 SECONDS
+WALKSPEED 16.00
+
+
+ADVANCED SIAIS —
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.17s
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.08
+WIPCIRE RECOVERY CPEENR 200
+
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 8.00
+HIPFIRE SPREAD DAMPING 0.75
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+RELOAD TIME 2.3 seconds
+
+EMPTY RELOAD TIME 3.1 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+CROSSHAIR RECOVER RATE 15.00
+
+MISC
+
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppressed
+
+AK12
+KILLS 2362
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+- 20
+(0) (70) me an "
+130
+0) 80 300
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+AMMO CAPACITY 30/120
+AMMO TYPE 9.45x39mm
+FIRERATE TOO A|1000B| 7005S
+FIREMODES | AUTO | Ill | SEMI |
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.205
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.05
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 10.00
+HIPFIRE SPREAD DAMPING 0.90
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 2.00
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2.5 seconds
+EMPTY RELOAD TIME 3.2 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+
+CROSSHAIR RECOVER RATE 20.00
+
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+ROUND IN CHAMBER One
+
+RANK 10
+
+AN-94
+KILLS 2103
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+300 | 43
+
+) (50) "(120) "
+0] 150 300
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+AMMO CAPACITY 30/120
+AMMO TYPE 9.45x39mm
+FIRERATE 600A|1800B|600S
+FIRE MODES | AUTO | Il | SEMI |
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.08 s
+MUZZLE VELOCITY 950.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 1.80
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.05
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 15.00
+HIPFIRE SPREAD DAMPING 0.80
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.25
+ACCURACY
+HIP CHOKE 0.35
+
+AIM CHOKE 0.35
+
+WEAPON HANDLING
+
+RELOAD TIME 1.8 seconds
+EMPTY RELOAD TIME 1.8 seconds
+EQUIP SPEED 14.00
+AIM MODEL SPEED 16.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 200.00
+
+CROSSHAIR RECOVER RATE 10.00
+
+MISC
+
+WEAPON WALKSPEED 15.00
+
+AIMING WALKSPEED 11.4
+
+ROUND IN CHAMBER None
+obility,and aiming Speed. ond on .
+
+E-GUN
+KILLS 14
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+15 2
+
+&P) (50) (sano 200
+HEAD MULTIPLIER 1.50
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+AMMO CAPACITY 25/200
+PELLET COUNT x1
+AMMO TYPE Angry Pancakes
+FIRERATE 3000 B|850A|85058
+FIRE MODES | IIlll | AUTO | SEMI |
+aes oo
+“aaah ™ Ne
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.00 s
+MUZZLE VELOCITY 1250.00 studs/s
+PENETRATION DEPTH 0.50 studs
+SUPPRESSION 0.25
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.08
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 9.00
+HIPFIRE SPREAD DAMPING 0.70
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2 seconds
+EMPTY RELOAD TIME 2.8 seconds
+EQUIP SPEED 16.00
+AIM MODEL SPEED 20.00
+AIM MAGNIFICATION SPEED 18.00
+CROSSHAIR SIZE 20.00
+CROSSHAIR SPREAD RATE 900.00
+
+CROSSHAIR RECOVER RATE 15.00
+
+MISC
+
+obility.and aiming speed -
+AIMIWG WALKSPEEL ; 8.4
+ROUND IN CHAMBER None
+RANAR SIUIPPRESSION RANGE oy
+
+RANK 201
+
+AF2011-Al
+KILLS 12
+OPTICS DEFAULT
+BARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+42
+
+"(0) (25) 29 .
+(8) 100 0? 200
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.25
+LIMB MULTIPLIER 1.00
+
+AMMO TYPE .45 ACP
+FIRERATB99000 SEMI | INSTANT BURST
+FIRE MODES | i |
+
+
+= = a
+
+
+a . . ~~ rr oh ae
+X - ke NS Sa %,
+al ¥ > vila yw Fn
+m eR Se
+Ps “war Qei i - - : " a
+J ot al oe AY ans . - =. +<v¥K, ae 's ¥
+? ao “Site fo ¢ ~- oS te “et
+; q - _ oo") . ~e — J 1g © Lor -
+- ~— rd . Q eres ioe ~ ‘4 2 . :
+> ye ip -, - - —: a ms Sy! b ae i ai =
+i ~~) > eee te oe if A > ° bs Es
+r >. ¢< m2 ¥ “~~, © ate a tO Mg “St 4
+. ' . > =, ’ = oon ete
+oe twee” Dee a, ea NS
+v Mee s-y | ie! , ans - s .
+- re ~ : 7 «- b
+» _™~, $73 es “ot ~* i a ; :
+: ~ 5 il — = 7 228 ~ og — ~ ¢ + ~~, * ~~ -* we
+. - Ox
+a hee eee Aare oe!
+‘1 See Sekes agar ®
+= _ Me »- » ~. _- / °
+Seer Sr eS se wT ye
+.<" ed CP wn fe oe en Tey a
+adi, , = < [4 _——* = ‘> * “= —
+Pade © ae" is oe 2. ~ . “ - ’ i. cy a
+ee ae ERS Baas yr og eee SP ww "Sie
+=> 3 ss — - , a oe : Se > z=
+& Ss . ron =o
+" » oo + » —— - . é
+2m PS 4 Ma - — * oms a = 2 > +. -
+3 - - < a > « _ “ip -
+cc a= 4
+* “ ’ wt $ - ‘ . 3
+“i. a ' m4 > - 7 » i .
+> ‘ > > oa a 4. (= ; ’ i ’ . ;
+: ! 4 ' od — » ‘ 4 . 3 ’
+eh jane _ es ae ii
+_ me . — : CS ets '’
+nal F te =~ a a >> 2 “ cS _
+. re eo es a : ee ee -.
+ ——— - a ac ene: T, at, es eS se > o
++. wt ’ . ‘ © fee - a = ws <
+Ce -! ~<a 23% 4-4 ns a
+. e. “% a « “4 = ~ -
+ae 2 ~a. - nal ae ‘ 7 \ r phe « * =
+a ? . _ ’ 2 7. 25 2 M . a.
+=p Cae TERR. - , . Reece gees
+pe at or er . re ¢ =
+— « + ee, ne Pee > ~ 7 a . a .
+ee Ste es he ee ee . = TY "
+7 as , OS Ors - “ - a « ad mi - : _ fe =~, al
+
+
+18
+O 100 200
+TRIGGER MECHANIBMAACT DETONATION
+SPECIAL EFFECTS IMPACT
+STORED CAPACITY 3
+
+| ————
+
+= SS
+~ ‘
+? : ‘i - - _
+. r 4 a ae . 1: 2 °
+> oe ee 7 7
+; > > Sb Sy as ———
+* fi > as, “pa - te
+as ae 1 oe —ee
+AS = . 4 . +. 1 ° ‘a
+t# - (atx /+ . 7% ’ ’ .
+a ‘.* ~ a, ws 7. tae ee . :
+< <.. OF mle + Ms » SS ot
+4 = xa a _— 1i-— eos a
+“ - 4 - - 4 % y?,) a Sn er z c
+fF Tee 2 7 Se a
+: ’ D : <a eo wa m ‘
+: . “I —— "a “- See ee > =" -
+i “a er ~~ ; 7 : Kol Pow
+hie: <4 ; . . ®. o _ , - ¢ wh
+oS * - - - p _ a ce
+y ; — = . ae
+rae Se |
+ate “bs i awe ba = ¥
+ae 7 ; x ix~_* . ’ .
+- 7 a. ° . >
+& “ ‘ . et - -
+“J _ Disp .
+
+~
+‘
+
+ots, es ae. in
+
+Rok
+4 . Le
+ue ie ak
+
+
+eee
+
+Es Frome
+
+
+
+“a! : ~*~ e — eo
+7 ee pike Sy
+or eee 2 ee ; - 1A
+z% te a a aaa
+~ > a> E \e ~ Seb. ,. ae - > *~.
+Phe a Se NS 0S Rs IT ek ee Ok) Le
+> 5 OP ent ‘ “ale; - , nn ge ee
+— a ae oe: fa | ; P Tues te. oo
+2 « o .* ~ 2) tor - a cf te ~y + ° = Lae. ee
+. r¥ . + “se <b =~
++: See Pe _" ty ~ aa Ra Mp. “ a a
+eg Ol oe ett ee kD : ee et
+x wien =e  . or Pt. v. / >
+. Sh et ee “+
+2 ae ae ss
+; - rete mec
+- Ses Se eS “1 So nS : s
+pS eG Err Sa ae xe eh
+= ~s peed, a = 7 po PO R P .
+2 ere SS. 7 s. & P Ex & os,
+> om a ot’ on ¢ ‘ — a see
+— “a ee gr oa Mes x” thee M4 +
+, ~al » * —“s i a “ + 1 ~ on. FL ge > “-* =a Pi
+ee. a SS Se es a ts 3 i ee
+oe. =~ 2 oat _ S. - gee be ~S
+.« % a Os - e- ~ « -«- ">" 7 . > +"
+we gy ae a c c ps ty
+ie tm , Si ee at > E ;
+PR . was a ee oC’ a 4 2 ~
+= . Ps A c .* oS, A ot) -
+ame =e = oe
+2 : “ # i ;
+i Ske “is or ao .
+* ~ % bad - @ a ».
+C4 Se. SF | EN > 2. teak ‘
+age - — es i Ce, fa . ~
+“" a. 2 — . - » . = ~— > s -
+—_" . es ~ <> a —_ ~~ ame ~ =
+VT bar 2 44 : . a -4 ad c rt ~ = -
+a ; Co 4 » .* yy - “<i - ? y “ - <4 _* -.~aigh me
+” 4 ee . . » +, sian O~._ 2 :
+“< c“% + a,’ q*- *+ a - > eee > tah = .
+eS Te ee ene. eae .— f a» Sata - ‘
+a i * . w= oe > ~ &y
+eed ate & POS ee me = = —
+i « a ae a r. 4 ~ : . ‘
+eth. * >» cae — 7 : ~_ pa = - ‘ im,
+¢ woe «Pee a ° “ : a > ‘ o “a .
+"yea “S- > a wet e Th - 4 Ky — - _ <q
+as & toes en Se ae 4 ~ oa — :
+er he wt ‘. =& tw ae, —>- — - ~~ 7. 4 , “=
+. 7 *» c tee ~<a ee > . Oa ~ > —_—
+Se. 8 SP — o- * e
+>  - » i. +164 «es = ff ~~ ———  - ee A
+
+RANK 50
+
+CLONKER
+KILLS 0
+HEAD MULTIPLIER 1.64
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+FRONT STAB DAMAGE 55.00
+BACK STAB DAMAGE 122.00
+
+MAIN ATTACK TIME 0.5 SECONDS
+
+MAIN ATTACK DELAY 0.2 SECONDS
+ALT ATTACK TIME 0.5 SECONDS
+ALT ATTACK DELAY 0.2 SECONDS
+QUICK ATTACK TIME 0.7 SECONDS
+QUICK ATTACK DELAY 0.2 SECONDS
+WALKSPEED 16.00
+| 2 See
+
+==
+_
+€ r :
+SS
+~~. = *.. sa 2
+—— :
+. mg " , ;
+« - ~~h A i. ’ * -
+—s" = a , =< rs
+: — 4 ie a . ~~ - ae aw ‘
+~~ —< ras, - - , * WHERE .
+. o - . A ~ :
+a .* = pS a - ; im
+ag . + ~~ =. —— crs ~ a
+5+ is — “> —_. ~~ ‘ a . * .
+: ; ; - + ~ we < ‘
+= ae * - ot 4 << > = a - ie .
+~~ = FPA «. %, -™¥ ‘~~ aT > ;
+c hae , 22 te -* Se 48
+; ~ .. ef _“* -— bs » i- od Ms
+eae Pe st. 5 . ‘hs a? = #. -
+' ; ee
+S » : “ LQ -" _ ? = 7
+a . a A : '
+= a uN : + aS rer
+ute: ; — = hy ats Pb o- of
+eS 3 ; , en aes
+er _ 7a : . _ . -2° eee
+5 Cw es " —
+; ’ ’ - ° ~
+ene . mtd : — -
+xX : <~_* . =
+~"1
+4 . ; -
+> =e ~. ers, , :
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.12s
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.08
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 8.00
+HIPFIRE SPREAD DAMPING 0.75
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2.3 seconds
+EMPTY RELOAD TIME 3.1 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+
+CROSSHAIR RECOVER RATE 15.00
+
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 84
+ROUND IN CHAMBER One
+a YAR ,. IPPRESS | PN be | 1 " " : a
+
+RANK O
+
+AK12
+KILLS 2363
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+- 20
+(0) (70) me an "
+130
+0) 80 300
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+AMMO CAPACITY 30/120
+AMMO TYPE 5.45x39mm
+FIRERATE TOO A|1000B| 7005S
+FIREMODES | AUTO | Iil | SEMI |
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.07 s
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.05
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 10.00
+HIPFIRE SPREAD DAMPING 0.90
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 2.00
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2.5 seconds
+EMPTY RELOAD TIME 3.2 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+
+CROSSHAIR RECOVER RATE 20.00
+
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+ROUND IN CHAMBER One
+= JAR p. IPPRESS | PPS bE | 1 " ecm a
+
+ADVANCED SIAIS —
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.17s
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.08
+WIPCIRE RECOVERY CPEENR 200
+
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 8.00
+HIPFIRE SPREAD DAMPING 0.75
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+RELOAD TIME 2.3 seconds
+
+EMPTY RELOAD TIME 3.1 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+CROSSHAIR RECOVER RATE 15.00
+
+MISC
+
+MISC
+
+WEAPON WALKSPEED 14.00
+AIMING WALKSPEED 8.4
+ROUND IN CHAMBER One
+RADAR SUPPRESSION RANGE Unsuppressed
+
+AK12
+KILLS 2362
+OPTICS DEFAULT
+BARREL DEFAULT
+UNDERBARREL DEFAULT
+OTHER DEFAULT
+
+AMMO DEFAULT
+
+- 20
+(0) (70) me an "
+130
+0) 80 300
+HEAD MULTIPLIER 1.40
+TORSO MULTIPLIER 1.00
+LIMB MULTIPLIER 1.00
+
+AMMO CAPACITY 30/120
+AMMO TYPE 9.45x39mm
+FIRERATE TOO A|1000B| 7005S
+FIREMODES | AUTO | Ill | SEMI |
+
+ADVANCED STATS
+
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.205
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.05
+
+HIP ACCURACY
+
+HIPFIRE SPREAD FACTOR 0.05
+HIPFIRE RECOVERY SPEED 10.00
+HIPFIRE SPREAD DAMPING 0.90
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 2.00
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+
+WEAPON HANDLING
+
+RELOAD TIME 2.5 seconds
+EMPTY RELOAD TIME 3.2 seconds
+EQUIP SPEED 12.00
+AIM MODEL SPEED 15.00
+AIM MAGNIFICATION SPEED 12.00
+CROSSHAIR SIZE 30.00
+CROSSHAIR SPREAD RATE 400.00
+
+CROSSHAIR RECOVER RATE 20.00
+
+ADVANCED SIAIS —
+WEAPON BALLISTICS
+
+MINIMUM TIME TO KILL 0.17s
+MUZZLE VELOCITY 2500.00 studs/s
+PENETRATION DEPTH 1.00 studs
+SUPPRESSION 0.50
+
+HIP ACCURACY
+HIPFIRE SPREAD FACTOR 0.08
+WIPCIRE RECOVERY CPEENR 200
+
+HIPFIRE SPREAD FACTOR 0.08
+HIPFIRE RECOVERY SPEED 8.00
+HIPFIRE SPREAD DAMPING 0.75
+
+SIGHT ACCURACY
+
+SIGHT MAGNIFICATION 1.80
+ACCURACY
+HIP CHOKE 0.00
+
+AIM CHOKE 0.00
+

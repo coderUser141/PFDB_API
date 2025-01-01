@@ -1,5 +1,6 @@
 import sys
 sys.path.append('C:\\Users\\Aethelhelm\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages')
+sys.path.append('/mnt/bulkdata/Programming/PFDB/PFDB_API/lib/python3.12/site-packages')
 
 import numpy
 import cv2
@@ -48,8 +49,14 @@ class ImageParser:
 	def __init__(self, tesspath):
 		self.resize_scale = 5
 		TESS_PATH = tesspath + "tessbin"
-		os.environ["TESSDATA_PREFIX"] = TESS_PATH + "\\tessdata\\"
-		pytesseract.pytesseract.tesseract_cmd = TESS_PATH + "\\tesseract"
+		testpath = TESS_PATH + "/tessdata/"
+		testpath2 = TESS_PATH + "/tessdata_best-4.1.0"
+		if(os.path.exists(testpath2)):
+			os.environ["TESSDATA_PREFIX"] = testpath2
+		elif(os.path.exists(testpath)):
+			os.environ["TESSDATA_PREFIX"] = testpath
+		if not(os.path.exists("/usr/bin")):
+			pytesseract.pytesseract.tesseract_cmd = TESS_PATH + "\\tesseract"
 
 	def parseTextFromImage(self, imagePath, weaponType, version, rank = 0):
 		weaponType = int(weaponType)

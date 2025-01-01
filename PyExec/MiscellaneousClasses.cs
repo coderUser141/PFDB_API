@@ -61,11 +61,10 @@ namespace PFDB
 			/// </summary>
 			public PhantomForcesVersion Version { get; private set; } = new PhantomForcesVersion("8.0.1");
 
-			WeaponIdentification IPythonExecutable.WeaponID => throw new System.NotImplementedException();
+			public WeaponIdentification WeaponID {get; private set;} = new WeaponIdentification(1000000000000000);
+			public WeaponType WeaponType {get; private set;} = WeaponType.Primary;
 
-			WeaponType IPythonExecutable.WeaponType => throw new System.NotImplementedException();
-
-			bool IPythonExecutable.IsDefaultConversion => throw new System.NotImplementedException();
+			public bool IsDefaultConversion { get; private set; } = true;
 
 			/// <summary>
 			/// Dummy input-checker.

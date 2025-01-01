@@ -10,6 +10,7 @@ using PFDB.Logging;
 using PFDB.SQLite;
 using PFDB.PythonExecutionUtility;
 using PFDB.PythonFactoryUtility;
+using System.IO;
 
 namespace PFDB
 {
@@ -35,10 +36,10 @@ namespace PFDB
 			/// <inheritdoc/>
 			public bool IsDefaultConversion { get { return _isDefaultConversion; } }
 
-			private void _constructorHelper(OutputDestination outputDestination, Categories categoryGroup, int weaponNumber, string path, PhantomForcesVersion version, string programDirectory, string? tessbinPath)
+
+			private void _constructorHelper(OutputDestination outputDestination, Categories categoryGroup, int weaponNumber, string path, PhantomForcesVersion version, string programDirectory, string? tessbinPath, TPythonExecutable pythonExecutable)
 			{
 				PythonExecutor py = new PythonExecutor(outputDestination);
-				TPythonExecutable pythonExecutable = new();
 				PFDBLogger.LogDebug("PythonExecutionFactory information. Is current object a PythonTesseractExecutable?", parameter: pythonExecutable is PythonTesseractExecutable);
 
 				for(int index = 0; index < version.MultipleScreenshotsCheck(); index++)
@@ -157,6 +158,11 @@ namespace PFDB
 			/// <param name="isDefaultConversion">Specifies if the images supplied are for default conversion.</param>
 			public PythonExecutionFactory(IDictionary<Categories,List<int>> weaponIDs, IDictionary<PhantomForcesVersion, string> versionAndPathPairs, string programDirectory, OutputDestination outputDestination, string? tessbinPath, Cores coreCount = Cores.Dual, bool isDefaultConversion = true)
 			{
+				TPythonExecutable pythonExecutable = new();
+				if(Directory.Exists(tessbinPath) == false && tessbinPath != null && pythonExecutable is PythonTesseractExecutable) {
+					PFDBLogger.LogFatal("The tessbin directory was not found, and was not null (null assumes that tessbinpath is in the same working directory)", parameter: tessbinPath);
+					throw new DirectoryNotFoundException("The tessbin directory was not found, and was not null (null assumes that tessbinpath is in the same working directory). tessbinPath was " + tessbinPath);
+				}
 				_coreCount = (int)coreCount;
 				_queue = new List<IPythonExecutor>();
 				_isDefaultConversion = isDefaultConversion;
@@ -164,7 +170,11 @@ namespace PFDB
 				{
 					foreach (Categories categoryGroup in weaponIDs.Keys) {
 						foreach (int weapon in weaponIDs[categoryGroup]) {
-							_constructorHelper(outputDestination, categoryGroup, weapon, versionAndPathPairs[version], version, programDirectory, tessbinPath);
+							if(File.Exists(versionAndPathPairs[version]) == false){
+								PFDBLogger.LogError("The targeted file was not found. Skipping.", parameter: versionAndPathPairs[version]);
+								continue;
+							}
+							_constructorHelper(outputDestination, categoryGroup, weapon, versionAndPathPairs[version], version, programDirectory, tessbinPath, pythonExecutable);
 						}
 					}
 				}
@@ -183,6 +193,11 @@ namespace PFDB
 			/// <param name="isDefaultConversion">Specifies if the images supplied are for default conversion.</param>
 			public PythonExecutionFactory(IDictionary<Categories, Collection<int>> weaponIDs, IDictionary<PhantomForcesVersion, string> versionAndPathPairs, string programDirectory, OutputDestination outputDestination, string? tessbinPath, Cores coreCount = Cores.Dual, bool isDefaultConversion = true)
 			{
+				TPythonExecutable pythonExecutable = new();
+				if(Directory.Exists(tessbinPath) == false && tessbinPath != null && pythonExecutable is PythonTesseractExecutable) {
+					PFDBLogger.LogFatal("The tessbin directory was not found, and was not null (null assumes that tessbinpath is in the same working directory)", parameter: tessbinPath);
+					throw new DirectoryNotFoundException("The tessbin directory was not found, and was not null (null assumes that tessbinpath is in the same working directory). tessbinPath was " + tessbinPath);
+				}
 				_coreCount = (int)coreCount;
 				_queue = new List<IPythonExecutor>();
 				_isDefaultConversion = isDefaultConversion;
@@ -190,7 +205,11 @@ namespace PFDB
 				{
 					foreach (Categories categoryGroup in weaponIDs.Keys) {
 						foreach (int weapon in weaponIDs[categoryGroup]) {
-							_constructorHelper(outputDestination, categoryGroup, weapon, versionAndPathPairs[version], version, programDirectory, tessbinPath);
+							if(File.Exists(versionAndPathPairs[version]) == false){
+								PFDBLogger.LogError("The targeted file was not found. Skipping.", parameter: versionAndPathPairs[version]);
+								continue;
+							}
+							_constructorHelper(outputDestination, categoryGroup, weapon, versionAndPathPairs[version], version, programDirectory, tessbinPath, pythonExecutable);
 						}
 					}
 				}
@@ -264,7 +283,7 @@ namespace PFDB
 				StatusCounter QueueStatus = new StatusCounter();
 				StatusCounter ExecutionStatus = new StatusCounter();
 
-				PFDBLogger.LogInformation("Factory has started");
+				PFDBLogger.LogInformation("Factory has started.");
 
 				ThreadPool.SetMinThreads(_coreCount, _coreCount);
 				ThreadPool.SetMaxThreads(_coreCount, _coreCount);
@@ -274,6 +293,7 @@ namespace PFDB
 					listForQueue.Add(new List<IPythonExecutor>(_queue));
 				}
 
+				// allocates items to a temporary queue buffer that restricts the number of parallel threads to be within the core count of the computer.
 				for(int i = 0; i < _queue.Count/ _coreCount; i++)
 				{
 					List<IPythonExecutor> temp = new List<IPythonExecutor>();
@@ -333,7 +353,7 @@ namespace PFDB
 							}else if(executor.Output is FailedPythonOutput failedOutput)
 							{
 								ExecutionStatus.FailCounter++;
-								PFDBLogger.LogError($"Execution failed.", parameter: failedOutput.OutputString);
+								PFDBLogger.LogError($"Execution failed: Execution of the individual Python script failed", parameter: failedOutput.OutputString);
 							}
 							else
 							{

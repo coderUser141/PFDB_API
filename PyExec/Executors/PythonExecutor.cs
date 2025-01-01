@@ -86,7 +86,7 @@ namespace PFDB
 			/// <param name="destination">Output destination for the enclosed <see cref="IOutput"/> object.</param>
 			public PythonExecutor(OutputDestination destination)
 			{
-				_input = new InitExecutable(); _output = new PythonOutput("");
+				_input = new InitExecutable(); _output = new TestOutput();
 				_destination = destination;
 				_manualEvent = new ManualResetEvent(false); //signal for PythonExecutionFactory
 			}
@@ -102,6 +102,7 @@ namespace PFDB
 					//throw new ArgumentException("Input cannot be of FailedPythonOutput type.");
 				}*/
 				_input = input;
+				_defaultConversion = _input.IsDefaultConversion;
 			}
 
 			/// <summary>
@@ -119,6 +120,7 @@ namespace PFDB
 					//throw new ArgumentException("Input cannot be of FailedPythonOutput type.");
 				}*/
 				_input = input;
+				_defaultConversion = _input.IsDefaultConversion;
 				return this;
 			}
 

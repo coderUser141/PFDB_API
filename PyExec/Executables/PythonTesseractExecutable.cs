@@ -25,6 +25,8 @@ namespace PFDB
 			private protected string _commandExecuted;
 			private protected bool _isDefaultConversion;
 
+			private static bool _isWindows = Directory.Exists("C:/");
+			private static bool _isLinux = File.Exists("/boot/vmlinuz-linux");
 
 			private bool _internalExecution = true;
 			private bool _untrustedConstruction = true;
@@ -156,13 +158,13 @@ namespace PFDB
 				StringBuilder command = new StringBuilder("Command used: ");
 				if (TessbinPath == null)
 				{
-					pyexecute = new ProcessStartInfo(ProgramDirectory + "impa.exe", $"-c {FileDirectory + Filename} {Convert.ToString((int)WeaponType)} {WeaponID.Version.VersionNumber.ToString()}");
+					pyexecute = new ProcessStartInfo(ProgramDirectory + "impa" + (_isWindows?".exe":string.Empty), $"-c {FileDirectory + Filename} {Convert.ToString((int)WeaponType)} {WeaponID.Version.VersionNumber.ToString()}");
 					command.Append(pyexecute.Arguments);
 					command = command.Replace(FileDirectory + Filename, "...." + PyUtilityClass.CommonExecutionPath(Environment.ProcessPath ?? "null", FileDirectory + Filename).Item2);
 				}
 				else
 				{
-					pyexecute = new ProcessStartInfo(ProgramDirectory + "impa.exe", $"-f {TessbinPath} {FileDirectory + Filename} {Convert.ToString((int)WeaponType)} {WeaponID.Version.VersionNumber.ToString()}");
+					pyexecute = new ProcessStartInfo(ProgramDirectory + "impa" + (_isWindows?".exe":string.Empty), $"-f {TessbinPath} {FileDirectory + Filename} {Convert.ToString((int)WeaponType)} {WeaponID.Version.VersionNumber.ToString()}");
 					command.Append(pyexecute.Arguments);
 					command = command.Replace(TessbinPath, "...." + PyUtilityClass.CommonExecutionPath(Environment.ProcessPath ?? "null", TessbinPath).Item2);
 				}
@@ -202,7 +204,7 @@ namespace PFDB
 						aggregateException.exceptions.Add(new DirectoryNotFoundException($"The tessbin path specified at {TessbinPath}\\tessbin\\ does not exist. Ensure that the directory exists, then try again."));
 					}
 				}
-				if(!File.Exists(ProgramDirectory + "impa.exe"))
+				if((File.Exists(ProgramDirectory + "impa.exe") == false && _isWindows) || (File.Exists(ProgramDirectory + "impa") == false && _isLinux))
 				{
 					//this shouldn't be logged, the factory ideally should catch and log it
 					aggregateException.exceptions.Add(new FileNotFoundException($"The application file, specified at {ProgramDirectory + "impa.exe"} does not exist."));

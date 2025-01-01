@@ -20,6 +20,8 @@ namespace PFDB
 			private string _programDirectory;
 			private bool _isDefaultConversion;
 
+			private static bool _isWindows = Directory.Exists("C:/");
+			private static bool _isLinux = File.Exists("/boot/vmlinuz-linux");
 
 			/// <inheritdoc/>
 			public WeaponIdentification WeaponID { get { return _WID; } }
@@ -45,7 +47,7 @@ namespace PFDB
 			private bool _untrustedConstruction = true;
 
 			/// <summary>
-			/// Unused constructor. Use <see cref="Construct(string, string, WeaponIdentification, WeaponType, string, bool)"/> instead.
+			/// Unused constructor, but is necessary for C# to not complain. Use <see cref="Construct(string, string, WeaponIdentification, WeaponType, string, bool)"/> instead.
 			/// </summary>
 			internal PythonCropExecutable()
 			{
@@ -82,10 +84,10 @@ namespace PFDB
 			{
 				PythonAggregateException aggregateException = new PythonAggregateException();
 				_internalExecution = false;
-				if (File.Exists(ProgramDirectory + "impa.exe") == false)
+				if ((File.Exists(ProgramDirectory + "impa.exe") == false && _isWindows) || (File.Exists(ProgramDirectory + "impa") == false && _isLinux))
 				{
 					//this shouldn't be logged, the factory ideally should catch and log it
-					aggregateException.exceptions.Add(new FileNotFoundException($"The application file, specified at {ProgramDirectory + "impa.exe"} does not exist.", ProgramDirectory + "impa.exe"));
+					aggregateException.exceptions.Add(new FileNotFoundException($"The application file, specified at {ProgramDirectory + "impa" + (_isWindows?".exe":string.Empty)} does not exist.", ProgramDirectory + "impa.exe"));
 					//throw new FileNotFoundException($"The application file, specified at {ProgramDirectory + "impa.exe"} does not exist.");
 				}
 				if (File.Exists(FileDirectory + Filename) == false)
@@ -111,7 +113,7 @@ namespace PFDB
 			public ProcessStartInfo GetProcessStartInfo()
 			{
 				ProcessStartInfo pyexecute;
-				pyexecute = new ProcessStartInfo(ProgramDirectory + "impa.exe", string.Format("{0} {1} {2} {3}", "-w", FileDirectory + Filename, Convert.ToString(WeaponType), WeaponID.Version.VersionNumber.ToString()));
+				pyexecute = new ProcessStartInfo(ProgramDirectory + "impa" + (_isWindows?".exe":string.Empty), string.Format("{0} {1} {2} {3}", "-w", FileDirectory + Filename, Convert.ToString(WeaponType), WeaponID.Version.VersionNumber.ToString()));
 				pyexecute.RedirectStandardOutput = true;
 				pyexecute.UseShellExecute = false;
 				return pyexecute;

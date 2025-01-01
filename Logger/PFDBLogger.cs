@@ -28,7 +28,7 @@ namespace PFDB
 					.WriteTo.File(logFileName, shared: true)
 					.CreateLogger();
 
-				Log.Logger.Information("Application start");
+				Log.Logger.Information("Application start. Logging has been activated.");
 
 				ConfigurationRoot = configuration.Build();
 			}

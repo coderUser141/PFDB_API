@@ -4,6 +4,12 @@ using PFDB.Logging;
 using PFDB.PythonExecution;
 using PFDB.PythonExecutionUtility;
 using System.Runtime.CompilerServices;
+using PFDB.WeaponUtility;
+using PFDB.PythonFactory;
+using System.Collections.Generic;
+using PFDB.PythonFactoryUtility;
+using PFDB.SQLite;
+using System.Linq;
 
 namespace PFDB{
     namespace PythonTesting{
@@ -17,25 +23,63 @@ namespace PFDB{
             /// </summary>
             public static void Main(){
                 PFDBLogger logger =  new PFDBLogger(".pfdblog");
+                WeaponTable.InitializeEverything();
                 Test();
             }
 
             /// <summary>
             /// Main testing function.
             /// </summary>
-            public static void Test(){
-                PythonInitExecutableTest();
-                PythonExecutorInitExecutableConsoleTest();
-                PythonExecutorInitExecutableFileTest();
-            }
+            public static void Test()
+			{
+				PythonInitExecutableTest();
+				PythonExecutorInitExecutableConsoleTest();
+				PythonExecutorInitExecutableFileTest();
+				PythonTesseractExecutableTest();
+				PythonExecutionFactoryTest();
+			}
 
-            /// <summary>
-            /// Tests if <see cref="InitExecutable"/> returns expected "init object"  output. 
-            /// </summary>
-            /// <returns>Whether this test passes.</returns>
-            public static bool PythonInitExecutableTest(){
+
+			public static bool PythonExecutionFactoryTest()
+			{
+				IDictionary<Categories, List<int>> weaponNumbers = new Dictionary<Categories, List<int>>();
+				PhantomForcesVersion version1001 = new PhantomForcesVersion("10.0.1");
+				weaponNumbers.Add(
+					Categories.AssaultRifles,
+					new List<int>(){
+						0,
+						1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
+					}
+				);
+				weaponNumbers.Add(
+					Categories.PersonalDefenseWeapons,
+					new List<int>(){
+						0,
+						1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21
+					}
+				);
+                int expectedAmount = 0;
+                foreach(Categories categories in weaponNumbers.Keys){
+                    expectedAmount += weaponNumbers[categories].Count;
+                }
+				IDictionary<PhantomForcesVersion, string> versionAndPathPairs = new Dictionary<PhantomForcesVersion, string>
+				{
+					{ version1001, "/mnt/bulkdata/Programming/PFDB/PFDB_API/ImageParserForAPI/version1001/" }
+				};
+				PythonExecutionFactory<InitExecutable> factory = new PythonExecutionFactory<InitExecutable>(weaponNumbers, versionAndPathPairs, "/mnt/bulkdata/Programming/PFDB/PFDB_API/ImageParserForAPI/dist", OutputDestination.Console, null);
+				IPythonExecutionFactoryOutput output = factory.Start();
+				Console.WriteLine(output.QueueStatusCounter.SuccessCounter);
+                int successes = output.QueueStatusCounter.SuccessCounter;
+                return TestingOutput("Python execution factory test (queueing, checking, executing)", successes >= expectedAmount, expectedAmount.ToString(), successes.ToString());
+			}
+
+			/// <summary>
+			/// Tests if <see cref="InitExecutable"/> returns expected "init object"  output. 
+			/// </summary>
+			/// <returns>Whether this test passes.</returns>
+			public static bool PythonInitExecutableTest(){
                 IPythonExecutable executable = new InitExecutable();
-                bool pass = (executable.ReturnOutput().OutputString == "init object");
+                bool pass = executable.ReturnOutput().OutputString == "init object";
                 return TestingOutput("Init Executable detection test", pass, "True", pass.ToString());
             }
             
@@ -47,17 +91,67 @@ namespace PFDB{
                 PFDBLogger.LogInformation("Below this message there should be \"init object\".");
                 executor.Execute(null);
             }
-            public static void PythonExecutorInitExecutableFileTest(){
+
+            /// <summary>
+            /// Tests if log and output folders were created.
+            /// </summary>
+            /// <returns>Whether this test passes.</returns>
+            public static bool PythonExecutorInitExecutableFileTest(){
                 IPythonExecutor executor = new PythonExecutor(OutputDestination.File);
                 executor.Execute(null);
                 bool outputfolderexists = Directory.Exists(Directory.GetCurrentDirectory()+"/"+PythonExecutor.OutputFolderName+"/0");
                 bool logfolderexists = Directory.Exists(Directory.GetCurrentDirectory()+"/"+PythonExecutor.LogFolderName+"/0");
+                bool outputfilecreated = File.Exists(Directory.GetCurrentDirectory()+"/"+PythonExecutor.OutputFolderName+"/0/.pfdb");
+                bool logfilecreated = File.Exists(Directory.GetCurrentDirectory()+"/"+PythonExecutor.LogFolderName+"/0/.pfdblog");
                 PFDBLogger.LogInformation($"Did it make an output directory? {outputfolderexists}");
                 PFDBLogger.LogInformation($"Did it make a log directory? {logfolderexists}");
+                PFDBLogger.LogInformation($"Did it make an output file? {outputfilecreated}");
+                PFDBLogger.LogInformation($"Did it make a log file? {logfilecreated}");
+                //Console.ReadLine();
                 if(logfolderexists)Directory.Delete(Directory.GetCurrentDirectory()+"/"+PythonExecutor.LogFolderName+"/0",true);
                 if(outputfolderexists)Directory.Delete(Directory.GetCurrentDirectory()+"/"+PythonExecutor.OutputFolderName+"/0",true);
                 PFDBLogger.LogInformation("Deleted output and log folders (if they even existed)");
+                return TestingOutput("Log and output folders + files creation", logfolderexists && outputfolderexists && logfilecreated && outputfilecreated, "True", (logfolderexists && outputfolderexists).ToString());
             }
+
+            /// <summary>
+            /// Tests if <see cref="PythonTesseractExecutable"/> is able to read from an image file, correctly read it, and write the output to a new file.
+            /// </summary>
+            /// <returns>Whether this test passes.</returns>
+            public static bool PythonTesseractExecutableTest(){
+                string fileName ="0_2_testimage.png";
+
+                IPythonExecutor executor = new PythonExecutor(OutputDestination.File);
+                PythonTesseractExecutable executable = new PythonTesseractExecutable();
+                executable.Construct(fileName,Directory.GetCurrentDirectory(), 
+                    new WeaponUtility.WeaponIdentification(new PhantomForcesVersion("10.1.0"), Categories.AssaultRifles, 15, 0, "AS-VAL"),
+                    WeaponType.Primary, Directory.GetCurrentDirectory()
+                    );
+                executor.Load(executable);
+                PFDBLogger.LogInformation("Executing, this may take a while...");
+                executor.Execute(null);
+                PFDBLogger.LogInformation("Done executing.");
+                
+                int score = 0;
+                bool fileExists = File.Exists($"{Directory.GetCurrentDirectory()}{PyUtilityClass.slash}{PythonExecutor.OutputFolderName}{PyUtilityClass.slash}1010/{fileName}.pfdb");
+                if(TestingOutput($"File {fileName}.pfdb exists",fileExists,"True",fileExists.ToString())){
+                    score++;
+                }
+
+                bool containsPredefinedText = executor.Output.OutputString.Contains("RankInfo");
+                if(TestingOutput($"Output contains predefined text (RankInfo)",containsPredefinedText,"True",containsPredefinedText.ToString())){
+                    score++;
+                }
+
+                bool containsOCRText = executor.Output.OutputString.Contains("AS VAL");
+                if(TestingOutput($"Output contains text only from OCR (AS VAL)", containsOCRText, "True", containsOCRText.ToString())){
+                    score++;
+                }
+
+                return TestingOutput("All 3 above tests passing", score >= 3, "3", score.ToString());
+
+            }
+
 
             /// <summary>
             /// Standardized way of outputting pass/fail condition for various tests.

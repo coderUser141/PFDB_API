@@ -88,6 +88,7 @@ namespace PFDB
 			{
 				_input = new InitExecutable(); _output = new TestOutput();
 				_destination = destination;
+				_output = new TestOutput(); //prevent unassigned reference
 				_manualEvent = new ManualResetEvent(false); //signal for PythonExecutionFactory
 			}
 
@@ -140,9 +141,11 @@ namespace PFDB
 						builder.Append($"Exception: {exception.GetType()} ||| {exception.Message}{Environment.NewLine}");
 					}
 					_output = new FailedPythonOutput(builder.ToString());
+					PFDBLogger.LogError($"An error occured while executing input of type {_input}. The affected input was handling {_input.Filename} with weapon ID {_input.WeaponID}{Environment.NewLine}{_output.OutputString}");
 				}catch(Exception ex)
 				{
 					_output = new FailedPythonOutput(ex.Message);
+					PFDBLogger.LogError($"An error occured while executing input of type {_input}. The affected input was handling {_input.Filename} with weapon ID {_input.WeaponID}{Environment.NewLine}{_output.OutputString}");
 				}
 				
 				_output = _input.ReturnOutput();
@@ -152,27 +155,27 @@ namespace PFDB
 				{
 					//Console.WriteLine(Directory.GetCurrentDirectory() ?? "null folder");
 
-					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\{_outputFolderName}\\"))
+					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}/{_outputFolderName}/"))
 					{
-						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\{_outputFolderName}\\");
-						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\{_outputFolderName}\\ because it did not exist.");
+						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}/{_outputFolderName}/");
+						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}/{_outputFolderName}/ because it did not exist.");
 					}
-					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\{_logFolderName}\\"))
+					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}/{_logFolderName}/"))
 					{
-						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\{_logFolderName}\\");
-						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\{_logFolderName}\\ because it did not exist.");
+						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}/{_logFolderName}/");
+						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}/{_logFolderName}/ because it did not exist.");
 					}
-					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\{_outputFolderName}\\{_input.WeaponID.Version.VersionNumber}")) {
-						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\{_outputFolderName}\\{_input.WeaponID.Version.VersionNumber}");
-						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\{_outputFolderName}\\{_input.WeaponID.Version.VersionNumber} because it did not exist.");
+					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}/{_outputFolderName}/{_input.WeaponID.Version.VersionNumber}")) {
+						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}/{_outputFolderName}/{_input.WeaponID.Version.VersionNumber}");
+						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}/{_outputFolderName}/{_input.WeaponID.Version.VersionNumber} because it did not exist.");
 					}
-					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\{_logFolderName}\\{_input.WeaponID.Version.VersionNumber}")) {
-						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\{_logFolderName}\\{_input.WeaponID.Version.VersionNumber}");
-						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}\\{_logFolderName}\\{_input.WeaponID.Version.VersionNumber} because it did not exist.");
+					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}/{_logFolderName}/{_input.WeaponID.Version.VersionNumber}")) {
+						Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}/{_logFolderName}/{_input.WeaponID.Version.VersionNumber}");
+						PFDBLogger.LogInformation($"Creating directory at {Directory.GetCurrentDirectory()}/{_logFolderName}/{_input.WeaponID.Version.VersionNumber} because it did not exist.");
 					}
 
-					File.WriteAllText($"{Directory.GetCurrentDirectory()}\\{_outputFolderName}\\{_input.WeaponID.Version.VersionNumber}\\{_input.Filename}.pfdb", _output.OutputString);
-					File.WriteAllText($"{Directory.GetCurrentDirectory()}\\{_logFolderName}\\{_input.WeaponID.Version.VersionNumber}\\{_input.Filename}.pfdblog",
+					File.WriteAllText($"{Directory.GetCurrentDirectory()}/{_outputFolderName}/{_input.WeaponID.Version.VersionNumber}/{_input.Filename}.pfdb", _output.OutputString);
+					File.WriteAllText($"{Directory.GetCurrentDirectory()}/{_logFolderName}/{_input.WeaponID.Version.VersionNumber}/{_input.Filename}.pfdblog",
 						$"Filename: {_input.Filename} {Environment.NewLine}" +
 						$"Program Directory: {_input.ProgramDirectory} {Environment.NewLine}" +
 						((_output is Benchmark benchmark) ? $"Elapsed time by DateTime (s): { benchmark.StopwatchDateTime.TotalSeconds}, Elapsed time by Stopwatch (s): { benchmark.StopwatchNormal.ElapsedMilliseconds / (double)1000}{Environment.NewLine}": "") +

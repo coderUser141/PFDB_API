@@ -103,13 +103,24 @@ namespace PFDB
 			/// <returns>The current object for chaining.</returns>
 			public IPythonExecutable Construct(string filename, string fileDirectory, PhantomForcesVersion version, WeaponType weaponType, string programDirectory)
 			{
+				Filename = filename;
+				ProgramDirectory = programDirectory;
+				Version = version;
+				WeaponType = weaponType;
+				ProgramDirectory = programDirectory;
 				return this;
 			}
 
 			/// <inheritdoc/>
 			public IPythonExecutable Construct(string filename, string fileDirectory, WeaponIdentification weaponID, WeaponType weaponType, string programDirectory, bool isDefaultConversion)
 			{
-				throw new System.NotImplementedException();
+				Filename = filename;
+				ProgramDirectory = programDirectory;
+				Version = weaponID.Version;
+				WeaponType = weaponType;
+				ProgramDirectory = programDirectory;
+				IsDefaultConversion = isDefaultConversion;
+				return this;
 			}
 		}
 

@@ -378,6 +378,10 @@ FodyWeavers.xsd
 # untrack build outputs (otherwise git will track THOUSANDS of items)
 /buildoutputbackup
 /all build options v*/
+/all build options v5/
+/all build options v6/
+/all build options v7/
+/textOutputsByVersion/
 /ImageParserForAPI/version1001
 /ImageParserForAPI/version1010
 /ImageParserForAPI/version902

@@ -149,14 +149,14 @@ namespace PFDB
 			/// <summary>
 			/// Constructs the factory from pre-defined values.
 			/// </summary>
-			/// <param name="weaponIDs">An <see cref="IDictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the category of the weapons, and <c>TValue</c> contains the weapons' numbers (in the abovementioned category).</param>
+			/// <param name="weaponNumbers">An <see cref="IDictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the category of the weapons, and <c>TValue</c> contains the weapons' numbers (in the abovementioned category).</param>
 			/// <param name="versionAndPathPairs">An <see cref="IDictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the Phantom Forces version, and <c>TValue</c> refers to the absolute path of where <c>TKey</c>'s version's images can be found.</param>
 			/// <param name="programDirectory">The program directory of the Python executable.</param>
 			/// <param name="outputDestination">Specifies the output destination.</param>
 			/// <param name="tessbinPath">Specifies the absolute path of <c>/tessbin/</c> folder. If null, assumes such folder is in the same working directory.</param>
 			/// <param name="coreCount">Specifies the core count manually. Default is dual (2) cores.</param>
 			/// <param name="isDefaultConversion">Specifies if the images supplied are for default conversion.</param>
-			public PythonExecutionFactory(IDictionary<Categories,List<int>> weaponIDs, IDictionary<PhantomForcesVersion, string> versionAndPathPairs, string programDirectory, OutputDestination outputDestination, string? tessbinPath, Cores coreCount = Cores.Dual, bool isDefaultConversion = true)
+			public PythonExecutionFactory(IDictionary<Categories,List<int>> weaponNumbers, IDictionary<PhantomForcesVersion, string> versionAndPathPairs, string programDirectory, OutputDestination outputDestination, string? tessbinPath, Cores coreCount = Cores.Dual, bool isDefaultConversion = true)
 			{
 				TPythonExecutable pythonExecutable = new();
 				if(Directory.Exists(tessbinPath) == false && tessbinPath != null && pythonExecutable is PythonTesseractExecutable) {
@@ -168,9 +168,9 @@ namespace PFDB
 				_isDefaultConversion = isDefaultConversion;
 				foreach (PhantomForcesVersion version in versionAndPathPairs.Keys)
 				{
-					foreach (Categories categoryGroup in weaponIDs.Keys) {
-						foreach (int weapon in weaponIDs[categoryGroup]) {
-							if(File.Exists(versionAndPathPairs[version]) == false){
+					foreach (Categories categoryGroup in weaponNumbers.Keys) {
+						foreach (int weapon in weaponNumbers[categoryGroup]) {
+							if(File.Exists($"{versionAndPathPairs[version]}{PyUtilityClass.slash}{(int)categoryGroup}_{weapon}.png") == false){
 								PFDBLogger.LogError("The targeted file was not found. Skipping.", parameter: versionAndPathPairs[version]);
 								continue;
 							}

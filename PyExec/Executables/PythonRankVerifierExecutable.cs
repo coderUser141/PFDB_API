@@ -29,13 +29,13 @@ namespace PFDB.PythonExecution
 			{
 				pyexecute = new ProcessStartInfo(ProgramDirectory + "impa" + (_isWindows?".exe":string.Empty), $"-cr {FileDirectory + Filename} {Convert.ToString((int)WeaponType)} {WeaponID.Version.VersionNumber.ToString()}");
 				command.Append(pyexecute.Arguments);
-				command = command.Replace(FileDirectory + Filename, "...." + PyUtilityClass.CommonExecutionPath(Environment.ProcessPath ?? "null", FileDirectory + Filename).Item2);
+				command = command.Replace(FileDirectory + Filename, "...." + PyUtilityClass.CommonExecutionPath(Directory.GetCurrentDirectory() ?? "null", FileDirectory + Filename).relativeForeignPath);
 			}
 			else
 			{
 				pyexecute = new ProcessStartInfo(ProgramDirectory + "impa" + (_isWindows?".exe":string.Empty), $"-fr {TessbinPath} {FileDirectory + Filename} {Convert.ToString((int)WeaponType)} {WeaponID.Version.VersionNumber.ToString()}");
 				command.Append(pyexecute.Arguments);
-				command = command.Replace(TessbinPath, "...." + PyUtilityClass.CommonExecutionPath(Environment.ProcessPath ?? "null", TessbinPath).Item2);
+				command = command.Replace(TessbinPath, "...." + PyUtilityClass.CommonExecutionPath(Directory.GetCurrentDirectory() ?? "null", TessbinPath).relativeForeignPath);
 			}
 			_commandExecuted = command.ToString();
 			pyexecute.RedirectStandardOutput = true;

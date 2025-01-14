@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using PFDB.Logging;
 using PFDB.PythonExecutionUtility;
 using PFDB.WeaponUtility;
 
@@ -128,6 +129,7 @@ namespace PFDB
 				if (_internalExecution || _untrustedConstruction)
 				{
 					//this shouldn't be logged, the factory ideally should catch and log it
+					PFDBLogger.LogWarning("The methods Construct() and CheckInput() have not been called. Do not try to invoke this method directly.");
 					return new FailedPythonOutput("The methods Construct() and CheckInput() have not been called. Do not try to invoke this method directly.");
 				}
 				ProcessStartInfo pyexecute = GetProcessStartInfo();
@@ -142,7 +144,7 @@ namespace PFDB
 								string result = reader.ReadToEnd();
 
 								string command = "Command used: " + pyexecute.Arguments;
-								command = command.Replace(FileDirectory + Filename, "...." + PyUtilityClass.CommonExecutionPath(Environment.ProcessPath ?? "null", FileDirectory + Filename).Item2);
+								command = command.Replace(FileDirectory + Filename, "...." + PyUtilityClass.CommonExecutionPath(Directory.GetCurrentDirectory() ?? "null", FileDirectory + Filename).relativeForeignPath);
 								int width = Console.WindowWidth;
 								string line = string.Empty;
 								for (int i = 0; i < width; ++i)
@@ -151,7 +153,7 @@ namespace PFDB
 								}
 
 								PythonOutput finalOutput = new PythonOutput(
-									$"Executed from: {"...." + PyUtilityClass.CommonExecutionPath(FileDirectory + Filename, Environment.ProcessPath ?? "null").Item2}{Environment.NewLine}" +
+									$"Executed from: {"...." + PyUtilityClass.CommonExecutionPath(FileDirectory + Filename, Directory.GetCurrentDirectory() ?? "null").relativeForeignPath}{Environment.NewLine}" +
 									$"{command}{Environment.NewLine}Computer Information:{Environment.NewLine}" +
 									$"Name: {Environment.MachineName}, Processor Count: {Environment.ProcessorCount}, Page Size: {Environment.SystemPageSize}{Environment.NewLine}" +
 									$"Working Set Memory: {Environment.WorkingSet}, .NET Version: {Environment.Version}, Operating System: {Environment.OSVersion}{Environment.NewLine}" +

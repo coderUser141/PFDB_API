@@ -90,18 +90,18 @@ namespace PFDB
 				_tessbinPath = null;
 				if (_tessbinPath != null)
 				{
-					if (_tessbinPath.EndsWith('\\') == false)
+					if (_tessbinPath.EndsWith(PyUtilityClass.slash) == false)
 					{
-						_tessbinPath += '\\';
+						_tessbinPath += PyUtilityClass.slash;
 					}
 				}
-				if (programDirectory.EndsWith('\\') == false)
+				if (programDirectory.EndsWith(PyUtilityClass.slash) == false)
 				{
-					programDirectory += '\\';
+					programDirectory += PyUtilityClass.slash;
 				}
-				if (fileDirectory.EndsWith('\\') == false)
+				if (fileDirectory.EndsWith(PyUtilityClass.slash) == false)
 				{
-					fileDirectory += '\\';
+					fileDirectory += PyUtilityClass.slash;
 				}
 				_fileDirectory = fileDirectory;
 				_WID = weaponID;
@@ -130,18 +130,18 @@ namespace PFDB
 				_isDefaultConversion = isDefaultConversion;
 				if (_tessbinPath != null)
 				{
-					if (_tessbinPath.EndsWith('\\') == false)
+					if (_tessbinPath.EndsWith(PyUtilityClass.slash) == false)
 					{
-						_tessbinPath += '\\';
+						_tessbinPath += PyUtilityClass.slash;
 					}
 				}
-				if (programDirectory.EndsWith('\\') == false)
+				if (programDirectory.EndsWith(PyUtilityClass.slash) == false)
 				{
-					programDirectory += '\\';
+					programDirectory += PyUtilityClass.slash;
 				}
-				if (fileDirectory.EndsWith('\\') == false)
+				if (fileDirectory.EndsWith(PyUtilityClass.slash) == false)
 				{
-					fileDirectory += '\\';
+					fileDirectory += PyUtilityClass.slash;
 				}
 				_fileDirectory = fileDirectory;
 				_WID = weaponID;
@@ -160,13 +160,13 @@ namespace PFDB
 				{
 					pyexecute = new ProcessStartInfo(ProgramDirectory + "impa" + (_isWindows?".exe":string.Empty), $"-c {FileDirectory + Filename} {Convert.ToString((int)WeaponType)} {WeaponID.Version.VersionNumber.ToString()}");
 					command.Append(pyexecute.Arguments);
-					command = command.Replace(FileDirectory + Filename, "...." + PyUtilityClass.CommonExecutionPath(Environment.ProcessPath ?? "null", FileDirectory + Filename).Item2);
+					command = command.Replace(FileDirectory + Filename, "...." + PyUtilityClass.CommonExecutionPath(Directory.GetCurrentDirectory() ?? "null", FileDirectory + Filename).relativeForeignPath);
 				}
 				else
 				{
 					pyexecute = new ProcessStartInfo(ProgramDirectory + "impa" + (_isWindows?".exe":string.Empty), $"-f {TessbinPath} {FileDirectory + Filename} {Convert.ToString((int)WeaponType)} {WeaponID.Version.VersionNumber.ToString()}");
 					command.Append(pyexecute.Arguments);
-					command = command.Replace(TessbinPath, "...." + PyUtilityClass.CommonExecutionPath(Environment.ProcessPath ?? "null", TessbinPath).Item2);
+					command = command.Replace(TessbinPath, "...." + PyUtilityClass.CommonExecutionPath(Directory.GetCurrentDirectory() ?? "null", TessbinPath).relativeForeignPath);
 				}
 				_commandExecuted = command.ToString();
 				pyexecute.RedirectStandardOutput = true;
@@ -190,18 +190,18 @@ namespace PFDB
 				}
 				if (TessbinPath == null)
 				{
-					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}\\tessbin\\"))
+					if (!Directory.Exists($"{Directory.GetCurrentDirectory()}{PyUtilityClass.slash}tessbin{PyUtilityClass.slash}"))
 					{
 						//this shouldn't be logged, the factory ideally should catch and log it
-						aggregateException.exceptions.Add(new DirectoryNotFoundException($"The tessbin path specified at {Directory.GetCurrentDirectory()}\\tessbin\\ does not exist. Ensure that the directory exists, then try again."));
+						aggregateException.exceptions.Add(new DirectoryNotFoundException($"The tessbin path specified at {Directory.GetCurrentDirectory()}{PyUtilityClass.slash}tessbin{PyUtilityClass.slash} does not exist. Ensure that the directory exists, then try again."));
 					}
 				}
 				else
 				{
-					if (!Directory.Exists(TessbinPath + "\\tessbin\\"))
+					if (!Directory.Exists(TessbinPath + $"{PyUtilityClass.slash}tessbin{PyUtilityClass.slash}"))
 					{
 						//this shouldn't be logged, the factory ideally should catch and log it
-						aggregateException.exceptions.Add(new DirectoryNotFoundException($"The tessbin path specified at {TessbinPath}\\tessbin\\ does not exist. Ensure that the directory exists, then try again."));
+						aggregateException.exceptions.Add(new DirectoryNotFoundException($"The tessbin path specified at {TessbinPath}{PyUtilityClass.slash}tessbin{PyUtilityClass.slash} does not exist. Ensure that the directory exists, then try again."));
 					}
 				}
 				if((File.Exists(ProgramDirectory + "impa.exe") == false && _isWindows) || (File.Exists(ProgramDirectory + "impa") == false && _isLinux))
@@ -236,6 +236,7 @@ namespace PFDB
 				if (_internalExecution || _untrustedConstruction)
 				{
 					//this shouldn't be logged, the factory ideally should catch and log it
+					PFDBLogger.LogWarning("The methods Construct() and CheckInput() have not been called. Do not try to invoke this method directly.");
 					return new FailedPythonOutput("The methods Construct() and CheckInputs() have not been called. Do not try to invoke this method directly.");
 				}
 				

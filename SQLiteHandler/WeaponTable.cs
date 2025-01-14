@@ -70,7 +70,8 @@ namespace PFDB.SQLite
 		public static SQLiteConnectionStringBuilder _getConnectionString(string? directory = null)
 		{
 			string actualpath = directory ?? Directory.GetCurrentDirectory();
-			SQLiteConnectionStringBuilder builder = new SQLiteConnectionStringBuilder($@"Data Source={actualpath}\{_databasePath};Version=3;FailIfMissing=True;");
+			char slash = Directory.Exists("/usr/bin") ? '/' : '\\';
+			SQLiteConnectionStringBuilder builder = new SQLiteConnectionStringBuilder($@"Data Source={actualpath}{slash}{_databasePath};Version=3;FailIfMissing=True;");
 			return builder;
 		}
 

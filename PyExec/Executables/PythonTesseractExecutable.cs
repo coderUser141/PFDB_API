@@ -236,8 +236,8 @@ namespace PFDB
 				if (_internalExecution || _untrustedConstruction)
 				{
 					//this shouldn't be logged, the factory ideally should catch and log it
-					PFDBLogger.LogWarning("The methods Construct() and CheckInput() have not been called. Do not try to invoke this method directly.");
-					return new FailedPythonOutput("The methods Construct() and CheckInputs() have not been called. Do not try to invoke this method directly.");
+					PFDBLogger.LogWarning($"The methods Construct() and CheckInput() have not been called. Do not try to invoke this method directly. File name was {Filename} and weapon ID was {_WID}");
+					return new FailedPythonOutput($"The methods Construct() and CheckInputs() have not been called. Do not try to invoke this method directly. File name was {Filename} and weapon ID was {_WID}");
 				}
 				
 				Benchmark benchmark = new Benchmark();
@@ -269,7 +269,7 @@ namespace PFDB
 				benchmark.StopBenchmark();
 
 				//this shouldn't be logged, the factory ideally should catch and log it
-				return new FailedPythonOutput("Failed.");
+				return new FailedPythonOutput($"Failed.  File name was {Filename} and weapon ID was {_WID} ");
 				
 			}
 

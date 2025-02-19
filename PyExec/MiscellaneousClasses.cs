@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PFDB.PythonExecution;
+﻿using System.Diagnostics;
 using PFDB.PythonExecutionUtility;
 using PFDB.WeaponUtility;
 

@@ -1,6 +1,5 @@
 ﻿using PFDB.WeaponUtility;
 using System.Data.SQLite;
-using PFDB.SQLite;
 using System.Text.RegularExpressions;
 using System.Data;
 using System.Collections.Immutable;

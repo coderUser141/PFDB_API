@@ -1,6 +1,4 @@
-﻿using System.Threading;
-
-namespace PFDB
+﻿namespace PFDB
 {
 	namespace PythonExecutionUtility
 	{

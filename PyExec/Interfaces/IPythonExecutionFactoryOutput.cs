@@ -67,6 +67,11 @@ namespace PFDB
 			/// </summary>
 			/// <returns>A string concatenating every single element from <see cref="PythonExecutors"/>.</returns>
 			string ToString();
+
+            /// <summary>
+            /// Missing files that the factory expected.
+            /// </summary>
+            IEnumerable<string> MissingFiles {get;}
 		}
     }
 }

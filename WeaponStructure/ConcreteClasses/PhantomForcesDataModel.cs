@@ -24,7 +24,13 @@ namespace PFDB.WeaponStructure
 		/// </summary>
 		public IClassCollection ClassCollection { get { return _classCollection; } }
 
-		
+		/// <summary>
+		/// Makes an <see cref="IWeaponCollection"/> from a Python Execution Factory.
+		/// </summary>
+		/// <param name="factory">The output from the Python Execution Factory.</param>
+		/// <returns>An <see cref="IWeaponCollection"/> that is populated from a Python Execution Fectory.</returns>
+		/// <exception cref="Exception"></exception>
+		/// <exception cref="NotImplementedException"></exception>
 		public static IWeaponCollection GetWeaponCollection(IPythonExecutionFactoryOutput factory)
 		{
 			if (factory.IsDefaultConversion) //default conversion, which means we have only ONE conversion per weapon
@@ -70,6 +76,12 @@ namespace PFDB.WeaponStructure
 			}
 		}
 
+		/// <summary>
+		/// Makes an <see cref="IWeaponCollection"/> from a specific Phantom Forces Version and the weapon database. 
+		/// </summary>
+		/// <param name="phantomForcesVersion">The Phantom Forces version to examine.</param>
+		/// <returns>An <see cref="IWeaponCollection"/> that is populated.</returns>
+		/// <exception cref="Exception"></exception>
 		public static IWeaponCollection GetWeaponCollection(PhantomForcesVersion phantomForcesVersion)
 		{
 			IWeaponCollection weaponCollection = new WeaponCollection();
@@ -134,6 +146,10 @@ namespace PFDB.WeaponStructure
 			return weaponCollection;
 		}
 
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="weaponCollection">An <see cref="IWeaponCollection"/> that is populated with weapon data.</param>
 		public PhantomForcesDataModel(IWeaponCollection weaponCollection)
 		{
 			//ICategory

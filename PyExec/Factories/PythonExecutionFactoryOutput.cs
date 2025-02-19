@@ -46,6 +46,9 @@ namespace PFDB
 			/// <inheritdoc/>
 			public bool IsDefaultConversion { get; }
 
+			/// <inheritdoc/>
+			public IEnumerable<string> MissingFiles {get;}
+
 			/// <summary>
 			/// Default constructor.
 			/// </summary>
@@ -58,7 +61,8 @@ namespace PFDB
 			/// <param name="totalParallelExecutionTimeFromStopwatchInMilliseconds">Total parallel execution time of the entire factory (across all threads) in milliseconds. Calculated with <see cref="Stopwatch"/>.</param>
 			/// <param name="actualElapsedExecutionTimeFromDateTime">Actual serial execution time of the entire factory (on main thread). Calculated with <see cref="DateTime"/>.</param>
 			/// <param name="actualExecutionTimeFromStopwatchInMilliseconds">Actual serial execution time of the entire factory (on main thread). Calculated with <see cref="Stopwatch"/>.</param>
-			public PythonExecutionFactoryOutput(IEnumerable<IPythonExecutor> pythonExecutors,bool isDefaultConversion, StatusCounter checkStatusCounter, StatusCounter queueStatusCounter, StatusCounter executionStatusCounter, TimeSpan totalParallelExecutionTimeFromDateTime, long totalParallelExecutionTimeFromStopwatchInMilliseconds, TimeSpan actualElapsedExecutionTimeFromDateTime, long actualExecutionTimeFromStopwatchInMilliseconds)
+			/// <param name="missingFiles">Missing files that the factory expected.</param>
+			public PythonExecutionFactoryOutput(IEnumerable<IPythonExecutor> pythonExecutors,bool isDefaultConversion, StatusCounter checkStatusCounter, StatusCounter queueStatusCounter, StatusCounter executionStatusCounter, TimeSpan totalParallelExecutionTimeFromDateTime, long totalParallelExecutionTimeFromStopwatchInMilliseconds, TimeSpan actualElapsedExecutionTimeFromDateTime, long actualExecutionTimeFromStopwatchInMilliseconds, IEnumerable<string> missingFiles)
 			{
 				IsDefaultConversion = isDefaultConversion;
 				PythonExecutors = pythonExecutors;
@@ -69,6 +73,7 @@ namespace PFDB
 				TotalParallelExecutionTimeFromStopwatchInMilliseconds = totalParallelExecutionTimeFromStopwatchInMilliseconds;
 				ActualExecutionTimeFromDateTime = actualElapsedExecutionTimeFromDateTime;
 				ActualExecutionTimeFromStopwatchInMilliseconds = actualExecutionTimeFromStopwatchInMilliseconds;
+				MissingFiles = missingFiles;
 
 				PFDBLogger.LogInformation($"Datetime parallel time: {TotalParallelExecutionTimeFromDateTime.TotalMilliseconds} " +
 			$"\t\tStopwatch parallel time {TotalParallelExecutionTimeFromStopwatchInMilliseconds} {Environment.NewLine}" +

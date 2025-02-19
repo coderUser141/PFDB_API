@@ -17,7 +17,7 @@ namespace PFDB.WeaponUtility
 	public class WeaponIdentification
 	{
 		private const short _dummyDigit = 1;
-		private short _checksum = 0; //im still not sure if i will implement this
+		//private short _checksum = 0; //im still not sure if i will implement this
 		private long _underlyingIntegerCode;
 		private readonly PhantomForcesVersion _version;
 		private readonly Categories _category;

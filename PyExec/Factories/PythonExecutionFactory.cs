@@ -36,21 +36,40 @@ namespace PFDB
 			/// <inheritdoc/>
 			public bool IsDefaultConversion { get { return _isDefaultConversion; } }
 
+			private List<string> missingFiles = new List<string>();
 
-			private void _constructorHelper(OutputDestination outputDestination, Categories categoryGroup, int weaponNumber, string path, PhantomForcesVersion version, string programDirectory, string? tessbinPath, TPythonExecutable pythonExecutable)
+
+			private void _constructorHelper(OutputDestination outputDestination, Categories categoryGroup, int weaponNumber, string imagePath, PhantomForcesVersion version, string programDirectory, string? tessbinPath, TPythonExecutable pythonExecutable)
 			{
 				PythonExecutor py = new PythonExecutor(outputDestination);
 				PFDBLogger.LogDebug("PythonExecutionFactory information. Is current object a PythonTesseractExecutable?", parameter: pythonExecutable is PythonTesseractExecutable);
-
+							
 				for(int index = 0; index < version.MultipleScreenshotsCheck(); index++)
 				{
+					if(imagePath.EndsWith(PyUtilityClass.slash) == false){
+						imagePath += PyUtilityClass.slash;
+					}
+
+					string temp = "";
+					if(version.IsLegacy){
+						temp = $"_{index+1}";
+					} else if(version.VersionNumber > 1012){
+						temp = $"_{index}";
+					}
+					if(File.Exists($"{imagePath}{(int)categoryGroup}_{weaponNumber}{temp}.png") == false){
+						PFDBLogger.LogError($"The targeted file ({imagePath}{(int)categoryGroup}_{weaponNumber}{temp}.png) was not found. Skipping.", parameter: imagePath);
+						missingFiles.Add($"{imagePath}{(int)categoryGroup}_{weaponNumber}{temp}.png");
+						continue; //not found, skip to the next one
+					}
 					if(pythonExecutable is PythonTesseractExecutable pytessexec)
 					{
+						
+						
 						_queue.Add(
 							py.LoadOut(
 								pytessexec.Construct(
-									$"{(int)categoryGroup}_{weaponNumber}_{(version.IsLegacy ? index + 1 : index)}.png",
-									path,
+									$"{(int)categoryGroup}_{weaponNumber}{temp}.png",
+									imagePath,
 									WeaponTable.WeaponIDCache[version].First(
 										x => x.weaponNumber == weaponNumber ||
 										(Categories)x.categoryNumber == categoryGroup
@@ -68,8 +87,8 @@ namespace PFDB
 						_queue.Add(
 							py.LoadOut(
 								pythonExecutable.Construct(
-									$"{(int)categoryGroup}_{weaponNumber}_{(version.IsLegacy ? index + 1 : index)}.png",
-									path,
+									$"{(int)categoryGroup}_{weaponNumber}{temp}.png",
+									imagePath,
 									WeaponTable.WeaponIDCache[version].First(
 										x => x.weaponNumber == weaponNumber ||
 										(Categories)x.categoryNumber == categoryGroup
@@ -149,16 +168,17 @@ namespace PFDB
 			/// <summary>
 			/// Constructs the factory from pre-defined values.
 			/// </summary>
-			/// <param name="weaponNumbers">An <see cref="IDictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the category of the weapons, and <c>TValue</c> contains the weapons' numbers (in the abovementioned category).</param>
+			/// <param name="weaponNumbers">An <see cref="IDictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the version of the weapons, and <c>TValue</c> contains a <see cref="Dictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the category of the specified version and <c>TValue</c> contains a list of the weapon numbers for the specified category and version .</param>
 			/// <param name="versionAndPathPairs">An <see cref="IDictionary{TKey, TValue}"/> object where <c>TKey</c> refers to the Phantom Forces version, and <c>TValue</c> refers to the absolute path of where <c>TKey</c>'s version's images can be found.</param>
 			/// <param name="programDirectory">The program directory of the Python executable.</param>
 			/// <param name="outputDestination">Specifies the output destination.</param>
 			/// <param name="tessbinPath">Specifies the absolute path of <c>/tessbin/</c> folder. If null, assumes such folder is in the same working directory.</param>
 			/// <param name="coreCount">Specifies the core count manually. Default is dual (2) cores.</param>
 			/// <param name="isDefaultConversion">Specifies if the images supplied are for default conversion.</param>
-			public PythonExecutionFactory(IDictionary<Categories,List<int>> weaponNumbers, IDictionary<PhantomForcesVersion, string> versionAndPathPairs, string programDirectory, OutputDestination outputDestination, string? tessbinPath, Cores coreCount = Cores.Dual, bool isDefaultConversion = true)
+			public PythonExecutionFactory(IDictionary<PhantomForcesVersion,Dictionary<Categories,List<int>>> weaponNumbers, IDictionary<PhantomForcesVersion, string> versionAndPathPairs, string programDirectory, OutputDestination outputDestination, string? tessbinPath, Cores coreCount = Cores.Dual, bool isDefaultConversion = true)
 			{
 				TPythonExecutable pythonExecutable = new();
+
 				if(Directory.Exists(tessbinPath) == false && tessbinPath != null && pythonExecutable is PythonTesseractExecutable) {
 					PFDBLogger.LogFatal("The tessbin directory was not found, and was not null (null assumes that tessbinpath is in the same working directory)", parameter: tessbinPath);
 					throw new DirectoryNotFoundException("The tessbin directory was not found, and was not null (null assumes that tessbinpath is in the same working directory). tessbinPath was " + tessbinPath);
@@ -168,14 +188,15 @@ namespace PFDB
 				_isDefaultConversion = isDefaultConversion;
 				foreach (PhantomForcesVersion version in versionAndPathPairs.Keys)
 				{
-					foreach (Categories categoryGroup in weaponNumbers.Keys) {
-						foreach (int weapon in weaponNumbers[categoryGroup]) {
-							if(File.Exists($"{versionAndPathPairs[version]}{PyUtilityClass.slash}{(int)categoryGroup}_{weapon}.png") == false){
-								PFDBLogger.LogError("The targeted file was not found. Skipping.", parameter: versionAndPathPairs[version]);
-								continue;
+					try{
+						foreach (Categories categoryGroup in weaponNumbers[version].Keys) {
+							foreach (int weapon in weaponNumbers[version][categoryGroup]) {
+								_constructorHelper(outputDestination, categoryGroup, weapon, versionAndPathPairs[version], version, programDirectory, tessbinPath, pythonExecutable);
 							}
-							_constructorHelper(outputDestination, categoryGroup, weapon, versionAndPathPairs[version], version, programDirectory, tessbinPath, pythonExecutable);
 						}
+					}catch(KeyNotFoundException){
+						PFDBLogger.LogWarning($"The following key ({version} with version {version.VersionString}) was not found in IDictionary<PhantomForcesVersion,Dictionary<Categories,List<int>>> weaponNumbers");
+						continue;
 					}
 				}
 				_initialQueueCount = _queue.Count;
@@ -273,11 +294,13 @@ namespace PFDB
 				{
 					CheckStatus = _checkFactory();
 				}
-				catch
+				catch(Exception ex)
 				{
-					//error
-
-					_factoryOutput = new PythonExecutionFactoryOutput(_queue,_isDefaultConversion, CheckStatus, new StatusCounter(SuccessCounter:0,FailCounter:_queue.Count), new StatusCounter(SuccessCounter: 0, FailCounter: _queue.Count), new TimeSpan(0), 0, new TimeSpan(0), 0);
+					int count = _queue.Count;
+					if(ex.Message.Contains("empty")){
+						count = 1; //sets automatically to 1
+					}
+					_factoryOutput = new PythonExecutionFactoryOutput(_queue,_isDefaultConversion, CheckStatus, new StatusCounter(SuccessCounter:0,FailCounter:count), new StatusCounter(SuccessCounter: 0, FailCounter: _queue.Count), new TimeSpan(0), 0, new TimeSpan(0), 0, missingFiles);
 					return _factoryOutput;
 				}
 				StatusCounter QueueStatus = new StatusCounter();
@@ -292,9 +315,9 @@ namespace PFDB
 				if(_queue.Count < _coreCount) {
 					listForQueue.Add(new List<IPythonExecutor>(_queue));
 				}
-
+				int i;
 				// allocates items to a temporary queue buffer that restricts the number of parallel threads to be within the core count of the computer.
-				for(int i = 0; i < _queue.Count/ _coreCount; i++)
+				for(i = 0; i < _queue.Count/ _coreCount; i++)
 				{
 					List<IPythonExecutor> temp = new List<IPythonExecutor>();
 
@@ -304,6 +327,15 @@ namespace PFDB
 					}
 					//listForQueue.Add(temp.ToList());
 					listForQueue.Add([..temp]);
+				}
+				if(_queue.Count%_coreCount != 0)
+				{
+					List<IPythonExecutor> temp1 = new List<IPythonExecutor>();
+					for (int j = i*_coreCount; j < _queue.Count; ++j)
+					{
+						temp1.Add(_queue[j]);
+					}
+					listForQueue.Add(temp1);
 				}
 
 				Stopwatch stopwatch = new Stopwatch();
@@ -369,10 +401,10 @@ namespace PFDB
 						ExecutionStatus.FailCounter++;
 					}
 					//idk if this does anything, but i'm thinking it's a good idea to free resources
-					foreach(ManualResetEvent u in manualEvents)
+					/*foreach(ManualResetEvent u in manualEvents)
 					{
 						u.Dispose();
-					}
+					}*/
 
 
 					PFDBLogger.LogInformation($"Thread Count: {ThreadPool.ThreadCount}, Completed Threads: {ThreadPool.CompletedWorkItemCount}, Pending Threads: {ThreadPool.PendingWorkItemCount} {Environment.NewLine} Completed/Total Parallel Jobs: {j + 1} / {listForQueue.Count}");
@@ -380,7 +412,7 @@ namespace PFDB
 				}
 				DateTime end = DateTime.Now;
 				stopwatch.Stop();
-				_factoryOutput = new PythonExecutionFactoryOutput(_queue,_isDefaultConversion, CheckStatus, QueueStatus, ExecutionStatus, totalParallelTimeElapsedDateTime, totalParallelTimeElapsedInMilliseconds, end - start, stopwatch.ElapsedMilliseconds);
+				_factoryOutput = new PythonExecutionFactoryOutput(_queue,_isDefaultConversion, CheckStatus, QueueStatus, ExecutionStatus, totalParallelTimeElapsedDateTime, totalParallelTimeElapsedInMilliseconds, end - start, stopwatch.ElapsedMilliseconds, missingFiles);
 				return _factoryOutput;
 				
 			}

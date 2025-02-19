@@ -31,7 +31,7 @@ namespace PFDB{
             /// <summary>
             /// Main testing function.
             /// </summary>
-            public static void Test(){
+            public static bool Test(){
                 int score = 0;
                 if(IndexSearchSingleCharacterTest())score++;
                 if(IndexSearchSingleWordTest())score++;
@@ -43,7 +43,7 @@ namespace PFDB{
                 if(FileReaderTest())score++;
                 if(FileParseCompleteTest())score++;
                 if(AddingIncompatibleWeaponsToStatisticCollectionTest())score++;
-                TestingOutput("All FileParse tests", score >= 10, "10", score.ToString());
+                return TestingOutput("All FileParse tests", score >= 10, "10", score.ToString());
             }
 
             /// <summary>

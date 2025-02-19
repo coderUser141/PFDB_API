@@ -9,7 +9,6 @@ using PFDB.PythonFactory;
 using System.Collections.Generic;
 using PFDB.PythonFactoryUtility;
 using PFDB.SQLite;
-using System.Linq;
 
 namespace PFDB{
     namespace PythonTesting{
@@ -18,31 +17,113 @@ namespace PFDB{
         /// Defines a class that tests functions within PyExec.
         /// </summary>
         public static class PythonTest{
+
+
+			//static string PythonPath = (Directory.Exists("/usr/bin") ? "/mnt/bulkdata/Programming/PFDB/PFDB_API/ImageParserForAPI/dist" : "D:\\Programming\\PFDB\\PFDB_API\\ImageParserForAPI\\dist");
+			//static string Path = (Directory.Exists("/usr/bin") ? "/mnt/bulkdata/Programming/PFDB/PFDB_API/ImageParserForAPI" : "D:\\Programming\\PFDB\\PFDB_API\\ImageParserForAPI");
+
             /// <summary>
             /// Main entry point.
             /// </summary>
             public static void Main(){
                 PFDBLogger logger =  new PFDBLogger(".pfdblog");
                 WeaponTable.InitializeEverything();
-                Test();
+                Test(string.Empty, string.Empty);
             }
 
             /// <summary>
             /// Main testing function.
             /// </summary>
-            public static void Test()
+            public static bool Test(string pythonProgramPath, string imageBasePath)
 			{
-				PythonInitExecutableTest();
+                int score = 0;
+				if(PythonInitExecutableTest())score++;
 				PythonExecutorInitExecutableConsoleTest();
-				PythonExecutorInitExecutableFileTest();
-				PythonTesseractExecutableTest();
-				PythonExecutionFactoryTest();
+				if(PythonExecutorInitExecutableFileTest())score++;
+				if(PythonTesseractExecutableTest())score++;
+				if(PythonExecutionFactoryMockedTest(pythonProgramPath, imageBasePath))score++;
+                if(PythonExectuonFactoryEmptyTest(pythonProgramPath, imageBasePath))score++;
+                if(PythonExecutionFactoryTesseractTest(pythonProgramPath, imageBasePath))score++;
+                return TestingOutput("All PyExec tests", score >= 6, "6", score.ToString());
+			}
+
+            /// <summary>
+            /// Tests if <see cref="PythonExecutionFactory{InitPythonExecutable}"/> can find files and properly execute them.
+            /// </summary>
+            /// <returns>Whether this tests passes.</returns>
+			public static bool PythonExecutionFactoryTesseractTest(string pythonProgramPath, string imageBasePath)
+			{
+                //string path = Path;
+
+				Dictionary<Categories, List<int>> weaponNumbers = new Dictionary<Categories, List<int>>();
+				PhantomForcesVersion version1001 = new PhantomForcesVersion("10.0.1");
+
+
+
+				weaponNumbers.Add(
+					Categories.AssaultRifles,
+					new List<int>(){
+						0
+					}
+				);
+				weaponNumbers.Add(
+					Categories.PersonalDefenseWeapons,
+					new List<int>(){
+						18
+					}
+				);
+                int expectedAmount = 0;
+                foreach(Categories categories in weaponNumbers.Keys){
+                    expectedAmount += weaponNumbers[categories].Count;
+                }
+				IDictionary<PhantomForcesVersion, string> versionAndPathPairs = new Dictionary<PhantomForcesVersion, string>
+				{
+					{ version1001, $"{imageBasePath}/version1001/" }
+				};
+				PythonExecutionFactory<PythonTesseractExecutable> factory = 
+                    new PythonExecutionFactory<PythonTesseractExecutable>(
+                        new Dictionary<PhantomForcesVersion, Dictionary<Categories, List<int>>>(){
+                            {version1001, weaponNumbers}
+                        }, versionAndPathPairs, pythonProgramPath, OutputDestination.Console, null);
+				IPythonExecutionFactoryOutput output = factory.Start();
+				Console.WriteLine(output.QueueStatusCounter.SuccessCounter);
+                int successes = output.QueueStatusCounter.SuccessCounter;
+                return TestingOutput("Python execution factory test (queueing, checking, executing)", successes >= expectedAmount, expectedAmount.ToString(), successes.ToString());
 			}
 
 
-			public static bool PythonExecutionFactoryTest()
+            /// <summary>
+            /// Tests if <see cref="PythonExecutionFactory{InitExecutable}"/> can detect if we give it an empty list.
+            /// </summary>
+            /// <returns>Whether this tests passes.</returns>
+            public static bool PythonExectuonFactoryEmptyTest(string pythonProgramPath, string imageBasePath){
+				Dictionary<Categories, List<int>> weaponNumbers = new Dictionary<Categories, List<int>>();
+				PhantomForcesVersion version1001 = new PhantomForcesVersion("10.0.1");
+
+				IDictionary<PhantomForcesVersion, string> versionAndPathPairs = new Dictionary<PhantomForcesVersion, string>
+				{
+					{ version1001, imageBasePath }
+				};
+				
+				PythonExecutionFactory<PythonTesseractExecutable> factory = 
+                    new PythonExecutionFactory<PythonTesseractExecutable>(
+                        new Dictionary<PhantomForcesVersion, Dictionary<Categories, List<int>>>(){
+                            {version1001, weaponNumbers}
+                        }, versionAndPathPairs, pythonProgramPath, OutputDestination.Console, null);
+				IPythonExecutionFactoryOutput output = factory.Start();
+                int fails = output.QueueStatusCounter.FailCounter;
+                return TestingOutput("Python execution factory test (queueing, checking, executing)", fails == 1, "1", fails.ToString());
+            }
+
+            /// <summary>
+            /// Tests if <see cref="PythonExecutionFactory{InitPythonExecutable}"/> can find files and properly execute them.
+            /// </summary>
+            /// <returns>Whether this tests passes.</returns>
+			public static bool PythonExecutionFactoryMockedTest(string pythonProgramPath, string imageBasePath)
 			{
-				IDictionary<Categories, List<int>> weaponNumbers = new Dictionary<Categories, List<int>>();
+				//string path = Path;
+
+				Dictionary<Categories, List<int>> weaponNumbers = new Dictionary<Categories, List<int>>();
 				PhantomForcesVersion version1001 = new PhantomForcesVersion("10.0.1");
 				weaponNumbers.Add(
 					Categories.AssaultRifles,
@@ -64,9 +145,14 @@ namespace PFDB{
                 }
 				IDictionary<PhantomForcesVersion, string> versionAndPathPairs = new Dictionary<PhantomForcesVersion, string>
 				{
-					{ version1001, "/mnt/bulkdata/Programming/PFDB/PFDB_API/ImageParserForAPI/version1001/" }
+					{ version1001, $"{imageBasePath}/version1001/" }
 				};
-				PythonExecutionFactory<InitExecutable> factory = new PythonExecutionFactory<InitExecutable>(weaponNumbers, versionAndPathPairs, "/mnt/bulkdata/Programming/PFDB/PFDB_API/ImageParserForAPI/dist", OutputDestination.Console, null);
+				
+				PythonExecutionFactory<PythonTesseractExecutable> factory = 
+                    new PythonExecutionFactory<PythonTesseractExecutable>(
+                        new Dictionary<PhantomForcesVersion, Dictionary<Categories, List<int>>>(){
+                            {version1001, weaponNumbers}
+                        }, versionAndPathPairs, pythonProgramPath, OutputDestination.Console, null);
 				IPythonExecutionFactoryOutput output = factory.Start();
 				Console.WriteLine(output.QueueStatusCounter.SuccessCounter);
                 int successes = output.QueueStatusCounter.SuccessCounter;

@@ -23,9 +23,7 @@ public class ComponentTester
 		bool test = false;
 		bool build = false;
 
-
-		
-		switch(args.Length){
+		switch (args.Length){
 			case 0:{
 				displayHelp();
 				break;
@@ -94,9 +92,10 @@ public class ComponentTester
 				}
 				break;
 			}
-			
+
 		}
-		
+		PFDBLogger logger = new PFDBLogger(".pfdblog");
+
 		// nothing -> help
 		// -h or --help ->  help
 		// -t = test
@@ -105,9 +104,8 @@ public class ComponentTester
 		// --tesseract = path to executable
 		// --imageBasePath
 
-		PFDBLogger logger = new PFDBLogger(".pfdblog");
 
-		if(test || build){
+		if (test || build){
 			WeaponTable.InitializeEverything();
 		}
 
@@ -118,7 +116,7 @@ public class ComponentTester
 				pythonProgramPath = args[1]
 				imageBasePath = args[2]
 			*/
-			if(PythonTest.Test(args[1],args[2]))score++;
+			if(PythonTest.Test(args[1],args[2], null))score++;
 			if(score >= 2){
 				Console.WriteLine($"{Environment.NewLine}{Environment.NewLine}");
 				PythonTest.TestingOutput("All tests", score >= 2, "2", 2.ToString());
@@ -175,7 +173,7 @@ public class ComponentTester
 				weaponNumbers.Add(category, tempList);
 			}
 			list.Add(version,weaponNumbers);
-			versionAndPathPairs.Add(version, $"{imageBasePath}/version{version.VersionNumber}/");
+			versionAndPathPairs.Add(version, $"{imageBasePath}{PyUtilityClass.slash}version{version.VersionNumber}{PyUtilityClass.slash}");
 		}
 		PythonExecutionFactory<PythonTesseractExecutable> factory = new PythonExecutionFactory<PythonTesseractExecutable>(list, versionAndPathPairs, pythonProgramPath, OutputDestination.Console | OutputDestination.File, tessbinPath);
 		IPythonExecutionFactoryOutput factoryOutput = factory.Start();
@@ -210,7 +208,7 @@ public class ComponentTester
 		}
 		IDictionary<PhantomForcesVersion, string> versionAndPathPairs = new Dictionary<PhantomForcesVersion, string>
 		{
-			{ version, $"{imageBasePath}/version{version.VersionNumber}/" }
+			{ version, $"{imageBasePath}{PyUtilityClass.slash}version{version.VersionNumber}{PyUtilityClass.slash}" }
 		};
 		PythonExecutionFactory<PythonTesseractExecutable> factory = 
 		new PythonExecutionFactory<PythonTesseractExecutable>(new Dictionary<PhantomForcesVersion, Dictionary<Categories, List<int>>>{{version, weaponNumbers}}, versionAndPathPairs, pythonProgramPath, OutputDestination.Console | OutputDestination.File, tessbinPath);

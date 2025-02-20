@@ -50,6 +50,7 @@ namespace PFDB
 						imagePath += PyUtilityClass.slash;
 					}
 
+					//check if file exists, skip if not
 					string temp = "";
 					if(version.IsLegacy){
 						temp = $"_{index+1}";
@@ -61,44 +62,61 @@ namespace PFDB
 						missingFiles.Add($"{imagePath}{(int)categoryGroup}_{weaponNumber}{temp}.png");
 						continue; //not found, skip to the next one
 					}
-					if(pythonExecutable is PythonTesseractExecutable pytessexec)
+
+					
+					pythonExecutable = new TPythonExecutable(); // do not remove this line otherwise you will spend hours of your time trying to figure out why it's only building 0_25.png
+					if(pythonExecutable is PythonTesseractExecutable pytessexec) //check if we are using pythontesseract (note that other cases should be handled should they need to be added
 					{
-						
-						
-						_queue.Add(
-							py.LoadOut(
-								pytessexec.Construct(
-									$"{(int)categoryGroup}_{weaponNumber}{temp}.png",
-									imagePath,
-									WeaponTable.WeaponIDCache[version].First(
-										x => x.weaponNumber == weaponNumber ||
-										(Categories)x.categoryNumber == categoryGroup
-										).weaponID,
-									WeaponUtilityClass.GetWeaponType(categoryGroup),
-									programDirectory,
-									tessbinPath,
-									_isDefaultConversion
-								)
-							)
-						);
+						try
+						{
+							var weaponID = WeaponTable.WeaponIDCache[version].First(
+											x => x.weaponNumber == weaponNumber &&
+											(Categories)x.categoryNumber == categoryGroup
+											).weaponID;
+
+							IPythonExecutor pythonExecutor = new PythonExecutor(outputDestination);
+							pythonExecutor.Load(pytessexec.Construct(
+										$"{(int)categoryGroup}_{weaponNumber}{temp}.png",
+										imagePath,
+										weaponID,
+										WeaponUtilityClass.GetWeaponType(categoryGroup),
+										programDirectory,
+										tessbinPath,
+										_isDefaultConversion
+									));
+							_queue.Add(pythonExecutor);
+						}
+						catch (InvalidOperationException) //when something is missing from the weaponIDCache list
+						{
+							continue; //skip, it's not found g
+						}
 					}
 					else
 					{
-						_queue.Add(
-							py.LoadOut(
-								pythonExecutable.Construct(
-									$"{(int)categoryGroup}_{weaponNumber}{temp}.png",
-									imagePath,
-									WeaponTable.WeaponIDCache[version].First(
-										x => x.weaponNumber == weaponNumber ||
-										(Categories)x.categoryNumber == categoryGroup
-										).weaponID,
-									WeaponUtilityClass.GetWeaponType(categoryGroup),
-									programDirectory,
-									_isDefaultConversion
+						try { 
+							var weaponID = WeaponTable.WeaponIDCache[version].First(
+											x => x.weaponNumber == weaponNumber &&
+											(Categories)x.categoryNumber == categoryGroup
+											).weaponID;
+
+
+							_queue.Add(
+								py.LoadOut(
+									pythonExecutable.Construct(
+										$"{(int)categoryGroup}_{weaponNumber}{temp}.png",
+										imagePath,
+										weaponID,
+										WeaponUtilityClass.GetWeaponType(categoryGroup),
+										programDirectory,
+										_isDefaultConversion
+									)
 								)
-							)
-						);
+							);
+						}
+						catch (InvalidOperationException) //when something is missing from the weaponIDCache list
+						{
+							continue; //skip, it's not found g
+						}
 					}
 				}
 
@@ -230,6 +248,7 @@ namespace PFDB
 								PFDBLogger.LogError("The targeted file was not found. Skipping.", parameter: versionAndPathPairs[version]);
 								continue;
 							}
+							pythonExecutable = new();
 							_constructorHelper(outputDestination, categoryGroup, weapon, versionAndPathPairs[version], version, programDirectory, tessbinPath, pythonExecutable);
 						}
 					}

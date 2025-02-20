@@ -8,8 +8,8 @@
 	<DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     
-	  <PreBuildEvent Condition="Exists('C:/')"><!--Windows Build-->
-		  $(SolutionDir)bin/python -m PyInstaller -path=[C:\Users\Aethelhelm\AppData\Local\Programs\Python\Python312\Scripts] --workpath $(SolutionDir)ImageParserForAPI\build --distpath $(SolutionDir)ImageParserForAPI\dist -F $(SolutionDir)ImageParserForAPI\impa.py
+	  <PreBuildEvent Condition="Exists('C:\')"><!--Windows Build-->
+		  py -m PyInstaller -path=[C:\Users\Aethelhelm\AppData\Local\Programs\Python\Python313\Scripts] --workpath $(SolutionDir)ImageParserForAPI\build --distpath $(SolutionDir)ImageParserForAPI\dist -F $(SolutionDir)ImageParserForAPI\impa.py
 		  xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ImageParserForAPI\ /y /f /v
 		  mkdir $(SolutionDir)PyExec\bin\$(Configuration)\$(TargetFramework)\tessbin
 		  xcopy $(SolutionDir)ImageParserForAPI\tessbin\ $(SolutionDir)PyExec\bin\$(Configuration)\$(TargetFramework)\tessbin\ /y /f /v /e /h /j

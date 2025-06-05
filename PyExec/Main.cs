@@ -148,13 +148,13 @@ namespace PFDB{
 					{ version1001, $"{imageBasePath}/version1001/" }
 				};
 				
-				PythonExecutionFactory<PythonTesseractExecutable> factory = 
-                    new PythonExecutionFactory<PythonTesseractExecutable>(
+				PythonExecutionFactory<InitExecutable> factory = 
+                    new PythonExecutionFactory<InitExecutable>(
                         new Dictionary<PhantomForcesVersion, Dictionary<Categories, List<int>>>(){
                             {version1001, weaponNumbers}
                         }, versionAndPathPairs, pythonProgramPath, OutputDestination.Console, null);
 				IPythonExecutionFactoryOutput output = factory.Start();
-				Console.WriteLine(output.QueueStatusCounter.SuccessCounter);
+				//Console.WriteLine(output.QueueStatusCounter.SuccessCounter);
                 int successes = output.QueueStatusCounter.SuccessCounter;
                 return TestingOutput("Python execution factory test (queueing, checking, executing)", successes >= expectedAmount, expectedAmount.ToString(), successes.ToString());
 			}

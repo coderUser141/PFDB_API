@@ -74,16 +74,18 @@ namespace PFDB
 				ActualExecutionTimeFromStopwatchInMilliseconds = actualExecutionTimeFromStopwatchInMilliseconds;
 				MissingFiles = missingFiles;
 
-				PFDBLogger.LogInformation($"Datetime parallel time: {TotalParallelExecutionTimeFromDateTime.TotalMilliseconds} " +
-			$"\t\tStopwatch parallel time {TotalParallelExecutionTimeFromStopwatchInMilliseconds} {Environment.NewLine}" +
-			$"\t\tDatetime serial time {ActualExecutionTimeFromDateTime.TotalMilliseconds} " +
-			$"\t\tStopwatch serial time {ActualExecutionTimeFromStopwatchInMilliseconds} {Environment.NewLine}" +
-			$"\t\tCheck Succeses {CheckStatusCounter.SuccessCounter} " +
-			$"\t\tCheck failures {CheckStatusCounter.FailCounter} {Environment.NewLine}" +
-			$"\t\tQueue successes {QueueStatusCounter.SuccessCounter} " +
-			$"\t\tQueue failures {QueueStatusCounter.FailCounter} {Environment.NewLine}" +
-			$"\t\tExecution successes {ExecutionStatusCounter.SuccessCounter} " +
-			$"\t\tExecution failures {ExecutionStatusCounter.FailCounter} ");
+				PFDBLogger.LogInformation(
+					$"\t\t{Environment.NewLine}Datetime parallel time: {TotalParallelExecutionTimeFromDateTime.TotalMilliseconds} ms" +
+					$"\tStopwatch parallel time {TotalParallelExecutionTimeFromStopwatchInMilliseconds} ms {Environment.NewLine}" +
+					$"\t\tDatetime serial time {ActualExecutionTimeFromDateTime.TotalMilliseconds} ms " +
+					$"\tStopwatch serial time {ActualExecutionTimeFromStopwatchInMilliseconds} {Environment.NewLine}" +
+					$"\t\tCheck successes {CheckStatusCounter.SuccessCounter} " +
+					$"\t\tCheck failures {CheckStatusCounter.FailCounter} {Environment.NewLine}" +
+					$"\t\tQueue successes {QueueStatusCounter.SuccessCounter} " +
+					$"\t\tQueue failures {QueueStatusCounter.FailCounter} {Environment.NewLine}" +
+					$"\t\tExecution successes {ExecutionStatusCounter.SuccessCounter} " +
+					$"\t\tExecution failures {ExecutionStatusCounter.FailCounter} "
+				);
 			}
 
 			/// <inheritdoc/>

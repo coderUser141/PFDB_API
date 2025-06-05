@@ -1,11 +1,10 @@
-﻿using PFDB.WeaponUtility;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 using System;
 using System.Linq;
 using PFDB.ParsingUtility;
 using PFDB.Logging;
-using System.Linq.Expressions;
+using PFDB.WeaponUtility;
 
 namespace PFDB
 {

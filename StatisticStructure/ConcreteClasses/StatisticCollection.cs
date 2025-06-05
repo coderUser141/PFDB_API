@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PFDB.Proofreading
+namespace PFDB.StatisticStructure
 {
 	/// <summary>
 	/// Defines a collection of statistics (i.e. <see cref="IStatistic"/>). Inherits from <see cref="List{IStatistic}"/> with additional fields

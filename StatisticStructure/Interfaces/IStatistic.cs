@@ -1,11 +1,8 @@
 ﻿using PFDB.WeaponUtility;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PFDB.StatisticUtility;
 
-namespace PFDB.StatisticUtility
+namespace PFDB.StatisticStructure
 {
 	/// <summary>
 	/// Interface that defines a statistic.

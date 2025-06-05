@@ -6,9 +6,10 @@ using System.Linq;
 using System.Text;
 using PFDB.Logging;
 using PFDB.ParsingUtility;
-using PFDB.Proofreading;
+using PFDB.AutomaticProofreading;
 using PFDB.StatisticUtility;
 using PFDB.WeaponUtility;
+using PFDB.StatisticStructure;
 
 namespace PFDB
 {

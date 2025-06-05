@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PFDB_SS", "PFDB_SS\PFDB_SS.csproj", "{9E0E1908-2DF9-41AF-BAE4-71E933FD80CD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeaponClasses", "WeaponClasses\WeaponClasses.csproj", "{601C6893-5492-4F99-925C-950EB6D94121}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeaponClasses", "ArchivedCode\WeaponClasses\WeaponClasses.csproj", "{601C6893-5492-4F99-925C-950EB6D94121}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ImageParserForAPI", "ImageParserForAPI\ImageParserForAPI.pyproj", "{2D7FAD35-6FD6-4742-9D78-05964EFD0A29}"
 EndProject
@@ -26,7 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		weapon_database.db = weapon_database.db
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileIO", "fileread\FileIO.csproj", "{90A08430-3034-483C-966C-44B531317C1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileIO", "ArchivedCode\fileread\FileIO.csproj", "{90A08430-3034-483C-966C-44B531317C1A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P_invokeWrapper", "p_invokewrapper\P_invokeWrapper.csproj", "{60BFF1DD-807A-42B5-A90D-901BEAABE61F}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -35,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P_invokeWrapper", "p_invoke
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Calculator", "Calculator\Calculator.vcxproj", "{EDC808D7-D6E3-4AEF-B207-896E6E914DED}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "temprenamer", "temprenamer\temprenamer.csproj", "{EE46B51A-0903-4148-98C1-3954F0921E3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "temprenamer", "ArchivedCode\temprenamer\temprenamer.csproj", "{EE46B51A-0903-4148-98C1-3954F0921E3F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentTester", "ComponentTester\ComponentTester.csproj", "{3C763D2D-FB41-4180-B90E-ECA413C86FB6}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -60,6 +60,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeaponStructure", "WeaponStructure\WeaponStructure.csproj", "{94EC1DF6-4361-4EE6-8557-DC44BCB890F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualProofread", "ManualProofread\ManualProofread.csproj", "{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatisticStructure", "StatisticStructure\StatisticStructure.csproj", "{8D041779-A608-4F54-89D3-0098B9D49697}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -495,6 +497,30 @@ Global
 		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Release|x64.Build.0 = Release|Any CPU
 		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Release|x86.ActiveCfg = Release|Any CPU
 		{A1F1D163-D66B-433B-BD17-F49E96AE6F2A}.Release|x86.Build.0 = Release|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Debug|x64.Build.0 = Debug|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Debug|x86.Build.0 = Debug|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Generalx64BuildDebug|Any CPU.ActiveCfg = Generalx64BuildDebug|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Generalx64BuildDebug|Any CPU.Build.0 = Generalx64BuildDebug|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Generalx64BuildDebug|x64.ActiveCfg = Generalx64BuildDebug|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Generalx64BuildDebug|x64.Build.0 = Generalx64BuildDebug|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Generalx64BuildDebug|x86.ActiveCfg = Generalx64BuildDebug|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Generalx64BuildDebug|x86.Build.0 = Generalx64BuildDebug|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Generalx64BuildRelease|Any CPU.ActiveCfg = Generalx64BuildRelease|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Generalx64BuildRelease|Any CPU.Build.0 = Generalx64BuildRelease|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Generalx64BuildRelease|x64.ActiveCfg = Generalx64BuildRelease|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Generalx64BuildRelease|x64.Build.0 = Generalx64BuildRelease|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Generalx64BuildRelease|x86.ActiveCfg = Generalx64BuildRelease|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Generalx64BuildRelease|x86.Build.0 = Generalx64BuildRelease|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Release|x64.ActiveCfg = Release|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Release|x64.Build.0 = Release|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Release|x86.ActiveCfg = Release|Any CPU
+		{8D041779-A608-4F54-89D3-0098B9D49697}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

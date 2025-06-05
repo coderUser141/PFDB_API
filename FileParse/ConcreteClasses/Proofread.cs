@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Text.RegularExpressions;
-using Microsoft.VisualBasic;
-using Microsoft.VisualBasic.FileIO;
+using PFDB.StatisticStructure;
 using PFDB.Logging;
 using PFDB.ParsingUtility;
 using PFDB.StatisticUtility;
@@ -13,7 +10,7 @@ using PFDB.WeaponUtility;
 namespace PFDB
 {
 
-	namespace Proofreading
+	namespace AutomaticProofreading
 	{
 
 		/// <summary>

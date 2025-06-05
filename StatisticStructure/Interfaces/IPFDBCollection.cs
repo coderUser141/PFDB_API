@@ -1,6 +1,6 @@
 ﻿using PFDB.WeaponUtility;
 
-namespace PFDB.StatisticUtility
+namespace PFDB.StatisticStructure
 {
 	/// <summary>
 	/// Interface for any collections defined for Phantom Forces.

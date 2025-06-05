@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace PFDB
 {
-	namespace Proofreading
+	namespace StatisticStructure
 	{
 		/// <summary>
 		/// Defines a statistic.
@@ -37,7 +37,7 @@ namespace PFDB
 			/// <param name="statistics">The list of statistics to group under this statistic object.</param>
 			/// <param name="weaponID">The weapon ID of the statistics.</param>
 			/// <param name="option">The type of statistic being added.</param>
-			protected internal Statistic(bool needsRevision, IEnumerable<string> statistics, WeaponIdentification weaponID, StatisticOptions option)
+			public Statistic(bool needsRevision, IEnumerable<string> statistics, WeaponIdentification weaponID, StatisticOptions option)
 			{
 				_WID = weaponID;
 				_option = option;
@@ -55,7 +55,7 @@ namespace PFDB
 			/// <param name="statistic">The underlying statistic for this statistic object.</param>
 			/// <param name="weaponID">The weapon ID of the statistics.</param>
 			/// <param name="option">The type of statistic being added.</param>
-			protected internal Statistic(bool needsRevision, string statistic, WeaponIdentification weaponID, StatisticOptions option)
+			public Statistic(bool needsRevision, string statistic, WeaponIdentification weaponID, StatisticOptions option)
 			{
 				_WID = weaponID;
 				_option = option;

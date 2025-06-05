@@ -1,10 +1,8 @@
-﻿using PFDB.ParsingUtility;
-using PFDB.StatisticUtility;
-using PFDB.WeaponUtility;
-using System;
-using System.Collections.Generic;
-
+﻿using System;
 using System.IO;
+
+using PFDB.WeaponUtility;
+using PFDB.StatisticStructure;
 
 namespace PFDB.Parsing
 {

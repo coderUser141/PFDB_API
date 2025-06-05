@@ -1,13 +1,13 @@
-﻿using PFDB.ConversionUtility;
-using PFDB.Logging;
-using PFDB.PythonExecutionUtility;
-using PFDB.WeaponUtility;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using PFDB.ConversionUtility;
+using PFDB.Logging;
+using PFDB.PythonExecutionUtility;
+using PFDB.WeaponUtility;
 
 namespace PFDB.Conversion
 {

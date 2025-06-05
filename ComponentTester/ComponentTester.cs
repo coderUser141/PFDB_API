@@ -111,6 +111,8 @@ public class ComponentTester
 			WeaponTable.InitializeEverything();
 		}
 
+		Console.WriteLine($"Has test been found? {test}");
+
 		if(test){
 			int score = 0;
 			if(ParseTesting.Test())score++;

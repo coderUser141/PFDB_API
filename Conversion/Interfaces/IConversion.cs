@@ -1,10 +1,5 @@
-﻿using PFDB.StatisticUtility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PFDB.WeaponUtility;
+﻿using PFDB.WeaponUtility;
+using PFDB.StatisticStructure;
 
 namespace PFDB.ConversionUtility
 {

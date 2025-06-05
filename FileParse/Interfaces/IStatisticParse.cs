@@ -1,6 +1,6 @@
-﻿using PFDB.ParsingUtility;
+﻿using System.Collections.Generic;
+using PFDB.ParsingUtility;
 using PFDB.WeaponUtility;
-using System.Collections.Generic;
 
 namespace PFDB.Parsing
 {

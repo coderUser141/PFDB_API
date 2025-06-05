@@ -18,8 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Logger\PFDBLogger.csproj" />
-    <ProjectReference Include="..\WeaponUtility2\WeaponUtility2.csproj" />
+    <ProjectReference Include="..\StatisticStructure\StatisticStructure.csproj" />
   </ItemGroup>
 
 </Project>

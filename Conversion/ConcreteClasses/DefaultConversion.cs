@@ -1,12 +1,7 @@
-﻿using PFDB.StatisticUtility;
-using PFDB.WeaponUtility;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PFDB.WeaponUtility;
 using PFDB.ConversionUtility;
 using PFDB.PythonExecutionUtility;
+using PFDB.StatisticStructure;
 
 namespace PFDB.Conversion
 {

@@ -1,19 +1,25 @@
 // pch.cpp: source file corresponding to the pre-compiled header
 
 #include "pch.h"
-#include "sqlite3.h"
-#define DLLEXPORT __declspec(dllexport)
-
+#ifdef _WIN32
+	#ifdef __GNUC__
+		#define __attribute__ (dllexport)
+	#else
+		#define DLLEXPORT __declspec(dllexport)
+	#endif
+#else
+	#define DLLEXPORT __attribute__ (( visibility("default") ))
+#endif
 
 
 // When you are using pre-compiled headers, this source file is necessary for compilation to succeed.
-
+extern "C" DLLEXPORT unsigned long long test() {
+	std::cout << "your mom\n"; return 6; 
+}
 
 namespace player_statistics_calculator {
 
-	extern "C" DLLEXPORT unsigned long long test() {
-		std::cout << "your mom\n"; return 6; 
-	}
+	
 
 	/// <summary>
 	/// Calculates the amount of credits earned at a given rank.
@@ -22,7 +28,7 @@ namespace player_statistics_calculator {
 	/// <returns>The credits obtained after hitting the given rank.</returns>
 	extern "C" DLLEXPORT unsigned long long rankToCredits(unsigned long long rank) {
 		//cannot be negative, cannot be bigger than unsigned long max
-		if (((UINT64_MAX - 201) / 5) < rank || rank < 0) return UINT64_MAX; //avoid int overflow
+		if (((ULLONG_MAX - 201) / 5) < rank || rank < 0) return ULLONG_MAX; //avoid int overflow
 		if (rank == 0)return 0;
 		return 200 + 5 * rank;
 	}
@@ -34,7 +40,7 @@ namespace player_statistics_calculator {
 	/// <returns>The rank that achieves the given rank.</returns>
 	extern "C" DLLEXPORT unsigned long long creditsToRank(unsigned long long credits) {
 		//must be a multiple of 5, cannot be negative, cannot be bigger than ulong max
-		if (credits < 0 || credits % 5 != 0) return UINT64_MAX;
+		if (credits < 0 || credits % 5 != 0) return ULLONG_MAX;
 		return (credits - (unsigned long long)200) / (unsigned long long)5;
 	}
 
@@ -46,11 +52,11 @@ namespace player_statistics_calculator {
 	/// <returns>Returns the sum of all the credits earned in the range defined by the start and end ranks.</returns>
 	extern "C" DLLEXPORT unsigned long long rankToCreditsSummation(unsigned long long startRank, unsigned long long endRank) {
 		//endRank must be greater than startRank, neither can be negative
-		if (endRank < startRank) return UINT64_MAX;
+		if (endRank < startRank) return ULLONG_MAX;
 		if (endRank == startRank)return 0;
 		//to check if the intermediate calculation will exceed the uint64 limit
-		if (startRank * (startRank - 1) > UINT64_MAX - (startRank * 2))return UINT64_MAX;
-		if (endRank * (endRank - 1) > UINT64_MAX - (endRank * 2))return UINT64_MAX;
+		if (startRank * (startRank - 1) > ULLONG_MAX - (startRank * 2))return ULLONG_MAX;
+		if (endRank * (endRank - 1) > ULLONG_MAX - (endRank * 2))return ULLONG_MAX;
 		//see https://www.desmos.com/calculator/4ywrmdkv6p
 		unsigned long long startSum = 200 * startRank + 5 * ((startRank * startRank + startRank) / 2);
 		unsigned long long endSum = 200 * endRank + 5 * ((endRank * endRank + endRank) / 2);
@@ -105,7 +111,7 @@ namespace player_statistics_calculator {
 
 	extern "C" DLLEXPORT unsigned long long creditsForGunRankRequirement(unsigned long long startRank, unsigned long long targetRank) {
 		unsigned long long delta = targetRank - startRank + 1;
-		if (delta > (UINT64_MAX - 700) / 140)return UINT64_MAX;
+		if (delta > (ULLONG_MAX - 700) / 140)return ULLONG_MAX;
 		return 140 * delta + 700;
 	}
 
@@ -118,55 +124,6 @@ namespace player_statistics_calculator {
 
 
 
-namespace sqlite_accessor {
-
-	int callback(void* data, int argcount, char** argv, char** column_name) {
-		std::cout << (char*)data << '\n';
-		for (int i{ 0 }; i < argcount; ++i) {
-			//std::cout << column_name[i] << ": " << argv[i] << '\n';
-		}
-		//std::cout << '\n';
-		return 0;
-	}
-
-	void bla() {
-		sqlite3* db;
-		char* errMsg = static_cast<char*>(malloc(sizeof(char))); //i've been trying for the past hour trying to make this a unique_ptr. oh well, onto the to do list you go...
-		*errMsg = 'y';
-		int rc{ 0 };
-
-		rc = sqlite3_open("attachments.db", &db);
-
-		if (rc != SQLITE_OK) {
-			//error
-			std::cout << ":(\n";
-			std::cout << "Error: " << errMsg << '\n';
-			if (errMsg != nullptr)sqlite3_free(errMsg);
-			sqlite3_close(db);
-			return;
-		}
-		std::cout << "yay\n";
-		char data[]{ "Callback function called." };
-		const char* sql{ "SELECT * FROM group_attachments;" };
-
-		sqlite3_exec(db, sql, callback, (void*)data, &errMsg);
-
-		if (errMsg != nullptr)sqlite3_free(errMsg);
-		sqlite3_close(db);
-	}
-
-	extern "C" DLLEXPORT void write(int* ints) {
-		for (int i = 0; i < sizeof(ints) / sizeof(int); ++i) {
-			std::cout << i << '\n';
-		}
-		//bla();
-	}
-
-	extern "C" DLLEXPORT BSTR returnString(){
-		return SysAllocString(L"hiiii");
-	}
-
-}
 //how to pass vector from c++ to c#
 //https://stackoverflow.com/questions/31417688/passing-a-vector-array-from-unmanaged-c-to-c-sharp
 
@@ -460,7 +417,7 @@ KOM 10X42: K14
 .32 ACP: Model 700
 Hi-Power 8-32: Model 700
 .375 Cheytac: Intervention
-Siege Sight, Olympian Target Sight, Combat Barrel, Sawed Off Barrel, Olympian Stock, Sporting Stock, #000 Buckshot, 3½ Shell, Bolo Round: DT11
+Siege Sight, Olympian Target Sight, Combat Barrel, Sawed Off Barrel, Olympian Stock, Sporting Stock, #000 Buckshot, 3ï¿½ Shell, Bolo Round: DT11
 Pump Action: SPAS-12
 20RD Drum: AA-12
 Shortened Barrel, Lengthened Barrel: Saiga-12

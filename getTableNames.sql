@@ -1,1 +1,0 @@
-SELECT name FROM sqlite_master WHERE sqlite_master.type = "table";

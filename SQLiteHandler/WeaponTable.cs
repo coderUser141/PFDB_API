@@ -5,6 +5,7 @@ using System.Data;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using PFDB.Logging;
+using System.Collections.Generic;
 
 
 namespace PFDB.SQLite
@@ -359,6 +360,7 @@ namespace PFDB.SQLite
 						$"ORDER BY \"{_categories[(int)_categoryNames.CategoryNumber]}\" + 0;";
 					using (SQLiteDataReader reader = cmd.ExecuteReader())
 					{
+						IDictionary<Categories, int> tempDictionary = new Dictionary<Categories, int>();
 						while (reader.Read())
 						{
 							int category = reader.GetInt32(1);
@@ -366,9 +368,10 @@ namespace PFDB.SQLite
 							{
 								throw new SQLiteException("Category number was outside the acceptable number limits");
 							}
-
-							_weaponCountsCache.TryAdd(version,new Dictionary<Categories, int>() { { (Categories)category, reader.GetInt32(2) } }.ToDictionary());
+							//Console.WriteLine(reader.GetInt32(1) + ", " + reader.GetInt32(2));
+							tempDictionary.Add((Categories)category, reader.GetInt32(2));
 						}
+					_weaponCountsCache.TryAdd(version, tempDictionary.ToDictionary());
 					}
 				}
 			}

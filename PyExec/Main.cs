@@ -28,22 +28,22 @@ namespace PFDB{
             public static void Main(){
                 PFDBLogger logger =  new PFDBLogger(".pfdblog");
                 WeaponTable.InitializeEverything();
-                Test(string.Empty, string.Empty);
+                Test(string.Empty, string.Empty, null);
             }
 
             /// <summary>
             /// Main testing function.
             /// </summary>
-            public static bool Test(string pythonProgramPath, string imageBasePath)
+            public static bool Test(string pythonProgramPath, string imageBasePath, string? tessbinPath)
 			{
                 int score = 0;
 				if(PythonInitExecutableTest())score++;
 				PythonExecutorInitExecutableConsoleTest();
 				if(PythonExecutorInitExecutableFileTest())score++;
-				if(PythonTesseractExecutableTest())score++;
+				if(PythonTesseractExecutableTest(tessbinPath))score++;
 				if(PythonExecutionFactoryMockedTest(pythonProgramPath, imageBasePath))score++;
-                if(PythonExectuonFactoryEmptyTest(pythonProgramPath, imageBasePath))score++;
-                if(PythonExecutionFactoryTesseractTest(pythonProgramPath, imageBasePath))score++;
+                if(PythonExecutionFactoryEmptyTest(pythonProgramPath, imageBasePath, tessbinPath))score++;
+                if(PythonExecutionFactoryTesseractTest(pythonProgramPath, imageBasePath, tessbinPath))score++;
                 return TestingOutput("All PyExec tests", score >= 6, "6", score.ToString());
 			}
 
@@ -51,7 +51,7 @@ namespace PFDB{
             /// Tests if <see cref="PythonExecutionFactory{InitPythonExecutable}"/> can find files and properly execute them.
             /// </summary>
             /// <returns>Whether this tests passes.</returns>
-			public static bool PythonExecutionFactoryTesseractTest(string pythonProgramPath, string imageBasePath)
+			public static bool PythonExecutionFactoryTesseractTest(string pythonProgramPath, string imageBasePath, string? tessbinPath)
 			{
                 //string path = Path;
 
@@ -84,7 +84,7 @@ namespace PFDB{
                     new PythonExecutionFactory<PythonTesseractExecutable>(
                         new Dictionary<PhantomForcesVersion, Dictionary<Categories, List<int>>>(){
                             {version1001, weaponNumbers}
-                        }, versionAndPathPairs, pythonProgramPath, OutputDestination.Console, null);
+                        }, versionAndPathPairs, pythonProgramPath, OutputDestination.Console, tessbinPath);
 				IPythonExecutionFactoryOutput output = factory.Start();
 				Console.WriteLine(output.QueueStatusCounter.SuccessCounter);
                 int successes = output.QueueStatusCounter.SuccessCounter;
@@ -96,7 +96,8 @@ namespace PFDB{
             /// Tests if <see cref="PythonExecutionFactory{InitExecutable}"/> can detect if we give it an empty list.
             /// </summary>
             /// <returns>Whether this tests passes.</returns>
-            public static bool PythonExectuonFactoryEmptyTest(string pythonProgramPath, string imageBasePath){
+            public static bool PythonExecutionFactoryEmptyTest(string pythonProgramPath, string imageBasePath, string? tessbinPath)
+			{
 				Dictionary<Categories, List<int>> weaponNumbers = new Dictionary<Categories, List<int>>();
 				PhantomForcesVersion version1001 = new PhantomForcesVersion("10.0.1");
 
@@ -109,7 +110,7 @@ namespace PFDB{
                     new PythonExecutionFactory<PythonTesseractExecutable>(
                         new Dictionary<PhantomForcesVersion, Dictionary<Categories, List<int>>>(){
                             {version1001, weaponNumbers}
-                        }, versionAndPathPairs, pythonProgramPath, OutputDestination.Console, null);
+                        }, versionAndPathPairs, pythonProgramPath, OutputDestination.Console, tessbinPath);
 				IPythonExecutionFactoryOutput output = factory.Start();
                 int fails = output.QueueStatusCounter.FailCounter;
                 return TestingOutput("Python execution factory test (queueing, checking, executing)", fails == 1, "1", fails.ToString());
@@ -145,7 +146,7 @@ namespace PFDB{
                 }
 				IDictionary<PhantomForcesVersion, string> versionAndPathPairs = new Dictionary<PhantomForcesVersion, string>
 				{
-					{ version1001, $"{imageBasePath}/version1001/" }
+					{ version1001, $"{imageBasePath}{PyUtilityClass.slash}version1001{PyUtilityClass.slash}" }
 				};
 				
 				PythonExecutionFactory<InitExecutable> factory = 
@@ -185,17 +186,17 @@ namespace PFDB{
             public static bool PythonExecutorInitExecutableFileTest(){
                 IPythonExecutor executor = new PythonExecutor(OutputDestination.File);
                 executor.Execute(null);
-                bool outputfolderexists = Directory.Exists(Directory.GetCurrentDirectory()+"/"+PythonExecutor.OutputFolderName+"/0");
-                bool logfolderexists = Directory.Exists(Directory.GetCurrentDirectory()+"/"+PythonExecutor.LogFolderName+"/0");
-                bool outputfilecreated = File.Exists(Directory.GetCurrentDirectory()+"/"+PythonExecutor.OutputFolderName+"/0/.pfdb");
-                bool logfilecreated = File.Exists(Directory.GetCurrentDirectory()+"/"+PythonExecutor.LogFolderName+"/0/.pfdblog");
+                bool outputfolderexists = Directory.Exists(Directory.GetCurrentDirectory()+PyUtilityClass.slash +PythonExecutor.OutputFolderName+$"{PyUtilityClass.slash}0");
+                bool logfolderexists = Directory.Exists(Directory.GetCurrentDirectory()+ PyUtilityClass.slash + PythonExecutor.LogFolderName+$"{PyUtilityClass.slash}0");
+                bool outputfilecreated = File.Exists(Directory.GetCurrentDirectory()+PyUtilityClass.slash +PythonExecutor.OutputFolderName+$"{PyUtilityClass.slash}0{PyUtilityClass.slash}.pfdb");
+                bool logfilecreated = File.Exists(Directory.GetCurrentDirectory()+ PyUtilityClass.slash + PythonExecutor.LogFolderName+$"{PyUtilityClass.slash}0{PyUtilityClass.slash}.pfdblog");
                 PFDBLogger.LogInformation($"Did it make an output directory? {outputfolderexists}");
                 PFDBLogger.LogInformation($"Did it make a log directory? {logfolderexists}");
                 PFDBLogger.LogInformation($"Did it make an output file? {outputfilecreated}");
                 PFDBLogger.LogInformation($"Did it make a log file? {logfilecreated}");
                 //Console.ReadLine();
-                if(logfolderexists)Directory.Delete(Directory.GetCurrentDirectory()+"/"+PythonExecutor.LogFolderName+"/0",true);
-                if(outputfolderexists)Directory.Delete(Directory.GetCurrentDirectory()+"/"+PythonExecutor.OutputFolderName+"/0",true);
+                if(logfolderexists)Directory.Delete(Directory.GetCurrentDirectory()+ PyUtilityClass.slash + PythonExecutor.LogFolderName+ PyUtilityClass.slash + "0",true);
+                if(outputfolderexists)Directory.Delete(Directory.GetCurrentDirectory()+ PyUtilityClass.slash + PythonExecutor.OutputFolderName+ PyUtilityClass.slash + "/0",true);
                 PFDBLogger.LogInformation("Deleted output and log folders (if they even existed)");
                 return TestingOutput("Log and output folders + files creation", logfolderexists && outputfolderexists && logfilecreated && outputfilecreated, "True", (logfolderexists && outputfolderexists).ToString());
             }
@@ -204,14 +205,15 @@ namespace PFDB{
             /// Tests if <see cref="PythonTesseractExecutable"/> is able to read from an image file, correctly read it, and write the output to a new file.
             /// </summary>
             /// <returns>Whether this test passes.</returns>
-            public static bool PythonTesseractExecutableTest(){
+            public static bool PythonTesseractExecutableTest(string? tessbinPath)
+			{
                 string fileName ="0_2_testimage.png";
 
                 IPythonExecutor executor = new PythonExecutor(OutputDestination.File);
                 PythonTesseractExecutable executable = new PythonTesseractExecutable();
                 executable.Construct(fileName,Directory.GetCurrentDirectory(), 
                     new WeaponUtility.WeaponIdentification(new PhantomForcesVersion("10.1.0"), Categories.AssaultRifles, 15, 0, "AS-VAL"),
-                    WeaponType.Primary, Directory.GetCurrentDirectory()
+                    WeaponType.Primary, Directory.GetCurrentDirectory(), tessbinPath
                     );
                 executor.Load(executable);
                 PFDBLogger.LogInformation("Executing, this may take a while...");

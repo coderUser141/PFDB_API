@@ -198,10 +198,10 @@ namespace PFDB
 				}
 				else
 				{
-					if (!Directory.Exists(TessbinPath + $"{PyUtilityClass.slash}tessbin{PyUtilityClass.slash}"))
+					if (!Directory.Exists(TessbinPath + $"tessbin{PyUtilityClass.slash}"))
 					{
 						//this shouldn't be logged, the factory ideally should catch and log it
-						aggregateException.exceptions.Add(new DirectoryNotFoundException($"The tessbin path specified at {TessbinPath}{PyUtilityClass.slash}tessbin{PyUtilityClass.slash} does not exist. Ensure that the directory exists, then try again."));
+						aggregateException.exceptions.Add(new DirectoryNotFoundException($"The tessbin path specified at {TessbinPath}tessbin{PyUtilityClass.slash} does not exist. Ensure that the directory exists, then try again."));
 					}
 				}
 				if((File.Exists(ProgramDirectory + "impa.exe") == false && _isWindows) || (File.Exists(ProgramDirectory + "impa") == false && _isLinux))

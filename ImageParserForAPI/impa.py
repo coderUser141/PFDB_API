@@ -1,5 +1,6 @@
 import sys
 sys.path.append('C:\\Users\\Aethelhelm\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages')
+sys.path.append('C:\\Users\\Aethelhelm\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages')
 sys.path.append('/mnt/bulkdata/Programming/PFDB/PFDB_API/lib/python3.12/site-packages')
 
 import numpy
@@ -269,6 +270,8 @@ class ImageParser:
 			crops = self.cropv1001(fullscreen_image, weaponType, crops, rank)
 		elif version == "1010":
 			crops = self.cropv1010(fullscreen_image, weaponType, crops, rank)
+		elif version == "1011":
+			crops = self.cropv1010(fullscreen_image, weaponType, crops, rank)
 		elif version == "9999":
 			crops = self.cropv9999(fullscreen_image, weaponType, crops, rank)
 		elif version == "9998":
@@ -330,7 +333,7 @@ class ImageParser:
 			
 			cv2.imwrite("temp.png", im_bw)
 			tempimage = cv2.imread("temp.png")#thinFontPreprocessing(enhanced_img)
-		
+			
 			gray			= cv2.cvtColor(tempimage, cv2.COLOR_BGR2GRAY)
 			blur			= cv2.GaussianBlur(gray, (7,7), 0)
 			a = "pythoncvtesting/index_blur_" + cropname + version + ".png"
@@ -420,7 +423,7 @@ OPTIONS:
 	-h  --help  Displays this help message, and exits
 	-c          Tessbin folder exists in the current working directory (TESSBINPATH is ignored)
 	#-f          Tessbin folder exists in another directory (specified by TESSBINPATH)
-	-w			
+	#-w			
 
 	NOTE: -c and -a are mutually exclusive; you cannot use both at the same time.
 		

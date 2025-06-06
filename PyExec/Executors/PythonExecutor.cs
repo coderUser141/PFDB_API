@@ -130,6 +130,7 @@ namespace PFDB
 			/// <exception cref="ArgumentException"></exception>
 			public void Execute(object? bs)
 			{
+				PFDBLogger.LogInformation($"Executing PythonExecutor with file {_input.Filename} with WeaponID {_input.WeaponID.ID} from version {_input.WeaponID.Version.VersionNumber}");
 				try
 				{
 					_input.CheckInput();
@@ -141,11 +142,11 @@ namespace PFDB
 						builder.Append($"Exception: {exception.GetType()} ||| {exception.Message}{Environment.NewLine}");
 					}
 					_output = new FailedPythonOutput(builder.ToString());
-					PFDBLogger.LogError($"An error occured while executing input of type {_input}. The affected input was handling {_input.Filename} with weapon ID {_input.WeaponID}{Environment.NewLine}{_output.OutputString}");
+					PFDBLogger.LogError($"An error occured while executing input of type {_input}. The affected input was handling {_input.Filename} with weapon ID {_input.WeaponID.ID}{Environment.NewLine}{_output.OutputString}");
 				}catch(Exception ex)
 				{
 					_output = new FailedPythonOutput(ex.Message);
-					PFDBLogger.LogError($"An error occured while executing input of type {_input}. The affected input was handling {_input.Filename} with weapon ID {_input.WeaponID}{Environment.NewLine}{_output.OutputString}");
+					PFDBLogger.LogError($"An error occured while executing input of type {_input}. The affected input was handling {_input.Filename} with weapon ID {_input.WeaponID.ID}{Environment.NewLine}{_output.OutputString}");
 				}
 				
 				_output = _input.ReturnOutput();

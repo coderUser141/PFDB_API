@@ -31,53 +31,67 @@ namespace PFDB
                     for (int i = 0; i < Math.Min(currentProcessPath.Length, foreignPath.Length); ++i)
                     {
                         if (currentProcessPath[i] != foreignPath[i])
-                        {
-                            tempCurrent = tempCurrent.Substring(0, i);
-                            tempForeign = tempForeign.Substring(0, i);
+						{
+							try
+							{
+								tempCurrent = tempCurrent.Substring(0, i);
+								tempForeign = tempForeign.Substring(0, i);
 
-                            if (tempForeign != tempCurrent) throw new Exception($"Something went really wrong: {tempCurrent} should equal {tempForeign}");
-                            
-                            int lastSlashBeforeSubstringC = tempCurrent.LastIndexOf(slash); //finds last slash (aka last common directory)
-                            int lastSlashBeforeSubstringF = tempForeign.LastIndexOf(slash);
+								if (tempForeign != tempCurrent) throw new Exception($"Something went really wrong: {tempCurrent} should equal {tempForeign}");
 
-                            if (lastSlashBeforeSubstringC != lastSlashBeforeSubstringF) throw new Exception($"Something went really wrong: {lastSlashBeforeSubstringC} should equal {lastSlashBeforeSubstringF}");
+								int lastSlashBeforeSubstringC = tempCurrent.LastIndexOf(slash); //finds last slash (aka last common directory)
+								int lastSlashBeforeSubstringF = tempForeign.LastIndexOf(slash);
 
-                            tempCurrent = tempCurrent.Substring(0, lastSlashBeforeSubstringC); //truncates off last slash
-                            tempForeign = tempForeign.Substring(0, lastSlashBeforeSubstringF);
+								if (lastSlashBeforeSubstringC != lastSlashBeforeSubstringF) throw new Exception($"Something went really wrong: {lastSlashBeforeSubstringC} should equal {lastSlashBeforeSubstringF}");
 
-                            if (tempForeign != tempCurrent) throw new Exception($"Something went really wrong: {tempCurrent} should equal {tempForeign}");
+								tempCurrent = tempCurrent.Substring(0, lastSlashBeforeSubstringC); //truncates off last slash
+								tempForeign = tempForeign.Substring(0, lastSlashBeforeSubstringF);
 
-                            int lastSlashBeforeSubstringC2 = tempCurrent.LastIndexOf(slash);
-                            int lastSlashBeforeSubstringF2 = tempForeign.LastIndexOf(slash);
+								if (tempForeign != tempCurrent) throw new Exception($"Something went really wrong: {tempCurrent} should equal {tempForeign}");
 
-                            tempCurrent = currentProcessPath.Substring(lastSlashBeforeSubstringC2);
-                            tempForeign = foreignPath.Substring(lastSlashBeforeSubstringF2);
-                            break;
+
+								int lastSlashBeforeSubstringC2 = tempCurrent.LastIndexOf(slash);
+								int lastSlashBeforeSubstringF2 = tempForeign.LastIndexOf(slash);
+
+								tempCurrent = currentProcessPath.Substring(lastSlashBeforeSubstringC2);
+								tempForeign = foreignPath.Substring(lastSlashBeforeSubstringF2);
+							}
+							catch
+							{
+								break; //it's not important
+							}
+							break;
                         }
                     }
                 }
                 else //subset, or the same
                 {
-                    tempCurrent = tempCurrent.Substring(0, Math.Min(currentProcessPath.Length, foreignPath.Length));
-                    tempForeign = tempForeign.Substring(0, Math.Min(currentProcessPath.Length, foreignPath.Length));
+					try
+					{
+						tempCurrent = tempCurrent.Substring(0, Math.Min(currentProcessPath.Length, foreignPath.Length));
+						tempForeign = tempForeign.Substring(0, Math.Min(currentProcessPath.Length, foreignPath.Length));
 
-                    int lastSlashBeforeSubstringC = tempCurrent.LastIndexOf(slash); //finds last slash (aka last common directory)
-                    int lastSlashBeforeSubstringF = tempForeign.LastIndexOf(slash);
-                    if (lastSlashBeforeSubstringC == -1) lastSlashBeforeSubstringC = 0; //couldn't find slash in currentDir, make it beginning of string
-                    if (lastSlashBeforeSubstringF == -1) lastSlashBeforeSubstringF = 0;
+						int lastSlashBeforeSubstringC = tempCurrent.LastIndexOf(slash); //finds last slash (aka last common directory)
+						int lastSlashBeforeSubstringF = tempForeign.LastIndexOf(slash);
+						if (lastSlashBeforeSubstringC == -1) lastSlashBeforeSubstringC = 0; //couldn't find slash in currentDir, make it beginning of string
+						if (lastSlashBeforeSubstringF == -1) lastSlashBeforeSubstringF = 0;
 
-                    tempCurrent = tempCurrent.Substring(0, lastSlashBeforeSubstringC); //truncates off last slash
-                    tempForeign = tempForeign.Substring(0, lastSlashBeforeSubstringF);
-                    //alternative: tempForeign = tempForeign[..lastSlashBeforeSubstringF];
+						tempCurrent = tempCurrent.Substring(0, lastSlashBeforeSubstringC); //truncates off last slash
+						tempForeign = tempForeign.Substring(0, lastSlashBeforeSubstringF);
+						//alternative: tempForeign = tempForeign[..lastSlashBeforeSubstringF];
 
-                    int lastSlashBeforeSubstringC2 = tempCurrent.LastIndexOf(slash);
-                    int lastSlashBeforeSubstringF2 = tempForeign.LastIndexOf(slash);
-                    if (lastSlashBeforeSubstringC2 == -1) lastSlashBeforeSubstringC2 = 0; //couldn't find slash in currentDir, make it beginning of string
-                    if (lastSlashBeforeSubstringF2 == -1) lastSlashBeforeSubstringF2 = 0;
+						int lastSlashBeforeSubstringC2 = tempCurrent.LastIndexOf(slash);
+						int lastSlashBeforeSubstringF2 = tempForeign.LastIndexOf(slash);
+						if (lastSlashBeforeSubstringC2 == -1) lastSlashBeforeSubstringC2 = 0; //couldn't find slash in currentDir, make it beginning of string
+						if (lastSlashBeforeSubstringF2 == -1) lastSlashBeforeSubstringF2 = 0;
 
-                    tempCurrent = currentProcessPath.Substring(lastSlashBeforeSubstringC2);
-                    tempForeign = foreignPath.Substring(lastSlashBeforeSubstringF2);
-
+						tempCurrent = currentProcessPath.Substring(lastSlashBeforeSubstringC2);
+						tempForeign = foreignPath.Substring(lastSlashBeforeSubstringF2);
+					}
+					catch
+					{
+						//do nothing, not important
+					}
                 }
                 return (tempCurrent, tempForeign);
             }

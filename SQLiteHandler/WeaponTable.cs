@@ -43,22 +43,35 @@ namespace PFDB.SQLite
 		/// Initializes and populates all fields within this class for requests. Slow time to execute, so it is best for this to be called during initialization.
 		/// </summary>
 		/// <returns></returns>
-		public static Stopwatch InitializeEverything()
+		public static (bool success, Stopwatch stopwatch) InitializeEverything()
 		{
+			bool success = false;
 			Stopwatch stopwatch = Stopwatch.StartNew();
-			PFDBLogger.LogInformation("Starting cumulative table table setup");
-			_cumulativeChangesTableSetup();
-			PFDBLogger.LogInformation("Finished cumulative table table setup");
-			PFDBLogger.LogInformation("Starting weapon counts");
-			_getWeaponCountsForEveryVersion();
-			PFDBLogger.LogInformation("Finished weapon counts");
-			PFDBLogger.LogInformation("Starting weapon identifications");
-			_getWeaponIdentificationsForEveryVersion();
-			PFDBLogger.LogInformation("Finished weapon identifications");
+			try
+			{
+				PFDBLogger.LogInformation("Starting cumulative table table setup");
+				_cumulativeChangesTableSetup();
+				PFDBLogger.LogInformation("Finished cumulative table table setup");
+				PFDBLogger.LogInformation("Starting weapon counts");
+				_getWeaponCountsForEveryVersion();
+				PFDBLogger.LogInformation("Finished weapon counts");
+				PFDBLogger.LogInformation("Starting weapon identifications");
+				_getWeaponIdentificationsForEveryVersion();
+				PFDBLogger.LogInformation("Finished weapon identifications");
+				success = true;
+			}
+			catch (SQLiteException exception)
+			{
+				PFDBLogger.LogFatal("Unable to interface with SQLite database. Check if it exists and try again.", exception.Message);
+			}
+			catch (Exception exception)
+			{
+				PFDBLogger.LogError("An error occured while interfacing with the SQLite database.", exception.Message);
+			}
 			stopwatch.Stop();
 			
 			PFDBLogger.LogInformation($"Stopwatch elapsed milliseconds: {stopwatch.ElapsedMilliseconds}", parameter: stopwatch);
-			return stopwatch;
+			return (success, stopwatch);
 		}
 
 

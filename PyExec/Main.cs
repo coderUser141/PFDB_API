@@ -27,7 +27,6 @@ namespace PFDB{
             /// </summary>
             public static void Main(){
                 PFDBLogger logger =  new PFDBLogger(".pfdblog");
-                WeaponTable.InitializeEverything();
                 Test(string.Empty, string.Empty, null);
             }
 
@@ -37,7 +36,8 @@ namespace PFDB{
             public static bool Test(string pythonProgramPath, string imageBasePath, string? tessbinPath)
 			{
                 int score = 0;
-				if(PythonInitExecutableTest())score++;
+                if (WeaponTable.InitializeEverything().success == false) return false;  
+				if (PythonInitExecutableTest()) score++;
 				PythonExecutorInitExecutableConsoleTest();
 				if(PythonExecutorInitExecutableFileTest())score++;
 				if(PythonTesseractExecutableTest(tessbinPath))score++;

@@ -24,7 +24,11 @@ namespace Frontend.Server
             builder.Services.AddSwaggerGen();
 
 			PFDBLogger logger = new PFDBLogger(".pfdblog");
-			WeaponTable.InitializeEverything();
+            if (WeaponTable.InitializeEverything().success == false)
+            {
+                PFDBLogger.LogFatal("Quitting application.");
+                return;
+            }
 			
 			foreach (PhantomForcesVersion version in WeaponTable.ListOfVersions)
 			{

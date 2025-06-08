@@ -6,7 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	  <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
-	  <PreBuildEvent Condition="Exists('C:/')"><!--Windows build-->
+	  
+    <PreBuildEvent Condition="Exists('C:/') and !Exists('./disablePreBuildEvent')"><!--Windows build-->
       xcopy $(SolutionDir)Calculator\Calculator.dll $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v		  
       xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ImageParserForAPI\ /y /f /v
       mkdir $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\tessbin
@@ -14,7 +15,7 @@
       xcopy $(SolutionDir)ImageParserForAPI\dist\impa.exe $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
       xcopy $(SolutionDir)weapon_database.db $(SolutionDir)ComponentTester\bin\$(Configuration)\$(TargetFramework)\ /y /f /v
 	  </PreBuildEvent>
-    <PreBuildEvent Condition="Exists('/usr/bin') and Exists('$(SolutionDir)')"><!--Linux build-->
+    <PreBuildEvent Condition="Exists('/usr/bin') and Exists('$(SolutionDir)') and !Exists('./disablePreBuildEvent')"><!--Linux build-->
       cp -vaf $(SolutionDir)Calculator/Calculator.dll $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)		  
       cp -vaf $(SolutionDir)ImageParserForAPI/dist/impa $(SolutionDir)ImageParserForAPI
       mkdir $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)/tessbin
@@ -22,7 +23,7 @@
       cp -vaf $(SolutionDir)ImageParserForAPI/dist/impa $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)
       cp -vaf $(SolutionDir)weapon_database.db $(SolutionDir)ComponentTester/bin/$(Configuration)/$(TargetFramework)
 	  </PreBuildEvent>
-    <PreBuildEvent Condition="Exists('/usr/bin') and !Exists('$(SolutionDir)')"><!--Linux build-->
+    <PreBuildEvent Condition="Exists('/usr/bin') and !Exists('$(SolutionDir)') and !Exists('./disablePreBuildEvent')"><!--Linux build-->
       cp -vaf ../../../../Calculator/Calculator.dll ../../../../ComponentTester/bin/$(Configuration)/$(TargetFramework)		  
       cp -vaf ../../../../ImageParserForAPI/dist/impa ../../../../ImageParserForAPI
       mkdir ../../../../ComponentTester/bin/$(Configuration)/$(TargetFramework)/tessbin

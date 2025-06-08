@@ -3,6 +3,7 @@ using Serilog;
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Text;
 
 namespace PFDB
 {
@@ -42,7 +43,13 @@ namespace PFDB
 				Assembly invokingAssembly = Assembly.GetCallingAssembly();
 				var mth = new StackTrace().GetFrame(1)?.GetMethod();
 				var cls = mth?.ReflectedType?.Name;
-				Log.Debug($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] \t [Parameter: {{parameter}}] \t Message: {message}", parameter);
+
+				StringBuilder stringBuilder = new StringBuilder();
+				stringBuilder.Append($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] ");
+				stringBuilder.Append($"\t Message: {message} ");
+				if(parameter == null)stringBuilder.Append("$\t [Parameter: {{parameter}}]");
+				
+				Log.Debug(stringBuilder.ToString(), parameter);
 			}
 
 			public static void LogInformation(string message, [CallerMemberName] string caller = "", params object?[]? parameter)
@@ -55,7 +62,13 @@ namespace PFDB
 				Assembly invokingAssembly = Assembly.GetCallingAssembly();
 				var mth = new StackTrace().GetFrame(1)?.GetMethod();
 				var cls = mth?.ReflectedType?.Name;
-				Log.Information($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] \t [Parameter: {{parameter}}] \t Message: {message}", parameter);
+				
+				StringBuilder stringBuilder = new StringBuilder();
+				stringBuilder.Append($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] ");
+				stringBuilder.Append($"\t Message: {message} ");
+				if(parameter == null)stringBuilder.Append("$\t [Parameter: {{parameter}}]");
+
+				Log.Information(stringBuilder.ToString(), parameter);
 			}
 
 			public static void LogWarning(string message, [CallerMemberName] string caller = "", params object?[]? parameter)
@@ -68,7 +81,13 @@ namespace PFDB
 				Assembly invokingAssembly = Assembly.GetCallingAssembly();
 				var mth = new StackTrace().GetFrame(1)?.GetMethod();
 				var cls = mth?.ReflectedType?.Name;
-				Log.Warning($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] \t [Parameter: {{parameter}}] \t Message: {message}", parameter);
+				
+				StringBuilder stringBuilder = new StringBuilder();
+				stringBuilder.Append($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] ");
+				stringBuilder.Append($"\t Message: {message} ");
+				if(parameter == null)stringBuilder.Append("$\t [Parameter: {{parameter}}]");
+
+				Log.Warning(stringBuilder.ToString(), parameter);
 			}
 
 			public static void LogError(string message, [CallerMemberName] string caller = "", params object?[]? parameter)
@@ -81,7 +100,13 @@ namespace PFDB
 				Assembly invokingAssembly = Assembly.GetCallingAssembly();
 				var mth = new StackTrace().GetFrame(1)?.GetMethod();
 				var cls = mth?.ReflectedType?.Name;
-				Log.Error($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] \t [Parameter: {{parameter}}] \t Message: {message}", parameter);
+				
+				StringBuilder stringBuilder = new StringBuilder();
+				stringBuilder.Append($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] ");
+				stringBuilder.Append($"\t Message: {message} ");
+				if(parameter == null)stringBuilder.Append("$\t [Parameter: {{parameter}}]");
+
+				Log.Error(stringBuilder.ToString(), parameter);
 			}
 
 			public static void LogFatal(string message, [CallerMemberName] string caller = "", params object?[]? parameter)
@@ -94,7 +119,13 @@ namespace PFDB
 				Assembly invokingAssembly = Assembly.GetCallingAssembly();
 				var mth = new StackTrace().GetFrame(1)?.GetMethod();
 				var cls = mth?.ReflectedType?.Name;
-				Log.Fatal($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] \t [Parameter: {{parameter}}] \t Message: {message}", parameter);
+				
+				StringBuilder stringBuilder = new StringBuilder();
+				stringBuilder.Append($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] ");
+				stringBuilder.Append($"\t Message: {message} ");
+				if(parameter == null)stringBuilder.Append("$\t [Parameter: {{parameter}}]");
+
+				Log.Fatal(stringBuilder.ToString(), parameter);
 			}
 
 

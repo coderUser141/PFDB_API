@@ -47,7 +47,7 @@ namespace PFDB
 				StringBuilder stringBuilder = new StringBuilder();
 				stringBuilder.Append($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] ");
 				stringBuilder.Append($"\t Message: {message} ");
-				if(parameter == null)stringBuilder.Append("$\t [Parameter: {{parameter}}]");
+				if(parameter != null)stringBuilder.Append($"\t [Parameter: {{parameter}}]");
 				
 				Log.Debug(stringBuilder.ToString(), parameter);
 			}
@@ -66,7 +66,7 @@ namespace PFDB
 				StringBuilder stringBuilder = new StringBuilder();
 				stringBuilder.Append($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] ");
 				stringBuilder.Append($"\t Message: {message} ");
-				if(parameter == null)stringBuilder.Append("$\t [Parameter: {{parameter}}]");
+				if(parameter != null)stringBuilder.Append($"\t [Parameter: {{parameter}}]");
 
 				Log.Information(stringBuilder.ToString(), parameter);
 			}
@@ -85,7 +85,7 @@ namespace PFDB
 				StringBuilder stringBuilder = new StringBuilder();
 				stringBuilder.Append($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] ");
 				stringBuilder.Append($"\t Message: {message} ");
-				if(parameter == null)stringBuilder.Append("$\t [Parameter: {{parameter}}]");
+				if(parameter != null)stringBuilder.Append($"\t [Parameter: {{parameter}}]");
 
 				Log.Warning(stringBuilder.ToString(), parameter);
 			}
@@ -104,7 +104,7 @@ namespace PFDB
 				StringBuilder stringBuilder = new StringBuilder();
 				stringBuilder.Append($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] ");
 				stringBuilder.Append($"\t Message: {message} ");
-				if(parameter == null)stringBuilder.Append("$\t [Parameter: {{parameter}}]");
+				if(parameter != null)stringBuilder.Append($"\t [Parameter: {{parameter}}]");
 
 				Log.Error(stringBuilder.ToString(), parameter);
 			}
@@ -123,7 +123,7 @@ namespace PFDB
 				StringBuilder stringBuilder = new StringBuilder();
 				stringBuilder.Append($"[Source: {invokingAssembly.GetName().Name}.{cls}.{caller}] ");
 				stringBuilder.Append($"\t Message: {message} ");
-				if(parameter == null)stringBuilder.Append("$\t [Parameter: {{parameter}}]");
+				if(parameter != null)stringBuilder.Append($"\t [Parameter: {{parameter}}]");
 
 				Log.Fatal(stringBuilder.ToString(), parameter);
 			}

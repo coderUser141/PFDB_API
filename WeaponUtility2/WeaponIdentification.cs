@@ -41,13 +41,14 @@ namespace PFDB.WeaponUtility
 		public PhantomForcesVersion Version { get { return _version; } }
 
 		/// <summary>
-		/// The rank of the weapon.
+		/// The rank of the weapon. Maximum rank is 9999999 (7 digits)
 		/// </summary>
 		public int Rank { get { return _rank; } }
 
 		/// <summary>
 		/// If two weapons are the same rank, this number determines the sort order according to the order of the screenshots provided. 
 		/// This value mostly comes from the weapon database.
+		/// Maximum tiebreaker is 99 (2 digits)
 		/// </summary>
 		public int RankTieBreaker { get { return _rankTieBreaker; } }
 
@@ -95,17 +96,22 @@ namespace PFDB.WeaponUtility
 		/// Default constructor for when the following parameters are known. Populates all fields of the object.
 		/// </summary>
 		/// <param name="version">The version of Phantom Forces that the weapon belongs to.</param>
-		/// <param name="category">The </param>
-		/// <param name="rank"></param>
-		/// <param name="rankTieBreaker"></param>
-		/// <param name="weaponName"></param>
+		/// <param name="category">The category of the weapon.</param>
+		/// <param name="rank">The rank of the weapon. Must not exceed 10 001 (as no weapon exists with that rank)</param>
+		/// <param name="rankTieBreaker">The rank tiebreaker number. Must not exceed 99 and must be unique to the weapon if there exists another weapon with the same rank.</param>
+		/// <param name="weaponName">The name of the weapon. Optional.</param>
 		/// <exception cref="ArgumentException"></exception>
 		public WeaponIdentification(PhantomForcesVersion version, Categories category, int rank, int rankTieBreaker, string weaponName = "")
 		{
 			if(rank > 10001)
 			{
-				PFDBLogger.LogFatal("Cannot instantiate WeaponIdentification with a rank number greater than 10 001.", parameter: category);
+				PFDBLogger.LogFatal("Cannot instantiate WeaponIdentification with a rank number greater than 10 001.", parameter: rank);
 				throw new ArgumentException("Cannot instantiate WeaponIdentification with a rank number greater than 10 001."); //invalid
+			}
+			if (rankTieBreaker > 99)
+			{
+				PFDBLogger.LogFatal("Cannot instantiate WeaponIdentification with a rank tiebreaker number greater than 99.", parameter: rankTieBreaker);
+				throw new ArgumentException("Cannot instantiate WeaponIdentification with a rank tiebreaker number greater than 99."); //invalid
 			}
 			StringBuilder stringBuilder = new StringBuilder();
 			stringBuilder.Append(_dummyDigit);
